@@ -1,0 +1,531 @@
+aku sudah ambil data dari 1/1/2020 sampai 31/12/2024. 
+ini sample excel dari BI :
+NO	Nilai	Kurs Jual	Kurs Beli	Tanggal
+
+1	1	16242.81	16081.19	12/31/2024 12:00:00 AM
+
+ini sample dari csv FRED :
+observation_date,CCUSMA02IDQ618N
+
+2020-01-01,14256.329314888000
+
+kemudian aku sudah membuat folder file :
+
+D:\Kuliah\projek_dw\KURS : isinya BI.xlsx dan FRED.csv
+
+D:\Kuliah\projek_dw\DJPU
+D:\Kuliah\projek_dw\DJPU\Statistik Angkutan Udara : isinya 5 pdf terpisah 2020-2024
+
+D:\Kuliah\projek_dw\BPS
+D:\Kuliah\projek_dw\BPS\Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022
+D:\Kuliah\projek_dw\BPS\Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022
+D:\Kuliah\projek_dw\BPS\Jumlah Penumpang Pesawat di Bandara Utama (Orang)
+D:\Kuliah\projek_dw\BPS\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024
+D:\Kuliah\projek_dw\BPS\Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)
+D:\Kuliah\projek_dw\BPS\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)
+D:\Kuliah\projek_dw\BPS\BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)
+D:\Kuliah\projek_dw\BPS\BongkarMuat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton)
+D:\Kuliah\projek_dw\BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama
+D:\Kuliah\projek_dw\BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)
+
+dan penjelasannya : [
+Kurang data :
+1. BongkarMuat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton) : Kurang 2020, 2021
+
+2. Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang) : Kurang 2024
+
+3. Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang) : cuma ada 2020
+
+Termuat dalam 1 data :
+1. Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022 : 1 data.
+2. Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022 : 1 data. ]
+
+Daftar Isi PDF Statistik Angkatan Udara : 
+[DAFTAR ISI 
+Kata Pengantar ......................................................................................................................................... i 
+Daftar Isi ................................................................................................................................................. ii 
+Ringkasan Eksekutif ................................................................................................................................. vi 
+ 
+I. Kerjasama Angkutan Udara 
+Air Service Agreement Antara Indonesia Dengan Negara Mitra Wicara ........................................................... I - 1 
+ 
+II. Perusahaan Angkutan Udara 
+Daftar Badan Usaha Angkutan Udara Niaga Berjadwal Yang Beroperasi Tahun 2020 ....................................... II - 1 
+Daftar Badan Usaha Angkutan Udara Niaga Tidak Berjadwal Yang Beroperasi Tahun 2020 ............................... II - 1 
+Daftar Badan Usaha Angkutan Udara Bukan Niaga Beroperasi 2020  ............................................................ II - 2 
+Daftar Perusahaan Angkutan Udara Asing Yang Beroperasi 2020 ................................................................. II - 2 
+ 
+III. Data Kapasitas Angkutan Udara Niaga Berjadwal Dalam Negeri 
+Rute Angkutan Udara Niaga Berjadwal Dalam Negeri 2020 ....................................................................... III - 1 
+Kota Terhubung Oleh Rute Angkutan Udara Niaga Berjadwal Dalam Negeri 2020 ......................................... III - 4 
+Rekapitulasi Jumlah Rute Dalam Negeri 2020 ......................................................................................... III - 5 
+ 
+IV. Data Kapasitas Angkutan Udara Niaga Berjadwal Luar Negeri 
+Rute Angkutan Udara Niaga Berjadwal Luar Negeri 2020 ........................................................................... IV - 1 
+Kota Terhubung Angkutan Udara Niaga Berjadwal Luar Negeri 2020 ........................................................... IV - 2 
+Rekapitulasi Jumlah Rute Luar Negeri 2020 ............................................................................................. IV - 3 
+ 
+V. Produksi Angkutan Udara Niaga Berjadwal 
+Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2016-2020 ............................................................ V - 1 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh BUAU Nasional 2016-2020 ................................ V – 18 
+ 
+STATISTIK ANGKUTAN UDARA 2020                             iii 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh Perusahaan Asing 2016-2020 ............................ V - 32 
+Total Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2016-2020 .................................................. V - 85 
+Total Produksi Angkutan Udara Niaga Berjadwal Luar Negeri 2016-2020 ..................................................... V – 86 
+       Market Share Penumpang Angkutan Udara Dalam Negeri, Badan Usaha Angkutan Udara Nasional 2016-2020 .. V - 87 
+Market Share Penumpang Angkutan Udara Luar Negeri, Badan Usaha Angkutan Udara Nasional 2016-2020 ..... V - 89 
+       Market Share Penumpang Angkutan Udara Luar Negeri, Perusahaan Angkutan Udara Asing 2016-2020 ........... V - 91 
+ 
+VI. Market Share dan Statistik Per Rute Penumpang Angkutan Udara 
+Jumlah Penumpang Per Rute Penerbangan Domestik  
+Bulan Januari s.d Desember Tahun 2020, Tahun 2019-2019 .....................................................................  VI - 1 
+Statistik Per Rute Penerbangan Domestik Tahun 2020 ...........................................................................  VI - 11 
+Jumlah Penumpang Per Rute Penerbangan International  
+Bulan Januari s.d Desember Tahun 2020, Tahun 2019-2019  ................................................................... VI - 21 
+Statistik Per Rute Penerbangan International Tahun 2020 ....................................................................... VI - 24 
+ 
+VII. Data Lalu Lintas Angkutan Udara di Bandar Udara 
+Data Lalu Lintas Angkutan Udara di Bandar Udara, 2016-2020 ...................................................................  VII-1 
+Rekapitulasi Penumpang dan Kargo Domestik Di Bandar Udara Indonesia Tahun 2020 .................................  VII-37 
+Rekapitulasi Penumpang dan Kargo Internasional Di Bandar Udara Indonesia Tahun 2020 ............................  VII-41 
+Komposisi Penumpang Berdasarkan Pengelola Bandar udara Tahun 2020 ..................................................  VII-42 
+ 
+VIII. Angkutan Udara Perintis 
+Realisasi Angkutan Udara Perintis, Tahun Anggaran 2020......................................................................  VIII – 1 
+ 
+IX. Angkutan Lebaran 2020 (1441 H) 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2019 (1440 H)  
+dengan Lebaran Tahun 2020 (1441 H): Penerbangan Domestik  ................................................................ IX - 1 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2019 (1440 H)  
+dengan Lebaran Tahun 2020 (1441 H): Jumlah Pesawat Berangkat Angkutan Udara Dalam Negeri  ................. IX - 5 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2019  
+dengan Lebaran Tahun 2020: Penerbangan Domestik  .............................................................................. IX - 6 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2019  
+dengan Lebaran Tahun 2020: Jumlah Penumpang Berangkat Angkutan Udara Dalam Negeri ........................ IX - 10 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2019 (1440 H)  
+dengan Lebaran Tahun 2020 (1441 H): Penerbangan Internasional .......................................................... IX - 11 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2019  
+dengan Lebaran Tahun 2020: Jumlah Pesawat Berangkat Angkutan Udara Luar Negeri ................................ IX – 13 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2019  
+dengan Lebaran Tahun 2020: Penerbangan Internasional ........................................................................ IX - 14 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2019  
+dengan Lebaran Tahun 2020: Jumlah Penumpang Berangkat Angkutan Udara Luar Negeri ........................... IX - 16 
+X. Angkutan Haji 
+Realisasi Keberangkatan Jemaah Haji Indonesia Tahun 2016-2020 ............................................................. X – 1 
+XI. Angkutan Natal 2020 dan Tahun Baru 2021 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2019 dan Tahun Baru 2020  
+dengan Natal 2020 dan Tahun Baru 2021 : Penerbangan Dalam Negeri ....................................................... XI - 1 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2019 dan Tahun Baru 2020  
+dengan Natal 2020 dan Tahun Baru 2021 : Jumlah Pesawat Berangkat Angkutan Udara Dalam Negeri ............. XI - 5 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2019 dan Tahun Baru 2020  
+dengan Natal 2020 dan Tahun Baru 2021 : Penerbangan Dalam Negeri ....................................................... XI - 6 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2019 dan Tahun Baru 2020  
+dengan Natal 2020 dan Tahun Baru 2021 : Jumlah Penumpang Berangkat Angkutan Udara Dalam Negeri ...... XI - 10 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2019 dan Tahun  
+Baru 2020 dengan Natal 2020 dan Tahun Baru 2021 : Penerbangan Luar Negeri ........................................ XI - 11 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2019 dan Tahun  
+Baru 2020 dengan Natal 2020 dan Tahun Baru 2021 : Jumlah Pesawat Berangkat Angkutan Udara Luar NegeriXI – 13 
+iv 
+STATISTIK ANGKUTAN UDARA 2020                             
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2019 dan Tahun Baru 2020  
+dengan Natal 2020 dan Tahun Baru 2021 : Penerbangan Luar Negeri ....................................................... XI - 14 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2019 dan Tahun Baru 2020  
+dengan Natal 2020 dan Tahun Baru 2021 : Jumlah Penumpang Berangkat Angkutan Udara Luar Negeri ......... XI - 16 
+XII. On Time Performance 
+Tingkat Ketepatan Waktu (On Time Performance) Badan Usaha Angkutan Udara  ....................................... XII – 1]
+[DAFTAR ISI 
+Kata Pengantar ......................................................................................................................................... i 
+Daftar Isi ................................................................................................................................................. ii 
+Ringkasan Eksekutif .................................................................................................................................. v 
+I. Kerjasama Angkutan Udara 
+Air Service Agreement Antara Indonesia Dengan Negara Mitra Wicara ........................................................... I - 1 
+ 
+II. Perusahaan Angkutan Udara 
+Daftar Badan Usaha Angkutan Udara Niaga Berjadwal Yang Beroperasi Tahun 2021 ....................................... II - 1 
+Daftar Badan Usaha Angkutan Udara Niaga Tidak Berjadwal Yang Beroperasi Tahun 2021 ............................... II - 1 
+Daftar Badan Usaha Angkutan Udara Bukan Niaga Beroperasi 2021  ............................................................ II - 2 
+Daftar Perusahaan Angkutan Udara Asing Yang Beroperasi 2021 ................................................................. II - 2 
+ 
+III. Data Kapasitas Angkutan Udara Niaga Berjadwal Dalam Negeri 
+Rute Angkutan Udara Niaga Berjadwal Dalam Negeri 2021 ....................................................................... III - 1 
+Kota Terhubung Oleh Rute Angkutan Udara Niaga Berjadwal Dalam Negeri 2021 ......................................... III - 4 
+Rekapitulasi Jumlah Rute Dalam Negeri 2021 ......................................................................................... III - 5 
+ 
+IV. Data Kapasitas Angkutan Udara Niaga Berjadwal Luar Negeri 
+Rute Angkutan Udara Niaga Berjadwal Luar Negeri 2021 ........................................................................... IV - 1 
+Kota Terhubung Angkutan Udara Niaga Berjadwal Luar Negeri 2021 ........................................................... IV - 2 
+Rekapitulasi Jumlah Rute Luar Negeri 2021 ............................................................................................. IV - 3 
+ 
+V. Produksi Angkutan Udara Niaga Berjadwal 
+Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2017-2021 ............................................................ V - 1 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh BUAU Nasional 2017-2021 ................................ V – 19 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh Perusahaan Asing 2017-2021 ............................ V - 33 
+Total Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2017-2021 .................................................. V - 87 
+Total Produksi Angkutan Udara Niaga Berjadwal Luar Negeri 2017-2021 ..................................................... V – 88 
+        Market Share Penumpang Angkutan Udara Dalam Negeri, Badan Usaha Angkutan Udara Nasional 2017-2021 .. V - 89 
+ 
+STATISTIK ANGKUTAN UDARA 2021                             iii 
+Market Share Penumpang Angkutan Udara Luar Negeri, Badan Usaha Angkutan Udara Nasional 2017-2021 ..... V - 92 
+       Market Share Penumpang Angkutan Udara Luar Negeri, Perusahaan Angkutan Udara Asing 2017-2021 ........... V - 95 
+ 
+VI. Statistik Per Rute Penumpang Angkutan Udara 
+Jumlah Penumpang Per Rute Penerbangan Domestik  
+Bulan Januari s.d Desember Tahun 2021, Tahun 2019-2020 .....................................................................  VI - 1 
+Statistik Per Rute Penerbangan Domestik Tahun 2021 .............................................................................  VI - 8 
+Jumlah Penumpang Per Rute Penerbangan International  
+Bulan Januari s.d Desember Tahun 2021, Tahun 2019-2020  ................................................................... VI - 17 
+Statistik Per Rute Penerbangan International Tahun 2021 ....................................................................... VI - 20 
+ 
+VII. Data Lalu Lintas Angkutan Udara di Bandar Udara 
+Data Lalu Lintas Angkutan Udara di Bandar Udara, 2016-2021 ...................................................................  VII-1 
+Rekapitulasi Penumpang dan Kargo Domestik Di Bandar Udara Indonesia Tahun 2021 .................................  VII-37 
+Rekapitulasi Penumpang dan Kargo Internasional Di Bandar Udara Indonesia Tahun 2021 ............................  VII-41 
+Komposisi Penumpang Berdasarkan Pengelola Bandar udara Tahun 2021 ..................................................  VII-42 
+ 
+VIII. Angkutan Udara Perintis 
+Realisasi Angkutan Udara Perintis, Tahun Anggaran 2021......................................................................  VIII – 1 
+ 
+IX. Angkutan Lebaran 2021 (1442 H) 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2020 (1441 H) 
+dengan Lebaran Tahun 2021 (1442 H): Penerbangan Domestik  ................................................................ IX - 1 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2020 (1441 H) 
+dengan Lebaran Tahun 2021 (1442 H): Jumlah Pesawat Berangkat Angkutan Udara Dalam Negeri  ................. IX - 5 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2020 (1441 H) 
+dengan Lebaran Tahun 2021 (1442 H): Penerbangan Domestik  ................................................................ IX - 6 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2019  
+dengan Lebaran Tahun 2021 (1442 H): Jumlah Penumpang Berangkat Angkutan Udara Dalam Negeri ........... IX - 10 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2020 (1441 H) 
+dengan Lebaran Tahun 2021 (1442 H): Penerbangan Internasional .......................................................... IX - 11 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2020 (1441 H) 
+dengan Lebaran Tahun 2021 (1442 H): Jumlah Pesawat Berangkat Angkutan Udara Luar Negeri ................... IX – 13 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2020 (1441 H)  
+dengan Lebaran Tahun 2021 (1442 H): Penerbangan Internasional .......................................................... IX - 14 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2020 (1441 H)  
+dengan Lebaran Tahun 2021 (1442 H): Jumlah Penumpang Berangkat Angkutan Udara Luar Negeri .............. IX - 16 
+X. Angkutan Haji 
+Realisasi Keberangkatan Jemaah Haji Indonesia Tahun 2017-2021 ............................................................. X – 1 
+XI. Angkutan Natal 2021 dan Tahun Baru 2022 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2020 dan Tahun Baru 2021 
+dengan Natal 2021 dan Tahun Baru 2022 : Penerbangan Dalam Negeri ....................................................... XI - 1 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2020 dan Tahun Baru 2021 
+dengan Natal 2021 dan Tahun Baru 2022 : Jumlah Pesawat Berangkat Angkutan Udara Dalam Negeri ............. XI - 5 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2020 dan Tahun Baru 2021 
+dengan Natal 2021 dan Tahun Baru 2022: Penerbangan Dalam Negeri ........................................................ XI - 6 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2020 dan Tahun Baru 2021 
+dengan Natal 2021 dan Tahun Baru 2022: Jumlah Penumpang Berangkat Angkutan Udara Dalam Negeri ....... XI - 10 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2020 dan Tahun Baru 2021  
+dengan Natal 2021 dan Tahun Baru 2022: Penerbangan Luar Negeri ........................................................ XI - 11 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2020 dan Tahun Baru 2021  
+dengan Natal 2021 dan Tahun Baru 2022: Jumlah Pesawat Berangkat Angkutan Udara Luar Negeri ............... XI – 13 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2020 dan Tahun Baru 2021  
+dengan Natal 2021 dan Tahun Baru 2022: Penerbangan Luar Negeri ........................................................ XI - 14 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2020 dan Tahun Baru 2021  
+dengan Natal 2021 dan Tahun Baru 2022: Jumlah Penumpang Berangkat Angkutan Udara Luar Negeri .......... XI - 16 
+XII. On Time Performance 
+Tingkat Ketepatan Waktu (On Time Performance) Badan Usaha Angkutan Udara  ....................................... XII – 1]
+[DAFTAR ISI 
+Kata Pengantar ........................................................................................................................... i 
+Daftar Isi .................................................................................................................................. ii 
+Ringkasan Eksekutif .................................................................................................................... v 
+I. Kerjasama Angkutan Udara 
+Air Service Agreement Antara Indonesia Dengan Negara Mitra Wicara .............................................. I-1 
+II. Perusahaan Angkutan Udara 
+Daftar Badan Usaha Angkutan Udara Niaga Berjadwal Yang Beroperasi Tahun 2022 ......................... II-1 
+Daftar Perusahaan Angkutan Udara Niaga Tidak Berjadwal Yang Beroperasi Tahun 2022 ................... II-1 
+Daftar Perusahaan Angkutan Udara Niaga Tidak Berjadwal Yang Beroperasi Tahun 2022 ................... II-2 
+Daftar Perusahaan Angkutan Udara Asing Yang Beroperasi 2022 ................................................... II-2 
+III. Data Kapasitas Angkutan Udara Niaga Berjadwal Dalam Negeri dan Luar Negeri 
+Rute Angkutan Udara Niaga Berjadwal Dalam Negeri 2022 ......................................................... III-1 
+Kota Terhubung Oleh Rute Angkutan Udara Niaga Berjadwal Dalam Negeri 2022 ............................ III-4 
+Rekapitulasi Jumlah Rute Dalam Negeri 2022 ........................................................................... III-5 
+Rute Angkutan Udara Niaga Berjadwal Luar Negeri 2022 ............................................................ III-6 
+Kota Terhubung Angkutan Udara Niaga Berjadwal Luar Negeri 2022 ............................................. III-7 
+Rekapitulasi Jumlah Rute Luar Negeri 2022 ............................................................................. III-8 
+IV. Produksi Angkutan Udara Niaga Berjadwal 
+Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2018-2022 ................................................. IV-1 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh BUAU Nasional 2018-2022 ....................... IV-19 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh Perusahaan Asing 2018-2022 ................... IV-33 
+Total Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2018-2022 .................................... IV-88 
+Total Produksi Angkutan Udara Niaga Berjadwal Luar Negeri 2018-2022 ....................................... IV-89 
+V. Market Share Penumpang Angkutan Udara Dalam Negeri dan Luar Negeri 
+Market Share Penumpang Angkutan Udara Dalam Negeri, Badan Usaha  
+Angkutan Udara Nasional 2018-2022 ........................................................................................... V-1 
+Market Share Penumpang Angkutan Udara Luar Negeri, Badan Usaha  
+STATISTIK ANGKUTAN UDARA 2022 ii 
+ 
+Angkutan Udara Nasional 2018-2022 .......................................................................................... V-5 
+Market Share Penumpang Angkutan Udara Luar Negeri, Perusahaan Angkutan  
+Udara Asing 2018-2022 ............................................................................................................ V-8 
+ 
+VI. Statistik Per Rute Penumpang Angkutan Udara 
+Jumlah Penumpang Per Rute Penerbangan Domestik 
+Bulan Januari s.d Desember Tahun 2022 ................................................................................... VI-1 
+Statistik Per Rute Penerbangan Domestik Tahun 2022 ............................................................... VI-10 
+Jumlah Penumpang Per Rute Penerbangan International 
+Bulan Januari s.d Desember Tahun 2022 ................................................................................. VI-19 
+Statistik Per Rute Penerbangan International Tahun 2022 .......................................................... VI-22 
+VII. Data Lalu Lintas Angkutan Udara di Bandar Udara 
+Data Lalu Lintas Angkutan Udara di Bandar Udara, 2018-2022 .....................................................VII-1 
+Rekapitulasi Penumpang dan Kargo Domestik Di Bandar Udara Indonesia Tahun 2022 ................... VII-39 
+Rekapitulasi Penumpang dan Kargo Internasional Di Bandar Udara Indonesia Tahun 2022 .............. VII-43 
+Komposisi Penumpang Berdasarkan Pengelola Bandar udara Tahun 2022 .................................... VII-44 
+VIII. Angkutan Udara Perintis 
+Realisasi Angkutan Udara Perintis, Tahun Anggaran 2022 .......................................................... VIII-1 
+IX. Angkutan Lebaran 2021 (1442 H) 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2021 (1442 H) 
+dengan Lebaran Tahun 2022 (1443 H): Penerbangan Domestik ..................................................... IX-1 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2021 (1442 H) 
+dengan Lebaran Tahun 2022 (1443 H): Penerbangan Domestik ..................................................... IX-6 
+Perbandingan Jumlah Kargo Berangkat Angkutan Lebaran Tahun 2021 (1442 H) 
+dengan Lebaran Tahun 2022 (1443 H): Penerbangan Domestik .................................................... IX-11 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2021 (1442 H) 
+dengan Lebaran Tahun 2022 (1443 H): Penerbangan Internasional .............................................. IX-15 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2021 (1442 H) 
+dengan Lebaran Tahun 2022 (1443 H): Penerbangan Internasional ............................................. IX-18 
+Perbandingan Jumlah Kargo Berangkat Angkutan Lebaran Tahun 2021 (1442 H) 
+dengan Lebaran Tahun 2022 (1443 H): Penerbangan Internasional .............................................. IX-21 
+STATISTIK ANGKUTAN UDARA 2022 iii 
+X. Angkutan Haji 
+Realisasi Keberangkatan Jemaah Haji Indonesia Tahun 2018-2022 ................................................. X-1 
+XI. Angkutan Natal 2022 dan Tahun Baru 2023 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2021 dan Tahun Baru 2022 
+dengan Natal 2022 dan Tahun Baru 2023 : Penerbangan Dalam Negeri ......................................... XI-1 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2021 dan Tahun Baru 2022 
+dengan Natal 2022 dan Tahun Baru 2023: Penerbangan Dalam Negeri .......................................... XI-6 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2021 dan Tahun Baru 2022 
+dengan Natal 2022 dan Tahun Baru 2023: Penerbangan Luar Negeri ............................................ XI-11 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2021 dan Tahun Baru 2022 
+dengan Natal 2022 dan Tahun Baru 2023: Penerbangan Luar Negeri ............................................. XI-13 
+XII. On Time Performance 
+Tingkat Ketepatan Waktu (On Time Performance) Badan Usaha Angkutan Udara .............................XII-1]
+[DAFTAR ISI 
+Kata Pengantar ................................................................................................ i 
+Daftar Isi ....................................................................................................... ii 
+Ringkasan Eksekutif ........................................................................................ v 
+I. Kerjasama Angkutan Udara 
+Kerjasama Bilateral Indonesia Dengan Negara Mitra Tahun 2023 ........................ I - 1 
+ 
+II. Perusahaan Angkutan Udara 
+Daftar Badan Usaha Angkutan Udara Niaga Berjadwal Tahun 2023 .................... II - 1 
+Daftar Badan Usaha Angkutan Udara Niaga Tidak Berjadwal Tahun 2023 ............ II - 2 
+Daftar Pemegang Perizinan Angkutan Udara Bukan Niaga Tahun 2023  ............... II - 4 
+Daftar Perusahaan Angkutan Udara Asing Tahun 2023 ..................................... II - 5 
+ 
+III. Data Kapasitas Angkutan Udara Niaga Berjadwal Dalam dan Luar Negeri 
+Rute Angkutan Udara Niaga Berjadwal Dalam Negeri 2023 ............................. III - 1 
+Kota Terhubung Oleh Rute Angkutan Udara Niaga Berjadwal Dalam 
+Negeri 2023 ............................................................................................ III - 5 
+Rekapitulasi Jumlah Rute Dalam Negeri 2023 ............................................... III - 7 
+Rute Angkutan Udara Niaga Berjadwal Luar Negeri 2023 ................................ III - 8 
+Kota Terhubung Angkutan Udara Niaga Berjadwal Luar Negeri 2023 ............... III - 11 
+Rekapitulasi Jumlah Rute Luar Negeri 2023 ................................................. III - 12 
+Badan Usaha Angkutan udara Nasional Penumpang yang Melayani Rute 
+Internasional Tahun 2023 ........................................................................ III - 12 
+ 
+IV. Produksi Angkutan Udara Niaga Berjadwal 
+Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2019-2023 ................. IV - 1 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh BUAU Nasional 
+2019-2023............................................................................................. IV - 10 
+Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh Perusahaan 
+Asing 2019-2023 .................................................................................... IV - 17 
+Total Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2019-2023 ....... IV - 48 
+Total Produksi Angkutan Udara Niaga Berjadwal Luar Negeri 2019-2023 .......... IV - 49 
+         
+V. Market Share Angkutan Udara Niaga Berjadwal 
+ Market Share Penumpang Angkutan Udara Dalam Negeri, Badan Usaha 
+Angkutan Udara Nasional 2019-2023 ............................................................ V - 1 
+Market Share Penumpang Angkutan Udara Luar Negeri, Badan Usaha 
+Angkutan Udara Nasional 2019-2023 ............................................................ V - 3 
+       Market Share Penumpang Angkutan Udara Luar Negeri, Perusahaan 
+Angkutan Udara Asing 2019-2023 ................................................................ V - 5 
+ 
+VI. Statistik Per Rute Penumpang Angkutan Udara 
+Jumlah Penumpang Per Rute Penerbangan Domestik  
+Bulan Januari s.d Desember Tahun 2023, Tahun 2019-2022 ............................ VI - 1 
+Statistik Per Rute Penerbangan Domestik Tahun 2023 .................................. VI - 13 
+Jumlah Penumpang Per Rute Penerbangan International 
+Bulan Januari s.d Desember Tahun 2023, Tahun 2019-2022  ......................... VI - 19 
+ 
+STATISTIK ANGKUTAN UDARA 2023 iii 
+Statistik Per Rute Penerbangan International Tahun 2023 .............................. VI - 25 
+ 
+VII. Data Lalu Lintas Angkutan Udara di Bandar Udara 
+Data Lalu Lintas Angkutan Udara di Bandar Udara, 2016-2023 ........................ VII - 1 
+Rekapitulasi Penumpang dan Kargo Domestik Di Bandar Udara Indonesia  
+Tahun 2023 .........................................................................................  VII - 75 
+Rekapitulasi Penumpang dan Kargo Internasional Di Bandar Udara 
+Indonesia Tahun 2023 ...........................................................................  VII - 83 
+Komposisi Penumpang Berdasarkan Pengelola Bandar udara Tahun 2023 .......  VII - 85 
+ 
+VIII. Angkutan Udara Perintis 
+Realisasi Angkutan Udara Perintis, Tahun Anggaran 2023 .............................  VIII - 1 
+ 
+IX. Angkutan Lebaran 2023 (1444 H) 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2022 
+(1443 H) dengan Lebaran Tahun 2023 (1444 H): Penerbangan Domestik  ......... IX - 1 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2022 
+(1443 H) dengan Lebaran Tahun 2023 (1444 H): Jumlah Pesawat 
+Berangkat Angkutan Udara Dalam Negeri  .................................................... IX - 7 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 
+2022 (1443 H) dengan Lebaran Tahun 2023 (1444 H): Penerbangan 
+Domestik  ................................................................................................ IX - 9 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 
+2022 (1443 H) dengan Lebaran Tahun 2023 (1444 H): Jumlah Penumpang 
+Berangkat Angkutan Udara Dalam Negeri ................................................... IX - 15 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2022 
+(1443 H) dengan Lebaran Tahun 2023 (1444 H): Penerbangan 
+Internasional .......................................................................................... IX - 25 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 
+2022 (1443 H) dengan Lebaran Tahun 2023 (1444 H): Penerbangan 
+Internasional .......................................................................................... IX - 27 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2022 
+(1443 H) dengan Lebaran Tahun 2023 (1444 H): Jumlah Pesawat 
+Berangkat Angkutan Udara Luar Negeri ...................................................... IX - 31 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 
+2022 (1443 H) dengan Lebaran Tahun 2023 (1444 H): Jumlah Penumpang 
+Berangkat Angkutan Udara Luar Negeri ...................................................... IX - 32 
+ 
+X. Angkutan Haji 
+Realisasi Keberangkatan Jemaah Haji Indonesia Tahun 2019-2023 .................... X – 1 
+ 
+XI. Angkutan Natal 2023 dan Tahun Baru 2024 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2022 dan Tahun 
+Baru 2023 dengan Natal 2023 dan Tahun Baru 2024 : Penerbangan Dalam 
+Negeri ..................................................................................................... XI - 1 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2022 dan Tahun 
+Baru 2023 dengan Natal 2023 dan Tahun Baru 2024 : Jumlah Pesawat 
+Berangkat Angkutan Udara Dalam Negeri ................................................... XI - 11 
+ 
+STATISTIK ANGKUTAN UDARA 2023 iv 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2022 dan 
+Tahun Baru 2023 dengan Natal 2023 dan Tahun Baru 2024: Penerbangan 
+Dalam Negeri ......................................................................................... XI - 13 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2022 dan 
+Tahun Baru 2023 dengan Natal 2023 dan Tahun Baru 2024: Jumlah 
+Penumpang Berangkat Angkutan Udara Dalam Negeri .................................. XI - 23 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2022 dan Tahun 
+Baru 2023 dengan Natal 2023 dan Tahun Baru 2024: Penerbangan Luar 
+Negeri ................................................................................................... XI - 25 
+Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2022 dan Tahun 
+Baru 2023 dengan Natal 2023 dan Tahun Baru 2024: Jumlah Pesawat 
+Berangkat Angkutan Udara Luar Negeri ...................................................... XI – 27 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2022 dan 
+Tahun Baru 2023 dengan Natal 2023 dan Tahun Baru 2024: Penerbangan 
+Luar Negeri ............................................................................................ XI - 29 
+Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2022 dan 
+Tahun Baru 2023 dengan Natal 2023 dan Tahun Baru 2024: Jumlah 
+Penumpang Berangkat Angkutan Udara Luar Negeri ..................................... XI - 31 
+ 
+XII. On Time Performance 
+Tingkat Ketepatan Waktu (On Time Performance) Badan Usaha Angkutan 
+Udara  .................................................................................................. XII – 1]
+[DAFTAR ISI 
+Kata Pengantar ................................................................................................................................ i 
+Daftar Isi .......................................................................................................................................... ii 
+Ringkasan Eksekutif ........................................................................................................................ v 
+ 
+I. Kerjasama Angkutan Udara 
+1. Kerjasama Bilateral Indonesia Dengan Negara Mitra Tahun 2024 .......................................... I - 1 
+ 
+II. Perusahaan Angkutan Udara 
+1. Daftar Badan Usaha Angkutan Udara Niaga Berjadwal Tahun 2024 ..................................... II - 1 
+2. Daftar Badan Usaha Angkutan Udara Niaga Tidak Berjadwal Tahun 2024 ............................ II - 2 
+3. Daftar Pemegang Perizinan Angkutan Udara Bukan Niaga Tahun 2024  ............................... II - 4 
+4. Daftar Perusahaan Angkutan Udara Asing Tahun 2024 ......................................................... II - 6 
+ 
+III. Data Kapasitas Angkutan Udara Niaga Berjadwal 
+1. Rute Angkutan Udara Niaga Berjadwal Dalam Negeri Tahun 2024 ...................................... III - 1 
+2. Kota Terhubung Oleh Rute Angkutan Udara Niaga Berjadwal Dalam Negeri Tahun 2024 .... III - 4 
+3. Rekapitulasi Jumlah Angkutan Udara Niaga Berjadwal Rute Dalam Negeri .......................... III - 5 
+4. Rute Angkutan Udara Niaga Berjadwal Luar Negeri Tahun 2024.......................................... III - 6 
+5. Kota Terhubung Angkutan Udara Niaga Berjadwal Luar Negeri Tahun 2024 ........................ III - 7 
+6. Rekapitulasi Jumlah Angkutan Udara Niaga Berjadwal Rute Luar Negeri ............................. III - 8 
+7. Badan Usaha Angkutan Udara Nasional Penumpang yang Melayani Rute Internasional  
+Tahun 2024........................................................................................................................... III - 8 
+ 
+IV. Produksi Angkutan Udara Niaga Berjadwal 
+1. Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri  ................................................ IV - 11 
+2. Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh Perusahaan Nasional  ........ IV - 11 
+3. Produksi Angkutan Udara Niaga Berjadwal Luar Negeri Oleh Perusahaan Asing  ............. IV - 17 
+4. Total Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri  ....................................... IV - 51 
+5. Total Produksi Angkutan Udara Niaga Berjadwal Luar Negeri  .......................................... IV - 52 
+         
+V. Market Share Angkutan Udara Niaga Berjadwal 
+1. Market Share Penumpang Angkutan Udara Dalam Negeri, Badan Usaha Angkutan Udara  
+Periode Tahun 2019-2024 .................................................................................................... V - 1 
+2. Market Share Penumpang Angkutan Udara Luar Negeri, Badan Usaha Angkutan Udara  
+Periode Tahun 2019-2024 .................................................................................................... V - 2 
+3. Market Share Penumpang Angkutan Udara Luar Negeri, Perusahaan Angkutan Udara  
+Asing Periode Tahun 2019-2024 ........................................................................................... V - 3 
+4. Market Share Penumpang Angkutan Udara Luar Negeri, Badan Usaha Angkutan Udara  
+Dan Perusahaan Angkutan Udara Asing Periode Tahun 2019-2024 ..................................... V - 5 
+ 
+VI. Statistik Per Rute Penumpang Angkutan Udara  
+1. Jumlah Penumpang Per Rute Angkutan Udara Niaga Berjadwal Dalam Negeri  
+Bulan Januari s.d Desember Tahun 2024  ......................................................................... VI - 13 
+2. Statistik Per Rute Angkutan Udara Niaga Berjadwal Dalam Negeri Tahun 2024 ................ VI - 73 
+3. Jumlah Penumpang Per Rute Angkutan Udara Niaga Berjadwal Luar Negeri  
+Bulan Januari s.d Desember Tahun 2024  ......................................................................... VI - 13 
+4. Statistik Per Rute Angkutan Udara Niaga Berjadwal Luar Negeri Tahun 2024 ................... VI - 16 
+ 
+VII. Data Lalu Lintas Angkutan Udara di Bandar Udara 
+1. Data Lalu Lintas Angkutan Udara di Bandar Udara Indonesia Periode Tahun 2020-2024  VII - 13 
+2. Rekapitulasi Data Lalu Lintas Angkutan Udara Di Bandar Udara Indonesia Periode  
+Tahun 2020-2024 ............................................................................................................  VII - 40 
+3. Data Lalu Lintas Angkutan Udara Rute Dalam Negeri di Bandar Udara Indonesia 
+Pada Tahun 2024 ............................................................................................................  VII - 41 
+4. Data Lalu Lintas Angkutan Udara Rute Luar Negeri di Bandar Udara Indonesia 
+Pada Tahun 2024 ............................................................................................................  VII - 45 
+5. Komposisi Jumlah Penumpang Berdasarkan Pengelola Bandar Udara Tahun 2024  ....... VII - 46 
+VIII. Angkutan Udara Perintis 
+1. Realisasi Angkutan Udara Perintis Tahun Anggaran 2024 ................................................  VIII - 1 
+IX. 
+X. 
+XI. 
+Angkutan Lebaran 2024 (1445 H) 
+1. Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Domestik  ................................. IX/1 - 14 
+2. Grafik Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Jumlah Pesawat Berangkat Angkutan Udara  
+Dalam Negeri ............................................................................................................... IX/1 - 74 
+3. Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Domestik  ................................. IX/1 - 84 
+4. Grafik Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Jumlah Penumpang Berangkat Angkutan Udara  
+Dalam Negeri................................................................................................................ IX/1 - 14 
+5. Perbandingan Jumlah Kargo Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Domestik .................................. IX/1 - 15 
+6. Perbandingan Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Internasional ............................. IX/2 - 15 
+7. Grafik Jumlah Pesawat Berangkat Angkutan Lebaran Tahun 2023 (1444 H) 
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Internasional ............................. IX/2 - 37 
+8. Perbandingan Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Internasional ............................. IX/2 - 43 
+9. Grafik Jumlah Penumpang Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Internasional  ............................ IX/2 - 62 
+10. Perbandingan Jumlah Kargo Berangkat Angkutan Lebaran Tahun 2023 (1444 H)  
+dengan Lebaran Tahun 2024 (1445 H): Penerbangan Internasional ............................. IX/1 - 75 
+Angkutan Haji 
+1. Realisasi Keberangkatan Jemaah Haji Indonesia Tahun 2019-2024 ................................... X – 1 
+Angkutan Natal 2024 dan Tahun Baru 2025 
+1. Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2023 dan Tahun Baru 2024  
+dengan Natal 2024 dan Tahun Baru 2025 : Penerbangan Dalam Negeri ........................ XI/1 - 12 
+2. Grafik Jumlah Pesawat Berangkat Angkutan Natal 2023 dan Tahun Baru 2024  
+dengan Natal 2024 dan Tahun Baru 2025 : Penerbangan Dalam Negeri ........................ XI/1 - 41 
+3. Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2023 dan Tahun Baru 2024  
+dengan Natal 2024 dan Tahun Baru 2025: Penerbangan Dalam Negeri ......................... XI/1 - 53 
+4. Grafik Jumlah Penumpang Berangkat Angkutan Natal 2023 dan Tahun Baru 2024  
+dengan Natal 2024 dan Tahun Baru 2025: Penerbangan Dalam Negeri ......................... XI/1 - 83 
+iii 
+STATISTIK ANGKUTAN UDARA 2025 
+5. Perbandingan Jumlah Pesawat Berangkat Angkutan Natal 2023 dan Tahun Baru 2024  
+dengan Natal 2024 dan Tahun Baru 2025: Penerbangan Luar Negeri ............................ XI/2 - 15 
+6. Grafik Jumlah Pesawat Berangkat Angkutan Natal 2023 dan Tahun Baru 2024  
+dengan Natal 2024 dan Tahun Baru 2025: Penerbangan Luar Negeri ............................XI/2 – 37 
+7. Perbandingan Jumlah Penumpang Berangkat Angkutan Natal 2023 dan Tahun Baru 2024 
+dengan Natal 2024 dan Tahun Baru 2025: Penerbangan Luar Negeri ............................ XI/2 - 49 
+8. Grafik Jumlah Penumpang Berangkat Angkutan Natal 2023 dan Tahun Baru 2024  
+dengan Natal 2024 dan Tahun Baru 2025: Penerbangan Luar Negeri ............................ XI/2 - 51 
+XII. On Time Performance 
+1. Tingkat Ketepatan Waktu (On Time Performance) Badan Usaha Angkutan Udara  ............ XII - 1 ]
