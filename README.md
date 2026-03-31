@@ -147,3 +147,15 @@ Satu hal yang belum ada adalah **denominasi harga tiket**. Tanpa data harga, kor
 ### Kesimpulan
 
 Dataset yang sudah terkumpul **cukup dan siap** untuk masuk ke tahap desain star schema dan ETL. Tidak ada kebutuhan mencari data tambahan. Langkah selanjutnya yang paling logis adalah melihat sample aktual dari kolom-kolom di setiap file, lalu merancang skema final sebelum mulai proses transformasi data.
+
+## ⚖️ Disclaimer & Data Attribution
+
+Proyek ini dibuat murni untuk tujuan akademis, edukasi, dan portofolio pribadi. Seluruh hak cipta dan kekayaan intelektual dari data mentah yang digunakan dalam repositori ini tetap menjadi milik instansi pencipta data:
+* **Badan Pusat Statistik (BPS) Indonesia**
+* **Direktorat Jenderal Perhubungan Udara (DJPU) - Kementerian Perhubungan RI**
+* **Bank Indonesia (BI)**
+* **Federal Reserve Economic Data (FRED)**
+
+Dokumen PDF dan dataset yang diunggah di dalam repositori ini semata-mata digunakan untuk mempermudah reproduksi proses ETL (Extract, Transform, Load) dalam proyek Data Warehouse ini. 
+
+Jika Anda berniat menggunakan data ini untuk keperluan komersial, publikasi resmi, atau pengambilan keputusan nyata, sangat disarankan untuk merujuk dan mengunduh data terbaru langsung dari portal resmi instansi terkait. Penulis tidak bertanggung jawab atas ketidakakuratan data akibat proses ekstraksi dan transformasi.
