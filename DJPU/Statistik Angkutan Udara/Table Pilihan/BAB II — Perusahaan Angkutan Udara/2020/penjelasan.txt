@@ -1,0 +1,24 @@
+BAB II(hal : 24 - 25) :
+AI : {
+- Daftar Badan Usaha Angkutan Udara Niaga Berjadwal Yang Beroperasi Tahun 2020
+- Daftar Badan Usaha Angkutan Udara Niaga Berjadwal Yang Beroperasi Tahun 2020
+- Daftar Badan Usaha Angkutan Udara Niaga Tidak Berjadwal Yang Beroperasi Tahun 2020
+- Daftar Badan Usaha Angkutan Udara Bukan Niaga Beroperasi 2020
+- Daftar Perusahaan Angkutan Udara Asing Yang Beroperasi 2020
+}
+
+NO : {
+[DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL 
+YANG BEROPERASI TAHUN 2020
+
+DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL
+YANG BEROPERASI TAHUN 2020](satu halaman di 24),
+[
+DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA
+YANG BEROPERASI TAHUN 2020
+
+DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING
+YANG BEROPERASI TAHUN 2020
+](satu halaman di 25)
+}
+
