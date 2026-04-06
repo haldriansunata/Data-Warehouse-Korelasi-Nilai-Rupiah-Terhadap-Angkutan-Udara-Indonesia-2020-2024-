@@ -1,0 +1,15 @@
+﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024
+1,Aircraft KM,(000),345,1.045,1.466,49,-
+2,Aircraft Departure,number,241,910,976,32,-
+3,Aircraft Hours,number,473:34,1607:04,2104:31,68:55,0
+4,Passenger Carried,number,-,-,-,-,-
+5,Freight Carried,ton,2.162,7.819,8.674,219,-
+6,Passenger KM,(000),-,-,-,-,-
+7,Available Seat KM,(000),-,-,-,-,-
+8,Passenger L/F,(%),-,-,-,-,-
+9a,Ton KM Performed - Passenger,(000),-,-,-,-,-
+9b,Ton KM Performed - Freight,(000),3.028,8.247,13.511,364,-
+9c,Ton KM Performed - Mail,(000),-,-,-,-,-
+9d,Ton KM Performed - Total,(000),3.028,8.247,13.511,364,-
+10,Available Ton KM,(000),6.255,19.338,27.458,907,-
+11,Weight L/F,(%),"48,40","42,65","49,21","40,13",-
