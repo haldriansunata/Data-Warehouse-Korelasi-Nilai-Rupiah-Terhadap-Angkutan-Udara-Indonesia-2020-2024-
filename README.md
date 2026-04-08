@@ -6,238 +6,378 @@
 ## 1. Struktur Folder Data
 
 ```
-D:.
-|   perencanaan_data_warehouse.md
-|   README.md
-|   struktur_folder.txt
-|   
-+---BPS
-|   +---BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)
-|   |       Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2020.csv
-|   |       Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2021.csv
-|   |       Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2022.csv
-|   |       Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2023.csv
-|   |       Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2024.csv
-|   |       
-|   +---BongkarMuat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton)
-|   |       Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2022.csv
-|   |       Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2023.csv
-|   |       Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2024.csv
-|   |       Kurang 2020, 2021.txt
-|   |       
-|   +---Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)
-|   |       Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2020.csv
-|   |       Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2021.csv
-|   |       Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2022.csv
-|   |       Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2023.csv
-|   |       Kurang 2024.txt
-|   |       
-|   +---Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)
-|   |       cuma ada 2020.txt
-|   |       Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2020.csv
-|   |       
-|   +---Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024
-|   |       Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2020.csv
-|   |       Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2021.csv
-|   |       Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2022.csv
-|   |       Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2023.csv
-|   |       Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2024.csv
-|   |       
-|   +---Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2020.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2021.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2022.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2023.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2024.csv
-|   |       
-|   +---Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2020.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2021.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2022.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2023.csv
-|   |       Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2024.csv
-|   |       
-|   +---Jumlah Penumpang Pesawat di Bandara Utama (Orang)
-|   |       Jumlah Penumpang Pesawat di Bandara Utama, 2020.csv
-|   |       Jumlah Penumpang Pesawat di Bandara Utama, 2021.csv
-|   |       Jumlah Penumpang Pesawat di Bandara Utama, 2022.csv
-|   |       Jumlah Penumpang Pesawat di Bandara Utama, 2023.csv
-|   |       Jumlah Penumpang Pesawat di Bandara Utama, 2024.csv
-|   |       
-|   +---Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022
-|   |       Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022.csv
-|   |       
-|   \---Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022
-|           emangnya 1.txt
-|           Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022.csv
-|           
-+---DJPU
-|   \---Statistik Angkutan Udara
-|           Statistik Angkutan Udara Tahun 2020.pdf
-|           Statistik Angkutan Udara Tahun 2021.pdf
-|           Statistik Angkutan Udara Tahun 2022.pdf
-|           Statistik Angkutan Udara Tahun 2023.pdf
-|           Statistik Angkutan Udara Tahun 2024.pdf
-|           
-+---KURS
-|       BI.xlsx
-|       FRED.csv
-|       
-\---Table_Pilihan
-    +---BAB II � Perusahaan Angkutan Udara
-    |   |   extract_range.py
-    |   |   
-    |   +---2020
-    |   |       daftar_buau_dan_pau_2020.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2021
-    |   |       daftar_buau_dan_pau_2021.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2022
-    |   |       daftar_buau_dan_pau_2022.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2023
-    |   |       daftar_buau_dan_pau_2023.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   \---2024
-    |           daftar_buau_dan_pau_2024.pdf
-    |           penjelasan.txt
-    |           
-    +---BAB III � Rute & Bandara
-    |   |   extract_range.py
-    |   |   
-    |   +---2020
-    |   |       kota_rute_dan_total_domestik_2020.pdf
-    |   |       kota_rute_dan_total_inter_2020.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2021
-    |   |       kota_rute_dan_total_domestik_2021.pdf
-    |   |       kota_rute_dan_total_inter_2021.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2022
-    |   |       kota_rute_dan_total_domestik_2021.pdf
-    |   |       kota_rute_dan_total_inter_2021.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2023
-    |   |       anomali_total_rekapitulasi.txt
-    |   |       penjelasan.txt
-    |   |       rute_kota_rekapitulasi_domestik_2023.pdf
-    |   |       rute_kota_rekapitulasi_inter_2023.pdf
-    |   |       
-    |   \---2024
-    |           kota_rute_dan_total_domestik_2024.pdf
-    |           kota_rute_dan_total_inter_2024.pdf
-    |           penjelasan.txt
-    |           
-    +---BAB IV � Produksi
-    |       extract_range.py
-    |       penjelasan.txt
-    |       Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2016-2020.pdf
-    |       Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2017-2021.pdf
-    |       Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2018-2022.pdf
-    |       Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2019-2023.pdf
-    |       Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2020 - 2024.pdf
-    |       
-    +---BAB V � Market Share
-    |       extract_range.py
-    |       MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2016 - 2020.pdf
-    |       MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2017 - 2021.pdf
-    |       MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2018 - 2022.pdf
-    |       MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2019 - 2023.pdf
-    |       MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2019-2024.pdf
-    |       penjelasan.txt
-    |       
-    +---BAB VI � Penumpang Per Rute
-    |   |   extract_range_jum_per_rute.py
-    |   |   extract_range_stat_per_rute.py
-    |   |   
-    |   +---2020
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2020.pdf
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2020.pdf
-    |   |       penjelasan.txt
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       
-    |   +---2021
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2021.pdf
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2021.pdf
-    |   |       penjelasan.txt
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       
-    |   +---2022
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.pdf
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2022.pdf
-    |   |       penjelasan.txt
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       
-    |   +---2023
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2023.pdf
-    |   |       JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2023.pdf
-    |   |       penjelasan.txt
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |   |       
-    |   \---2024
-    |           JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2024.pdf
-    |           JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2024.pdf
-    |           penjelasan.txt
-    |           STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |           STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
-    |           
-    +---BAB VII � Lalu Lintas Bandara
-    |   |   data_lalu_lintas_dan_komposisi.py
-    |   |   
-    |   +---2020
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2020.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2020.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2016 - 2020.pdf
-    |   |       KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2020.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2021
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2021.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2021.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2017 - 2021.pdf
-    |   |       KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2021.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2022
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2022.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2022.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2018 - 2022.pdf
-    |   |       KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2022.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   +---2023
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2023.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2023.pdf
-    |   |       DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.pdf
-    |   |       KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2023.pdf
-    |   |       penjelasan.txt
-    |   |       
-    |   \---2024
-    |           DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2024.pdf
-    |           DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2024.pdf
-    |           DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.pdf
-    |           KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2024.pdf
-    |           penjelasan.txt
-    |           
-    \---BAB XII � On Time Performance
-            extract_range.py
-            TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2020.pdf
-            TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2021.pdf
-            TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2022.pdf
-            TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2023.pdf
-            TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2024.pdf
+.
+├── README.md
+├── struktur.txt
+├── BPS
+│   ├── BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)
+│   │   ├── Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2020.csv
+│   │   ├── Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2021.csv
+│   │   ├── Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2022.csv
+│   │   ├── Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2023.csv
+│   │   └── Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2024.csv
+│   ├── BongkarMuat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton)
+│   │   ├── Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2022.csv
+│   │   ├── Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2023.csv
+│   │   ├── Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2024.csv
+│   │   └── Kurang 2020, 2021.txt
+│   ├── Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)
+│   │   ├── Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2020.csv
+│   │   ├── Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2021.csv
+│   │   ├── Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2022.csv
+│   │   ├── Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2023.csv
+│   │   └── Kurang 2024.txt
+│   ├── Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)
+│   │   ├── cuma ada 2020.txt
+│   │   └── Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2020.csv
+│   ├── Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024
+│   │   ├── Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2020.csv
+│   │   ├── Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2021.csv
+│   │   ├── Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2022.csv
+│   │   ├── Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2023.csv
+│   │   └── Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2024.csv
+│   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2020.csv
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2021.csv
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2022.csv
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2023.csv
+│   │   └── Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2024.csv
+│   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2020.csv
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2021.csv
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2022.csv
+│   │   ├── Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2023.csv
+│   │   └── Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2024.csv
+│   ├── Jumlah Penumpang Pesawat di Bandara Utama (Orang)
+│   │   ├── Jumlah Penumpang Pesawat di Bandara Utama, 2020.csv
+│   │   ├── Jumlah Penumpang Pesawat di Bandara Utama, 2021.csv
+│   │   ├── Jumlah Penumpang Pesawat di Bandara Utama, 2022.csv
+│   │   ├── Jumlah Penumpang Pesawat di Bandara Utama, 2023.csv
+│   │   └── Jumlah Penumpang Pesawat di Bandara Utama, 2024.csv
+│   ├── Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022
+│   │   └── Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022.csv
+│   └── Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022
+│       ├── emangnya 1.txt
+│       └── Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022.csv
+├── DJPU
+│   └── Statistik Angkutan Udara
+│       ├── Statistik Angkutan Udara Tahun 2020.pdf
+│       ├── Statistik Angkutan Udara Tahun 2021.pdf
+│       ├── Statistik Angkutan Udara Tahun 2022.pdf
+│       ├── Statistik Angkutan Udara Tahun 2023.pdf
+│       └── Statistik Angkutan Udara Tahun 2024.pdf
+├── KURS
+│   ├── BI.xlsx
+│   └── FRED.csv
+└── Table_Pilihan
+    ├── BAB II - Perusahaan Angkutan Udara
+    │   ├── extract_range.py
+    │   ├── 2020
+    │   │   ├── DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL YANG BEROPERASI TAHUN 2020.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING YANG BEROPERASI TAHUN 2020.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA YANG BEROPERASI TAHUN 2020.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL YANG BEROPERASI TAHUN 2020.csv
+    │   │   └── PDF
+    │   │       ├── daftar_buau_dan_pau_2020.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2021
+    │   │   ├── DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2021.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2021.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2021.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2021.csv
+    │   │   └── PDF
+    │   │       ├── daftar_buau_dan_pau_2021.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2022
+    │   │   ├── DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2022.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2022.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2022.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2022.csv
+    │   │   └── PDF
+    │   │       ├── daftar_buau_dan_pau_2022.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2023
+    │   │   ├── DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2023.csv
+    │   │   ├── DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2023.csv
+    │   │   ├── DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2023.csv
+    │   │   ├── DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2023.csv
+    │   │   └── PDF
+    │   │       ├── daftar_buau_dan_pau_2023.pdf
+    │   │       └── penjelasan.txt
+    │   └── 2024
+    │       ├── DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2024.csv
+    │       ├── DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2024.csv
+    │       ├── DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2024.csv
+    │       ├── DAFTAR PERWAKILAN PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2024.csv
+    │       └── PDF
+    │           ├── daftar_buau_dan_pau_2024.pdf
+    │           └── penjelasan.txt
+    ├── BAB III - Rute & Bandara
+    │   ├── extract_range.py
+    │   ├── rute_badanPenghubung_badanUsaha(di masing-masing folder per tahun).txt
+    │   ├── TOTAL JUMLAH RUTE DOMESTIK ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2020-2024.csv
+    │   ├── TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2020-2024.csv
+    │   ├── 2020
+    │   │   ├── BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2020.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2020.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2020.csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020.csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020.csv
+    │   │   ├── TOTAL JUMLAH RUTE DOMESTIK TAHUN 2015-2020.csv
+    │   │   ├── TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2016-2020.csv
+    │   │   └── PDF
+    │   │       ├── kota_rute_dan_total_domestik_2020.pdf
+    │   │       ├── kota_rute_dan_total_inter_2020.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2021
+    │   │   ├── BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2021.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2021.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2021.csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021..csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021.csv
+    │   │   ├── TOTAL JUMLAH RUTE DOMESTIK TAHUN 2015-2021.csv
+    │   │   ├── TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2016 - 2021.csv
+    │   │   └── PDF
+    │   │       ├── kota_rute_dan_total_domestik_2021.pdf
+    │   │       ├── kota_rute_dan_total_inter_2021.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2022
+    │   │   ├── BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2022.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2022.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2022.csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022.csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022.csv
+    │   │   ├── TOTAL JUMLAH RUTE DOMESTIK TAHUN 2016-2022.csv
+    │   │   ├── TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2017-2022.csv
+    │   │   └── PDF
+    │   │       ├── kota_rute_dan_total_domestik_2022.pdf
+    │   │       ├── kota_rute_dan_total_inter_2022.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2023
+    │   │   ├── BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL TAHUN 2023.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2023.csv
+    │   │   ├── KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2023.csv
+    │   │   ├── REKAPITULASI JUMLAH RUTE DOMESTIK TAHUN 2018-2023.csv
+    │   │   ├── REKAPITULASI JUMLAH RUTE INTERNATIONAL TAHUN 2018-2023.csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023.csv
+    │   │   ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023.csv
+    │   │   └── PDF
+    │   │       ├── penjelasan.txt
+    │   │       ├── rute_kota_rekapitulasi_domestik_2023.pdf
+    │   │       └── rute_kota_rekapitulasi_inter_2023.pdf
+    │   └── 2024
+    │       ├── BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL.csv
+    │       ├── KOTA TERHUBUNG OLEH ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024.csv
+    │       ├── KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2024.csv
+    │       ├── KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2024.csv
+    │       ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024.csv
+    │       ├── RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024.csv
+    │       ├── TOTAL JUMLAH RUTE DOMESTIK ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2020-2024.csv
+    │       ├── TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2020-2024.csv
+    │       └── PDF
+    │           ├── kota_rute_dan_total_domestik_2024.pdf
+    │           ├── kota_rute_dan_total_inter_2024.pdf
+    │           └── penjelasan.txt
+    ├── BAB IV - Produksi
+    │   ├── extract_range.py
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT ASI PUJIASTUTI.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT BATIK AIR.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT BBN AIRLINES INDONESIA.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT CARDIG AIR.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT CITILINK INDONESIA.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT GARUDA INDONESIA (Persero) Tbk..csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT INDONESIA AIRASIA.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT LION MENTARI AIRLINES.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT MY INDO AIRLINES.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT NAM AIR.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT PELITA AIR SERVICE.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT RUSKY AERO INTERNATIONAL.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT SRIWIJAYA AIR.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT SUPER AIR JET.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRANSNUSA AVIATION MANDIRI.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRAVEL EXPRESS AVIATION SERVICE.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRI MG AIRLINES.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRIGANA AIR SERVICE.csv
+    │   ├── PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 WINGS ABADI AIRLINES.csv
+    │   └── PDF
+    │       ├── penjelasan.txt
+    │       ├── Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2016-2020.pdf
+    │       ├── Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2017-2021.pdf
+    │       ├── Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2018-2022.pdf
+    │       ├── Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2019-2023.pdf
+    │       └── Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2020 - 2024.pdf
+    ├── BAB V - Market Share
+    │   ├── extract_range.py
+    │   ├── TABEL MARKET SHARE PENUMPANG ANGKUTAN UDARA DALAM NEGERI BERDASARKAN BADAN USAHA ANGKUTAN UDARA NIAGA NASIONAL TAHUN 2019-2024.csv
+    │   └── PDF
+    │       ├── MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2016 - 2020.pdf
+    │       ├── MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2017 - 2021.pdf
+    │       ├── MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2018 - 2022.pdf
+    │       ├── MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2019 - 2023.pdf
+    │       ├── MS PENUMPANG AU DALAM NEGERI BERDASARKAN BUAU NIAGA NASIONAL TAHUN 2019-2024.pdf
+    │       └── penjelasan.txt
+    ├── BAB VI - Penumpang Per Rute
+    │   ├── 2020
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2020.csv
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2020.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── PDF
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2020.pdf
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2020.pdf
+    │   │   │   ├── penjelasan.txt
+    │   │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   │   └── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   └── py_ekstrak
+    │   │       ├── ANALISA_STRUKTUR_TABEL.md
+    │   │       ├── analysis_report.txt
+    │   │       ├── analyze_pdfs.py
+    │   │       ├── extract_to_csv.py
+    │   │       ├── README.md
+    │   │       └── UNIVERSAL_PROMPT_PDF_TO_CSV.md
+    │   ├── 2021
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2021.csv
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2021.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── PDF
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2021.pdf
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2021.pdf
+    │   │   │   ├── penjelasan.txt
+    │   │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   │   └── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   └── py_ekstrak
+    │   │       ├── ANALISA_STRUKTUR_TABEL.md
+    │   │       ├── extract_pdf_to_csv.py
+    │   │       ├── README.md
+    │   │       └── UNIVERSAL_PROMPT_PDF_TO_CSV.md
+    │   ├── 2022
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.csv
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2022.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── PDF
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.pdf
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2022.pdf
+    │   │   │   ├── penjelasan.txt
+    │   │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   │   └── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   └── py_ekstrak
+    │   │       ├── ANALISA_STRUKTUR_TABEL.md
+    │   │       ├── extract_pdf_to_csv.py
+    │   │       ├── README.md
+    │   │       ├── structure_info.json
+    │   │       └── UNIVERSAL_PROMPT_PDF_TO_CSV.md
+    │   ├── 2023
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2023.csv
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2023.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── PDF
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2023.pdf
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2023.pdf
+    │   │   │   ├── penjelasan.txt
+    │   │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   │   └── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   └── py_ekstrak
+    │   │       ├── analisa_struktur.py
+    │   │       ├── ANALISA_STRUKTUR_TABEL.md
+    │   │       ├── debug_statistik_domestik.py
+    │   │       ├── debug_total_row.py
+    │   │       ├── extract_to_csv.py
+    │   │       ├── README.md
+    │   │       └── UNIVERSAL_PROMPT_PDF_TO_CSV.md
+    │   ├── 2024
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2024.csv
+    │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2024.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+    │   │   ├── PDF
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2024.pdf
+    │   │   │   ├── JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2024.pdf
+    │   │   │   ├── penjelasan.txt
+    │   │   │   ├── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   │   └── STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf
+    │   │   └── py_ekstrak
+    │   │       ├── analisa_pdf.py
+    │   │       ├── ANALISA_STRUKTUR_TABEL.md
+    │   │       ├── check_pdf3.py
+    │   │       ├── check_pdf3_detail.py
+    │   │       ├── check_pdf3_text.py
+    │   │       ├── extract_pdf_to_csv.py
+    │   │       ├── README.md
+    │   │       ├── UNIVERSAL_PROMPT_PDF_TO_CSV.md
+    │   │       └── verify_csv.py
+    │   └── py_potongPDF
+    │       ├── extract_range_jum_per_rute.py
+    │       └── extract_range_stat_per_rute.py
+    ├── BAB VII - Lalu Lintas Bandara
+    │   ├── DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.csv
+    │   ├── data_lalu_lintas_dan_komposisi.py
+    │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2020.csv
+    │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2021.csv
+    │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2022.csv
+    │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2023.csv
+    │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2024.csv
+    │   ├── 2020
+    │   │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2020.csv
+    │   │   └── PDF
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2020.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2020.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2016 - 2020.pdf
+    │   │       ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2020.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2021
+    │   │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2021.csv
+    │   │   └── PDF
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2021.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2021.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2017 - 2021.pdf
+    │   │       ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2021.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2022
+    │   │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2022.csv
+    │   │   └── PDF
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2022.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2022.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2018 - 2022.pdf
+    │   │       ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2022.pdf
+    │   │       └── penjelasan.txt
+    │   ├── 2023
+    │   │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2023.csv
+    │   │   └── PDF
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2023.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2023.pdf
+    │   │       ├── DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2023.pdf
+    │   │       ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2023.pdf
+    │   │       └── penjelasan.txt
+    │   └── 2024
+    │       ├── DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.csv
+    │       ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2024.csv
+    │       ├── PDF
+    │       │   ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO DALAM NEGERI DI BANDAR UDARA INDONESIA TAHUN 2024.pdf
+    │       │   ├── DATA LALU LINTAS ANGKUTAN PENUMPANG DAN KARGO LUAR NEGERI DI BANDAR UDARA INDONESIA TAHUN 2024.pdf
+    │       │   ├── DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.pdf
+    │       │   ├── KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2024.pdf
+    │       │   └── penjelasan.txt
+    │       └── perbaikan
+    │           ├── insertperhalaman.csv
+    │           ├── perbaikan13(airporttype).csv
+    │           ├── perbaikan32(papbarday).csv
+    │           └── perbaikan33(airportcode).csv
+    └── BAB XII - On Time Performance
+        ├── extract_range.py
+        ├── TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2024.csv
+        └── PDF
+            ├── TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2020.pdf
+            ├── TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2021.pdf
+            ├── TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2022.pdf
+            ├── TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2023.pdf
+            └── TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2024.pdf
 ```
 
 ---
