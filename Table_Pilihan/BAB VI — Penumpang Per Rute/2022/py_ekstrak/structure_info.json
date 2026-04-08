@@ -1,0 +1,458 @@
+[
+  {
+    "file": "JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.pdf",
+    "pages": 9,
+    "total_rows": 375,
+    "headers_per_page": [
+      {
+        "page": 1,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 2,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 3,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 4,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 5,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 6,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 7,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 8,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 9,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      }
+    ],
+    "has_repetitive_headers": true,
+    "has_page_breaks": false,
+    "anomalies": [],
+    "csv_file": "JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.csv",
+    "shape": [
+      375,
+      15
+    ]
+  },
+  {
+    "file": "STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf",
+    "pages": 9,
+    "total_rows": 375,
+    "headers_per_page": [
+      {
+        "page": 1,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 2,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 3,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 4,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 5,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 6,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 7,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 8,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 9,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG (Kg)",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      }
+    ],
+    "has_repetitive_headers": true,
+    "has_page_breaks": false,
+    "anomalies": [],
+    "csv_file": "STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv",
+    "shape": [
+      375,
+      8
+    ]
+  },
+  {
+    "file": "JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2022.pdf",
+    "pages": 3,
+    "total_rows": 134,
+    "headers_per_page": [
+      {
+        "page": 1,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 2,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      },
+      {
+        "page": 3,
+        "headers": [
+          "NO",
+          "RUTE ( PP)",
+          "Jan-22",
+          "Feb-22",
+          "Mar-22",
+          "Apr-22",
+          "May-22",
+          "Jun-22",
+          "Jul-22",
+          "Aug-22",
+          "Sep-22",
+          "Oct-22",
+          "Nov-22",
+          "Dec-22",
+          "TOTAL 2022"
+        ]
+      }
+    ],
+    "has_repetitive_headers": true,
+    "has_page_breaks": false,
+    "anomalies": [],
+    "csv_file": "JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2022.csv",
+    "shape": [
+      134,
+      15
+    ]
+  },
+  {
+    "file": "STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf",
+    "pages": 3,
+    "total_rows": 134,
+    "headers_per_page": [
+      {
+        "page": 1,
+        "headers": [
+          "NO",
+          "RUTE",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 2,
+        "headers": [
+          "NO",
+          "RUTE",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      },
+      {
+        "page": 3,
+        "headers": [
+          "NO",
+          "RUTE",
+          "JUMLAH PENERBANGAN",
+          "JUMLAH PENUMPANG",
+          "KAPASITAS SEAT",
+          "JUMLAH BARANG",
+          "JUMLAH POS",
+          "L/F"
+        ]
+      }
+    ],
+    "has_repetitive_headers": true,
+    "has_page_breaks": false,
+    "anomalies": [],
+    "csv_file": "STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv",
+    "shape": [
+      134,
+      8
+    ]
+  }
+]
