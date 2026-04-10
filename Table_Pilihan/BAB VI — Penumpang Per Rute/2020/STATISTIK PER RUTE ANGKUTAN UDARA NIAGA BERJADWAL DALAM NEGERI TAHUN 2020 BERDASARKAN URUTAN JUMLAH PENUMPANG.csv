@@ -114,14 +114,8 @@
 113,Surabaya (SUB)-Sampit (SMQ),1035,60626,89172,291717,,"68,0%"
 114,Waingapu (WGP)-Kupang (KOE),1393,60248,106778,347598,,"56,4%"
 115,Jakarta-HLP (HLP)-Siborong-borong (DTB),595,59981,107100,454307,,"56,0%"
-116,Surabaya (SUB)-Bandung (BDO),"1583
-744","59426
-59226","113366
-130219","323007
-264183","-
-200","52,4%
-45,5%"
-117,Yogyakarta (YIA)-Banjarmasin (BDJ),,,,,,
+116,Surabaya (SUB)-Bandung (BDO),1583,59426,113366,323007,,"52,4%"
+117,Yogyakarta (YIA)-Banjarmasin (BDJ),744,59226,130219,264183,200,"45,5%"
 118,Pontianak (PNK)-Batam (BTH),534,58770,100053,118897,310,"58,7%"
 119,Semarang (SRG)-Balikpapan (BPN),483,58681,93211,459615,101,"63,0%"
 120,Kupang (KOE)-Bajawa (BJW),1303,58372,92194,195422,,"63,3%"
@@ -256,14 +250,8 @@
 249,Jakarta (CGK)-Bungo (BUU),173,13241,20744,79313,,"63,8%"
 250,Majalengka (KJT)-Banjarmasin (BDJ),152,13177,28754,55791,1,"45,8%"
 251,Sinabang (SNB)-Medan (KNO),344,12709,24768,45315,,"51,3%"
-252,Makassar (UPG)-KXB,"358
-333","12397
-12387","25532
-23682","9723
-69028","-
--","48,6%
-52,3%"
-253,Palangkaraya (PKY)-Balikpapan (BPN),,,,,,
+252,Makassar (UPG)-KXB,358,12397,25532,9723,,"48,6%"
+253,Palangkaraya (PKY)-Balikpapan (BPN),333,12387,23682,69028,,"52,3%"
 254,Makassar (UPG)-Kotabaru (KBU),398,12356,28656,23158,,"43,1%"
 255,Melangguane (MNA)-Manado (MDC),287,11978,20664,4038,,"58,0%"
 256,Tanjung Selor (TJS)-Balikpapan (BPN),308,11819,22176,25078,,"53,3%"
@@ -280,32 +268,14 @@
 267,Pekanbaru (PKU)-Dumai (DUM),194,10380,13968,137,,"74,3%"
 268,Tanjung Pandan (TJQ)-Jakarta-HLP (HLP),122,10241,21960,1149,,"46,6%"
 269,Ruteng (RTG)-Kupang (KOE),355,10087,18520,109820,,"54,5%"
-270,Meulaboh (MEQ)-Medan (KNO),"240
-147","10011
-9988","17280
-27809","2179
-75776","-
-11","57,9%
-35,9%"
-271,Majalengka (KJT)-Balikpapan (BPN),,,,,,
-272,Tanjung Redeb (BEJ)-Samarinda (AAP),"205
-280","9916
-9784","14064
-20160","629
-11023","-
--","70,5%
-48,5%"
-273,Ternate (TTE)-Maba (PGQ),,,,,,
+270,Meulaboh (MEQ)-Medan (KNO),240,10011,17280,2179,,"57,9%"
+271,Majalengka (KJT)-Balikpapan (BPN),147,9988,27809,75776,11,"35,9%"
+272,Tanjung Redeb (BEJ)-Samarinda (AAP),205,9916,14064,629,,"70,5%"
+273,Ternate (TTE)-Maba (PGQ),280,9784,20160,11023,,"48,5%"
 274,Denpasar (DPS)-Samarinda (AAP),153,9675,23868,,,"40,5%"
 275,Palembang (PLM)-Pekanbaru (PKU),274,9641,19728,5807,,"48,9%"
-276,Kendari (KDI)-Bau Bau (BUW),"205
-192","9604
-9551","14760
-13824","2087
-1173","-
--","65,1%
-69,1%"
-277,Ternate (TTE)-Morotai (OTI),,,,,,
+276,Kendari (KDI)-Bau Bau (BUW),205,9604,14760,2087,,"65,1%"
+277,Ternate (TTE)-Morotai (OTI),192,9551,13824,1173,,"69,1%"
 278,Jakarta-HLP (HLP)-Jambi (DJB),124,9539,22320,30028,,"42,7%"
 279,Batulicin (BTW)-Banjarmasin (BDJ),188,9249,13536,77,,"68,3%"
 280,Dobo (DOB)-Ambon (AMQ),203,9175,14616,42919,,"62,8%"
@@ -345,14 +315,8 @@
 314,Medan (KNO)-Jambi (DJB),167,6544,12024,4474,,"54,4%"
 315,Medan (KNO)-Padang Sidempuan (AEG),184,6435,13196,4087,,"48,8%"
 316,Tarakan (TRK)-Nunukan (NNX),297,6381,13884,734,4,"46,0%"
-317,Palangkaraya (PKY)-Pangkalan Bun (PKN),"146
-176","6094
-6063","10220
-12672","50130
-19485","-
--","59,6%
-47,8%"
-318,Surabaya (SUB)-Jember (JBB),,,,,,
+317,Palangkaraya (PKY)-Pangkalan Bun (PKN),146,6094,10220,50130,,"59,6%"
+318,Surabaya (SUB)-Jember (JBB),176,6063,12672,19485,,"47,8%"
 319,TAKENGON (TXE)-Medan (KNO),182,5945,13104,40,,"45,4%"
 320,Pekanbaru (PKU)-Jambi (DJB),170,5935,12240,4972,,"48,5%"
 321,Tanjung Pinang (TNJ)-Pekanbaru (PKU),202,5910,14544,13911,,"40,6%"
@@ -362,14 +326,8 @@
 325,Medan (KNO)-Dumai (DUM),168,5825,12096,,,"48,2%"
 326,Manado (MDC)-Kao (KAZ),118,5673,8496,5555,,"66,8%"
 327,Kerinci (KRC)-Bungo (BUU),174,5629,12528,,,"44,9%"
-328,Buol (UOL)-Palu (PLW),"152
-204","5558
-5534","10944
-14688","-
-1805","-
--","50,8%
-37,7%"
-329,Singkep (SIQ)-Batam (BTH),,,,,,
+328,Buol (UOL)-Palu (PLW),152,5558,10944,,,"50,8%"
+329,Singkep (SIQ)-Batam (BTH),204,5534,14688,1805,,"37,7%"
 330,Mamuju (MJU)-Balikpapan (BPN),153,5370,11016,81,,"48,7%"
 331,Makassar (UPG)-Bandung (BDO),68,5354,12852,84409,,"41,7%"
 332,Maumere (MOF)-Labuhan Bajo (LBJ),195,5323,14040,2834,,"37,9%"
@@ -400,24 +358,12 @@
 357,Matak (MWK)-Batam (BTH),88,2427,2816,,,"86,2%"
 358,Manokwari (MKW)-Kaimana (KNG),53,2362,3816,2793,,"61,9%"
 359,Jakarta (CGK)-Tanjung Redeb (BEJ),43,2196,6714,5843,5,"32,7%"
-360,Manokwari (MKW)-Fak-fak (FKQ),"52
-60","2184
-2065","3744
-4320","503
--","-
--","58,3%
-47,8%"
-361,Semarang (SRG)-Karimun Jawa (KWB),,,,,,
+360,Manokwari (MKW)-Fak-fak (FKQ),52,2184,3744,503,,"58,3%"
+361,Semarang (SRG)-Karimun Jawa (KWB),60,2065,4320,,,"47,8%"
 362,Tanjung Pinang (TNJ)-Matak (MWK),76,2004,2432,,,"82,4%"
 363,Surabaya (SUB)-Solo (SOC),132,1967,9504,5266,,"20,7%"
-364,Sanana (SQN)-Ambon (AMQ),"74
-74","1865
-1847","3700
-3700","553
--","-
--","50,4%
-49,9%"
-365,Ternate (TTE)-Sanana (SQN),,,,,,
+364,Sanana (SQN)-Ambon (AMQ),74,1865,3700,553,,"50,4%"
+365,Ternate (TTE)-Sanana (SQN),74,1847,3700,,,"49,9%"
 366,Morotai (OTI)-Manado (MDC),62,1795,4464,400,,"40,2%"
 367,Bandar Lampung (TKG)-Peakon Serai (TFY),72,1784,5184,1417,,"34,4%"
 368,Solo (SOC)-Palangkaraya (PKY),64,1774,4608,348,,"38,5%"
@@ -463,4 +409,4 @@
 408,Pontianak (PNK)-Majalengka (KJT),,,,,,"0,0%"
 409,Jakarta (CGK)-Luwuk (LUW),,,,,,"0,0%"
 410,Tanjung Pinang (TNJ)-Anambas (LMU),,,,,,"0,0%"
-Total,,402447,35393966,60269598,430559992,8605576,"58,7%"
+,,402447,35393966,60269598,430559992,8605576,"58,7%"
