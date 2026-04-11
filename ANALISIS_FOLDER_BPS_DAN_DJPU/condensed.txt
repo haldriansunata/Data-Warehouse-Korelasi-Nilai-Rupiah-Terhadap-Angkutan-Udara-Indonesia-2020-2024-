@@ -1,0 +1,745 @@
+=== BPS DATA ===
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2020.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2021.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2022.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2023.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama, 2024.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Dalam Negeri di 5 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2022.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2023.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\BongkarMuat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton)\Bongkar_Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama, 2024.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Bongkar/Muat Barang Angkutan Udara Luar Negeri di 4 Bandara Utama (Ton),,,,,,,,,,,,,,,,,,,,,,,,, | ,Barang yang Dibongkar,,,,,,,,,,,,,Barang yang dimuat,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2020.csv
+HEAD: ﻿38 Provinsi,, | ,Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang), | ,Datang,Berangkat
+
+FILE: BPS\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2021.csv
+HEAD: ﻿38 Provinsi,, | ,Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang), | ,Datang,Berangkat
+
+FILE: BPS\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2022.csv
+HEAD: ﻿38 Provinsi,, | ,Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang), | ,Datang,Berangkat
+
+FILE: BPS\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)\Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2023.csv
+HEAD: ﻿38 Provinsi,, | ,Jumlah Penumpang Domestik berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang), | ,Datang,Berangkat
+
+FILE: BPS\Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang)\Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi, 2020.csv
+HEAD: ﻿38 Provinsi,, | ,Jumlah Penumpang Internasional berdasarkan Moda Transportasi Pesawat Terbang menurut provinsi (Orang), | ,Datang,Berangkat
+
+FILE: BPS\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2020.csv
+HEAD: ﻿Keberangkatan, | ,Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang) | ,2020
+
+FILE: BPS\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2021.csv
+HEAD: ﻿Keberangkatan, | ,Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang) | ,2021
+
+FILE: BPS\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2022.csv
+HEAD: ﻿Keberangkatan, | ,Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang) | ,2022
+
+FILE: BPS\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2023.csv
+HEAD: ﻿Keberangkatan, | ,Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang) | ,2023
+
+FILE: BPS\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang), 2024\Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia, 2024.csv
+HEAD: ﻿Keberangkatan, | ,Jumlah Penumpang Pada Keberangkatan di Bandara Indonesia (Ribu Orang) | ,2024
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2020.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2021.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2022.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2023.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama\Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama, 2024.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Domestik di 5 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2020.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2021.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2022.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2023.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang)\Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama, 2024.csv
+HEAD: ﻿Bandara Utama Internasional,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat (Angkutan Udara) Internasional di 4 Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan,,,,,,,,,,,,,Kedatangan,,,,,,,,,,,,,Transit,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat di Bandara Utama (Orang)\Jumlah Penumpang Pesawat di Bandara Utama, 2020.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat di Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan pada Penerbangan Domestik,,,,,,,,,,,,,Keberangkatan pada Penerbangan Internasional,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat di Bandara Utama (Orang)\Jumlah Penumpang Pesawat di Bandara Utama, 2021.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat di Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan pada Penerbangan Domestik,,,,,,,,,,,,,Keberangkatan pada Penerbangan Internasional,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat di Bandara Utama (Orang)\Jumlah Penumpang Pesawat di Bandara Utama, 2022.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat di Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan pada Penerbangan Domestik,,,,,,,,,,,,,Keberangkatan pada Penerbangan Internasional,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat di Bandara Utama (Orang)\Jumlah Penumpang Pesawat di Bandara Utama, 2023.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat di Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan pada Penerbangan Domestik,,,,,,,,,,,,,Keberangkatan pada Penerbangan Internasional,,,,,,,,,,,,
+
+FILE: BPS\Jumlah Penumpang Pesawat di Bandara Utama (Orang)\Jumlah Penumpang Pesawat di Bandara Utama, 2024.csv
+HEAD: ﻿Bandara Utama Domestik,,,,,,,,,,,,,,,,,,,,,,,,,, | ,Jumlah Penumpang Pesawat di Bandara Utama (Orang),,,,,,,,,,,,,,,,,,,,,,,,, | ,Keberangkatan pada Penerbangan Domestik,,,,,,,,,,,,,Keberangkatan pada Penerbangan Internasional,,,,,,,,,,,,
+
+FILE: BPS\Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022\Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022.csv
+HEAD: ﻿Lalu Lintas Penerbangan Dalam Negeri Indonesia Tahun 2003-2022,,,,,,,,,,,,,,,,,,,,, | ,,,,,,,,,,,,,,,,,,,,, | Deskripsi,Unit,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016 ,2017,2018 ,2019,2020 ,2021,2022
+
+FILE: BPS\Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022\Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022.csv
+HEAD: ﻿Lalu Lintas Penerbangan Luar Negeri Indonesia Tahun 2003-2022,,,,,,,,,,,,,,,,,,,,, | ,,,,,,,,,,,,,,,,,,,,, | Deskripsi,Unit,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016 ,2017,2018 ,2019,2020 ,2021,2022
+
+
+=== DJPU DATA ===
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL YANG BEROPERASI TAHUN 2020.csv
+HEAD: ﻿NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT. ASI PUDJIASTUTI AVIATION,Penumpang | 2,PT. BATIK AIR INDONESIA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING YANG BEROPERASI TAHUN 2020.csv
+HEAD: ﻿NO,NAMA PERUSAHAAN,JENIS KEGIATAN | 1,AIR ASIA BERHARD,Penumpang | 2,AIR ASIA X BERHARD,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA YANG BEROPERASI TAHUN 2020.csv
+HEAD: ﻿NO,NAMA BADAN USAHA | 1,MERPATI TRAINING CENTER | 2,PERKUMPULAN PENERBANG INDONESIA
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL YANG BEROPERASI TAHUN 2020.csv
+HEAD: ﻿NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT. AIR PASIFIK UTAMA,Penumpang | 2,PT. AIRFAST INDONESIA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2021.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT. ASI PUDJIASTUTI AVIATION,Penumpang | 2,PT. BATIK AIR INDONESIA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2021.csv
+HEAD: NO,NAMA PERUSAHAAN,NEGARA,JENIS KEGIATAN | 1,AIR ASIA BERHARD,MALAYSIA,Penumpang | 2,AIR ASIA X BERHARD**,MALAYSIA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2021.csv
+HEAD: NO,NAMA BADAN USAHA | 1,PT. SINAR MAS SUPER AIR | 2,YAYASAN MAF INDONESIA (MISSION AVIATION FELLOWSHIP)
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2021.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT. AIR PASIFIK UTAMA,Penumpang | 2,PT. AIRFAST INDONESIA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2022.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT. ASI PUDJIASTUTI AVIATION,Penumparig | 2,PT. BATIK AIR INDONESIA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2022.csv
+HEAD: NO,NAMA PERUSAHAAN,NEGARA,JENIS KEGIATAN | 1,AIR ASIA BERHARD,MALAYSIA,Penumpang | 2,AIR ASIA X BERHARD,MALAYSIA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2022.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT. AVIATERRA DINAMΙΚΑ,Flying School | 2,PT. DIRGANTARA AVIATION ENGINEERING,Fiving School
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2022.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT. AIR PASIFIK UTAMA,Penumpang | 2,PT. ALDA TRANS PAPUA,Penumpang
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2023.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT SUPER AIR JET,Penumpang dan Kargo | 2,PT PELITA AIR SERVICE,Penumpang dan Kargo
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2023.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT Volta Pasifik Aviasi,"Penumpang dan Kargo, angkutan udara niaga tidak berjadwal lainnya" | 2,PT Amarta Aviasi Mandiri,"Penumpang dan Kargo dalam dan luar negeri, angkutan udara niaga tidak berjadwal lainnya"
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2023.csv
+HEAD: NO,NAMA PERUSAHAAN | 1,PT AERO FLYER INSTITUTE | 2,PT AIR TRANSPORT SERVICES
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2023.csv
+HEAD: NO,NAMA PERUSAHAAN,NEGARA,JENIS KEGIATAN | 1,AIRASIA,MALAYSIA,Penumpang dan Kargo | 2,AIRASIA X,MALAYSIA,Penumpang dan Kargo
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2024.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT ASI PUDJIASTUTI AVIATION,Penumpang dan Kargo | 2,PT BATIK AIR INDONESIA,Penumpang dan Kargo
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2024.csv
+HEAD: NO,NAMA BADAN USAHA,JENIS KEGIATAN | 1,PT Volta Pasifik Aviasi,"Penumpang dan Kargo, angkutan udara niaga tidak berjadwal lainnya" | 2,PT Nasional Global Aviasi,"Penumpang dan Kargo dalam negeri, angkutan udara niaga tidak berjadwal lainnya"
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2024.csv
+HEAD: NO,NAMA PERUSAHAAN | 1,PT AERO FLYER INSTITUTE | 2,PT ANGKASA SUPER SERVICES
+
+FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\DAFTAR PERWAKILAN PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2024.csv
+HEAD: NO,NAMA ANGKUTAN UDARA ASING,NEGARA,JENIS KEGIATAN | 1,AIRASIA BERHAD,MALAYSIA,Penumpang dan Kargo | 2,AIRASIA X BERHAD,MALAYSIA,Penumpang dan Kargo
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2020.csv
+HEAD: NO,NAMA BADAN USAHA | 1,PT. GARUDA INDONESIA (Persero) Tbk. | 2,PT. LION MENTARI AIRLINES
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020.csv
+HEAD: NO,KOTA | 1,Alor (ARD) | 2,Ambon (AMQ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2020.csv
+HEAD: NO,KOTA | 1,Balikpapan (BPN) | 2,Banda Aceh (BTJ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2020.csv
+HEAD: NO,KOTA | 1,Abu Dhabi (AUH) | 2,Addis Ababa (ADD)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020.csv
+HEAD: NO,RUTE (ASAL),RUTE (TUJUAN) | 1,Pontianak (PNK),Palangkaraya (PKY) | 2,Timika (TIM),Manado (MDC)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020.csv
+HEAD: NO,RUTE (ASAL),RUTE (TUJUAN) | 1,Denpasar (DPS),Geelong (AVV) | 2,Jakarta (CGK),Addis Ababa (ADD)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\TOTAL RUTE\TOTAL JUMLAH RUTE DOMESTIK TAHUN 2015-2020.csv
+HEAD: DOMESTIK,2015,2016,2017,2018,2019,2020 | Rute di ijin rute,283,313,374,406,444,410 | kapasitas di ijin rute,126.249.760,129.597.312,145.632.240,147.409.808,141.295.427,148.601.851
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\TOTAL RUTE\TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2016-2020.csv
+HEAD: NO,INTERNATIONAL,2016,2017,2018,2019,2020 | 1,Rute Sesuai Izin,118,129,153,170,157 | 2,Kapasitas Sesuai Izin,48.433.216,57.823.064,56.374.344,57.407.948,45.037.060
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2021.csv
+HEAD: NO,NAMA BADAN USAHA | 1,PT. GARUDA INDONESIA (Persero) Tbk. | 2,PT. LION MENTARI AIRLINES
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021.csv
+HEAD: NO,KOTA | 1,Alor (ARD) | 2,Ambon (AMQ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2021.csv
+HEAD: NO,KOTA | 1,Balikpapan (BPN) | 2,Banda Aceh (BTJ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2021.csv
+HEAD: NO,KOTA | 1,Abu Dhabi (AUH) | 2,Addis Ababa (ADD)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021.csv
+HEAD: NO,RUTE (ASAL),RUTE (TUJUAN) | 1,Muara Teweh (HMS),Banjarmasin (BDJ) | 2,Fak-fak (FKQ),Ambon (AMQ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021.csv
+HEAD: NO,RUTE ASAL,RUTE TUJUAN | 1,Jakarta (CGK),Ho Chi Minh City (SGN) | 2,Ho Chi Minh City (SGN),Denpasar (DPS)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\TOTAL RUTE\TOTAL JUMLAH RUTE DOMESTIK TAHUN 2015-2021.csv
+HEAD: DOMESTIK,2015,2016,2017,2018,2019,2020,2021 | Rute di ijin rute,283,313,374,406,444,410,378 | Kapasitas di ijin rute,126.249.760,129.597.312,145.632.240,147.409.808,141.295.427,148.601.851,145.524.821
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\TOTAL RUTE\TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2016 - 2021.csv
+HEAD: NO,INTERNATIONAL,2016,2017,2018,2019,2020,2021 | 1,Rute Sesuai Izin,118,129,153,170,157,145 | 2,Kapasitas Sesuai Izin,48.433.216,57.823.064,56.374.344,57.407.948,45.037.060,51.321.478
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2022.csv
+HEAD: ﻿NAMA BADAN USAHA | PT. GARUDA INDONESIA(Persero) Tbk. | PT. LION MENTARI AIRLINES
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022.csv
+HEAD: ﻿NO,KOTA | 1,Alor(ARD) | 2,Ambon(AMQ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2022.csv
+HEAD: ﻿NO,KOTA | 1,Balikpapan(BPN) | 2,Banda Aceh(BTJ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2022.csv
+HEAD: ﻿NO,KOTA | 1,Abu Dhabi(AUH) | 2,Addis Ababa(ADD)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022.csv
+HEAD: ﻿NO,RUTE (ASAL - TUJUAN) | 1,Balikpapan(BPN) - Samarinda(AAP) | 2,Jakarta-HLP(HLP) - PANGANDARAN(CJN)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022.csv
+HEAD: ﻿NO,RUTE (ASAL - TUJUAN) | 1,Surabaya(SUB) - Jeddah(JED) | 2,KUCHING(KCH) - Balikpapan(BPN)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\TOTAL RUTE\TOTAL JUMLAH RUTE DOMESTIK TAHUN 2016-2022.csv
+HEAD: ﻿DOMESTIK,2016,2017,2018,2019,2020,2021,2022 | Rute Sesuai Izin,313,374,406,444,410,378,374 | Kapasitas Sesuai Izin,129.597.312,145.632.240,147.409.808,141.295.427,148.601.851,145.524.821,126.352.499
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\TOTAL RUTE\TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2017-2022.csv
+HEAD: ﻿NO,INTERNATIONAL,2017,2018,2019,2020,2021,2022 | 1,Rute Sesuai Izin,129,153,170,157,145,133 | 2,Kapasitas Sesuai Izin,57.823.064,56.374.344,57.407.948,45.037.060,51.321.478,45.119.412
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL TAHUN 2023.csv
+HEAD: ﻿NO,NAMA BADAN USAHA | 1,PT. GARUDA INDONESIA(Persero) Tbk. | 2,PT. LION MENTARI AIRLINES
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023.csv
+HEAD: ﻿NO,KOTA | 1,Alor(ARD) | 2,Ambon(AMQ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2023.csv
+HEAD: ﻿NO,KOTA | 1,Balikpapan(BPN) | 2,Banda Aceh(BTJ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2023.csv
+HEAD: ﻿NO,KOTA | 1,Abu Dhabi(AUH) | 2,Adelaide(ADL)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023.csv
+HEAD: ﻿NO,RUTE (PP) | 1,Singkep(SIQ) - Pekanbaru(PKU) | 2,Ternate(TTE) - Sanana(SQN)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023.csv
+HEAD: ﻿NO,RUTE (PP) | 1,BANDAR SRI BEGAWAN(BWN) - Balikpapan(BPN) | 2,Jakarta(CGK) - TFU
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\TOTAL RUTE\REKAPITULASI JUMLAH RUTE DOMESTIK TAHUN 2018-2023.csv
+HEAD: ﻿NO,DOMESTIK,2018,2019,2020,2021,2022,2023 | 1,Rute Sesuai Izin,406,444,410,378,374,303 | 2,Kapasitas Sesuai Izin,147.409.808,141.295.427,148.601.851,145.524.821,126.352.499,104.981.570
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\TOTAL RUTE\REKAPITULASI JUMLAH RUTE INTERNATIONAL TAHUN 2018-2023.csv
+HEAD: ﻿NO,INTERNATIONAL,2018,2019,2020,2021,2022,2023 | 1,Rute Sesuai Izin,153,170,157,145,133,125 | 2,Kapasitas Sesuai Izin,56.374.344,57.407.948,45.037.060,51.321.478,45.119.412,50.670.828
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL.csv
+HEAD: ﻿NAMA BADAN USAHA | PT. CITILINK INDONESIA | PT. GARUDA INDONESIA(Persero) Tbk.
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\KOTA TERHUBUNG OLEH ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024.csv
+HEAD: ﻿NO,KOTA | 1,Alor(ARD) | 2,Ambon(AMQ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2024.csv
+HEAD: ﻿NO,KOTA | 1,Balikpapan(BPN) | 2,Banda Aceh(BTJ)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2024.csv
+HEAD: ﻿NO,KOTA | 1,Abu Dhabi(AUH) | 2,Adelaide(ADL)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024.csv
+HEAD: ﻿NO,RUTE (PP) | 1,Dhoho(DHX) - Balikpapan(BPN) | 2,Medan(KNO) - Jambi(DJB)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024.csv
+HEAD: ﻿NO,RUTE (PP) | 1,Port Moresby(POM) - Denpasar(DPS) | 2,Denpasar(DPS) - Abu Dhabi(AUH)
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\TOTAL JUMLAH RUTE DOMESTIK ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2020-2024.csv
+HEAD: ﻿DOMESTIK,2020,2021,2022,2023,2024 | Rute Sesuai Izin,410,378,374,303,312 | Kapasitas Sesuai Izin,148.601.851,145.524.821,126.352.499,104.981.570,104.812.656
+
+FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2020-2024.csv
+HEAD: ﻿INTERNATIONAL,2018,2019,2020,2021,2022,2023,2024 | Rute Sesuai Izin,153,170,157,145,133,125,128 | Kapasitas Sesuai Izin,56.374.344,57.407.948,45.037.060,51.321.478,45.119.412,50.670.828,54.315.664
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT ASI PUJIASTUTI.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),289,276,383,528,641 | 2,Aircraft Departure,number,1.661,1.768,2.100,2.920,3.605
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT BATIK AIR.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),67.540,71.032,86.155,101.341,84.310 | 2,Aircraft Departure,number,58.027,59.326,77.432,85.507,74.619
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT BBN AIRLINES INDONESIA.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),-,-,-,-,209 | 2,Aircraft Departure,number,-,-,-,-,367
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT CARDIG AIR.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),345,1.045,1.466,49,- | 2,Aircraft Departure,number,241,910,976,32,-
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT CITILINK INDONESIA.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),54.602,70.260,60.170,69.056,72.006 | 2,Aircraft Departure,number,65.467,79.502,68.596,83.171,84.779
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT GARUDA INDONESIA (Persero) Tbk..csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),61.804,81.668,69.002,95.822,124.278 | 2,Aircraft Departure,number,65.485,43.098,33.955,47.166,60.736
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT INDONESIA AIRASIA.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),8.127,5.838,12.419,11.555,9.803 | 2,Aircraft Departure,number,9.674,5.596,12.676,13.246,11.314
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT LION MENTARI AIRLINES.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),82.071,63.146,113.102,106.266,91.685 | 2,Aircraft Departure,number,88.742,66.371,115.448,109.769,92.749
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT MY INDO AIRLINES.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),589,899,690,738,728 | 2,Aircraft Departure,number,2.071,3.149,2.738,2.708,2.449
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT NAM AIR.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),5.662,2.691,4.554,3.756,3.847 | 2,Aircraft Departure,number,10.156,4.497,5.964,4.563,5.144
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT PELITA AIR SERVICE.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),-,1.558,8.062,18.003,- | 2,Aircraft Departure,number,-,1.796,9.543,18.795,-
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT RUSKY AERO INTERNATIONAL.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),-,-,-,23,6 | 2,Aircraft Departure,number,-,-,-,16,4
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT SRIWIJAYA AIR.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),13.685,8.910,10.570,5.298,4.775 | 2,Aircraft Departure,number,15.155,9.319,11.773,6.910,5.272
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT SUPER AIR JET.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),-,1.574,20.420,45.097,45.905 | 2,Aircraft Departure,number,-,2.700,37.029,66.523,68.697
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRANSNUSA AVIATION MANDIRI.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),1.635,-,1.149,5.746,4.865 | 2,Aircraft Departure,number,4.687,-,1.265,5.971,4.718
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRAVEL EXPRESS AVIATION SERVICE.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),667,-,-,-,- | 2,Aircraft Departure,number,1.205,-,-,-,-
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRI MG AIRLINES.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),492,442,1.041,535,779 | 2,Aircraft Departure,number,733,682,1.439,805,1.724
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT TRIGANA AIR SERVICE.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),4.219,3.127,4.059,3.959,4.696 | 2,Aircraft Departure,number,13.569,11.655,15.122,14.648,17.222
+
+FILE: DJPU\Table_Pilihan\BAB IV — Produksi\PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 WINGS ABADI AIRLINES.csv
+HEAD: ﻿NO,DESCRIPTION,Unit,2020,2021,2022,2023,2024 | 1,Aircraft KM,(000),24.858,11.598,16.648,18.848,16.977 | 2,Aircraft Departure,number,65.600,52.275,76.233,64.901,46.531
+
+FILE: DJPU\Table_Pilihan\BAB V — Market Share\TABEL MARKET SHARE PENUMPANG ANGKUTAN UDARA DALAM NEGERI BERDASARKAN BADAN USAHA ANGKUTAN UDARA NIAGA NASIONAL TAHUN 2019-2024.csv
+HEAD: ﻿NO,OPERATOR,2019 (Penumpang),2019 (%),2020 (Penumpang),2020 (%),2021 (Penumpang),2021 (%),2022 (Penumpang),2022 (%),2023 (Penumpang),2023 (%),2024 (Penumpang),2024 (%) | 1,PT. GARUDA INDONESIA (Persero) Tbk.,15.542.662,"19,56%",4.619.487,"13,05%",3.490.812,"10,46%",4.646.651,"8,24%",6.314.490,"9,57%",8.665.055,"13,16%" | 2,PT. INDONESIA AIRASIA,2.887.581,"3,63%",1.113.480,"3,15%",637.453,"1,91%",1.676.437,"2,97%",2.017.452,"3,06%",1.796.152,"2,73%"
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2020.csv
+HEAD: ﻿NO,RUTE (PP),Jan-20,Feb-20,Mar-20,Apr-20,May-20,Jun-20,Jul-20,Aug-20,Sep-20,Oct-20,Nov-20,Dec-20,TOTAL 2020,TOTAL 2019,TOTAL 2018 | 1,Jakarta (CGK)-Makassar (UPG),231865,237258,188899,31636,6104,43398,84865,129679,114075,142963,186393,181917,1579052.0,3607498.0,2886112.0 | 2,Jakarta (CGK)-Denpasar (DPS),363789,302423,190792,20611,4312,12063,36954,78726,69444,100595,157146,212308,1549163.0,4770798.0,4384437.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2020.csv
+HEAD: ﻿NO,RUTE,Jan-20,Feb-20,Mar-20,Apr-20,May-20,Jun-20,Jul-20,Aug-20,Sep-20,Oct-20,Nov-20,Dec-20,TOTAL 2020,TOTAL 2019,TOTAL 2018 | 1,Jakarta (CGK)-SINGAPURA (SIN),334069,169342.0,73928.0,2604.0,1431.0,2748.0,4055.0,3888.0,3995.0,4711.0,6487.0,10859.0,618117.0,4194638.0,4077673.0 | 2,Jakarta (CGK)-Kuala Lumpur (KUL),229241,166788.0,82853.0,3975.0,1609.0,2802.0,4522.0,3954.0,3435.0,2911.0,4232.0,3984.0,510306.0,2687401.0,2780466.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE (PP),JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG (Kg),JUMLAH POS,L/F | 1,Jakarta (CGK)-Makassar (UPG),15065,1579052,2660708,28494003,1140884,"59,3%" | 2,Jakarta (CGK)-Denpasar (DPS),15111,1549163,2907008,20444625,605309,"53,3%"
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE,JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG,JUMLAH POS,L/F | 1,Jakarta (CGK)-SINGAPURA (SIN),8032,618117.0,1266002.0,58849280.0,200832.0,"48,8%" | 2,Jakarta (CGK)-Kuala Lumpur (KUL),4794,510306.0,930797.0,9005311.0,202286.0,"54,8%"
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2021.csv
+HEAD: ﻿NO,RUTE ( PP),Jan-21,Feb-21,Mar-21,Apr-21,Mei-21,Jun-21,Jul-21,Agu-21,Sep-21,Okt-21,Nov-21,Des-21,TOTAL 2021,TOTAL 2020,TOTAL 2019 | 1,Jakarta (CGK) - Denpasar (DPS),107991.0,76081.0,129566.0,145001.0,134284.0,224916.0,48418.0,57157.0,132029.0,261814.0,312199.0,373333.0,2002789.0,1549163.0,4384437.0 | 2,Jakarta (CGK) - Makassar (UPG),132428.0,117623.0,158762.0,156018.0,124032.0,181164.0,66758.0,88453.0,136606.0,185092.0,206239.0,197107.0,1750282.0,1579052.0,2886112.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2021.csv
+HEAD: ﻿NO,RUTE,Jan-21,Feb-21,Mar-21,Apr-21,Mei-21,Jun-21,Jul-21,Agu-21,Sep-21,Okt-21,Nov-21,Des-21,TOTAL 2021,TOTAL 2020,TOTAL 2019 | 1,Jakarta (CGK) - Singapura (SIN),7734.0,7238.0,10246.0,13248.0,14452.0,16647.0,11756.0,6979.0,10756.0,19988.0,31345.0,48969.0,199358.0,618117.0,4077673.0 | 2,Jakarta (CGK) - Doha (DOH),9923.0,10021.0,11620.0,14676.0,14805.0,20112.0,17473.0,17047.0,18547.0,18594.0,21187.0,20619.0,194624.0,129366.0,400515.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE ( PP),JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG (Kg),JUMLAH POS,L/F | 1,Jakarta (CGK) - Denpasar (DPS),14974.0,2002789.0,2977867.0,21365798.0,196771.0,"67,3%" | 2,Jakarta (CGK) - Makassar (UPG),15789.0,1750282.0,2679920.0,28754522.0,789774.0,"65,3%"
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE,JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG,JUMLAH POS,L/F | 1,Jakarta (CGK) - Singapura (SIN),6190.0,199358.0,960938.0,77876539.0,118699.0,"20,7%" | 2,Jakarta (CGK) - Doha (DOH),1418.0,194624.0,382972.0,15993771.0,77839.0,"50,8%"
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.csv
+HEAD: ﻿NO,RUTE ( PP),Jan-22,Feb-22,Mar-22,Apr-22,May-22,Jun-22,Jul-22,Aug-22,Sep-22,Oct-22,Nov-22,Dec-22,TOTAL 2022 | 1.0,CGK-DPS,324.111,199.681,315.863,254.339,431.481,418.035,436.252,406.86,355.43,380.157,360.217,460.495,4342921.0 | 2.0,CGK-KNO,294.81,193.835,258.45,258.795,331.335,312.769,322.842,267.153,240.691,239.572,240.438,285.369,3246059.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2022.csv
+HEAD: ﻿NO,RUTE ( PP),Jan-22,Feb-22,Mar-22,Apr-22,May-22,Jun-22,Jul-22,Aug-22,Sep-22,Oct-22,Nov-22,Dec-22,TOTAL 2022 | 1.0,CGK-SIN,35.788,35.429,58.523,120.926,160.582,154.205,166.84,166.103,180.045,194.606,206.29,226.098,1705435.0 | 2.0,SIN-DPS,,2.733,22.297,62.075,91.003,110.906,125.957,140.615,148.569,144.273,160.794,196.516,1205738.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE ( PP),JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG (Kg),JUMLAH POS,L/F | 1.0,CGK-DPS,29.803,4342921.0,5586084.0,17811490.0,73.244,"77,7%" | 2.0,CGK-KNO,21.891,3246059.0,3915603.0,28268432.0,272.777,"82,9%"
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE,JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG,JUMLAH POS,L/F | 1.0,CGK-SIN,12360.0,1705435.0,2117819.0,69230922.0,70957.0,"80,5%" | 2.0,SIN-DPS,5665.0,1205738.0,1437191.0,5464984.0,8418.0,"83,9%"
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2023.csv
+HEAD: ﻿NO,RUTE,Jan-23,Feb-23,Mar-23,Apr-23,Mei-23,Jun-23,Jul-23,Agu-23,Sep-23,Okt-23,Nov-23,Des-23,TOTAL 2023 | 1,CGK-DPS,392247.0,316750.0,351716.0,373206.0,392707.0,453127.0,501516.0,442890.0,411534.0,437965.0,410442.0,477624.0,4961724.0 | 2,CGK-KNO,304372.0,226362.0,253979.0,304452.0,323983.0,302369.0,338512.0,279809.0,249715.0,266435.0,266559.0,298275.0,3414822.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2023.csv
+HEAD: ﻿NO,RUTE,Jan-23,Feb-23,Mar-23,Apr-23,Mei-23,Jun-23,Jul-23,Agu-23,Sep-23,Okt-23,Nov-23,Des-23,TOTAL 2023 | 1,CGK-SIN,227699.0,212154.0,241100.0,226693.0,252659.0,255235.0,290907.0,255973.0,247194.0,263525.0,259458.0,272425.0,3005022.0 | 2,SIN-DPS,166942.0,152855.0,186747.0,196857.0,218700.0,222371.0,246027.0,249236.0,235993.0,225985.0,192590.0,217864.0,2512167.0
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE,JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG,JUMLAH POS,L/F | 1,CGK-DPS,33262.0,4961724.0,6154776.0,17882030.0,16693.0,80.6% | 2,CGK-KNO,22046.0,3414822.0,4022289.0,32054921.0,93233.0,84.9%
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE,JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG,JUMLAH POS,L/F | 1,CGK-SIN,20962.0,3005022.0,3863119.0,53653573.0,63822.0,77.8% | 2,SIN-DPS,12621.0,2512167.0,3107027.0,4424374.0,37700.0,80.9%
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2024.csv
+HEAD: ﻿NO,RUTE PP,Jan-24,Feb-24,Mar-24,Apr-24,May-24,Jun-24,Jul-24,Aug-24,Sep-24,Oct-24,Nov-24,Dec-24,TOTAL 2024 | 1,CGK-DPS,380993,375894,288291,373808,427777,412979,443496,447768,430715,390137,331601,419261,4722720 | 2,CGK-SUB,222367,224374,220455,225950,251853,261657,276546,270450,267539,263087,243006,255105,2982389
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2024.csv
+HEAD: ﻿NO,RUTE PP,Jan-24,Feb-24,Mar-24,Apr-24,May-24,Jun-24,Jul-24,Aug-24,Sep-24,Oct-24,Nov-24,Dec-24,TOTAL 2024 | 1,CGK-SIN,295204,255013,276771,267834,263316,264765,285735.0,265211,261443,264751,272151.0,358984,3331178 | 2,DPS-SIN,186458,203954,210441,228754,249154,245584,254949.0,261773,245600,236860,198567.0,220187,2742281
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE PP,JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG KG,JUMLAH POS KG,LF % | 1,CGK-DPS,29327,4722720,5458466,24572851,123177,87% | 2,CGK-SUB,21097,2982389,3597671,17525594,38593,83%
+
+FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv
+HEAD: ﻿NO,RUTE PP,JUMLAH PENERBANGAN,JUMLAH PENUMPANG,KAPASITAS SEAT,JUMLAH BARANG KG,JUMLAH POS KG,LF % | 1,CGK-SIN,21614,3331178,4065871,67955961,70459,82% | 2,DPS-SIN,13125,2742281,3308297,5983780,13358,83%
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.csv
+HEAD: propinsi_code,propinsi_name,airport_code,airport_name,year,pesawat_dtg,pesawat_brk,pesawat_total,penumpang_dtg,penumpang_brk,penumpang_total,penumpang_tra,bagasi_dtg,bagasi_brk,bagasi_total,barang_dtg,barang_brk,barang_total,pos_dtg,pos_brk,pos_total,keterangan | 1,PROPINSI DAERAH ISTIMEWA ACEH,A,SULTAN ISKANDAR MUDA - BANDA ACEH (DOM),2020,1.809,1.813,3.622,157.995,165.534,323.529,532,904.353,832.514,1.736.867,4.553.460,778.885,5.332.345,0,134,134,Data 12 Bln | 1,PROPINSI DAERAH ISTIMEWA ACEH,A,SULTAN ISKANDAR MUDA - BANDA ACEH (DOM),2021,1.951,1.955,3.906,154.921,163.993,318.914,986,1.152.615,1.149.999,2.302.614,6.444.538,968.474,7.413.012,0,0,0,Data 12 Bln
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2020.csv
+HEAD: ﻿PENGELOLA BANDARA,DALAM NEGERI DTG,DALAM NEGERI BRKT,DALAM NEGERI TOTAL,LUAR NEGERI DTG,LUAR NEGERI BRKT,LUAR NEGERI TOTAL | AP I,14.047.059,12.004.748,26.051.807,1.581.234,1.704.300,3.285.534 | AP II,15.161.493,13.834.355,28.995.848,2.434.032,2.319.093,4.753.125
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2021.csv
+HEAD: ﻿PENGELOLA BANDARA,DALAM NEGERI DTG,DALAM NEGERI BRKT,DALAM NEGERI TOTAL,LUAR NEGERI DTG,LUAR NEGERI BRKT,LUAR NEGERI TOTAL | AP I,14.386.530,11.849.839,26.236.369,95.954,13.122,109.076 | AP II,13.581.876,12.990.016,26.571.892,911.060,896.503,1.807.563
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2022.csv
+HEAD: PENGELOLA BANDARA,DALAM NEGERI DTG,DALAM NEGERI BRKT,DALAM NEGERI TOTAL,LUAR NEGERI DTG,LUAR NEGERI BRKT,LUAR NEGERI TOTAL | AP I,22.944.203,19.512.802,42.457.005,2.984.094,2.874.374,5.858.468 | AP II,26.753.143,25.078.233,51.831.376,3.772.202,4.216.428,7.988.630
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2023.csv
+HEAD: PENGELOLA BANDARA,DALAM NEGERI DTG,DALAM NEGERI BRKT,DALAM NEGERI TOTAL,LUAR NEGERI DTG,LUAR NEGERI BRKT,LUAR NEGERI TOTAL | AP I,26.468.754,22.676.321,49.145.075,7.278.216,7.320.620,14.598.836 | AP II,30.859.967,28.201.744,59.061.711,7.904.246,8.143.583,16.047.829
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2024.csv
+HEAD: PENGELOLA BANDARA,DALAM NEGERI DTG,DALAM NEGERI BRKT,DALAM NEGERI TOTAL,LUAR NEGERI DTG,LUAR NEGERI BRKT,LUAR NEGERI TOTAL | BUBU,59.501.705,60.095.799,119.597.504,18.759.645,18.931.618,37.691.263 | UPBU / SATPEL,6.345.876,6.341.233,12.687.109,6.961,6.333,13.294
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\2024\perbaikan\insertperhalaman.csv
+HEAD: propinsi_code,propinsi_name,airport_code,airport_name,year,pesawat_dtg,pesawat_brk,pesawat_total,penumpang_dtg,penumpang_brk,penumpang_total,penumpang_tra,bagasi_dtg,bagasi_brk,bagasi_total,barang_dtg,barang_brk,barang_total,pos_dtg,pos_brk,pos_total,keterangan | 1,PROPINSI DAERAH ISTIMEWA ACEH,A,SULTAN ISKANDAR MUDA - BANDA ACEH (DOM),2020,1.809,1.813,3.622,157.995,165.534,323.529,532,904.353,832.514,1.736.867,4.553.460,778.885,5.332.345,0,134,134,Data 12 Bln | 1,PROPINSI DAERAH ISTIMEWA ACEH,A,SULTAN ISKANDAR MUDA - BANDA ACEH (DOM),2021,1.951,1.955,3.906,154.921,163.993,318.914,986,1.152.615,1.149.999,2.302.614,6.444.538,968.474,7.413.012,0,0,0,Data 12 Bln
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\2024\perbaikan\perbaikan13(airporttype).csv
+HEAD: ﻿provinsi_code,provinsi_name,airport_code,airport_name,tahun,pesawat_dtg,pesawat_brk,pesawat_total,penumpang_dtg,penumpang_brk,penumpang_total,penumpang_tra,bagasi_dtg,bagasi_brk,bagasi_total,barang_dtg,barang_brk,barang_total,pos_dtg,pos_brk,pos_total,keterangan | 15,DAERAH ISTIMEWA YOGYAKARTA,B,YOGYAKARTA INTERNASIONAL AIRPORT (INT),2020,23,22,45,993,157,1150,0,15572,6784,22356,102350,8805,111155,0,0,0,Data 12 Bln | 15,DAERAH ISTIMEWA YOGYAKARTA,B,YOGYAKARTA INTERNASIONAL AIRPORT (INT),2021,19,18,37,49,40,89,0,356,496,852,26062,303438,401598,0,0,0,Data 12 Bln
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\2024\perbaikan\perbaikan32(papbarday).csv
+HEAD: ﻿propinsi_code,propinsi_name,airport_code,airport_name,year,pesawat_dtg,pesawat_brk,pesawat_total,penumpang_dtg,penumpang_brk,penumpang_total,penumpang_tra,bagasi_dtg,bagasi_brk,bagasi_total,barang_dtg,barang_brk,barang_total,pos_dtg,pos_brk,pos_total,keterangan, | 34,PAPUA BARAT DAYA,A,DOMINE EDUARD OSOK - SORONG,2020,4.057,4.279,8.336,301.206,314.639,615.845,36.484,2.486.447,2.652.814,5.139.261,2.470.174,2.347.139,4.817.313,95,1,96,Data 12 Bln, | 34,PAPUA BARAT DAYA,A,DOMINE EDUARD OSOK - SORONG,2021,4.745,4.738,9.483,348.507,407.862,756.369,0,2.909.426,3.188.628,6.098.054,2.542.612,3.569.566,6.112.178,0,0,0,Data 12 Bln,
+
+FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\2024\perbaikan\perbaikan33(airportcode).csv
+HEAD: ﻿propinsi_code,propinsi_name,airport_code,airport_name,year,pesawat_dtg,pesawat_brk,pesawat_total,penumpang_dtg,penumpang_brk,penumpang_total,penumpang_tra,bagasi_dtg,bagasi_brk,bagasi_total,barang_dtg,barang_brk,barang_total,pos_dtg,pos_brk,pos_total,keterangan | 35,PAPUA,B,FRANS KAISIEPO - BIAK (INT),2020,35,34,69,167,121,288,535,2.681,1.621,4.302,0,0,0,0,0,0,Data 12 Bln | 35,PAPUA,B,FRANS KAISIEPO - BIAK (INT),2021,63,60,123,19,23,42,1.315,80,105,185,0,0,0,0,0,0,Data 12 Bln
+
+FILE: DJPU\Table_Pilihan\BAB XII — On Time Performance\TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2024.csv
+HEAD: ﻿NO,BADAN USAHA,2018,2019,2020,2021,2022,2023,2024 | 1,PT. Asi Pudjiastuti,"61,07%","54,52%","28,90%","35,32%","39,92%","56,77%","47,03%" | 2,PT. Batik Indonesia Air,"88,78%","88,72%","87,32%","84,75%","82,03%","74,89%","74,62%"
+
+
+=== DJPU MD SUMMARIES ===
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\ANALISIS_PERBANDINGAN_STRUKTUR_CSV.md
+# Analisis Perbandingan Struktur CSV — Perusahaan Angkutan Udara (2020-2024)  ## Ringkasan Eksekusi  Dokumen ini membandingkan struktur dan kualitas data dari 4 kategori file CSV selama 5 tahun (2020-2024). Total file yang dianalisis: **20 file CSV** → **20 file analisis individual** → **1 dokumen perbandingan ini**.  ---  ## 1. Perbandingan Nama File  | Kategori | 2020 | 2021 | 2022 | 2023 | 2024 | |----------|------|------|------|------|------| | **Niaga Berjadwal** | `...NIAGA BERJADWAL YANG 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\ASING_2020_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING YANG BEROPERASI TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING YANG BEROPERASI TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Angkutan Udara Asing | | **Total Baris Data** | 52 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\BUKAN_NIAGA_2020_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA YANG BEROPERASI TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA YANG BEROPERASI TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Angkutan Udara Bukan Niaga | | **Total Baris Data** | 32 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Int
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\NIAGA_BERJADWAL_2020_analysis.md
+# Analisis Tabel: DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL YANG BEROPERASI TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL YANG BEROPERASI TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Angkutan Udara Niaga Berjadwal | | **Total Baris Data** | 15 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2020\NIAGA_TIDAK_BERJADWAL_2020_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL YANG BEROPERASI TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL YANG BEROPERASI TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Angkutan Udara Niaga Tidak Berjadwal | | **Total Baris Data** | 50 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\ASING_2021_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Angkutan Udara Asing | | **Total Baris Data** | 49 | | **Jumlah Kolom** | 4 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut perusahaan | | 2 | `NAMA PERUSAH
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\BUKAN_NIAGA_2021_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Angkutan Udara Bukan Niaga | | **Total Baris Data** | 41 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut badan usaha | 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\NIAGA_BERJADWAL_2021_analysis.md
+# Analisis Tabel: DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Angkutan Udara Niaga Berjadwal | | **Total Baris Data** | 19 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2021\NIAGA_TIDAK_BERJADWAL_2021_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Angkutan Udara Niaga Tidak Berjadwal | | **Total Baris Data** | 54 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integ
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\ASING_2022_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Angkutan Udara Asing | | **Total Baris Data** | 56 | | **Jumlah Kolom** | 4 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut perusahaan | | 2 | `NAMA PERUSAH
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\BUKAN_NIAGA_2022_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Angkutan Udara Bukan Niaga | | **Total Baris Data** | 40 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut badan usaha | 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\NIAGA_BERJADWAL_2022_analysis.md
+# Analisis Tabel: DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Angkutan Udara Niaga Berjadwal | | **Total Baris Data** | 18 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2022\NIAGA_TIDAK_BERJADWAL_2022_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Angkutan Udara Niaga Tidak Berjadwal | | **Total Baris Data** | 54 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integ
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\ASING_2023_analysis.md
+# Analisis Tabel: DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Angkutan Udara Asing | | **Total Baris Data** | 74 | | **Jumlah Kolom** | 4 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut perusahaan | | 2 | `NAMA PERUSAH
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\BUKAN_NIAGA_2023_analysis.md
+# Analisis Tabel: DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Angkutan Udara Bukan Niaga | | **Total Baris Data** | 40 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor uru
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\NIAGA_BERJADWAL_2023_analysis.md
+# Analisis Tabel: DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Angkutan Udara Niaga Berjadwal | | **Total Baris Data** | 20 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2023\NIAGA_TIDAK_BERJADWAL_2023_analysis.md
+# Analisis Tabel: DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Angkutan Udara Niaga Tidak Berjadwal | | **Total Baris Data** | 55 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Int
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\ASING_2024_analysis.md
+# Analisis Tabel: DAFTAR PERWAKILAN PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PERWAKILAN PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Angkutan Udara Asing | | **Total Baris Data** | 65 | | **Jumlah Kolom** | 4 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut perusahaan
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\BUKAN_NIAGA_2024_analysis.md
+# Analisis Tabel: DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR PEMEGANG PERIZINAN ANGKUTAN UDARA BUKAN NIAGA TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Angkutan Udara Bukan Niaga | | **Total Baris Data** | 35 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor uru
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\NIAGA_BERJADWAL_2024_analysis.md
+# Analisis Tabel: DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Angkutan Udara Niaga Berjadwal | | **Total Baris Data** | 18 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer | Nomor urut 
+
+MD FILE: DJPU\Table_Pilihan\BAB II — Perusahaan Angkutan Udara\2024\NIAGA_TIDAK_BERJADWAL_2024_analysis.md
+# Analisis Tabel: DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA TIDAK BERJADWAL TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Angkutan Udara Niaga Tidak Berjadwal | | **Total Baris Data** | 53 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Int
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\ANALISIS_PERBANDINGAN_STRUKTUR_CSV.md
+# Analisis Perbandingan Struktur CSV — Rute & Bandara Angkutan Udara (2020–2024)  Dokumen ini membandingkan struktur, format, penamaan, dan kualitas data dari semua file CSV rute & bandara angkutan udara selama 5 tahun (2020–2024).  ---  ## 1. Perbandingan Judul Tabel  ### 1.1 Badan Usaha Nasional — Rute Internasional  | Tahun | Judul File (asli) | Catatan Perubahan | |-------|-------------------|-------------------| | 2020 | `...NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL...` | — | | 20
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\BADAN_USAHA_NASIONAL_INTERNASIONAL_2020_analysis.md
+# Analisis Tabel: BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Badan Usaha Nasional — Rute Internasional (Penumpang) | | **Total Baris Data** | 8 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\KOTA_DOMESTIK_2020_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Kota Domestik — Rute Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 138 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\KOTA_LN_INDONESIA_2020_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Kota Indonesia — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 26 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskrip
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\KOTA_LN_NEGARA_TUJUAN_2020_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Kota Negara Tujuan — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 66 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Da
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\RUTE_DOMESTIK_2020_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Rute Domestik — Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 410 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2020\RUTE_LN_2020_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020.csv` | | **Tahun** | 2020 | | **Kategori** | Rute Internasional — Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 157 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Intege
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\BADAN_USAHA_NASIONAL_INTERNASIONAL_2021_analysis.md
+# Analisis Tabel: BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Badan Usaha Nasional — Rute Internasional (Penumpang) | | **Total Baris Data** | 7 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\KOTA_DOMESTIK_2021_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Kota Domestik — Rute Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 135 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\KOTA_LN_INDONESIA_2021_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Kota Indonesia — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 22 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskrip
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\KOTA_LN_NEGARA_TUJUAN_2021_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Kota Negara Tujuan — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 62 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Da
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\RUTE_DOMESTIK_2021_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021..csv` | | **Tahun** | 2021 | | **Kategori** | Rute Domestik — Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 378 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2021\RUTE_LN_2021_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021.csv` | | **Tahun** | 2021 | | **Kategori** | Rute Internasional — Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 145 | | **Jumlah Kolom** | 3 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Intege
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\BADAN_USAHA_NASIONAL_INTERNASIONAL_2022_analysis.md
+# Analisis Tabel: BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `BADAN USAHA ANGKUTAN UDARA NASIONAL YANG MELAYANI PENUMPANG RUTE INTERNASIONAL TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Badan Usaha Nasional — Rute Internasional (Penumpang) | | **Total Baris Data** | 6 | | **Jumlah Kolom** | 1 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\KOTA_DOMESTIK_2022_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Kota Domestik — Rute Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 133 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\KOTA_LN_INDONESIA_2022_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Kota Indonesia — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 21 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskrip
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\KOTA_LN_NEGARA_TUJUAN_2022_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Kota Negara Tujuan — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 56 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Da
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\RUTE_DOMESTIK_2022_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Rute Domestik — Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 374 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2022\RUTE_LN_2022_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022.csv` | | **Tahun** | 2022 | | **Kategori** | Rute Internasional — Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 133 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Intege
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\BADAN_USAHA_NASIONAL_INTERNASIONAL_2023_analysis.md
+# Analisis Tabel: BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Badan Usaha Nasional — Rute Internasional (Penumpang) | | **Total Baris Data** | 8 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\KOTA_DOMESTIK_2023_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Kota Domestik — Rute Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 128 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\KOTA_LN_INDONESIA_2023_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Kota Indonesia — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 16 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskrip
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\KOTA_LN_NEGARA_TUJUAN_2023_analysis.md
+# Analisis Tabel: KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNGI OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Kota Negara Tujuan — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 63 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Da
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\RUTE_DOMESTIK_2023_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Rute Domestik — Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 303 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2023\RUTE_LN_2023_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023.csv` | | **Tahun** | 2023 | | **Kategori** | Rute Internasional — Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 125 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Intege
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\BADAN_USAHA_NASIONAL_INTERNASIONAL_2024_analysis.md
+# Analisis Tabel: BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `BADAN USAHA ANGKUTAN UDARA NASIONAL PENUMPANG YANG MELAYANI RUTE INTERNASIONAL.csv` | | **Tahun** | 2024 | | **Kategori** | Badan Usaha Nasional — Rute Internasional (Penumpang) | | **Total Baris Data** | 7 | | **Jumlah Kolom** | 1 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|---
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\KOTA_DOMESTIK_2024_analysis.md
+# Analisis Tabel: KOTA TERHUBUNG OLEH ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNG OLEH ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Kota Domestik — Rute Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 118 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\KOTA_LN_INDONESIA_2024_analysis.md
+# Analisis Tabel: KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI INDONESIA TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Kota Indonesia — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 17 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\KOTA_LN_NEGARA_TUJUAN_2024_analysis.md
+# Analisis Tabel: KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `KOTA TERHUBUNG OLEH RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI DI NEGARA TUJUAN TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Kota Negara Tujuan — Rute Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 62 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\RUTE_DOMESTIK_2024_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Rute Domestik — Niaga Berjadwal Dalam Negeri | | **Total Baris Data** | 312 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Integer 
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\RUTE_LN_2024_analysis.md
+# Analisis Tabel: RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024.csv` | | **Tahun** | 2024 | | **Kategori** | Rute Internasional — Niaga Berjadwal Luar Negeri | | **Total Baris Data** | 128 | | **Jumlah Kolom** | 2 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `NO` | Intege
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\TOTAL_RUTE_DOMESTIK_AGGREGAT_2020-2024_analysis.md
+# Analisis Tabel: TOTAL JUMLAH RUTE DOMESTIK ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2020-2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `TOTAL JUMLAH RUTE DOMESTIK ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2020-2024.csv` | | **Tahun** | 2020-2024 (Agregat 5 Tahun) | | **Kategori** | Agregat — Rute Domestik | | **Total Baris Data** | 5 | | **Jumlah Kolom** | 6 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|------
+
+MD FILE: DJPU\Table_Pilihan\BAB III — Rute & Bandara\2024\TOTAL_RUTE_INTERNASIONAL_AGGREGAT_2020-2024_analysis.md
+# Analisis Tabel: TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2020-2024  ## Informasi Umum | Atribut | Nilai | |---------|-------| | **Sumber File** | `TOTAL JUMLAH RUTE INTERNATIONAL TAHUN 2020-2024.csv` | | **Tahun** | 2018-2024 (Agregat 7 Tahun) | | **Kategori** | Agregat — Rute Internasional | | **Total Baris Data** | 7 | | **Jumlah Kolom** | 8 |  ---  ## Struktur Tabel  | No | Nama Kolom | Tipe Data | Deskripsi | |----|------------|-----------|-----------| | 1 | `INTERNATIONAL` | String | Kategor
+
+MD FILE: DJPU\Table_Pilihan\BAB IV — Produksi\analisis_konsistensi_csv.md
+# Analisis Konsistensi Struktur CSV - Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2020-2024  ## Ringkasan Eksekutif - **Total File CSV**: 19 file (satu file per perusahaan) - **Periode Data**: 2020-2024 - **Sumber**: Badan Pusat Statistik (BPS) / Kementerian Perhubungan RI - **Tanggal Analisis**: April 9, 2026  ---  # BAGIAN 1: STRUKTUR TABEL  ## 1.1 Gambaran Umum  Setiap file CSV merepresentasikan data produksi satu perusahaan penerbangan dengan struktur **cross-sectional time-series**
+
+MD FILE: DJPU\Table_Pilihan\BAB V — Market Share\ANALISIS_STRUKTUR_DATA.md
+# 📊 Analisis Struktur Data — Market Share Penumpang Angkutan Udara Dalam Negeri  ## 📋 Informasi Umum  | Properti | Detail | |----------|--------| | **Nama File** | `TABEL MARKET SHARE PENUMPANG ANGKUTAN UDARA DALAM NEGERI BERDASARKAN BADAN USAHA ANGKUTAN UDARA NIAGA NASIONAL TAHUN 2019-2024.csv` | | **Sumber** | Direktorat Jenderal Perhubungan Udara (DJPU) | | **Periode Data** | 2019 - 2024 | | **Jumlah Baris** | 16 (15 operator + 1 total) | | **Jumlah Kolom** | 13 | | **Tipe Data** | CSV (Comma
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\BAB_VI_MASTER_SUMMARY_FINAL.md
+# BAB VI Master Summary: Penumpang Per Rute (2020-2024)  ## 📊 Overview  Dokumen ini adalah **master summary final** untuk BAB VI — Penumpang Per Rute, yang membandingkan **struktur tabel, format, penamaan kolom, dan tipe data** dari kelima tahun (2020-2024).  Tujuannya adalah memberi gambaran jelas tentang **apa saja yang harus ditangani** sebelum data dimasukan ke database.  ---  ## 🔍 Perbandingan Struktur Tabel Antar Tahun  ### 1. File Bulanan (Domestik & Internasional)  #### Jumlah Kolom  | T
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\CSV_ANALYSIS_2020_Domestik_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Domestik Bulanan 2020  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2020.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Januari - Desember 2020 (plus komparasi 2019 & 2018) | | **Jumlah Baris** | 412 (1 header + 410 rute + 1 Total) | | **Jumlah Kolom** | 18 | | **Tipe Data Utama** | Integer (angka penumpang bulana
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\CSV_ANALYSIS_2020_Domestik_Ranking.md
+# CSV Analysis: Statistik Per Rute — Domestik Ranking 2020  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Tahun 2020 (ranking berdasarkan jumlah penumpang) | | **Jumlah Baris** | 412 (1 header + 410 rute + 1 footer total) | | **Jumlah Kolom** | 8 | | **Tipe Data Utama** | Integer 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\CSV_ANALYSIS_2020_Internasional_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Internasional Bulanan 2020  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2020.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Januari - Desember 2020 (plus komparasi 2019 & 2018) | | **Jumlah Baris** | 160 (1 header + 158 rute + 1 KARGO rows + 1 Total + 1 footer) | | **Jumlah Kolom** | 18 | 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\CSV_ANALYSIS_2020_Internasional_Ranking.md
+# CSV Analysis: Statistik Per Rute — Internasional Ranking 2020  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Tahun 2020 (ranking berdasarkan jumlah penumpang) | | **Jumlah Baris** | 161 (1 header + 157 rute + 1 Total + 1 footer + 1 empty row) | | **Jumlah Kolom** | 8 | | **Tipe D
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\CSV_ANALYSIS_2020_SUMMARY.md
+# BAB VI Summary: Penumpang Per Rute — Tahun 2020  ## 📊 Overview  Summary ini merangkum analisis dari **4 file CSV tahun 2020** dalam folder `BAB VI — Penumpang Per Rute/2020/`.  ### File yang Dianalisis  | No | File | Kategori | Dimensi | Baris | Kolom | Status `NO` | |----|------|----------|---------|-------|-------|-------------| | 1 | `JUMLAH PENUMPANG PER RUTE ... DALAM NEGERI JAN-DES 2020.csv` | Domestik | Bulanan | **412** | 18 | ✅ Konsisten (1-410) | | 2 | `JUMLAH PENUMPANG PER RUTE ... 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\py_ekstrak\ANALISA_STRUKTUR_TABEL.md
+# ANALISA STRUKTUR TABEL PDF ## BAB VI — Penumpang Per Rute (2020)  ---  ## 📊 RINGKASAN  Total ada **4 file PDF** yang dianalisis, masing-masing dengan karakteristik tabel yang berbeda namun dengan pola yang konsisten.  ---  ## 📁 FILE 1: Domestic Monthly (Dalam Negeri - Bulanan) **Nama File:** `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2020.pdf`  ### Karakter Umum: - **Total Halaman:** 10 halaman - **Judul Tabel:** "JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIA
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\py_ekstrak\README.md
+# BAB VI — Penumpang Per Rute (2020)  ## 📊 Deskripsi Folder ini berisi data penumpang angkutan udara niaga berjadwal tahun 2020 untuk rute domestik dan internasional, diekstrak dari 4 file PDF dan dikonversi ke format CSV.  ## 📁 File Input (PDF) 1. **JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2020.pdf**    - 10 halaman, 411 rute domestik    - Data bulanan (Jan-Des 2020) dengan perbandingan 2019 & 2018  2. **JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADW
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2020\py_ekstrak\UNIVERSAL_PROMPT_PDF_TO_CSV.md
+# UNIVERSAL PROMPT: PDF Table Extractor to CSV  Kamu adalah seorang data engineer yang ahli dalam ekstraksi data dari file PDF.  ## TUGAS Saya memiliki file PDF yang berisi tabel data. Tolong lakukan hal berikut:  ### 1. ANALISA STRUKTUR TABEL - Buka dan baca seluruh halaman PDF - Identifikasi struktur tabel di setiap halaman:   - Jumlah kolom dan nama header   - Jumlah baris per halaman   - Apakah header kolom diulang di setiap halaman?   - Apakah ada judul/subjudul yang muncul berulang di seti
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\CSV_ANALYSIS_2021_Domestik_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Domestik Bulanan 2021  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2021.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Januari - Desember 2021 (plus komparasi 2020 & 2019) | | **Jumlah Baris** | 381 (1 header + 379 rute + 1 Total) | | **Jumlah Kolom** | 18 | | **Tipe Data Utama** | Float (semua nilai punya suffix
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\CSV_ANALYSIS_2021_Domestik_Ranking.md
+# CSV Analysis: Statistik Per Rute — Domestik Ranking 2021  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Tahun 2021 (ranking berdasarkan jumlah penumpang) | | **Jumlah Baris** | 381 (1 header + 379 rute + 1 Total) | | **Jumlah Kolom** | 8 | | **Tipe Data Utama** | Float (semua ni
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\CSV_ANALYSIS_2021_Internasional_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Internasional Bulanan 2021  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2021.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Januari - Desember 2021 (plus komparasi 2020 & 2019) | | **Jumlah Baris** | 148 (1 header + 145 rute + 1 Total + 1 empty/footer) | | **Jumlah Kolom** | 18 | | **Tipe 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\CSV_ANALYSIS_2021_Internasional_Ranking.md
+# CSV Analysis: Statistik Per Rute — Internasional Ranking 2021  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Tahun 2021 (ranking berdasarkan jumlah penumpang) | | **Jumlah Baris** | 148 (1 header + 145 rute + 1 Total + 1 footer) | | **Jumlah Kolom** | 8 | | **Tipe Data Utama** | 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\CSV_ANALYSIS_2021_SUMMARY.md
+# BAB VI Summary: Penumpang Per Rute — Tahun 2021  ## 📊 Overview  Summary ini merangkum analisis dari **4 file CSV tahun 2021** dalam folder `BAB VI — Penumpang Per Rute/2021/`.  ### File yang Dianalisis  | No | File | Kategori | Dimensi | Baris | Kolom | Status `NO` | |----|------|----------|---------|-------|-------|-------------| | 1 | `JUMLAH PENUMPANG PER RUTE ... DALAM NEGERI JAN-DES 2021.csv` | Domestik | Bulanan | **381** | 18 | ✅ Konsisten (1-379) | | 2 | `JUMLAH PENUMPANG PER RUTE ... 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\py_ekstrak\ANALISA_STRUKTUR_TABEL.md
+# Analisa Struktur Tabel - PDF Penumpang Per Rute 2021  ## Ringkasan  | No | Nama File PDF | Halaman | Total Baris Data | Jumlah Kolom | |----|---------------|---------|------------------|--------------| | 1 | JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2021.pdf | 7 | 361 (360 routes + 1 Total) | 17 | | 2 | JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2021.pdf | 3 | 147 (146 routes + 1 Total) | 17 | | 3 | 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\py_ekstrak\README.md
+# PDF to CSV Extraction - Penumpang Per Rute 2021  ## Deskripsi  Proyek ini melakukan ekstraksi data dari 4 file PDF statistik penumpang per rute angkutan udara niaga berjadwal tahun 2021 ke format CSV yang siap dianalisis.  Data berasal dari laporan statistik penerbangan Indonesia tahun 2021, mencakup: - **Penerbangan Domestik (Dalam Negeri)**: Rute-rute innerhalb Indonesia - **Penerbangan Internasional (Luar Negeri)**: Rute-rute dari Indonesia ke luar negeri  Setiap kategori memiliki 2 jenis l
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2021\py_ekstrak\UNIVERSAL_PROMPT_PDF_TO_CSV.md
+# UNIVERSAL PROMPT: PDF Table Extractor to CSV  Kamu adalah seorang data engineer yang ahli dalam ekstraksi data dari file PDF.  ## TUGAS Saya memiliki file PDF yang berisi tabel data. Tolong lakukan hal berikut:  ### 1. ANALISA STRUKTUR TABEL - Buka dan baca seluruh halaman PDF - Identifikasi struktur tabel di setiap halaman:   - Jumlah kolom dan nama header   - Jumlah baris per halaman   - Apakah header kolom diulang di setiap halaman?   - Apakah ada judul/subjudul yang muncul berulang di seti
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\CSV_ANALYSIS_2022_Domestik_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Domestik Bulanan 2022  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Januari - Desember 2022 | | **Jumlah Baris** | 377 (1 header + 374 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 15 | | **Tipe Data Utama** | Float dengan titik sebagai pemisah ribuan (contoh:
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\CSV_ANALYSIS_2022_Domestik_Ranking.md
+# CSV Analysis: Statistik Per Rute — Domestik Ranking 2022  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Periode** | Tahun 2022 (ranking berdasarkan jumlah penumpang) | | **Jumlah Baris** | 377 (1 header + 374 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 8 | | **Tipe Data Utama** | Float
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\CSV_ANALYSIS_2022_Internasional_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Internasional Bulanan 2022  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2022.csv` | | **Jumlah Baris** | 136 (1 header + 133 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 15 | | **Format Angka** | Float dengan titik sebagai pemisah ribuan | | **Format Rute** | Hanya IATA code (`CGK-SIN`) |  ---  ## ⚠️ PERBEDAAN 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\CSV_ANALYSIS_2022_Internasional_Ranking.md
+# CSV Analysis: Statistik Per Rute — Internasional Ranking 2022  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Jumlah Baris** | 136 (1 header + 133 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 8 | | **Format Rute** | Hanya IATA code | | **Format Angka** | Float dengan titik sebagai pemisah ribuan |  ---  ## ⚠️ PERBEDAAN SANGAT SIGNIFIKAN 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\CSV_ANALYSIS_2022_SUMMARY.md
+# BAB VI Summary: Penumpang Per Rute — Tahun 2022  ## 📊 Overview  Summary ini merangkum analisis dari **4 file CSV tahun 2022** dalam folder `BAB VI — Penumpang Per Rute/2022/`.  ### File yang Dianalisis  | No | File | Kategori | Baris | Kolom | Format Rute | Format Angka | |----|------|----------|-------|-------|-------------|--------------| | 1 | `JUMLAH PENUMPANG PER RUTE ... DALAM NEGERI JAN-DES 2022.csv` | Domestik Bulanan | **377** | **15** | **IATA only** ⚠️ | **Titik = ribuan** ⚠️ | | 2 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\py_ekstrak\ANALISA_STRUKTUR_TABEL.md
+# Analisa Struktur Tabel - PDF Ekstraksi Data 2022  ## Ringkasan Ekstraksi  Diproses **4 file PDF** dari direktori `BAB VI — Penumpang Per Rute\2022`:  | No | Nama File PDF | Halaman | Baris Data | Kolom | Output CSV | |----|---------------|---------|------------|-------|------------| | 1 | JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2022.pdf | ~9 | 375 | 15 | ✅ | | 2 | STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022 BERDASARKAN URUTAN 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\py_ekstrak\README.md
+# PDF to CSV Extraction - Penumpang Per Rute Angkutan Udara 2022  ## Deskripsi  Direktori ini berisi hasil ekstraksi data dari **4 file PDF** statistik penumpang per rute angkutan udara niaga berjadwal tahun 2022. Data berasal dari laporan resmi yang diterbitkan untuk tahun 2022.  ## Sumber Data  Data berasal dari publikasi resmi statistik penerbangan Indonesia tahun 2022, yang mencakup: - **Penerbangan Domestik** (Dalam Negeri): Rute antar kota di Indonesia - **Penerbangan Internasional** (Luar
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2022\py_ekstrak\UNIVERSAL_PROMPT_PDF_TO_CSV.md
+# UNIVERSAL PROMPT: PDF Table Extractor to CSV  Kamu adalah seorang data engineer yang ahli dalam ekstraksi data dari file PDF.  ## TUGAS Saya memiliki file PDF yang berisi tabel data. Tolong lakukan hal berikut:  ### 1. ANALISA STRUKTUR TABEL - Buka dan baca seluruh halaman PDF - Identifikasi struktur tabel di setiap halaman:   - Jumlah kolom dan nama header   - Jumlah baris per halaman   - Apakah header kolom diulang di setiap halaman?   - Apakah ada judul/subjudul yang muncul berulang di seti
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\CSV_ANALYSIS_2023_Domestik_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Domestik Bulanan 2023  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2023.csv` | | **Jumlah Baris** | 306 (1 header + 303 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 15 | | **Format Rute** | Hanya IATA code (`CGK-DPS`) | | **Format Angka** | Float dengan `.0` suffix (contoh: `392247.0`) | | **Missing Value** | Sel kosong |  ---  ## ⚠️ 
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\CSV_ANALYSIS_2023_Domestik_Ranking.md
+# CSV Analysis: Statistik Per Rute — Domestik Ranking 2023  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Jumlah Baris** | 306 (1 header + 303 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 8 | | **Format Rute** | Hanya IATA code (`CGK-DPS`) | | **Format Angka** | Float dengan `.0` suffix | | **Load Factor** | String dengan koma desimal (t
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\CSV_ANALYSIS_2023_Internasional_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Internasional Bulanan 2023  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2023.csv` | | **Jumlah Baris** | 128 (1 header + 125 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 15 | | **Format Rute** | Hanya IATA code (`CGK-SIN`) | | **Format Angka** | Float dengan `.0` suffix | | **Nama Bulan** | Bahasa Indonesia (`M
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\CSV_ANALYSIS_2023_Internasional_Ranking.md
+# CSV Analysis: Statistik Per Rute — Internasional Ranking 2023  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Jumlah Baris** | 128 (1 header + 125 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 8 | | **Format Rute** | Hanya IATA code | | **Format Angka** | Float dengan `.0` suffix | | **Load Factor** | String dengan titik desimal, TANPA qu
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\CSV_ANALYSIS_2023_SUMMARY.md
+# BAB VI Summary: Penumpang Per Rute — Tahun 2023  ## 📊 Overview  Summary ini merangkum analisis dari **4 file CSV tahun 2023** dalam folder `BAB VI — Penumpang Per Rute/2023/`.  ### File yang Dianalisis  | No | File | Kategori | Baris | Kolom | Format Rute | Format Angka | |----|------|----------|-------|-------|-------------|--------------| | 1 | `JUMLAH PENUMPANG PER RUTE ... DALAM NEGERI JAN-DES 2023.csv` | Domestik Bulanan | **306** | **15** | IATA only | Float (.0) | | 2 | `JUMLAH PENUMPAN
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\py_ekstrak\ANALISA_STRUKTUR_TABEL.md
+# ANALISA STRUKTUR TABEL - PDF 2023  ## Ringkasan  Dokumen ini berisi analisa struktur tabel dari 4 file PDF data penumpang angkutan udara niaga berjadwal tahun 2023.  ---  ## FILE 1: JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2023.pdf  ### Statistik - **Jumlah halaman:** 12 - **Total baris data:** ~312 (52 rute × 6 pasang halaman) - **Struktur:** Tabel terbagi per 2 halaman (kiri: Jan-Jun, kanan: Jul-Des + Total)  ### Struktur Header Kolom  **Halaman Ganjil (1
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\py_ekstrak\README.md
+# README - Ekstraksi Data Penumpang Angkutan Udara Niaga Berjadwal 2023  ## Deskripsi  Proyek ini melakukan ekstraksi data dari 4 file PDF statistik penumpang angkutan udara niaga berjadwal tahun 2023 ke format CSV yang dapat dibaca dengan Excel.  Data berasal dari laporan resmi yang berisi: - **Penumpang Domestik** (penerbangan dalam negeri) - **Penumpang Luar Negeri** (penerbangan internasional)  Setiap kategori memiliki dua jenis tabel: 1. **Bulanan (Jan-Des)** - Data penumpang per bulan Janu
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2023\py_ekstrak\UNIVERSAL_PROMPT_PDF_TO_CSV.md
+# UNIVERSAL PROMPT: PDF Table Extractor to CSV  Kamu adalah seorang data engineer yang ahli dalam ekstraksi data dari file PDF.  ## TUGAS Saya memiliki file PDF yang berisi tabel data. Tolong lakukan hal berikut:  ### 1. ANALISA STRUKTUR TABEL - Buka dan baca seluruh halaman PDF - Identifikasi struktur tabel di setiap halaman:   - Jumlah kolom dan nama header   - Jumlah baris per halaman   - Apakah header kolom diulang di setiap halaman?   - Apakah ada judul/subjudul yang muncul berulang di seti
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\CSV_ANALYSIS_2024_Domestik_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Domestik Bulanan 2024  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2024.csv` | | **Jumlah Baris** | 317 (1 header + 314 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 15 | | **Format Rute** | Hanya IATA code (`CGK-DPS`) | | **Format Angka** | **Integer** (tanpa `.0`!) | | **Missing Value** | `0` atau sel kosong | | **Nama Bulan** | Baha
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\CSV_ANALYSIS_2024_Domestik_Ranking.md
+# CSV Analysis: Statistik Per Rute — Domestik Ranking 2024  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Jumlah Baris** | 318 (1 header + 315 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 8 | | **Format Rute** | Hanya IATA code (`CGK-DPS`) | | **Format Angka** | **Integer** (tanpa `.0`!) | | **Load Factor** | String dengan `%` TANPA desi
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\CSV_ANALYSIS_2024_Internasional_Bulanan.md
+# CSV Analysis: Jumlah Penumpang Per Rute — Internasional Bulanan 2024  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI BULAN JANUARI S.D DESEMBER TAHUN 2024.csv` | | **Jumlah Baris** | 137 (1 header + 134 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 15 | | **Format Rute** | Hanya IATA code (`CGK-SIN`) | | **Format Angka** | Mix Integer dan Float `.0` (contoh: `295204`, `285735.0`) | | **Na
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\CSV_ANALYSIS_2024_Internasional_Ranking.md
+# CSV Analysis: Statistik Per Rute — Internasional Ranking 2024  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.csv` | | **Jumlah Baris** | 137 (1 header + 134 rute + 1 Total + 1 empty) | | **Jumlah Kolom** | 8 | | **Format Rute** | Hanya IATA code | | **Format Angka** | Integer | | **Load Factor** | String dengan `%` TANPA desimal (contoh: `82%`) |  ---
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\CSV_ANALYSIS_2024_SUMMARY.md
+# BAB VI Summary: Penumpang Per Rute — Tahun 2024  ## 📊 Overview  Summary ini merangkum analisis dari **4 file CSV tahun 2024** dalam folder `BAB VI — Penumpang Per Rute/2024/`.  ### File yang Dianalisis  | No | File | Kategori | Baris | Kolom | Format Rute | Format Angka | |----|------|----------|-------|-------|-------------|--------------| | 1 | `JUMLAH PENUMPANG PER RUTE ... DALAM NEGERI JAN-DES 2024.csv` | Domestik Bulanan | **317** | **15** | IATA only | **Integer** | | 2 | `JUMLAH PENUMPA
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\py_ekstrak\ANALISA_STRUKTUR_TABEL.md
+# ANALISA STRUKTUR TABEL  ## Ringkasan  | No | Nama File | Halaman | Total Baris Data | Kolom | |----|-----------|---------|------------------|-------| | 1 | JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2024.pdf | 6 | 318 (271 routes + TOTAL row + headers) | 15 | | 2 | STATISTIK PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024 BERDASARKAN URUTAN JUMLAH PENUMPANG.pdf | 6 | 308 (307 routes + TOTAL row) | 8 | | 3 | JUMLAH PENUMPANG PER RUTE ANGKUTAN U
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\py_ekstrak\README.md
+# README - PDF to CSV Extraction  ## Deskripsi  Dokumen ini berisi hasil ekstraksi data dari 4 file PDF statistik angkutan udara niaga berjadwal tahun 2024 ke format CSV.  **Sumber**: Buku Statistik Angkutan Udara Tahun 2024   **Bab**: BAB VI — Penumpang Per Rute   **Tahun Data**: 2024  ---  ## File yang Diproses  ### 1. JUMLAH PENUMPANG PER RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI JAN-DES 2024  | Properti | Nilai | |----------|-------| | **PDF Pages** | 6 halaman | | **Total Rows** | 31
+
+MD FILE: DJPU\Table_Pilihan\BAB VI — Penumpang Per Rute\2024\py_ekstrak\UNIVERSAL_PROMPT_PDF_TO_CSV.md
+# UNIVERSAL PROMPT: PDF Table Extractor to CSV  Kamu adalah seorang data engineer yang ahli dalam ekstraksi data dari file PDF.  ## TUGAS Saya memiliki file PDF yang berisi tabel data. Tolong lakukan hal berikut:  ### 1. ANALISA STRUKTUR TABEL - Buka dan baca seluruh halaman PDF - Identifikasi struktur tabel di setiap halaman:   - Jumlah kolom dan nama header   - Jumlah baris per halaman   - Apakah header kolom diulang di setiap halaman?   - Apakah ada judul/subjudul yang muncul berulang di seti
+
+MD FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\CSV_ANALYSIS_DATA_LALU_LINTAS_BANDARA_2020-2024.md
+# CSV Analysis: Data Lalu Lintas Angkutan Udara di Bandar Udara (2020-2024)  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.csv` | | **Jumlah File** | 1 file (multi-tahun: 2020-2024) | | **Jumlah Baris** | 1.282 baris (1 header + ~1.281 data) | | **Jumlah Kolom** | 23 | | **Tipe Data Utama** | String (nama provinsi/bandara), Integer (angka dengan titik sebagai pemisah ribuan) | | **Rentang Tahun*
+
+MD FILE: DJPU\Table_Pilihan\BAB VII — Lalu Lintas Bandara\CSV_ANALYSIS_KOMPOSISI_PENGELOLA_2020-2024.md
+# CSV Analysis: Komposisi Penumpang Berdasarkan Pengelola Bandar Udara (2020-2024)  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `KOMPOSISI PENUMPANG BERDASARKAN PENGELOLA BANDAR UDARA TAHUN 2020.csv` s/d `2024.csv` | | **Jumlah File** | 5 file (1 file per tahun: 2020, 2021, 2022, 2023, 2024) | | **Jumlah Baris per File** | 5 baris (4 pengelola + 1 Total) | | **Jumlah Kolom** | 7 | | **Tipe Data Utama** | String (nama pengelola) & Integer (angka dengan titik s
+
+MD FILE: DJPU\Table_Pilihan\BAB XII — On Time Performance\CSV_ANALYSIS_2024.md
+# CSV Analysis: On Time Performance - Penerbangan Domestik 2024  ## 📊 Informasi Umum  | Properti | Nilai | |----------|-------| | **Nama File** | `TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2024.csv` | | **Sumber** | Extract dari PDF (Kemenhub/DJPU) | | **Tahun Data** | 2018 - 2024 | | **Jumlah Baris** | 15 (14 entitas + 1 baris Total/Rata-rata) | | **Jumlah Kolom** | 9 | | **Format Persentase** | String dengan koma des
