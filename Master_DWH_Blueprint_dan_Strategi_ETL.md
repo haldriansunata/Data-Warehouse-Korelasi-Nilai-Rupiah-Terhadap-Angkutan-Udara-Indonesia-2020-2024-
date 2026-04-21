@@ -49,11 +49,19 @@
 * **Isu:** Data sumber BAB II memiliki informasi `jenis_kegiatan` (Penumpang/Kargo/Penumpang & Kargo) dan `negara_asal` (untuk maskapai asing) yang semula tidak dicantumkan di blueprint `Dim_Maskapai`.
 * **Solusi:** Tambahkan kedua kolom tersebut ke `Dim_Maskapai` untuk memperkaya kemampuan analisis. `jenis_kegiatan` memungkinkan filtering maskapai berdasarkan tipe operasi, dan `negara_asal` memungkinkan analisis distribusi negara asal maskapai asing. Untuk maskapai nasional, `negara_asal` diisi `'Indonesia'`.
 
+**13. Kurs Tahunan: Menyambungkan Fakta Tahunan ke Data Kurs**
+* **Isu:** Skema DWH memiliki dua jalur waktu yang terpisah. Jalur bulanan (`Dim_Waktu_Bulanan`) sudah tersambung ke kurs via `Fact_Kurs_Bulanan`, sehingga `Fact_Penumpang_Rute` bisa di-korelasikan dengan kurs secara langsung. Namun jalur tahunan (`Dim_Waktu_Tahunan`) **buntu** — 4 tabel fakta tahunan (Produksi, OTP, Lalu Lintas, Statistik Rute) terhubung ke `Dim_Waktu_Tahunan`, tapi tidak ada tabel kurs yang juga terhubung ke sana. Artinya fakta tahunan tidak bisa "melihat" kurs sama sekali.
+* **Solusi:** Buat **`Fact_Kurs_Tahunan`** (hanya 5 baris, satu per tahun 2020–2024) yang terhubung ke `Dim_Waktu_Tahunan`. Tabel ini dihitung **langsung dari data harian BI.csv** (sumber yang sama dengan `Fact_Kurs_Bulanan`), bukan dari mengagregasi `Fact_Kurs_Bulanan`. Alasan menghindari agregasi-dari-agregasi: `AVG(avg_kurs_tengah)` dari 12 bulan tidak presisi karena setiap bulan punya jumlah hari trading berbeda — simple average dari 12 rata-rata ≠ rata-rata dari ~250 data harian. Dengan menghitung langsung dari harian, hasilnya presisi sempurna. Effort pembuatannya minimal (logika hampir identik dengan `Fact_Kurs_Bulanan`, hanya beda level GroupBy), tapi dampaknya besar: semua fakta tahunan kini punya jalur eksplisit ke kurs.
+
+**14. Strategi Implementasi: Clean Rewrite, Bukan Update Script Lama**
+* **Isu:** Script ETL dari implementation plan v2.2 sudah pernah dijalankan, tapi output-nya belum divalidasi kebenarannya. Implementation plan v3 awalnya mengasumsikan cukup meng-update script v2, padahal ada risiko mewarisi bug tersembunyi.
+* **Solusi:** Perlakukan implementasi v3 sebagai **clean rewrite** (tulis ulang dari nol), bukan update/patch dari script v2. Setiap script ETL ditulis fresh mengacu langsung ke master blueprint ini, lalu **divalidasi per gelombang** sebelum melanjutkan ke gelombang berikutnya. Script v2 boleh dijadikan *referensi bacaan* untuk memahami parsing logic yang pernah dicoba, tapi tidak boleh di-copy-paste tanpa verifikasi. Untuk script yang logic-nya terbukti identik dan sederhana (misal `fact_kurs` — hanya rename path), boleh reuse setelah quick spot-check output-nya terhadap data mentah.
+
 ---
 
 ### 🚀 Blueprint Final Data Warehouse (Checkpoint Terkini)
 
-Berikut adalah struktur final skema DWH:
+Berikut adalah struktur final skema DWH (5 Dimensi + 7 Fakta = **12 tabel total**):
 
 #### A. Tabel Dimensi (Konteks Deskriptif)
 
@@ -184,7 +192,7 @@ Berikut adalah struktur final skema DWH:
 | otp_percentage | Numeric | Tingkat ketepatan waktu (Format desimal, misal 0.8619 untuk 86.19%) |
 
 **6. `Fact_Kurs_Bulanan`**
-*(Grain: Waktu, Bulanan. Merekam volatilitas dan rata-rata nilai tukar)*
+*(Grain: Waktu, Bulanan. Merekam volatilitas dan rata-rata nilai tukar bulanan. Terhubung ke `Dim_Waktu_Bulanan`, melayani korelasi dengan fakta bulanan seperti `Fact_Penumpang_Rute`.)*
 | Nama Kolom | Tipe | Keterangan |
 | :--- | :--- | :--- |
 | **waktu_id** | Foreign Key | Mengarah ke `Dim_Waktu_Bulanan` |
@@ -195,12 +203,24 @@ Berikut adalah struktur final skema DWH:
 | max_kurs_tengah | Numeric | Nilai kurs tengah tertinggi di bulan tsb |
 | jumlah_hari_trading | Integer | Jumlah hari bursa aktif (validitas metrik) |
 
+**7. `Fact_Kurs_Tahunan`**
+*(Grain: Waktu, Tahunan. Merekam agregat nilai tukar per tahun. Terhubung ke `Dim_Waktu_Tahunan`, melayani korelasi dengan fakta tahunan seperti `Fact_Produksi_Maskapai`, `Fact_OTP_Maskapai`, `Fact_Lalu_Lintas_Bandara`, `Fact_Statistik_Rute`. Dihitung langsung dari data harian BI.csv — BUKAN agregasi dari `Fact_Kurs_Bulanan`.)*
+| Nama Kolom | Tipe | Keterangan |
+| :--- | :--- | :--- |
+| **waktu_id** | Foreign Key | Mengarah ke `Dim_Waktu_Tahunan` |
+| avg_kurs_jual | Numeric | Rata-rata kurs jual per tahun (dari data harian) |
+| avg_kurs_beli | Numeric | Rata-rata kurs beli per tahun (dari data harian) |
+| avg_kurs_tengah | Numeric | Rata-rata kurs tengah per tahun (dari data harian) |
+| min_kurs_tengah | Numeric | Nilai kurs tengah terendah di tahun tsb |
+| max_kurs_tengah | Numeric | Nilai kurs tengah tertinggi di tahun tsb |
+| jumlah_hari_trading | Integer | Jumlah hari bursa aktif dalam setahun |
+
 ---
 ---
 
 ### 🗺️ Peta Strategi ETL: Dari CSV Sumber ke Tabel DWH Target
 
-Urutan eksekusi disusun berdasarkan dependensi — **Dimensi duluan, Fakta belakangan**. Setiap tabel dipetakan: dari mana datanya, apa transformasinya, dan apa risiko/tantangannya.
+Urutan eksekusi disusun berdasarkan dependensi — **Dimensi duluan, Fakta belakangan**. Setiap script ETL ditulis sebagai **clean rewrite** (bukan update script v2), mengacu langsung ke blueprint di atas. Script v2 lama boleh dijadikan referensi bacaan, tapi tidak di-copy-paste tanpa verifikasi.
 
 ---
 
@@ -220,7 +240,7 @@ Urutan eksekusi disusun berdasarkan dependensi — **Dimensi duluan, Fakta belak
 | Item | Detail |
 |:---|:---|
 | **Sumber** | Generate manual via Python |
-| **Jumlah Baris** | 5 baris (2020–2024). Data OTP 2018–2019 dibuang (Keputusan K1). |
+| **Jumlah Baris** | 5 baris (2020–2024) |
 | **Transformasi** | Buat DataFrame sederhana: `waktu_id` (YYYY) dan `tahun`. |
 
 ---
@@ -267,36 +287,36 @@ Urutan eksekusi disusun berdasarkan dependensi — **Dimensi duluan, Fakta belak
 **Tahap A — Fondasi dari BAB VII (Bandara Domestik):**
 1. Baca CSV BAB VII.
 2. Bersihkan tag kategori dari `airport_name`: strip `(DOM)`, `(INT)`, `(DOMESTIK)`, `(INTERNASIONAL)` via Regex → simpan nama bandara bersih.
-3. Ambil kombinasi unik `(nama_bandara_bersih, propinsi_name)`.
-4. **Buang** kolom `airport_code` (bukan IATA, hanya index alfabet per provinsi).
-5. Set `negara = 'Indonesia'` untuk semua.
+3. Parse `NAMA_BANDARA - KOTA` via dash split → pisahkan nama bandara & kota.
+4. Ambil kombinasi unik `(nama_bandara_bersih, kota, propinsi_name)`.
+5. **Buang** kolom `airport_code` (bukan IATA, hanya index alfabet per provinsi).
+6. Set `negara = 'Indonesia'` untuk semua.
 
 **Tahap B — Perkaya dengan Kode IATA dari BAB III/VI:**
 1. Dari CSV rute BAB III & BAB VI, parse semua string rute → ekstrak pasangan `(nama_kota, kode_iata)`.
-2. **Match** nama bandara BAB VII ke nama kota dari rute → pasangkan `kode_iata`. (Lihat Strategi Matching K4 di bawah).
+2. **Match** nama bandara BAB VII ke nama kota dari rute → pasangkan `kode_iata`. (Lihat Strategi Matching di bawah).
 3. Bandara asing (muncul di rute internasional, tidak ada di BAB VII) → tambahkan sebagai baris baru dengan `provinsi = NULL`, `negara` diisi manual.
 
-#### Strategi Matching Nama Bandara ↔ Kode IATA (K4)
+#### Strategi Matching Nama Bandara ↔ Kode IATA
 
-Tantangan utama: nama di BAB VII adalah **nama bandara** (misal `SOEKARNO-HATTA`), sedangkan nama di string rute BAB III/VI adalah **nama kota** (misal `Jakarta`). Keduanya tidak identik. Berikut urutan strategi dari yang paling direkomendasikan secara best-practice:
+Tantangan utama: nama di BAB VII adalah **nama bandara** (misal `SOEKARNO-HATTA`), sedangkan nama di string rute BAB III/VI adalah **nama kota** (misal `Jakarta`). Keduanya tidak identik. Urutan strategi dari yang paling direkomendasikan:
 
 **🥇 Prioritas 1: Exact Match setelah Standardisasi Agresif**
-Langkah pertama yang wajib dicoba. Normalisasi kedua sisi (uppercase, strip whitespace, hapus tanda baca), lalu cocokkan.
-* **Keunggulan:** Paling cepat, nol risiko *false positive* (salah cocok). Tidak perlu library tambahan.
-* **Kekurangan:** Hanya menangkap bandara yang kebetulan nama kota dan nama bandaranya sama persis (misal `HALIM PERDANAKUSUMA` tidak akan match ke `Jakarta`). Coverage kemungkinan rendah.
-* **Kapan gagal:** Hampir pasti banyak yang tidak match, jadi ini lebih berfungsi sebagai *first pass* penyaring awal.
+Normalisasi kedua sisi (uppercase, strip whitespace, hapus tanda baca), lalu cocokkan.
+* **Keunggulan:** Paling cepat, nol risiko *false positive*. Tidak perlu library tambahan.
+* **Kekurangan:** Coverage rendah (nama bandara ≠ nama kota). Berfungsi sebagai *first pass* penyaring awal.
 
 **🥈 Prioritas 2: Manual Mapping Dictionary (Lookup Table Buatan)**
-Buat kamus Python (`dict`) yang secara eksplisit memetakan nama bandara BAB VII ke kode IATA. Contoh: `{"SOEKARNO-HATTA - JAKARTA": "CGK", "NGURAH RAI - BALI": "DPS", ...}`.
-* **Keunggulan:** Akurasi 100% — setiap mapping diverifikasi manusia. Ini adalah **gold standard** di proyek DWH profesional untuk dataset berskala kecil-menengah. Jumlah bandara Indonesia terbatas (~200–300), sangat feasible untuk dibangun manual.
-* **Kekurangan:** Butuh effort awal untuk menyusun kamus. Jika ada bandara baru di masa depan, kamus harus di-update manual.
-* **Rekomendasi:** Gunakan hasil *Prioritas 1* (exact match) untuk mengisi sebanyak mungkin, sisanya lengkapi manual.
+Buat kamus Python (`dict`) yang memetakan nama bandara BAB VII ke kode IATA. Contoh: `{"SOEKARNO-HATTA": "CGK", "NGURAH RAI": "DPS"}`.
+* **Keunggulan:** Akurasi 100%. **Gold standard** di proyek DWH profesional untuk dataset berskala kecil-menengah. Jumlah bandara Indonesia terbatas (~200–300), sangat feasible.
+* **Kekurangan:** Butuh effort awal menyusun kamus. Harus di-update manual jika ada bandara baru.
+* **Rekomendasi:** Gunakan hasil Prioritas 1 untuk mengisi sebanyak mungkin, sisanya lengkapi manual.
 
 **🥉 Prioritas 3: Fuzzy Matching dengan Human Review**
-Gunakan library seperti `fuzzywuzzy` atau `rapidfuzz` dengan algoritma *token_set_ratio* untuk mencocokkan string yang mirip tapi tidak identik.
-* **Keunggulan:** Otomatis, bisa menangkap variasi ejaan dan urutan kata. Berguna untuk *discovery* — menemukan kandidat match yang tidak terpikirkan.
-* **Kekurangan:** **Wajib di-review manual hasilnya.** Fuzzy matching bisa menghasilkan *false positive* (misal: `SULTAN HASANUDDIN - MAKASSAR` bisa salah match ke `SULTAN SYARIF KASIM II - PEKANBARU` jika threshold terlalu longgar). Butuh tuning threshold (biasanya 80–90).
-* **Rekomendasi:** Gunakan sebagai alat bantu *discovery* untuk mempercepat pembuatan Manual Mapping Dictionary (Prioritas 2), bukan sebagai pengganti.
+Gunakan library `rapidfuzz` dengan algoritma *token_set_ratio*.
+* **Keunggulan:** Otomatis, menangkap variasi ejaan. Berguna untuk *discovery* kandidat match.
+* **Kekurangan:** **Wajib di-review manual.** Bisa false positive. Butuh tuning threshold (80–90).
+* **Rekomendasi:** Gunakan sebagai alat bantu untuk mempercepat pembuatan Manual Mapping Dictionary, bukan sebagai pengganti.
 
 **Strategi Gabungan yang Direkomendasikan:**
 ```
@@ -410,7 +430,7 @@ Semua dimensi sudah tersedia → FK bisa di-lookup.
 | Langkah | Detail |
 |:---|:---|
 | 1. UNPIVOT (Melt) kolom tahun | Kolom `2020`–`2024` → turun jadi baris: kolom `tahun` + kolom `nilai`. |
-| 2. PIVOT baris metrik | 14 baris metrik (`Aircraft KM`, `Passenger Carried`, dll.) → naik jadi 14 kolom terpisah. Hasil: satu baris per maskapai per tahun. |
+| 2. PIVOT baris metrik | 14 baris metrik → naik jadi 14 kolom terpisah. Hasil: satu baris per maskapai per tahun. |
 | 3. Sanitasi numerik | Ganti koma eropa → titik, hapus tanda kutip, ganti dash → `NULL`/`0`, casting ke float. |
 | 4. Derive `kategori_rute` | Dari metadata folder: Dalam Negeri → `'DOMESTIK'`, Luar Negeri → `'INTERNASIONAL'`. |
 | 5. Cleansing nama maskapai | Standardisasi agar match `Dim_Maskapai`: uppercase, strip, hapus `PT.` dll. |
@@ -433,7 +453,7 @@ Semua dimensi sudah tersedia → FK bisa di-lookup.
 | Langkah | Detail |
 |:---|:---|
 | 1. UNPIVOT (Melt) | Kolom tahun `2018`–`2024` → baris: `tahun` + `otp_value`. |
-| 2. Filter tahun | Buang baris 2018 & 2019 (Keputusan K1). Pertahankan hanya 2020–2024. |
+| 2. Filter tahun | Buang baris 2018 & 2019. Pertahankan hanya 2020–2024. |
 | 3. Sanitasi numerik | Hapus `%`, ganti koma → titik, casting ke float. Konversi ke desimal: bagi 100 (misal `86.19` → `0.8619`). |
 | 4. Cleansing nama maskapai | `"PT. Garuda Indonesia"` → `"PT GARUDA INDONESIA"`. Hapus titik singkatan, uppercase, strip. |
 | 5. Construct `waktu_id` | Tahun → format YYYY. |
@@ -461,25 +481,96 @@ Semua dimensi sudah tersedia → FK bisa di-lookup.
 
 ---
 
-## FASE 3: RINGKASAN URUTAN EKSEKUSI
+### 2.7 `Fact_Kurs_Tahunan` 🆕
+| Item | Detail |
+|:---|:---|
+| **Sumber** | **KURS BI** (`BI.csv`, ~1230 baris harian) — **sumber yang sama** dengan `Fact_Kurs_Bulanan` |
+| **Grain** | 1 tahun (agregat langsung dari harian, BUKAN dari bulanan) |
+| **Dependensi FK** | `Dim_Waktu_Tahunan` |
+
+**Transformasi:**
+
+| Langkah | Detail |
+|:---|:---|
+| 1. Skip metadata | `skiprows=2` saat read CSV (sama dengan Fact_Kurs_Bulanan). |
+| 2. Parse tanggal | `"12/31/2024 12:00:00 AM"` → datetime → ekstrak `tahun`. |
+| 3. Derive kurs tengah | `kurs_tengah = (kurs_jual + kurs_beli) / 2` per baris harian. |
+| 4. Agregasi tahunan | GroupBy `(tahun)` → `AVG(kurs_jual)`, `AVG(kurs_beli)`, `AVG(kurs_tengah)`, `MIN(kurs_tengah)`, `MAX(kurs_tengah)`, `COUNT(*)` → `jumlah_hari_trading`. |
+| 5. Construct `waktu_id` | Tahun langsung → format YYYY (misal `2020`). |
+| 6. Filter range | Pertahankan hanya 2020–2024. |
+
+**Mengapa dari harian, bukan dari bulanan?** Menghitung `AVG(avg_kurs_tengah)` dari 12 baris bulanan menghasilkan *average of averages* yang tidak presisi — karena setiap bulan punya jumlah hari trading berbeda (ada 20, ada 22, ada lebih sedikit). Menghitung langsung dari ~250 baris harian per tahun menghasilkan rata-rata yang presisi sempurna. Untuk `MIN` dan `MAX`, keduanya memang selalu presisi (`MIN(min_bulan)` = `MIN(harian)`), tapi demi konsistensi dan kesederhanaan kode, kita hitung semuanya dari harian.
+
+**Catatan implementasi:** Script ETL untuk `Fact_Kurs_Bulanan` dan `Fact_Kurs_Tahunan` bisa digabung dalam satu file Python (misal `05_fact_kurs.py`) karena membaca sumber yang sama. Langkah 1–3 identik, hanya beda di langkah 4 (GroupBy bulan vs GroupBy tahun) dan langkah 5 (format `waktu_id`).
+
+---
+
+## FASE 3: RINGKASAN URUTAN EKSEKUSI & CHECKPOINT VALIDASI
 
 ```
-GELOMBANG 1 — Dimensi Independen (tanpa dependensi satu sama lain):
+GELOMBANG 1 — Dimensi Independen:
   ├── 1. Dim_Waktu_Bulanan    ✅ SELESAI
   ├── 2. Dim_Waktu_Tahunan    (generate, 5 baris)
   └── 3. Dim_Maskapai          (dari BAB II)
+  
+  🔍 CHECKPOINT 1: Validasi Gelombang 1
+     ├── dim_waktu_bulanan: 60 baris, waktu_id unik, format YYYYMM
+     ├── dim_waktu_tahunan: 5 baris, waktu_id = 2020–2024
+     └── dim_maskapai: nama unik, tidak ada NULL di kolom wajib,
+         kategori hanya NASIONAL/ASING, jenis_kegiatan hanya 3 enum
 
 GELOMBANG 2 — Dimensi dengan Integrasi Silang:
   ├── 4. Dim_Bandara           (BAB VII + BAB III/VI untuk IATA)
   └── 5. Dim_Rute              (BAB III, butuh Dim_Bandara selesai)
 
-GELOMBANG 3 — Tabel Fakta (butuh semua dimensi selesai):
+  🔍 CHECKPOINT 2: Validasi Gelombang 2
+     ├── dim_bandara: kode_iata unik (kecuali NULL), bandara Indonesia
+     │   punya provinsi (tidak NULL), semua bandara di rute BAB VI
+     │   terwakili
+     └── dim_rute: kode_rute unik, semua bandara_1_id & bandara_2_id
+         valid (ada di dim_bandara), kategori hanya DOMESTIK/INTERNASIONAL
+
+GELOMBANG 3 — Tabel Fakta (7 tabel):
   ├── 6. Fact_Penumpang_Rute          (BAB VI Jumlah)
   ├── 7. Fact_Statistik_Rute          (BAB VI Statistik)
   ├── 8. Fact_Lalu_Lintas_Bandara     (BAB VII)
   ├── 9. Fact_Produksi_Maskapai       (BAB IV)
   ├── 10. Fact_OTP_Maskapai           (BAB XII)
-  └── 11. Fact_Kurs_Bulanan           (KURS BI)
+  ├── 11. Fact_Kurs_Bulanan           (KURS BI → agregat bulanan)
+  └── 12. Fact_Kurs_Tahunan           (KURS BI → agregat tahunan)
+
+  🔍 CHECKPOINT 3: Validasi Gelombang 3
+     ├── Semua FK valid (tidak ada orphan — setiap rute_id, bandara_id,
+     │   maskapai_id, waktu_id ada di dimensi terkait)
+     ├── fact_kurs_bulanan: 60 baris, avg_kurs_tengah wajar (13.000–16.500)
+     ├── fact_kurs_tahunan: 5 baris, avg_kurs_tengah wajar
+     ├── CROSS-CHECK: AVG(fact_kurs_bulanan.avg_kurs_tengah) per tahun
+     │   ≈ fact_kurs_tahunan.avg_kurs_tengah (boleh sedikit beda karena
+     │   beda metode agregasi — ini expected, bukan bug)
+     ├── fact_penumpang_rute: SUM DOM 2020 ≈ 35.394.000
+     ├── fact_statistik_rute: semua rute_id match dim_rute
+     ├── fact_lalu_lintas: ~1.281 baris, semua bandara_id valid
+     ├── fact_produksi: semua maskapai_id valid
+     └── fact_otp: range otp_percentage 0.0–1.0, tahun ≥ 2020
+```
+
+---
+
+### Peta Koneksi Skema Lengkap (Ringkasan Visual)
+
+```
+JALUR BULANAN (korelasi utama proyek):
+  Dim_Waktu_Bulanan ←── Fact_Kurs_Bulanan
+  Dim_Waktu_Bulanan ←── Fact_Penumpang_Rute ──→ Dim_Rute ──→ Dim_Bandara
+
+JALUR TAHUNAN (enrichment + korelasi tahunan):
+  Dim_Waktu_Tahunan ←── Fact_Kurs_Tahunan
+  Dim_Waktu_Tahunan ←── Fact_Statistik_Rute    ──→ Dim_Rute ──→ Dim_Bandara
+  Dim_Waktu_Tahunan ←── Fact_Lalu_Lintas_Bandara ──→ Dim_Bandara
+  Dim_Waktu_Tahunan ←── Fact_Produksi_Maskapai ──→ Dim_Maskapai
+  Dim_Waktu_Tahunan ←── Fact_OTP_Maskapai      ──→ Dim_Maskapai
+
+Kedua jalur kini memiliki tabel kurs masing-masing → TIDAK ADA jalur yang buntu.
 ```
 
 ---
