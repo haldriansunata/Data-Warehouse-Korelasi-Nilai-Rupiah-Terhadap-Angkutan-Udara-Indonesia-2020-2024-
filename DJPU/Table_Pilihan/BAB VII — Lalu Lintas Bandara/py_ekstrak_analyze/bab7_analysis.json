@@ -1,0 +1,69 @@
+{
+    "num_rows": 1281,
+    "num_cols": 22,
+    "columns": [
+        "propinsi_code",
+        "propinsi_name",
+        "airport_code",
+        "airport_name",
+        "year",
+        "pesawat_dtg",
+        "pesawat_brk",
+        "pesawat_total",
+        "penumpang_dtg",
+        "penumpang_brk",
+        "penumpang_total",
+        "penumpang_tra",
+        "bagasi_dtg",
+        "bagasi_brk",
+        "bagasi_total",
+        "barang_dtg",
+        "barang_brk",
+        "barang_total",
+        "pos_dtg",
+        "pos_brk",
+        "pos_total",
+        "keterangan"
+    ],
+    "dtypes": {
+        "propinsi_code": "int64",
+        "propinsi_name": "str",
+        "airport_code": "str",
+        "airport_name": "str",
+        "year": "int64",
+        "pesawat_dtg": "float64",
+        "pesawat_brk": "float64",
+        "pesawat_total": "float64",
+        "penumpang_dtg": "str",
+        "penumpang_brk": "str",
+        "penumpang_total": "str",
+        "penumpang_tra": "str",
+        "bagasi_dtg": "str",
+        "bagasi_brk": "str",
+        "bagasi_total": "str",
+        "barang_dtg": "str",
+        "barang_brk": "str",
+        "barang_total": "str",
+        "pos_dtg": "str",
+        "pos_brk": "str",
+        "pos_total": "str",
+        "keterangan": "str"
+    },
+    "distinct_value_examples": {
+        "year": [
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+        ],
+        "keterangan": [
+            "Data 12 Bln",
+            "Data 12 Bulan",
+            "Data 5 bln",
+            "Data 10 Bln",
+            "Data 12 bln"
+        ]
+    },
+    "has_nulls": true
+}

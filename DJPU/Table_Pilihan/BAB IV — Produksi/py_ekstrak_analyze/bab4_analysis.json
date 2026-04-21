@@ -1,0 +1,194 @@
+{
+    "CSV_Produksi Angkutan Udara Niaga Berjadwal Dalam Negeri 2020-2024": {
+        "total_files": 19,
+        "schema_samples": [
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT ASI PUJIASTUTI.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            },
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT BATIK AIR.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            },
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI 2020-2024 PT BBN AIRLINES INDONESIA.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            }
+        ],
+        "metric_descriptions": [
+            "Aircraft Departure",
+            "Aircraft Hours",
+            "Aircraft KM",
+            "Available Seat KM",
+            "Available Ton KM",
+            "Freight Carried",
+            "Passenger Carried",
+            "Passenger KM",
+            "Passenger L/F",
+            "Ton KM Performed - Freight",
+            "Ton KM Performed - Mail",
+            "Ton KM Performed - Passenger",
+            "Ton KM Performed - Total",
+            "Weight L/F"
+        ],
+        "inconsistent_schemas_found": false
+    },
+    "CSV_PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 BADAN USAHA ANGKUTAN UDARA NASIONAL": {
+        "total_files": 11,
+        "schema_samples": [
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 BADAN USAHA ANGKUTAN UDARA NASIONAL MY INDO AIRLINES.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            },
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 BADAN USAHA ANGKUTAN UDARA NASIONAL PT BATIK AIR INDONESIA.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            },
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 BADAN USAHA ANGKUTAN UDARA NASIONAL PT CITILINK INDONESIA.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            }
+        ],
+        "metric_descriptions": [
+            "Aircraft Departure",
+            "Aircraft Hours",
+            "Aircraft KM",
+            "Available Seat KM",
+            "Available Ton KM",
+            "Freight Carried",
+            "Passenger Carried",
+            "Passenger KM",
+            "Passenger L/F",
+            "Ton KM Performed - Freight",
+            "Ton KM Performed - Mail",
+            "Ton KM Performed - Passenger",
+            "Ton KM Performed - Total",
+            "Weight L/F"
+        ],
+        "inconsistent_schemas_found": false
+    },
+    "CSV_PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 PERUSAHAAN ANGKUTAN UDARA ASING": {
+        "total_files": 66,
+        "schema_samples": [
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 PERUSAHAAN ANGKUTAN UDARA ASING AERO DILI TRANSPORT SERVICES.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            },
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 PERUSAHAAN ANGKUTAN UDARA ASING AEROFLOT.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            },
+            {
+                "filename": "PRODUKSI ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI 2020 - 2024 PERUSAHAAN ANGKUTAN UDARA ASING AIR BUSAN.csv",
+                "columns": [
+                    "NO",
+                    "DESCRIPTION",
+                    "Unit",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023",
+                    "2024"
+                ],
+                "num_rows": 14
+            }
+        ],
+        "metric_descriptions": [
+            "Aircraft Departure",
+            "Aircraft Hours",
+            "Aircraft KM",
+            "Available Seat KM",
+            "Available Ton KM",
+            "Freight Carried",
+            "Passenger Carried",
+            "Passenger KM",
+            "Passenger L/F",
+            "Ton KM Performed - Freight",
+            "Ton KM Performed - Mail",
+            "Ton KM Performed - Passenger",
+            "Ton KM Performed - Total",
+            "Weight L/F"
+        ],
+        "inconsistent_schemas_found": false
+    }
+}

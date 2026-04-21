@@ -1,0 +1,100 @@
+{
+    "dalam_negeri": [
+        {
+            "year": "2024",
+            "type": "Gabungan",
+            "sample": [
+                "Dhoho(DHX) - Balikpapan(BPN)",
+                "Medan(KNO) - Jambi(DJB)",
+                "Pangkalan Bun(PKN) - Balikpapan(BPN)",
+                "Semarang(SRG) - Padang Pariaman(PDG)",
+                "Sumbawa Besar(SWQ) - Denpasar(DPS)"
+            ],
+            "delimiters_found": {
+                "-": 312
+            },
+            "anomalies": [
+                "Dhoho(DHX) - Balikpapan(BPN)",
+                "Medan(KNO) - Jambi(DJB)",
+                "Pangkalan Bun(PKN) - Balikpapan(BPN)"
+            ]
+        },
+        {
+            "year": "2021",
+            "type": "Terpisah",
+            "sample_asal": [
+                "Muara Teweh (HMS)",
+                "Fak-fak (FKQ)",
+                "Fak-fak (FKQ)",
+                "Jakarta-HLP (HLP)",
+                "Yogyakarta (JOG)"
+            ],
+            "sample_tuj": [
+                "Banjarmasin (BDJ)",
+                "Ambon (AMQ)",
+                "Teluk Bintoni (BXB)",
+                "Cepu (CPF)",
+                "Denpasar (DPS)"
+            ],
+            "anomalies_asal": [
+                "Muara Teweh (HMS)",
+                "Fak-fak (FKQ)",
+                "Fak-fak (FKQ)"
+            ],
+            "anomalies_tuj": [
+                "Banjarmasin (BDJ)",
+                "Ambon (AMQ)",
+                "Teluk Bintoni (BXB)"
+            ]
+        }
+    ],
+    "luar_negeri": [
+        {
+            "year": "2024",
+            "type": "Gabungan",
+            "sample": [
+                "Port Moresby(POM) - Denpasar(DPS)",
+                "Denpasar(DPS) - Abu Dhabi(AUH)",
+                "Phuket(HKT) - Denpasar(DPS)",
+                "Kuala Lumpur(KUL) - Batam(BTH)",
+                "Manado(MDC) - Kota Kinabalu(BKI)"
+            ],
+            "delimiters_found": {
+                "-": 128
+            },
+            "anomalies": [
+                "Port Moresby(POM) - Denpasar(DPS)",
+                "Denpasar(DPS) - Abu Dhabi(AUH)",
+                "Phuket(HKT) - Denpasar(DPS)"
+            ]
+        },
+        {
+            "year": "2021",
+            "type": "Terpisah",
+            "sample_asal": [
+                "Jakarta (CGK)",
+                "Ho Chi Minh City (SGN)",
+                "Jakarta (CGK)",
+                "Pekanbaru (PKU)",
+                "Yogyakarta (YIA)"
+            ],
+            "sample_tuj": [
+                "Ho Chi Minh City (SGN)",
+                "Denpasar (DPS)",
+                "Chengdu (CTU)",
+                "Kuala Lumpur (KUL)",
+                "Kuala Lumpur (KUL)"
+            ],
+            "anomalies_asal": [
+                "Jakarta (CGK)",
+                "Ho Chi Minh City (SGN)",
+                "Jakarta (CGK)"
+            ],
+            "anomalies_tuj": [
+                "Ho Chi Minh City (SGN)",
+                "Denpasar (DPS)",
+                "Chengdu (CTU)"
+            ]
+        }
+    ]
+}

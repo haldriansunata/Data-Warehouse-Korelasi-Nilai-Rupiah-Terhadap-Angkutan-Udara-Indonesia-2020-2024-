@@ -1,0 +1,25 @@
+{
+    "num_rows": 1230,
+    "num_cols": 5,
+    "columns": [
+        "Kurs Transaksi USD  ",
+        "Kurs Transaksi USD  .1",
+        "Kurs Transaksi USD  .2",
+        "Kurs Transaksi USD  .3",
+        "Unnamed: 4"
+    ],
+    "dtypes": {
+        "Kurs Transaksi USD  ": "str",
+        "Kurs Transaksi USD  .1": "str",
+        "Kurs Transaksi USD  .2": "str",
+        "Kurs Transaksi USD  .3": "str",
+        "Unnamed: 4": "str"
+    },
+    "distinct_value_examples": {
+        "Kurs Transaksi USD  .1": [
+            "Nilai",
+            "1"
+        ]
+    },
+    "has_nulls": true
+}

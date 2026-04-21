@@ -1,0 +1,218 @@
+{
+    "dalam_negeri": [
+        {
+            "year": "2024",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2024.csv",
+            "num_rows": 312,
+            "num_cols": 2,
+            "raw_columns": [
+                "NO",
+                "RUTE (PP)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (pp)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (PP)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2023",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2023.csv",
+            "num_rows": 303,
+            "num_cols": 2,
+            "raw_columns": [
+                "NO",
+                "RUTE (PP)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (pp)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (PP)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2022",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2022.csv",
+            "num_rows": 374,
+            "num_cols": 2,
+            "raw_columns": [
+                "NO",
+                "RUTE (ASAL - TUJUAN)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (asal - tujuan)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (ASAL - TUJUAN)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2021",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2021.csv",
+            "num_rows": 378,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "RUTE (ASAL)",
+                "RUTE (TUJUAN)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (asal)",
+                "rute (tujuan)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (ASAL)": "str",
+                "RUTE (TUJUAN)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2020",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL DALAM NEGERI TAHUN 2020.csv",
+            "num_rows": 410,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "RUTE (ASAL)",
+                "RUTE (TUJUAN)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (asal)",
+                "rute (tujuan)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (ASAL)": "str",
+                "RUTE (TUJUAN)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        }
+    ],
+    "luar_negeri": [
+        {
+            "year": "2024",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2024.csv",
+            "num_rows": 128,
+            "num_cols": 2,
+            "raw_columns": [
+                "NO",
+                "RUTE (PP)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (pp)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (PP)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2023",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2023.csv",
+            "num_rows": 125,
+            "num_cols": 2,
+            "raw_columns": [
+                "NO",
+                "RUTE (PP)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (pp)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (PP)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2022",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2022.csv",
+            "num_rows": 133,
+            "num_cols": 2,
+            "raw_columns": [
+                "NO",
+                "RUTE (ASAL - TUJUAN)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (asal - tujuan)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (ASAL - TUJUAN)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2021",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2021.csv",
+            "num_rows": 145,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "RUTE ASAL",
+                "RUTE TUJUAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute asal",
+                "rute tujuan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE ASAL": "str",
+                "RUTE TUJUAN": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        },
+        {
+            "year": "2020",
+            "filename": "RUTE ANGKUTAN UDARA NIAGA BERJADWAL LUAR NEGERI TAHUN 2020.csv",
+            "num_rows": 157,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "RUTE (ASAL)",
+                "RUTE (TUJUAN)"
+            ],
+            "standardized_columns": [
+                "no",
+                "rute (asal)",
+                "rute (tujuan)"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "RUTE (ASAL)": "str",
+                "RUTE (TUJUAN)": "str"
+            },
+            "distinct_value_examples": {},
+            "has_nulls": false
+        }
+    ]
+}

@@ -1,0 +1,309 @@
+{
+    "niaga_berjadwal": [
+        {
+            "year": "2024",
+            "filename": "DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2024.csv",
+            "num_rows": 18,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "NAMA BADAN USAHA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama badan usaha",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA BADAN USAHA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang dan Kargo",
+                    "Penumpang",
+                    "Kargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2023",
+            "filename": "DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2023.csv",
+            "num_rows": 20,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "NAMA BADAN USAHA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama badan usaha",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA BADAN USAHA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang dan Kargo",
+                    "Penumpang",
+                    "Kargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2022",
+            "filename": "DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2022.csv",
+            "num_rows": 18,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "NAMA BADAN USAHA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama badan usaha",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA BADAN USAHA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumparig",
+                    "Penumpang",
+                    "Penumpang dan Kargo",
+                    "Kargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2021",
+            "filename": "DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL TAHUN 2021.csv",
+            "num_rows": 19,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "NAMA BADAN USAHA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama badan usaha",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA BADAN USAHA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang",
+                    "Cargo",
+                    "Penumpang dan Kargo",
+                    "Penumpang Dan Kargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2020",
+            "filename": "DAFTAR BADAN USAHA ANGKUTAN UDARA NIAGA BERJADWAL YANG BEROPERASI TAHUN 2020.csv",
+            "num_rows": 15,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "NAMA BADAN USAHA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama badan usaha",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA BADAN USAHA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang",
+                    "Cargo"
+                ]
+            },
+            "has_nulls": false
+        }
+    ],
+    "asing": [
+        {
+            "year": "2024",
+            "filename": "DAFTAR PERWAKILAN PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2024.csv",
+            "num_rows": 65,
+            "num_cols": 4,
+            "raw_columns": [
+                "NO",
+                "NAMA ANGKUTAN UDARA ASING",
+                "NEGARA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama angkutan udara asing",
+                "negara",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA ANGKUTAN UDARA ASING": "str",
+                "NEGARA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang dan Kargo",
+                    "Khusus Kargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2023",
+            "filename": "DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2023.csv",
+            "num_rows": 74,
+            "num_cols": 4,
+            "raw_columns": [
+                "NO",
+                "NAMA PERUSAHAAN",
+                "NEGARA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama perusahaan",
+                "negara",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA PERUSAHAAN": "str",
+                "NEGARA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang dan Kargo",
+                    "Khusus Kargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2022",
+            "filename": "DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2022.csv",
+            "num_rows": 56,
+            "num_cols": 4,
+            "raw_columns": [
+                "NO",
+                "NAMA PERUSAHAAN",
+                "NEGARA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama perusahaan",
+                "negara",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA PERUSAHAAN": "str",
+                "NEGARA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang",
+                    "Perumpang",
+                    "Penumpang.",
+                    "Penumpang dan Kargo",
+                    "Kargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2021",
+            "filename": "DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING TAHUN 2021.csv",
+            "num_rows": 49,
+            "num_cols": 4,
+            "raw_columns": [
+                "NO",
+                "NAMA PERUSAHAAN",
+                "NEGARA",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama perusahaan",
+                "negara",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA PERUSAHAAN": "str",
+                "NEGARA": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang",
+                    "Cargo",
+                    "Penumpang & Cargo"
+                ]
+            },
+            "has_nulls": false
+        },
+        {
+            "year": "2020",
+            "filename": "DAFTAR PERUSAHAAN ANGKUTAN UDARA ASING YANG BEROPERASI TAHUN 2020.csv",
+            "num_rows": 52,
+            "num_cols": 3,
+            "raw_columns": [
+                "NO",
+                "NAMA PERUSAHAAN",
+                "JENIS KEGIATAN"
+            ],
+            "standardized_columns": [
+                "no",
+                "nama perusahaan",
+                "jenis kegiatan"
+            ],
+            "dtypes": {
+                "NO": "int64",
+                "NAMA PERUSAHAAN": "str",
+                "JENIS KEGIATAN": "str"
+            },
+            "distinct_value_examples": {
+                "JENIS KEGIATAN": [
+                    "Penumpang",
+                    "Penumpang & Cargo",
+                    "Cargo"
+                ]
+            },
+            "has_nulls": false
+        }
+    ]
+}
