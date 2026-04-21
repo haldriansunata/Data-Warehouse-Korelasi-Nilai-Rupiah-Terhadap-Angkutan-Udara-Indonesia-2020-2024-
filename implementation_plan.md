@@ -190,9 +190,20 @@ erDiagram
         string kategori
         int pesawat_dtg
         int pesawat_brk
+        int pesawat_total
         int penumpang_dtg
         int penumpang_brk
+        int penumpang_tra
         int penumpang_total
+        int bagasi_dtg
+        int bagasi_brk
+        int bagasi_total
+        int barang_dtg
+        int barang_brk
+        int barang_total
+        int pos_dtg
+        int pos_brk
+        int pos_total
     }
     Fact_Produksi_Maskapai {
         int waktu_id FK
@@ -200,8 +211,18 @@ erDiagram
         string kategori_rute
         float aircraft_km
         int aircraft_departure
-        float passenger_carried
+        float aircraft_hours
+        int passenger_carried
+        float freight_carried
+        float passenger_km
+        float available_seat_km
         float passenger_load_factor
+        float ton_km_passenger
+        float ton_km_freight
+        float ton_km_mail
+        float ton_km_total
+        float available_ton_km
+        float weight_load_factor
     }
     Fact_OTP_Maskapai {
         int waktu_id FK
@@ -525,6 +546,224 @@ d:\Kuliah\projek_dw\
 
 ## 6. DETAIL LOGIC PER SCRIPT
 
+### 6.0 `config.py` + `utils.py` — Shared Infrastructure
+
+#### `config.py` — Paths & Constants
+
+```python
+# === BASE PATHS ===
+BASE_DIR       # Root project: d:\Kuliah\projek_dw
+OUTPUT_DIR     # output/ (flat, semua 12 file di sini)
+
+# === INPUT PATHS ===
+KURS_CSV       # KURS/BI.csv
+BAB_II_DIR     # DJPU/Table_Pilihan/BAB II — Perusahaan Angkutan Udara/
+BAB_III_DIR    # DJPU/Table_Pilihan/BAB III — Rute & Bandara/
+BAB_IV_DIR     # DJPU/Table_Pilihan/BAB IV — Produksi/
+BAB_VI_DIR     # DJPU/Table_Pilihan/BAB VI — Penumpang Per Rute/
+BAB_VII_CSV    # DJPU/Table_Pilihan/BAB VII — .../DATA LALU LINTAS...2020-2024.csv
+BAB_XII_CSV    # DJPU/Table_Pilihan/BAB XII — .../TINGKAT KETEPATAN WAKTU...2024.csv
+
+# === CONSTANTS ===
+TAHUN_MULAI = 2020
+TAHUN_AKHIR = 2024
+TAHUN_RANGE = range(2020, 2025)  # [2020, 2021, 2022, 2023, 2024]
+
+NAMA_BULAN = {
+    1: "Januari", 2: "Februari", 3: "Maret", 4: "April",
+    5: "Mei", 6: "Juni", 7: "Juli", 8: "Agustus",
+    9: "September", 10: "Oktober", 11: "November", 12: "Desember"
+}
+```
+
+#### `utils.py` — Shared Parsing Functions
+
+**Fungsi 1: `parse_angka_indonesia(val: str) -> int | float | None`**
+
+Konversi string angka format Indonesia ke numerik Python.
+
+```
+Input/Output examples:
+  "1.234.567"     → 1234567      (titik = ribuan, semua segmen setelah titik pertama panjang 3)
+  "363789"         → 363789       (integer langsung)
+  "1549163.0"      → 1549163      (float .0 → truncate ke int)
+  "-"              → 0            (dash → nol)
+  ""               → None         (kosong → None)
+  "nan"            → None
+  "61,07"          → 61.07        (koma = desimal eropa → float)
+  '"43,76"'        → 43.76        (strip quotes dulu, lalu koma → titik)
+
+Logic:
+  1. Strip whitespace dan quotes (", ')
+  2. Jika val in ('-', '', 'nan', 'None', None) → return 0 untuk '-', None untuk sisanya
+  3. Jika ada koma DAN tidak ada titik → koma = desimal eropa → replace(',' , '.') → float
+  4. Jika ada titik:
+     a. Split by '.'. Jika semua segmen setelah pertama panjang 3 → titik = ribuan → hapus titik → int
+     b. Else → titik = desimal biasa → float → int jika .0
+  5. Else → int langsung
+```
+
+---
+
+**Fungsi 2: `parse_airport_name(raw: str) -> tuple[str, str, str]`**
+
+Parse kolom `airport_name` dari BAB VII CSV.
+
+```
+Input:  "SULTAN ISKANDAR MUDA - BANDA ACEH (DOM)"
+Output: ("SULTAN ISKANDAR MUDA", "BANDA ACEH", "DOMESTIK")
+
+Input:  "KUALANAMU - MEDAN (INT)"
+Output: ("KUALANAMU", "MEDAN", "INTERNASIONAL")
+
+Input:  "KUALANAMU - MEDAN (INTERNASIONAL)"
+Output: ("KUALANAMU", "MEDAN", "INTERNASIONAL")
+
+Input:  "CUT NYAK DHIEN - NAGAN RAYA"
+Output: ("CUT NYAK DHIEN", "NAGAN RAYA", "DOMESTIK")  # tanpa tag → default DOMESTIK
+
+Input:  "HALIM PERDANAKUSUMA"  # tanpa dash, tanpa tag
+Output: ("HALIM PERDANAKUSUMA", "", "DOMESTIK")
+
+Logic:
+  1. Regex search pattern \s*\((DOM|INT|DOMESTIK|INTERNASIONAL)\)\s*$ di akhir string
+  2. Jika match → extract tag, strip tag dari string
+  3. Map tag: DOM/DOMESTIK → 'DOMESTIK', INT/INTERNASIONAL → 'INTERNASIONAL'
+  4. Jika tidak match → kategori = 'DOMESTIK' (default bandara kecil/perintis)
+  5. Split sisa string by ' - ' (spasi-dash-spasi):
+     a. Jika ada dash → bagian kiri = nama_bandara, bagian kanan = kota
+     b. Jika tidak ada dash → nama_bandara = seluruh string, kota = ''
+  6. Strip whitespace kedua hasil
+  7. Return (nama_bandara, kota, kategori)
+```
+
+---
+
+**Fungsi 3: `extract_iata_from_route(route_str: str) -> tuple[str, str, str, str]`**
+
+Parse string rute dari BAB III/VI CSV.
+
+```
+Input:  "Jakarta (CGK) - Denpasar (DPS)"    # format 2020-2021
+Output: ("CGK", "DPS", "Jakarta", "Denpasar")
+
+Input:  "CGK-DPS"                            # format 2022-2024
+Output: ("CGK", "DPS", "", "")
+
+Input:  "Praya, Lombok (LOP) - Jakarta (CGK)" # edge case: koma dalam nama kota
+Output: ("LOP", "CGK", "Praya, Lombok", "Jakarta")
+
+Input:  "CGK - DPS"                          # dengan spasi
+Output: ("CGK", "DPS", "", "")
+
+Logic:
+  1. Coba regex: r'(.+?)\s*\(([A-Z]{3}\*?)\)\s*[-–]\s*(.+?)\s*\(([A-Z]{3}\*?)\)'
+     → match = format panjang (kota + IATA) → extract 4 grup
+  2. Jika tidak match, split by '-' atau '–' → strip masing-masing
+     → jika kedua sisi panjang 3 dan semua uppercase → format pendek (IATA saja)
+  3. Strip asterisk (*) dari kode IATA jika ada (codeshare marker)
+  4. Return (iata_asal, iata_tujuan, kota_asal, kota_tujuan)
+```
+
+---
+
+**Fungsi 4: `standardize_maskapai(nama: str) -> str`**
+
+Standardisasi nama maskapai ke format konsisten.
+
+```
+Input:  "PT. Garuda Indonesia"  → "PT GARUDA INDONESIA"
+Input:  "pt Pelita Air Sevice"  → "PT PELITA AIR SERVICE"  # fix typo
+Input:  "  Lion Air  "          → "LION AIR"
+
+Logic:
+  1. Strip whitespace
+  2. Uppercase
+  3. Replace 'PT.' → 'PT' (hapus titik singkatan)
+  4. Apply typo corrections dict:
+     MASKAPAI_TYPO_MAP = {
+         "SEVICE": "SERVICE",
+         "PELITA AIR SEVICE": "PELITA AIR SERVICE",
+         "BATIK INDONESIA AIR": "BATIK AIR INDONESIA",
+         ... (dikembangkan saat implementasi)
+     }
+  5. Collapse multiple spaces → single space
+  6. Return result
+```
+
+---
+
+**Fungsi 5: `normalize_jenis_kegiatan(val: str) -> str`**
+
+Standardisasi kolom jenis_kegiatan dari BAB II ke ENUM.
+
+```
+Input:  "Penumparig"           → "PENUMPANG"  # typo
+Input:  "Perumpang"            → "PENUMPANG"  # typo
+Input:  "Cargo"                → "KARGO"
+Input:  "Khusus Kargo"         → "KARGO"
+Input:  "Penumpang dan Kargo"  → "PENUMPANG & KARGO"
+Input:  "Penumpang & Kargo"    → "PENUMPANG & KARGO"
+
+Logic:
+  1. Uppercase, strip
+  2. Apply typo map: PENUMPARIG/PERUMPANG → PENUMPANG, CARGO → KARGO
+  3. If contains 'PENUMPANG' AND ('KARGO' or 'CARGO') → 'PENUMPANG & KARGO'
+  4. If 'KARGO' or 'CARGO' or 'KHUSUS KARGO' → 'KARGO'
+  5. If 'PENUMPANG' → 'PENUMPANG'
+  6. Else → original (log warning)
+```
+
+---
+
+**Konstanta 6: `BANDARA_IATA_MAP` — Manual Mapping Dictionary**
+
+> [!IMPORTANT]
+> **BLOCKER untuk Gelombang 2.** Dictionary ini HARUS terisi sebelum `03_dim_bandara.py` bisa berjalan dengan benar. Tanpa ini, sebagian besar bandara akan punya `kode_iata = NULL`.
+
+**Cara membangun `BANDARA_IATA_MAP`:**
+```
+Step 1: Jalankan 03_dim_bandara.py Phase A saja
+        → hasilkan list ~250-350 nama bandara unik dari BAB VII
+            ↓
+Step 2: Jalankan exact match + fuzzy match otomatis
+        → generate kandidat pasangan nama↔IATA
+            ↓
+Step 3: Review manual, isi yang miss/salah
+        → finalisasi dict di utils.py
+            ↓
+Step 4: Jalankan ulang 03_dim_bandara.py Phase A+B
+        → dim_bandara.csv siap ✅
+```
+
+```python
+# Format: nama_bandara (dari BAB VII, setelah strip tag) → kode IATA
+BANDARA_IATA_MAP = {
+    # Bandara utama (akan diisi ~200-300 entri)
+    "SOEKARNO-HATTA": "CGK",
+    "NGURAH RAI": "DPS",
+    "JUANDA": "SUB",
+    "SULTAN HASANUDDIN": "UPG",
+    "KUALANAMU": "KNO",
+    "SULTAN AJI MUHAMMAD SULAIMAN SEPINGGAN": "BPN",
+    "HANG NADIM": "BTH",
+    "ADIAN SUCIPTO": "JOG",
+    "HUSEIN SASTRANEGARA": "BDO",
+    "MINANGKABAU": "PDG",
+    # ... (dikembangkan via Phase B step 1-3)
+}
+
+# Reverse lookup: IATA → kota (dari BAB III/VI parsing)
+IATA_KOTA_MAP = {
+    "CGK": "Jakarta",
+    "DPS": "Denpasar",
+    "SUB": "Surabaya",
+    # ... (auto-populated dari extract_iata_from_route)
+}
+```
+
+---
+
 ### 6.1 `01_dim_waktu.py`
 
 **Sumber:** Generate manual via Python (tidak dari CSV).
@@ -728,6 +967,90 @@ d:\Kuliah\projek_dw\
 
 ---
 
+### 6.11 `run_all.py` — Orchestrator
+
+**Tujuan:** Menjalankan semua 10 script ETL secara berurutan dalam 3 gelombang, dengan checkpoint validasi antar gelombang.
+
+**Pseudocode:**
+```python
+def main():
+    print("=== ETL PIPELINE v3.1 — Run All ===")
+    
+    # --- GELOMBANG 1: Dimensi Independen ---
+    print("\n▶ GELOMBANG 1 — Dimensi Independen")
+    run_script("etl/01_dim_waktu.py")
+    run_script("etl/02_dim_maskapai.py")
+    
+    # Checkpoint Gelombang 1
+    assert row_count("dim_waktu_bulanan.csv") == 60
+    assert row_count("dim_waktu_tahunan.csv") == 5
+    assert no_nulls("dim_maskapai.csv", "kategori_maskapai")
+    assert no_duplicates("dim_maskapai.csv", "nama_maskapai")
+    print("✅ Checkpoint Gelombang 1 PASSED")
+    
+    # --- GELOMBANG 2: Dimensi Integrasi Silang ---
+    print("\n▶ GELOMBANG 2 — Dimensi Integrasi Silang")
+    run_script("etl/03_dim_bandara.py")
+    run_script("etl/04_dim_rute.py")
+    
+    # Checkpoint Gelombang 2
+    assert no_nulls_where("dim_bandara.csv", "provinsi", "negara == 'Indonesia'")
+    assert no_duplicates("dim_rute.csv", "kode_rute")
+    assert all_fk_valid("dim_rute.csv", "bandara_1_id", "dim_bandara.csv", "bandara_id")
+    assert all_fk_valid("dim_rute.csv", "bandara_2_id", "dim_bandara.csv", "bandara_id")
+    print("✅ Checkpoint Gelombang 2 PASSED")
+    
+    # --- GELOMBANG 3: Tabel Fakta ---
+    print("\n▶ GELOMBANG 3 — Tabel Fakta")
+    run_script("etl/05_fact_kurs.py")
+    run_script("etl/06_fact_penumpang_rute.py")
+    run_script("etl/07_fact_statistik_rute.py")
+    run_script("etl/08_fact_lalu_lintas.py")
+    run_script("etl/09_fact_produksi.py")
+    run_script("etl/10_fact_otp.py")
+    
+    # Checkpoint Gelombang 3
+    assert row_count("fact_kurs_bulanan.csv") == 60
+    assert row_count("fact_kurs_tahunan.csv") == 5
+    cross_check_kurs()  # AVG bulanan per tahun ≈ tahunan (warning jika >1% beda)
+    assert all_fk_valid("fact_penumpang_rute.csv", "rute_id", "dim_rute.csv", "rute_id")
+    assert all_fk_valid("fact_lalu_lintas_bandara.csv", "bandara_id", "dim_bandara.csv", "bandara_id")
+    assert min_value("fact_otp_maskapai.csv", "waktu_id") >= 2020
+    assert value_range("fact_otp_maskapai.csv", "otp_percentage", 0.0, 1.0)
+    print("✅ Checkpoint Gelombang 3 PASSED")
+    
+    # --- SUMMARY ---
+    print("\n=== ✅ ALL 12 FILES GENERATED ===")
+    for f in sorted(os.listdir(OUTPUT_DIR)):
+        size = os.path.getsize(os.path.join(OUTPUT_DIR, f))
+        rows = row_count(f)
+        print(f"  {f}: {rows:,} rows ({size:,} bytes)")
+
+def run_script(path):
+    """Jalankan script Python via subprocess. Exit jika gagal."""
+    result = subprocess.run([sys.executable, path], cwd=BASE_DIR, env=...)
+    if result.returncode != 0:
+        print(f"❌ FAILED: {path}")
+        sys.exit(1)
+
+def cross_check_kurs():
+    """Bandingkan AVG bulanan per tahun vs tahunan. Warning jika >1% beda."""
+    bulanan = pd.read_csv("fact_kurs_bulanan.csv")
+    tahunan = pd.read_csv("fact_kurs_tahunan.csv")
+    bulanan['tahun'] = bulanan['waktu_id'] // 100
+    avg_from_bulanan = bulanan.groupby('tahun')['avg_kurs_tengah'].mean()
+    for _, row in tahunan.iterrows():
+        tahun = row['waktu_id']
+        diff_pct = abs(avg_from_bulanan[tahun] - row['avg_kurs_tengah']) / row['avg_kurs_tengah'] * 100
+        status = "✅" if diff_pct < 1.0 else "⚠️"
+        print(f"  Kurs {tahun}: bulanan_avg={avg_from_bulanan[tahun]:.2f}, "
+              f"tahunan={row['avg_kurs_tengah']:.2f}, diff={diff_pct:.3f}% {status}")
+```
+
+**Helper functions** (`row_count`, `no_nulls`, `no_duplicates`, `all_fk_valid`, `min_value`, `value_range`) diimplementasikan sebagai pembaca CSV sederhana menggunakan pandas.
+
+---
+
 ## 7. VERIFIKASI
 
 ### Dimension Checks
@@ -795,9 +1118,13 @@ dim_maskapai ──── fact_otp_maskapai (maskapai_id = maskapai_id)
 
 ---
 
-## 9. OPEN QUESTIONS
+## 9. RESOLVED QUESTIONS
 
-> [!IMPORTANT]
-> **Q1: Manual Mapping Bandara ↔ IATA**
-> Script `03_dim_bandara.py` membutuhkan dictionary manual. Rekomendasi:
-> Saya build dictionary lengkap dari data (jumlah bandara <300, feasible). OK?
+> [!NOTE]
+> ~~**Q1: Manual Mapping Bandara ↔ IATA**~~ — **RESOLVED: Ya, build dictionary-nya.**
+> Ini prerequisite keras sebelum Gelombang 2. Workflow:
+> 1. Jalankan `03_dim_bandara.py` Phase A → list ~250-350 nama bandara unik
+> 2. Exact match + fuzzy match otomatis → generate kandidat
+> 3. Review manual → finalisasi `BANDARA_IATA_MAP` di `utils.py`
+> 4. Jalankan ulang `03_dim_bandara.py` Phase A+B → `dim_bandara.csv` siap
+> Detail spec ada di Section 6.0 (Konstanta 6).
