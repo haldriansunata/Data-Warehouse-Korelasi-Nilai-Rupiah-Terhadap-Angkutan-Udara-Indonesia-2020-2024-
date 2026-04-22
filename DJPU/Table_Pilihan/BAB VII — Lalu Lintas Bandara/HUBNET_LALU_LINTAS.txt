@@ -1,0 +1,4 @@
+https://hubnet.kemenhub.go.id/dataset/content/dataset/103
+
+- csv fokus 1 tahun, kolom ga lengkap langsung nilai pergerakan pesawat dan penumpang(domestik , international, dan bagasi terpisah)
+- kalo di table statistik kebalikannya

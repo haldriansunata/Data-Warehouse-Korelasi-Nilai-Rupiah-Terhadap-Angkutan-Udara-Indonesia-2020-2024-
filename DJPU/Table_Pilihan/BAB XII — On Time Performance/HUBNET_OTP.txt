@@ -1,0 +1,5 @@
+https://hubnet.kemenhub.go.id/dataset/content/dataset/151
+
+- cuma rangkuman total, gak ada entitas badan usahanya.
+-  csv terpisah pertahun
+- kalo di buku statistik kebalikannya.

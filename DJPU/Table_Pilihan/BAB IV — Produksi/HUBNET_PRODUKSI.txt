@@ -1,0 +1,5 @@
+https://hubnet.kemenhub.go.id/dataset/content/dataset/1061
+
+- ada yang gak lengkap data tahunannya
+- csv terpisah pertahun
+- kalo di buku statistik kebalikannya.

@@ -1,33 +1,44 @@
 """
-Konfigurasi path dan konstanta untuk ETL pipeline.
+Konfigurasi path dan konstanta untuk ETL Pipeline v3.2
 Data Warehouse: Korelasi Nilai Rupiah terhadap Angkutan Udara Indonesia (2020-2024)
+Sumber kebenaran: Master_DWH_Blueprint_dan_Strategi_ETL.md
 """
 
 import os
+from pathlib import Path
 
-# Base paths
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# === BASE PATHS ===
+BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OUTPUT_DIR = BASE_DIR / "output"
 
-# Input paths
-KURS_CSV = os.path.join(BASE_DIR, "KURS", "BI.csv")
-BAB_II_DIR = os.path.join(BASE_DIR, "DJPU", "Table_Pilihan", "BAB II — Perusahaan Angkutan Udara")
-BAB_IV_DIR = os.path.join(BASE_DIR, "DJPU", "Table_Pilihan", "BAB IV — Produksi")
-BAB_VI_DIR = os.path.join(BASE_DIR, "DJPU", "Table_Pilihan", "BAB VI — Penumpang Per Rute")
-BAB_VII_DIR = os.path.join(BASE_DIR, "DJPU", "Table_Pilihan", "BAB VII — Lalu Lintas Bandara")
-BAB_XII_DIR = os.path.join(BASE_DIR, "DJPU", "Table_Pilihan", "BAB XII — On Time Performance")
+# === INPUT PATHS ===
+KURS_CSV = BASE_DIR / "KURS" / "BI.csv"
 
-# Output paths
-OUTPUT_CORE = os.path.join(BASE_DIR, "output", "fase1_core")
-OUTPUT_ENRICHMENT = os.path.join(BASE_DIR, "output", "fase2_enrichment")
+BAB_II_DIR = BASE_DIR / "DJPU" / "Table_Pilihan" / "BAB II \u2014 Perusahaan Angkutan Udara"
+BAB_III_DIR = BASE_DIR / "DJPU" / "Table_Pilihan" / "BAB III \u2014 Rute & Bandara"
+BAB_IV_DIR = BASE_DIR / "DJPU" / "Table_Pilihan" / "BAB IV \u2014 Produksi"
+BAB_VI_DIR = BASE_DIR / "DJPU" / "Table_Pilihan" / "BAB VI \u2014 Penumpang Per Rute"
+BAB_VII_CSV = (
+    BASE_DIR / "DJPU" / "Table_Pilihan" / "BAB VII \u2014 Lalu Lintas Bandara"
+    / "DATA LALU LINTAS ANGKUTAN UDARA DI BANDAR UDARA TAHUN 2020 - 2024.csv"
+)
+BAB_XII_CSV = (
+    BASE_DIR / "DJPU" / "Table_Pilihan" / "BAB XII \u2014 On Time Performance"
+    / "TINGKAT KETEPATAN WAKTU (ON TIME PERFORMANCE) BADAN USAHA ANGKUTAN UDARA NIAGA PENERBANGAN NIAGA BERJADWAL DALAM NEGERI 2024.csv"
+)
 
-# Tahun analisis
+# === CONSTANTS ===
 TAHUN_MULAI = 2020
 TAHUN_AKHIR = 2024
-TAHUN_RANGE = range(TAHUN_MULAI, TAHUN_AKHIR + 1)
+TAHUN_RANGE = range(TAHUN_MULAI, TAHUN_AKHIR + 1)  # [2020, 2021, 2022, 2023, 2024]
 
-# Nama bulan Indonesia
 NAMA_BULAN = {
     1: "Januari", 2: "Februari", 3: "Maret", 4: "April",
     5: "Mei", 6: "Juni", 7: "Juli", 8: "Agustus",
     9: "September", 10: "Oktober", 11: "November", 12: "Desember"
 }
+
+
+def ensure_output_dir():
+    """Buat folder output/ jika belum ada."""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
