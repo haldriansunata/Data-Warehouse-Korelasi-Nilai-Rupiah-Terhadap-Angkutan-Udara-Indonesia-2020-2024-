@@ -159,3 +159,281 @@ Kalau tujuan skripsi/proyekmu adalah korelasi kurs terhadap angkutan udara, stru
 
 Kalau kamu mau, aku bisa bantu bikin **peta analisis final**:
 mana yang dipakai untuk korelasi utama, mana yang cuma jadi pendukung, dan visual apa yang paling pas untuk tiap pertanyaan.
+
+Pendeknya: menambahkan Dim_Waktu_Tahunan tidak menyelesaikan masalah fan-out. Itu bukan over-engineering, tapi juga bukan obat untuk duplikasi yang kamu alami.
+
+Aku jelasin pelan sesuai layer ya.
+
+
+---
+
+🧠 Layer 1 — Apa fungsi Dim_Waktu_Tahunan sebenarnya?
+
+Dim_Waktu_Tahunan itu:
+
+👉 cuma lookup / atribut waktu
+
+tahun
+
+label
+
+hierarki (kalau ada)
+
+
+Dia tidak mengubah jumlah baris di fact.
+
+
+---
+
+⚠️ Layer 2 — Sumber masalah kamu (inti)
+
+Fan-out terjadi karena:
+
+> Kamu join banyak fact dengan grain berbeda hanya lewat waktu_id
+
+
+
+Contoh real dari model kamu:
+
+Fact	Grain
+
+Produksi Maskapai	Tahun + Maskapai
+Lalu Lintas Bandara	Tahun + Bandara
+Statistik Rute	Tahun + Rute
+
+
+👉 Mereka tidak punya dimensi yang sama selain waktu
+
+
+---
+
+🔥 Layer 3 — Kenapa tetap fan-out walau ada Dim_Waktu_Tahunan?
+
+Misal:
+
+Fact Kurs
+
+Tahun
+
+2021
+
+
+Fact Produksi
+
+Tahun	Maskapai
+
+2021	A
+2021	B
+
+
+Fact Bandara
+
+Tahun	Bandara
+
+2021	CGK
+2021	DPS
+
+
+
+---
+
+Kalau kamu gabung semua via waktu:
+
+Tahun	Maskapai	Bandara
+
+2021	A	CGK
+2021	A	DPS
+2021	B	CGK
+2021	B	DPS
+
+
+👉 Tetap meledak
+➡️ Dim_Waktu_Tahunan tidak mengubah ini sama sekali
+
+
+---
+
+🧠 Layer 4 — Jadi jawab pertanyaan kamu
+
+❓ “Apakah menambah dim waktu tahunan menyelesaikan masalah?”
+
+❌ Tidak
+
+
+---
+
+❓ “Apakah over-engineer?”
+
+👉 Sedikit iya kalau cuma untuk:
+
+filter tahun
+
+join sederhana
+
+
+Tapi: ✔ Berguna kalau:
+
+kamu mau konsistensi DW
+
+mau extend ke kuartal / fiscal / dll
+
+
+
+---
+
+❓ “Apakah tetap fan-out?”
+
+✅ IYA, tetap fan-out
+
+
+---
+
+🧠 Layer 5 — Kenapa kamu “merasa harus pakai LOD”
+
+Karena model kamu sekarang:
+
+👉 banyak fact → dipaksa jadi satu
+👉 Tableau join → row multiply
+👉 kamu pakai:
+
+MIN()
+
+➡️ untuk “balikin angka”
+
+
+---
+
+🚨 Layer 6 — Diagnosis jujur
+
+Masalah kamu itu bukan:
+
+kurang dimensi waktu ❌
+
+
+Masalahnya:
+
+> multiple fact tanpa shared grain
+
+
+
+
+---
+
+🧭 Layer 7 — Cara yang benar (ini penting banget)
+
+Ada 2 pendekatan yang benar:
+
+
+---
+
+✅ Cara 1 — Jangan join fact secara fisik
+
+Di Tableau:
+
+👉 pakai Relationship (Logical Layer), bukan join
+
+Artinya:
+
+tiap fact tetap berdiri sendiri
+
+Tableau baru gabung saat query
+
+mengurangi fan-out
+
+
+
+---
+
+✅ Cara 2 — Samakan grain dulu
+
+Contoh:
+
+Target:
+
+| Tahun | Total Passenger | Kurs |
+
+👉 kamu harus:
+
+agregasi semua fact ke level tahun
+
+baru digabung
+
+
+
+---
+
+❌ Yang sekarang kamu lakukan
+
+join semua fact langsung
+
+berharap dim waktu menyelamatkan
+
+
+👉 ini yang bikin masalah
+
+
+---
+
+🧠 Layer 8 — Insight penting (level data engineer)
+
+> Dimensi tidak memperbaiki grain.
+
+Yang memperbaiki grain adalah:
+
+agregasi
+
+atau desain model (relationship / star schema yang benar)
+
+
+
+
+
+---
+
+🔥 Layer 9 — Rekomendasi konkret buat kamu
+
+Untuk kasus kamu:
+
+👉 Tetap boleh punya Dim_Waktu_Tahunan ✔ good practice
+❌ tapi jangan berharap dia solve fan-out
+
+
+---
+
+Yang HARUS kamu ubah:
+
+1. Jangan join semua fact di DS2 secara fisik
+
+
+2. Gunakan:
+
+relationship
+
+atau datasource terpisah
+
+
+
+3. Fokus analisis:
+
+bulanan (utama)
+
+tahunan (supporting)
+
+
+
+
+
+---
+
+❓ Pertanyaan lanjutan (biar kita rapihin total)
+
+Sekarang aku mau tahu:
+
+👉 Kamu di Tableau sekarang:
+
+pakai join (physical)?
+
+atau sudah pakai relationship (logical layer)?
+
+
+Karena ini akan nentuin: 👉 apakah model kamu bisa diselamatkan tanpa rombak besar, atau harus redesign sedikit.
