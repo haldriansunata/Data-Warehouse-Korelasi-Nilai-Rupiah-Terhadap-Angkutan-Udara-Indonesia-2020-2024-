@@ -17,16 +17,16 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from etl.config import OUTPUT_DIR, BAB_VII_CSV, TAHUN_RANGE, ensure_output_dir
 from etl.utils import parse_angka_indonesia, parse_airport_name
-
+from thefuzz import process, fuzz
 
 def load_dim_bandara():
     bandara_path = OUTPUT_DIR / "dim_bandara.csv"
-    b_map = {}
+    b_list = []
     with open(bandara_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            b_map[(row['nama_bandara'], row['kota'])] = int(row['bandara_id'])
-    return b_map
+            b_list.append(row)
+    return b_list
 
 def main():
     print("=" * 60)
@@ -34,7 +34,11 @@ def main():
     print("=" * 60)
 
     ensure_output_dir()
-    b_map = load_dim_bandara()
+    b_list = load_dim_bandara()
+    
+    # Build a lookup list for fuzzy matching
+    # We will match against "NAMA_BANDARA KOTA" to get better accuracy
+    lookup_choices = {row['bandara_id']: f"{row['nama_bandara']} {row['kota']}" for row in b_list}
 
     # Metrics cols (16 metrics) + 1 transit
     metric_cols = [
@@ -47,6 +51,10 @@ def main():
 
     records = []
     
+    # Cache for matched airports to speed up processing
+    match_cache = {}
+    skipped_airports = set()
+    
     with open(BAB_VII_CSV, 'r', encoding='utf-8-sig', newline='') as f:
         reader = csv.DictReader(f)
         
@@ -56,14 +64,21 @@ def main():
                 continue
 
             nama_bandara, kota, kategori = parse_airport_name(airport_raw)
-            nama_bandara = nama_bandara.strip().upper()
-            kota = kota.strip().upper()
+            search_query = f"{nama_bandara} {kota}".strip()
             
-            key = (nama_bandara, kota)
-            if key not in b_map:
+            if search_query in match_cache:
+                bandara_id = match_cache[search_query]
+            elif search_query in skipped_airports:
                 continue
-                
-            bandara_id = b_map[key]
+            else:
+                # Fuzzy match
+                best_match = process.extractOne(search_query, lookup_choices, scorer=fuzz.token_set_ratio)
+                if best_match and best_match[1] >= 65:
+                    bandara_id = best_match[2] # dict key is bandara_id
+                    match_cache[search_query] = bandara_id
+                else:
+                    skipped_airports.add(search_query)
+                    continue
             
             try:
                 tahun = int(str(row.get('year', '')).strip())

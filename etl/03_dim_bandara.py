@@ -1,364 +1,250 @@
 """
-03_dim_bandara.py — Generate Dim_Bandara dari BAB VII + IATA dari BAB III/VI
+03_dim_bandara.py — Generate Dim_Bandara
 ETL Pipeline v3.2 (Clean Rewrite)
 
 Output:
   - output/dim_bandara.csv
 
-Phase A: Fondasi dari BAB VII (nama_bandara, kota, provinsi, negara)
-Phase B: Perkaya dengan kode IATA dari BAB III/VI + BANDARA_IATA_MAP
-
-Kolom output: bandara_id, kode_iata, nama_bandara, kota, provinsi, negara
+Sumber:
+  - Ekstraksi IATA unik dari BAB III dan BAB VI (Data Rute).
+  - Data nama, kota, provinsi diperkaya menggunakan internet/airportsdata.
+Kolom output: bandara_id, nama_bandara, iata, kota, provinsi, negara
 """
 
 import csv
-import re
 import os
 import sys
-from collections import defaultdict
+import re
+import urllib.request
+import json
+import airportsdata
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from etl.config import (OUTPUT_DIR, BAB_III_DIR, BAB_VI_DIR, BAB_VII_CSV,
-                         TAHUN_RANGE, ensure_output_dir)
-from etl.utils import parse_airport_name, BANDARA_IATA_MAP, IATA_KOTA_MAP
+from etl.config import OUTPUT_DIR, BAB_III_DIR, BAB_VI_DIR, ensure_output_dir
 
 
-def read_csv_auto(filepath):
-    """Baca CSV dengan auto-detect encoding."""
-    for enc in ['utf-8-sig', 'utf-8', 'latin-1', 'cp1252']:
-        try:
-            with open(filepath, 'r', encoding=enc, newline='') as f:
-                reader = csv.DictReader(f)
-                rows = list(reader)
-                return rows, reader.fieldnames
-        except (UnicodeDecodeError, UnicodeError):
-            continue
-    raise ValueError(f"Cannot read {filepath}")
+def extract_iata_from_datasets():
+    print("  Mengumpulkan kode IATA unik dari BAB III & BAB VI...")
+    iata_map = {}
+    
+    # Regex to capture "City Name(IATA)" or just IATAs
+    # This regex looks for (XXX) where XXX is 3 uppercase letters
+    regex_with_parens = re.compile(r'([A-Za-z\s\-\.]+)\(([A-Z]{3})\)')
+    # Regex for just standalone IATAs
+    regex_standalone = re.compile(r'\b([A-Z]{3})\b')
+    
+    block_list = {'DAN', 'KE', 'DARI', 'PER', 'KAB', 'KEC', 'PRO', 'PP', 
+                  'JAN', 'FEB', 'MAR', 'APR', 'MEI', 'JUN', 'JUL', 'AGU', 
+                  'SEP', 'OKT', 'NOV', 'DES', 'MAY', 'AUG', 'OCT', 'DEC', 
+                  'DOM', 'INT', 'AIR', 'JET', 'POS', 'LTD'}
 
+    def process_val(val):
+        pairs = regex_with_parens.findall(val)
+        found = False
+        for city, iata in pairs:
+            city = city.replace('-', '').strip()
+            if iata not in block_list:
+                if iata not in iata_map: iata_map[iata] = set()
+                if len(city) > 2: iata_map[iata].add(city)
+                found = True
+        
+        # If no parens found, try standalone
+        if not found:
+            iatas = regex_standalone.findall(val)
+            for iata in iatas:
+                if iata not in block_list:
+                    if iata not in iata_map: iata_map[iata] = set()
 
-def clean_provinsi(raw: str) -> str:
-    """Standardisasi nama provinsi."""
-    p = raw.strip().upper()
-    # Hapus prefix PROPINSI/PROVINSI
-    p = re.sub(r'^PROP?INSI\s+', '', p)
-    # Normalisasi spasi "R I A U" → "RIAU"
-    if re.match(r'^[A-Z](\s[A-Z])+$', p):
-        p = p.replace(' ', '')
-    return p.strip()
+    for d in [BAB_III_DIR, BAB_VI_DIR]:
+        for root, dirs, files in os.walk(d):
+            for f in files:
+                if f.endswith('.csv'):
+                    try:
+                        with open(os.path.join(root, f), 'r', encoding='utf-8-sig') as file:
+                            reader = csv.reader(file)
+                            for row in reader:
+                                for cell in row:
+                                    if 'RUTE' in cell.upper() or 'TOTAL' in cell.upper() or 'KARGO' in cell.upper():
+                                        continue
+                                    process_val(cell)
+                    except Exception:
+                        pass
+    
+    return iata_map
 
-
-# =========================================================================
-# PHASE A: Fondasi dari BAB VII
-# =========================================================================
-
-def phase_a():
-    """
-    Extract bandara unik dari BAB VII CSV.
-    Returns: dict keyed by (nama_bandara, kota) → {provinsi, negara, kategori_set}
-    """
-    print("\n--- PHASE A: Extract Bandara dari BAB VII ---")
-
-    rows, _ = read_csv_auto(str(BAB_VII_CSV))
-    print(f"  Total baris BAB VII: {len(rows)}")
-
-    bandara_map = {}  # key: (nama_bandara_upper, kota_upper) → info
-
-    for row in rows:
-        airport_raw = row.get('airport_name', '').strip()
-        provinsi_raw = row.get('propinsi_name', '').strip()
-
-        if not airport_raw:
-            continue
-
-        nama_bandara, kota, kategori = parse_airport_name(airport_raw)
-        nama_bandara = nama_bandara.strip().upper()
-        kota = kota.strip().upper()
-        provinsi = clean_provinsi(provinsi_raw)
-
-        key = (nama_bandara, kota)
-        if key not in bandara_map:
-            bandara_map[key] = {
-                'nama_bandara': nama_bandara,
-                'kota': kota,
-                'provinsi': provinsi,
-                'negara': 'INDONESIA',
-                'kategori_set': set(),
-            }
-        bandara_map[key]['kategori_set'].add(kategori)
-
-    print(f"  Bandara unik (nama+kota): {len(bandara_map)}")
-
-    # Debug: show some examples
-    sample = list(bandara_map.values())[:5]
-    for s in sample:
-        print(f"    - {s['nama_bandara']} | {s['kota']} | {s['provinsi']} | {s['kategori_set']}")
-
-    return bandara_map
-
-
-# =========================================================================
-# PHASE B: Extract IATA dari BAB III + BAB VI
-# =========================================================================
-
-def extract_iata_from_bab3_and_bab6():
-    """
-    Scan semua CSV di BAB III dan BAB VI untuk extract kota↔IATA pairs.
-    Returns: dict kota_upper → set of IATA codes
-    """
-    print("\n--- PHASE B: Extract IATA dari BAB III + BAB VI ---")
-
-    kota_iata = defaultdict(set)  # kota → {IATA codes}
-
-    # Pattern: "Jakarta (CGK)" or "Jakarta(CGK)"
-    pattern_kota_iata = re.compile(r'([^()]+?)\s*\(([A-Z]{3}\*?)\)')
-
-    def scan_csv_for_iata(filepath, label):
-        """Scan CSV untuk pattern kota(IATA)."""
-        count = 0
-        try:
-            rows, fieldnames = read_csv_auto(filepath)
-        except Exception as e:
-            print(f"    ⚠️ Gagal baca {label}: {e}")
-            return 0
-
-        for row in rows:
-            for col in (fieldnames or []):
-                val = row.get(col, '').strip()
-                if not val:
-                    continue
-                # Find all kota(IATA) patterns
-                matches = pattern_kota_iata.findall(val)
-                for kota, iata in matches:
-                    kota = kota.strip().upper()
-                    iata = iata.strip().rstrip('*').upper()
-                    if len(iata) == 3 and iata.isalpha():
-                        kota_iata[kota].add(iata)
-                        count += 1
-
-                # Also handle pure "CGK-DPS" format
-                if re.match(r'^[A-Z]{3}\s*[-–]\s*[A-Z]{3}$', val.strip()):
-                    parts = re.split(r'\s*[-–]\s*', val.strip())
-                    for p in parts:
-                        p = p.strip()
-                        if len(p) == 3 and p.isalpha() and p.isupper():
-                            # Pure IATA — no kota info, but track existence
-                            kota_iata[f'__IATA_{p}__'].add(p)
-                            count += 1
-        return count
-
-    # Scan BAB III
-    bab3_count = 0
-    for tahun in TAHUN_RANGE:
-        tahun_dir = os.path.join(BAB_III_DIR, str(tahun))
-        if not os.path.isdir(tahun_dir):
-            continue
-        for f in os.listdir(tahun_dir):
-            if not f.lower().endswith('.csv'):
-                continue
-            fp = os.path.join(tahun_dir, f)
-            n = scan_csv_for_iata(fp, f"BAB III/{tahun}/{f[:40]}")
-            bab3_count += n
-
-    # Scan BAB VI
-    bab6_count = 0
-    for tahun in TAHUN_RANGE:
-        tahun_dir = os.path.join(BAB_VI_DIR, str(tahun))
-        if not os.path.isdir(tahun_dir):
-            continue
-        for f in os.listdir(tahun_dir):
-            if not f.lower().endswith('.csv'):
-                continue
-            fp = os.path.join(tahun_dir, f)
-            n = scan_csv_for_iata(fp, f"BAB VI/{tahun}/{f[:40]}")
-            bab6_count += n
-
-    print(f"  BAB III: {bab3_count} kota↔IATA matches")
-    print(f"  BAB VI: {bab6_count} kota↔IATA matches")
-    print(f"  Total unique kota keys: {len(kota_iata)}")
-
-    # Show sample
-    sample_items = [(k, v) for k, v in sorted(kota_iata.items()) if not k.startswith('__')][:10]
-    for kota, iatas in sample_items:
-        print(f"    {kota} → {iatas}")
-
-    return kota_iata
-
-
-def match_iata_to_bandara(bandara_map, kota_iata):
-    """
-    Match IATA codes ke bandara menggunakan 3-pass approach.
-    Returns: bandara_map with 'kode_iata' added.
-    """
-    print("\n--- PHASE B: Match IATA → Bandara ---")
-
-    matched = 0
-    unmatched = []
-
-    for key, info in bandara_map.items():
-        nama_bandara = info['nama_bandara']
-        kota = info['kota']
-
-        # Pass 1: Exact match dari BANDARA_IATA_MAP (manual dict)
-        if nama_bandara in BANDARA_IATA_MAP:
-            info['kode_iata'] = BANDARA_IATA_MAP[nama_bandara]
-            matched += 1
-            continue
-
-        # Pass 2: Match kota dari BAB III/VI data
-        iata_found = None
-
-        # Try exact kota match
-        if kota and kota in kota_iata:
-            codes = kota_iata[kota]
-            if len(codes) == 1:
-                iata_found = list(codes)[0]
-            else:
-                # Multiple IATA for same kota (e.g. JAKARTA → CGK, HLP)
-                # Pick the most common one (heuristic)
-                iata_found = sorted(codes)[0]  # alphabetical first
-
-        # Try kota variations
-        if not iata_found and kota:
-            # Try without dashes: "SIBORONG-BORONG" → "SIBORONG BORONG"
-            kota_alt = kota.replace('-', ' ')
-            if kota_alt in kota_iata:
-                codes = kota_iata[kota_alt]
-                iata_found = list(codes)[0]
-
-            # Try first word: "PADANG KEMILING" → "PADANG"
-            if not iata_found:
-                first_word = kota.split()[0] if kota.split() else ''
-                if first_word and first_word in kota_iata and len(kota_iata[first_word]) == 1:
-                    iata_found = list(kota_iata[first_word])[0]
-
-        if iata_found:
-            info['kode_iata'] = iata_found
-            matched += 1
-        else:
-            info['kode_iata'] = ''
-            unmatched.append((nama_bandara, kota))
-
-    print(f"  Matched: {matched}/{len(bandara_map)}")
-    print(f"  Unmatched: {len(unmatched)}")
-    if unmatched:
-        print(f"\n  Unmatched bandara (top 20):")
-        for nama, kota in sorted(unmatched)[:20]:
-            print(f"    - {nama} | {kota}")
-
-    return bandara_map
-
-
-# =========================================================================
-# PHASE B2: Add foreign airports from BAB III/VI international routes
-# =========================================================================
-
-def add_foreign_airports(bandara_map, kota_iata):
-    """
-    Bandara asing yang muncul di rute internasional tapi tidak ada di BAB VII.
-    Tambah sebagai baris baru dengan provinsi=NULL.
-    """
-    print("\n--- PHASE B2: Foreign Airports dari Rute Internasional ---")
-
-    # Collect all IATA codes already in bandara_map
-    existing_iata = set()
-    for info in bandara_map.values():
-        if info.get('kode_iata'):
-            existing_iata.add(info['kode_iata'])
-
-    # Collect all IATA codes from kota_iata that are NOT in existing
-    foreign_count = 0
-    for kota_key, iata_set in kota_iata.items():
-        if kota_key.startswith('__'):
-            continue
-        for iata in iata_set:
-            if iata not in existing_iata:
-                # This is likely a foreign airport
-                key = (f"FOREIGN_{iata}", kota_key)
-                if key not in bandara_map:
-                    bandara_map[key] = {
-                        'nama_bandara': kota_key.title(),  # Best guess
-                        'kota': kota_key.title(),
-                        'provinsi': '',
-                        'negara': '',  # Not Indonesia
-                        'kode_iata': iata,
-                        'kategori_set': {'INTERNASIONAL'},
-                    }
-                    existing_iata.add(iata)
-                    foreign_count += 1
-
-    print(f"  Foreign airports added: {foreign_count}")
-    return bandara_map
-
-
-# =========================================================================
-# MAIN
-# =========================================================================
+# Custom overrides for specific Indonesian airports mapping that airportsdata might have slightly wrong or missing
+CUSTOM_MAPPINGS = {
+    'HLP': {'name': 'Halim Perdanakusuma International Airport', 'city': 'Jakarta', 'subd': 'DKI Jakarta', 'country': 'ID'},
+    'KJT': {'name': 'Kertajati International Airport', 'city': 'Majalengka', 'subd': 'Jawa Barat', 'country': 'ID'},
+    'YIA': {'name': 'Yogyakarta International Airport', 'city': 'Yogyakarta', 'subd': 'DI Yogyakarta', 'country': 'ID'},
+    'AAP': {'name': 'Aji Pangeran Tumenggung Pranoto International Airport', 'city': 'Samarinda', 'subd': 'Kalimantan Timur', 'country': 'ID'},
+    'BDO': {'name': 'Husein Sastranegara International Airport', 'city': 'Bandung', 'subd': 'Jawa Barat', 'country': 'ID'},
+    'JOG': {'name': 'Adisutjipto International Airport', 'city': 'Yogyakarta', 'subd': 'DI Yogyakarta', 'country': 'ID'},
+    'SRG': {'name': 'Achmad Yani International Airport', 'city': 'Semarang', 'subd': 'Jawa Tengah', 'country': 'ID'},
+    'SOC': {'name': 'Adisumarmo International Airport', 'city': 'Solo', 'subd': 'Jawa Tengah', 'country': 'ID'},
+    'BDJ': {'name': 'Syamsudin Noor International Airport', 'city': 'Banjarmasin', 'subd': 'Kalimantan Selatan', 'country': 'ID'},
+    'PKY': {'name': 'Tjilik Riwut Airport', 'city': 'Palangkaraya', 'subd': 'Kalimantan Tengah', 'country': 'ID'},
+    'TRT': {'name': 'Toraja Airport', 'city': 'Makale', 'subd': 'Sulawesi Selatan', 'country': 'ID'},
+    'KRC': {'name': 'Depati Parbo Airport', 'city': 'Kerinci', 'subd': 'Jambi', 'country': 'ID'},
+    'PUM': {'name': 'Sangia Nibandera Airport', 'city': 'Kolaka', 'subd': 'Sulawesi Tenggara', 'country': 'ID'},
+    'KXB': {'name': 'Sangia Nibandera Airport', 'city': 'Kolaka', 'subd': 'Sulawesi Tenggara', 'country': 'ID'},
+    'TFY': {'name': 'Taufiq Kiemas Airport', 'city': 'Krui', 'subd': 'Lampung', 'country': 'ID'},
+    'LLJ': {'name': 'Silampari Airport', 'city': 'Lubuklinggau', 'subd': 'Sumatera Selatan', 'country': 'ID'},
+    'PXA': {'name': 'Atung Bungsu Airport', 'city': 'Pagar Alam', 'subd': 'Sumatera Selatan', 'country': 'ID'},
+    'PWL': {'name': 'Jenderal Besar Sudirman Airport', 'city': 'Purbalingga', 'subd': 'Jawa Tengah', 'country': 'ID'},
+    'CPF': {'name': 'Ngloram Airport', 'city': 'Blora', 'subd': 'Jawa Tengah', 'country': 'ID'},
+    'KWB': {'name': 'Dewadaru Airport', 'city': 'Karimunjawa', 'subd': 'Jawa Tengah', 'country': 'ID'},
+    'TSY': {'name': 'Wiriadinata Airport', 'city': 'Tasikmalaya', 'subd': 'Jawa Barat', 'country': 'ID'},
+    'CJN': {'name': 'Nusawiru Airport', 'city': 'Pangandaran', 'subd': 'Jawa Barat', 'country': 'ID'},
+    'SQN': {'name': 'Emalamo Airport', 'city': 'Sanana', 'subd': 'Maluku Utara', 'country': 'ID'},
+    'PGQ': {'name': 'Buli Airport', 'city': 'Maba', 'subd': 'Maluku Utara', 'country': 'ID'},
+    'KAZ': {'name': 'Kao Airport', 'city': 'Kao', 'subd': 'Maluku Utara', 'country': 'ID'},
+    'GLX': {'name': 'Gamar Malamo Airport', 'city': 'Galela', 'subd': 'Maluku Utara', 'country': 'ID'},
+    'OTI': {'name': 'Leo Wattimena Airport', 'city': 'Morotai', 'subd': 'Maluku Utara', 'country': 'ID'},
+    'NAM': {'name': 'Namlea Airport', 'city': 'Namlea', 'subd': 'Maluku', 'country': 'ID'},
+    'NRE': {'name': 'Namrole Airport', 'city': 'Namrole', 'subd': 'Maluku', 'country': 'ID'},
+    'DOB': {'name': 'Rar Gwamar Airport', 'city': 'Dobo', 'subd': 'Maluku', 'country': 'ID'},
+    'LUV': {'name': 'Dumatubun Airport', 'city': 'Langgur', 'subd': 'Maluku', 'country': 'ID'},
+    'SXK': {'name': 'Mathilda Batlayeri Airport', 'city': 'Saumlaki', 'subd': 'Maluku', 'country': 'ID'},
+    'MNA': {'name': 'Melonguane Airport', 'city': 'Melonguane', 'subd': 'Sulawesi Utara', 'country': 'ID'},
+    'NAH': {'name': 'Naha Airport', 'city': 'Tahuna', 'subd': 'Sulawesi Utara', 'country': 'ID'},
+    'IAX': {'name': 'Melonguane Airport', 'city': 'Talaud', 'subd': 'Sulawesi Utara', 'country': 'ID'},
+    'UOL': {'name': 'Pogogul Airport', 'city': 'Buol', 'subd': 'Sulawesi Tengah', 'country': 'ID'},
+    'TLI': {'name': 'Sultan Bantilan Airport', 'city': 'Tolitoli', 'subd': 'Sulawesi Tengah', 'country': 'ID'},
+    'PSJ': {'name': 'Kasiguncu Airport', 'city': 'Poso', 'subd': 'Sulawesi Tengah', 'country': 'ID'},
+    'MOH': {'name': 'Maleo Airport', 'city': 'Morowali', 'subd': 'Sulawesi Tengah', 'country': 'ID'},
+    'OJU': {'name': 'Tanjung Api Airport', 'city': 'Ampana', 'subd': 'Sulawesi Tengah', 'country': 'ID'},
+    'LUW': {'name': 'Syukuran Aminuddin Amir Airport', 'city': 'Luwuk', 'subd': 'Sulawesi Tengah', 'country': 'ID'},
+    'MJU': {'name': 'Tampa Padang Airport', 'city': 'Mamuju', 'subd': 'Sulawesi Barat', 'country': 'ID'},
+    'RAQ': {'name': 'Sugimanuru Airport', 'city': 'Muna', 'subd': 'Sulawesi Tenggara', 'country': 'ID'},
+    'BTW': {'name': 'Bersujud Airport', 'city': 'Batulicin', 'subd': 'Kalimantan Selatan', 'country': 'ID'},
+    'SMQ': {'name': 'H. Asan Airport', 'city': 'Sampit', 'subd': 'Kalimantan Tengah', 'country': 'ID'},
+    'PKN': {'name': 'Iskandar Airport', 'city': 'Pangkalan Bun', 'subd': 'Kalimantan Tengah', 'country': 'ID'},
+    'KTG': {'name': 'Rahadi Oesman Airport', 'city': 'Ketapang', 'subd': 'Kalimantan Barat', 'country': 'ID'},
+    'SQG': {'name': 'Tebelian Airport', 'city': 'Sintang', 'subd': 'Kalimantan Barat', 'country': 'ID'},
+    'PSU': {'name': 'Pangsuma Airport', 'city': 'Putussibau', 'subd': 'Kalimantan Barat', 'country': 'ID'},
+    'LNU': {'name': 'Robert Atty Bessing Airport', 'city': 'Malinau', 'subd': 'Kalimantan Utara', 'country': 'ID'},
+    'NNX': {'name': 'Nunukan Airport', 'city': 'Nunukan', 'subd': 'Kalimantan Utara', 'country': 'ID'},
+    'TJS': {'name': 'Tanjung Harapan Airport', 'city': 'Tanjung Selor', 'subd': 'Kalimantan Utara', 'country': 'ID'},
+    'BEJ': {'name': 'Kalimarau Airport', 'city': 'Tanjung Redeb', 'subd': 'Kalimantan Timur', 'country': 'ID'},
+    'GHS': {'name': 'Melalan Airport', 'city': 'Melak', 'subd': 'Kalimantan Timur', 'country': 'ID'},
+    'NTI': {'name': 'Bintuni Airport', 'city': 'Bintuni', 'subd': 'Papua Barat', 'country': 'ID'},
+    'BXB': {'name': 'Babo Airport', 'city': 'Babo', 'subd': 'Papua Barat', 'country': 'ID'},
+    'FKQ': {'name': 'Fakfak Torea Airport', 'city': 'Fakfak', 'subd': 'Papua Barat', 'country': 'ID'},
+    'KNG': {'name': 'Utarom Airport', 'city': 'Kaimana', 'subd': 'Papua Barat', 'country': 'ID'},
+    'NBX': {'name': 'Douw Aturure Airport', 'city': 'Nabire', 'subd': 'Papua Tengah', 'country': 'ID'},
+    'TIM': {'name': 'Mozes Kilangin Airport', 'city': 'Timika', 'subd': 'Papua Tengah', 'country': 'ID'},
+    'ZRI': {'name': 'Stevanus Rumbewas Airport', 'city': 'Serui', 'subd': 'Papua', 'country': 'ID'},
+    'OKL': {'name': 'Oksibil Airport', 'city': 'Oksibil', 'subd': 'Papua Pegunungan', 'country': 'ID'},
+    'WMX': {'name': 'Wamena Airport', 'city': 'Wamena', 'subd': 'Papua Pegunungan', 'country': 'ID'},
+    'DEX': {'name': 'Nop Goliat Dekai Airport', 'city': 'Yahukimo', 'subd': 'Papua Pegunungan', 'country': 'ID'},
+    'KEI': {'name': 'Kepi Airport', 'city': 'Kepi', 'subd': 'Papua Selatan', 'country': 'ID'},
+    'TMH': {'name': 'Tanah Merah Airport', 'city': 'Tanah Merah', 'subd': 'Papua Selatan', 'country': 'ID'},
+    'GTO': {'name': 'Jalaluddin Airport', 'city': 'Gorontalo', 'subd': 'Gorontalo', 'country': 'ID'},
+    'FLZ': {'name': 'Ferdinand Lumban Tobing Airport', 'city': 'Sibolga', 'subd': 'Sumatera Utara', 'country': 'ID'},
+    'AEG': {'name': 'Aek Godang Airport', 'city': 'Padang Sidempuan', 'subd': 'Sumatera Utara', 'country': 'ID'},
+    'GNS': {'name': 'Binaka Airport', 'city': 'Gunungsitoli', 'subd': 'Sumatera Utara', 'country': 'ID'},
+    'SNB': {'name': 'Lasikin Airport', 'city': 'Sinabang', 'subd': 'Aceh', 'country': 'ID'},
+    'MEQ': {'name': 'Cut Nyak Dhien Airport', 'city': 'Nagan Raya', 'subd': 'Aceh', 'country': 'ID'},
+    'LSW': {'name': 'Malikus Saleh Airport', 'city': 'Lhokseumawe', 'subd': 'Aceh', 'country': 'ID'},
+    'TXE': {'name': 'Rembele Airport', 'city': 'Takengon', 'subd': 'Aceh', 'country': 'ID'},
+    'NTX': {'name': 'Ranai Airport', 'city': 'Natuna', 'subd': 'Kepulauan Riau', 'country': 'ID'},
+    'MWK': {'name': 'Matak Airport', 'city': 'Anambas', 'subd': 'Kepulauan Riau', 'country': 'ID'},
+    'LMU': {'name': 'Letung Airport', 'city': 'Anambas', 'subd': 'Kepulauan Riau', 'country': 'ID'},
+    'SIQ': {'name': 'Dabo Airport', 'city': 'Singkep', 'subd': 'Kepulauan Riau', 'country': 'ID'},
+    'TMC': {'name': 'Tambolaka Airport', 'city': 'Tambolaka', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'WGP': {'name': 'Umbu Mehang Kunda Airport', 'city': 'Waingapu', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'ENE': {'name': 'H. Hasan Aroeboesman Airport', 'city': 'Ende', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'LWE': {'name': 'Wunopito Airport', 'city': 'Lewoleba', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'LKA': {'name': 'Gewayantana Airport', 'city': 'Larantuka', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'ARD': {'name': 'Mali Airport', 'city': 'Alor', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'SAU': {'name': 'Tardamu Airport', 'city': 'Sabu', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'RTI': {'name': 'David Constantijn Saudale Airport', 'city': 'Rote', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'ABU': {'name': 'Haliwen Airport', 'city': 'Atambua', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'BJW': {'name': 'Turelelo Soa Airport', 'city': 'Bajawa', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'RTG': {'name': 'Frans Sales Lega Airport', 'city': 'Ruteng', 'subd': 'Nusa Tenggara Timur', 'country': 'ID'},
+    'SWQ': {'name': 'Sultan Muhammad Kaharuddin III Airport', 'city': 'Sumbawa Besar', 'subd': 'Nusa Tenggara Barat', 'country': 'ID'},
+    'BMU': {'name': 'Sultan Muhammad Salahudin Airport', 'city': 'Bima', 'subd': 'Nusa Tenggara Barat', 'country': 'ID'},
+    'JBB': {'name': 'Notohadinegoro Airport', 'city': 'Jember', 'subd': 'Jawa Timur', 'country': 'ID'},
+    'SUP': {'name': 'Trunojoyo Airport', 'city': 'Sumenep', 'subd': 'Jawa Timur', 'country': 'ID'},
+    'PCB': {'name': 'Pondok Cabe Airport', 'city': 'Tangerang Selatan', 'subd': 'Banten', 'country': 'ID'},
+}
 
 def main():
     print("=" * 60)
-    print("03_dim_bandara.py — Generate Dimensi Bandara")
+    print("03_dim_bandara.py — Generate Dim_Bandara (IATA-Based)")
     print("=" * 60)
 
     ensure_output_dir()
+    
+    iata_map = extract_iata_from_datasets()
+    print(f"  Berhasil mengekstrak {len(iata_map)} IATA unik.")
 
-    # Phase A: Extract from BAB VII
-    bandara_map = phase_a()
-
-    # Phase B: Extract IATA and match
-    kota_iata = extract_iata_from_bab3_and_bab6()
-    bandara_map = match_iata_to_bandara(bandara_map, kota_iata)
-
-    # Phase B2: Add foreign airports
-    bandara_map = add_foreign_airports(bandara_map, kota_iata)
-
-    # Build final list, sorted
+    ad_db = airportsdata.load('IATA')
+    
     records = []
-    for key, info in sorted(bandara_map.items()):
+    bandara_id = 1
+    
+    # Iterate and build
+    for iata in sorted(iata_map.keys()):
+        # Determine best city name from datasets if available, else fallback to API
+        cities = list(iata_map[iata])
+        city_extracted = cities[0] if cities else ''
+        
+        # Override with CUSTOM_MAPPINGS or fallback to airportsdata
+        if iata in CUSTOM_MAPPINGS:
+            info = CUSTOM_MAPPINGS[iata]
+            name = info['name']
+            city = city_extracted if city_extracted else info['city']
+            provinsi = info['subd']
+            negara = info['country']
+        elif iata in ad_db:
+            info = ad_db[iata]
+            name = info['name']
+            city = city_extracted if city_extracted else info['city']
+            provinsi = info['subd']
+            negara = info['country']
+        else:
+            name = f"Airport {iata}"
+            city = city_extracted if city_extracted else "Unknown"
+            provinsi = "Unknown"
+            negara = "Unknown"
+            
+        # Format Negara
+        if negara == 'ID':
+            negara = 'INDONESIA'
+        elif len(negara) == 2:
+            # We can leave as Country Code or map it. Let's just use the code or map common ones.
+            common_countries = {
+                'MY': 'MALAYSIA', 'SG': 'SINGAPURA', 'TH': 'THAILAND', 'VN': 'VIETNAM',
+                'PH': 'FILIPINA', 'CN': 'CHINA', 'JP': 'JEPANG', 'KR': 'KOREA SELATAN',
+                'TW': 'TAIWAN', 'HK': 'HONG KONG', 'AU': 'AUSTRALIA', 'NZ': 'SELANDIA BARU',
+                'IN': 'INDIA', 'LK': 'SRI LANKA', 'AE': 'UNI EMIRAT ARAB', 'QA': 'QATAR',
+                'SA': 'ARAB SAUDI', 'TR': 'TURKI', 'GB': 'INGGRIS', 'NL': 'BELANDA',
+                'US': 'AMERIKA SERIKAT', 'TL': 'TIMOR LESTE', 'BN': 'BRUNEI'
+            }
+            negara = common_countries.get(negara, negara)
+
         records.append({
-            'kode_iata': info.get('kode_iata', ''),
-            'nama_bandara': info['nama_bandara'],
-            'kota': info['kota'],
-            'provinsi': info['provinsi'],
-            'negara': info['negara'],
+            'bandara_id': bandara_id,
+            'nama_bandara': name.upper(),
+            'iata': iata,
+            'kota': city.upper(),
+            'provinsi': provinsi.upper() if provinsi else "UNKNOWN",
+            'negara': negara.upper()
         })
+        bandara_id += 1
 
-    # Assign surrogate key
-    for i, rec in enumerate(records, start=1):
-        rec['bandara_id'] = i
-
-    # Write CSV
     out_path = OUTPUT_DIR / "dim_bandara.csv"
-    fieldnames = ['bandara_id', 'kode_iata', 'nama_bandara', 'kota', 'provinsi', 'negara']
+    fieldnames = ['bandara_id', 'nama_bandara', 'iata', 'kota', 'provinsi', 'negara']
+    
     with open(out_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(records)
 
-    # Stats
-    total = len(records)
-    with_iata = sum(1 for r in records if r['kode_iata'])
-    indonesia = sum(1 for r in records if r['negara'] == 'INDONESIA')
-    foreign = sum(1 for r in records if r['negara'] != 'INDONESIA')
-    null_prov_indo = sum(1 for r in records if r['negara'] == 'INDONESIA' and not r['provinsi'])
-
-    print(f"\n{'=' * 60}")
-    print(f"HASIL:")
-    print(f"  Total bandara: {total}")
-    print(f"  Dengan IATA: {with_iata} ({with_iata*100//total}%)")
-    print(f"  Indonesia: {indonesia}")
-    print(f"  Foreign: {foreign}")
-    print(f"  Indonesia tanpa provinsi: {null_prov_indo}")
-
-    # Validasi
-    if null_prov_indo > 0:
-        print(f"\n  ⚠️ Ada {null_prov_indo} bandara Indonesia tanpa provinsi!")
-        for r in records:
-            if r['negara'] == 'INDONESIA' and not r['provinsi']:
-                print(f"     - {r['nama_bandara']} | {r['kota']}")
-
-    print(f"\n  ✅ dim_bandara.csv — {total} baris")
+    print(f"  ✅ dim_bandara.csv — {len(records)} baris")
     print("\n✅ 03_dim_bandara.py SELESAI")
-
 
 if __name__ == "__main__":
     main()

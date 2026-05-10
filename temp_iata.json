@@ -1,0 +1,895 @@
+{
+  "ARD": [
+    "- Alor",
+    "Alor"
+  ],
+  "AMQ": [
+    "Ambon",
+    "- Ambon"
+  ],
+  "OJU": [
+    "- Ampana",
+    "Ampana"
+  ],
+  "LMU": [
+    "- Anambas",
+    "Anambas"
+  ],
+  "ABU": [
+    "- Atambua",
+    "Atambua"
+  ],
+  "BJW": [
+    "- Bajawa",
+    "Bajawa"
+  ],
+  "BPN": [
+    "Balikpapan",
+    "- Balikpapan",
+    "TRT - Balikpapan"
+  ],
+  "BTJ": [
+    "- Banda Aceh",
+    "Banda Aceh"
+  ],
+  "TKG": [
+    "- Bandar Lampung",
+    "Bandar Lampung"
+  ],
+  "BDO": [
+    "- Bandung",
+    "Bandung"
+  ],
+  "BDJ": [
+    "- Banjarmasin",
+    "Banjarmasin",
+    "HMS - Banjarmasin"
+  ],
+  "BWX": [
+    "Banyuwangi",
+    "- Banyuwangi"
+  ],
+  "BTH": [
+    "Batam",
+    "- Batam"
+  ],
+  "BTW": [
+    "Batulicin",
+    "- Batulicin"
+  ],
+  "BUW": [
+    "Bau Bau",
+    "- Bau Bau"
+  ],
+  "BKS": [
+    "Bengkulu",
+    "- Bengkulu"
+  ],
+  "BIK": [
+    "Biak",
+    "- Biak"
+  ],
+  "BMU": [
+    "Bima",
+    "- Bima"
+  ],
+  "NTI": [
+    "Bintuni",
+    "- Bintuni"
+  ],
+  "BUU": [
+    "- Bungo",
+    "Bungo"
+  ],
+  "UOL": [
+    "Buol"
+  ],
+  "CXP": [
+    "- Cilacap",
+    "Cilacap"
+  ],
+  "DPS": [
+    "Denpasar",
+    "- Denpasar"
+  ],
+  "DOB": [
+    "Dobo",
+    "- Dobo"
+  ],
+  "DUM": [
+    "- Dumai",
+    "Dumai"
+  ],
+  "ENE": [
+    "Ende",
+    "- Ende"
+  ],
+  "FKQ": [
+    "- Fak-fak",
+    "Fak-fak"
+  ],
+  "GLX": [
+    "Galela"
+  ],
+  "GTO": [
+    "- Gorontalo",
+    "Gorontalo"
+  ],
+  "GNS": [
+    "- Gunung Sitoli",
+    "Gunung Sitoli"
+  ],
+  "CGK": [
+    "Jakarta"
+  ],
+  "HLP": [
+    "- Jakarta-HLP",
+    "Jakarta-HLP",
+    "Jakarta"
+  ],
+  "DJB": [
+    "Jambi",
+    "- Jambi"
+  ],
+  "DJJ": [
+    "- Jayapura",
+    "Jayapura"
+  ],
+  "JBB": [
+    "Jember",
+    "- Jember"
+  ],
+  "KNG": [
+    "- Kaimana",
+    "Kaimana"
+  ],
+  "KAZ": [
+    "Kao",
+    "- Kao"
+  ],
+  "KWB": [
+    "Karimun Jawa"
+  ],
+  "KDI": [
+    "- Kendari",
+    "Kendari"
+  ],
+  "IAX": [
+    "TALAUD",
+    "KEP TALAUD"
+  ],
+  "KRC": [
+    "Kerinci"
+  ],
+  "KTG": [
+    "Ketapang",
+    "- Ketapang"
+  ],
+  "PUM": [
+    "Pomala",
+    "Kolaka"
+  ],
+  "KBU": [
+    "Kotabaru",
+    "- Kotabaru"
+  ],
+  "KOE": [
+    "- Kupang",
+    "Kupang"
+  ],
+  "KXB": [
+    "- Kolaka",
+    "Kolaka"
+  ],
+  "LAH": [
+    "- Labuha",
+    "Labuha"
+  ],
+  "LBJ": [
+    "- Labuhan Bajo",
+    "Labuhan Bajo"
+  ],
+  "PXA": [
+    "Lahat"
+  ],
+  "LUV": [
+    "Langgur",
+    "- Langgur"
+  ],
+  "LKA": [
+    "Larantuka"
+  ],
+  "LWE": [
+    "Lewoleba"
+  ],
+  "LSW": [
+    "Lhokseumawe"
+  ],
+  "LLJ": [
+    "- Lubuk Linggau",
+    "Lubuk Linggau"
+  ],
+  "LUW": [
+    "- Luwuk",
+    "Luwuk"
+  ],
+  "PGQ": [
+    "Maba",
+    "- Maba"
+  ],
+  "KJT": [
+    "Majalengka",
+    "- Majalengka"
+  ],
+  "UPG": [
+    "- Makassar",
+    "Makassar"
+  ],
+  "MLG": [
+    "- Malang",
+    "Malang"
+  ],
+  "LNU": [
+    "- Malinau",
+    "Malinau"
+  ],
+  "MJU": [
+    "Mamuju",
+    "- Mamuju"
+  ],
+  "MDC": [
+    "Manado",
+    "- Manado"
+  ],
+  "MKW": [
+    "Manokwari",
+    "- Manokwari"
+  ],
+  "KEI": [
+    "- Mappi",
+    "Mappi"
+  ],
+  "MWK": [
+    "Matak"
+  ],
+  "MOF": [
+    "- Maumere",
+    "Maumere"
+  ],
+  "KNO": [
+    "LKI - Medan",
+    "Medan",
+    "- Medan"
+  ],
+  "GHS": [
+    "Melak"
+  ],
+  "MNA": [
+    "Melangguane",
+    "- Melangguane"
+  ],
+  "MKQ": [
+    "- Merauke",
+    "Merauke"
+  ],
+  "MEQ": [
+    "Meulaboh"
+  ],
+  "JIO": [
+    "Moa"
+  ],
+  "OTI": [
+    "- Morotai",
+    "Morotai"
+  ],
+  "MOH": [
+    "Morowali",
+    "- Morowali",
+    "Morowall"
+  ],
+  "RAQ": [
+    "Muna",
+    "- Muna"
+  ],
+  "NBX": [
+    "Nabire",
+    "- Nabire"
+  ],
+  "NAM": [
+    "Namlea"
+  ],
+  "NRE": [
+    "Namrole"
+  ],
+  "NTX": [
+    "- NATUNA",
+    "- Natuna",
+    "NATUNA"
+  ],
+  "NNX": [
+    "- Nunukan",
+    "Nunukan"
+  ],
+  "OKL": [
+    "Oksibil"
+  ],
+  "PDG": [
+    "- Padang Pariaman",
+    "Padang Pariaman"
+  ],
+  "AEG": [
+    "Padang Sidempuan"
+  ],
+  "PKY": [
+    "Palangkaraya",
+    "- Palangkaraya"
+  ],
+  "PLM": [
+    "- Palembang",
+    "Palembang"
+  ],
+  "LLO": [
+    ""
+  ],
+  "PLW": [
+    "- Palu",
+    "Palu"
+  ],
+  "CJN": [
+    "- PANGANDARAN",
+    "Pangandaran",
+    "- Pangandaran",
+    "PANGANDARAN"
+  ],
+  "PGK": [
+    "Pangkal Pinang",
+    "- Pangkal Pinang"
+  ],
+  "PKN": [
+    "Pangkalan Bun",
+    "- Pangkalan Bun"
+  ],
+  "TFY": [
+    "Peakon Serai",
+    "Peakon Seral"
+  ],
+  "PKU": [
+    "- Pekanbaru",
+    "Pekanbaru"
+  ],
+  "PNK": [
+    "- Pontianak",
+    "Pontianak"
+  ],
+  "PSJ": [
+    "- Poso",
+    "Poso"
+  ],
+  "LOP": [
+    "Lombok"
+  ],
+  "PSU": [
+    "Putu Sibau"
+  ],
+  "RTI": [
+    "Rote"
+  ],
+  "RTG": [
+    "Ruteng"
+  ],
+  "SAU": [
+    "Sabu"
+  ],
+  "AAP": [
+    "Samarinda",
+    "- Samarinda"
+  ],
+  "SRI": [
+    "Samarinda"
+  ],
+  "SMQ": [
+    "Sampit",
+    "- Sampit"
+  ],
+  "SON": [
+    "Sanana"
+  ],
+  "SXK": [
+    "Saumlaki"
+  ],
+  "KSR": [
+    "- Selayar",
+    "Selayar"
+  ],
+  "SRG": [
+    "- Semarang",
+    "Semarang"
+  ],
+  "ZRI": [
+    "Serui"
+  ],
+  "FLZ": [
+    "- Sibolga",
+    "Sibolga"
+  ],
+  "DTB": [
+    "- Siborong-borong",
+    "Siborong-borong",
+    "Siborongborong -"
+  ],
+  "SNB": [
+    "Sinabang"
+  ],
+  "SIQ": [
+    "- Singkep",
+    "Singkep"
+  ],
+  "SQG": [
+    "Sintang"
+  ],
+  "SOC": [
+    "Solo",
+    "- Solo"
+  ],
+  "SOQ": [
+    "Sorong",
+    "- Sorong"
+  ],
+  "SWQ": [
+    "Sumbawa Besar"
+  ],
+  "SUP": [
+    "Sumenep"
+  ],
+  "SUB": [
+    "Surabaya",
+    "- Surabaya"
+  ],
+  "NAH": [
+    "Tahuna"
+  ],
+  "TXE": [
+    "Takengon",
+    "TAKENGON"
+  ],
+  "TMC": [
+    "Tambolaka"
+  ],
+  "TMH": [
+    "Tanah Merah"
+  ],
+  "TJQ": [
+    "Tanjung Pandan",
+    "- Tanjung Pandan"
+  ],
+  "TNJ": [
+    "- Tanjung Pinang",
+    "Tanjung Pinang"
+  ],
+  "BEJ": [
+    "- Tanjung Redeb",
+    "Tanjung Redeb"
+  ],
+  "TJS": [
+    "- Tanjung Selor",
+    "Tanjung Selor"
+  ],
+  "TRK": [
+    "Tarakan",
+    "- Tarakan"
+  ],
+  "TSY": [
+    "Tasikmalaya"
+  ],
+  "BXB": [
+    "Teluk Bintoni",
+    "- Teluk Bintoni"
+  ],
+  "TTE": [
+    "Ternate",
+    "- Ternate"
+  ],
+  "TIM": [
+    "Timika",
+    "- Timika"
+  ],
+  "TLI": [
+    "Toli-toli"
+  ],
+  "TRT": [
+    "Toraja",
+    "- Pongtiku",
+    "Pongtiku",
+    "Tana Toraja"
+  ],
+  "WGP": [
+    "Waingapu"
+  ],
+  "WMX": [
+    "Wamena"
+  ],
+  "WNI": [
+    "Wangi-Wangi"
+  ],
+  "DEX": [
+    "- Yahukimo",
+    "Yahukimo"
+  ],
+  "JOG": [
+    "- Yogyakarta",
+    "Yogyakarta"
+  ],
+  "YIA": [
+    "- Yogyakarta",
+    "Yogyakarta"
+  ],
+  "AUH": [
+    "- Abu Dhabi",
+    "Abu Dhabi"
+  ],
+  "ADD": [
+    "- Addis Ababa",
+    "Addis Ababa"
+  ],
+  "ADL": [
+    "- Adelaide",
+    "Adelaide"
+  ],
+  "AMS": [
+    "- Amsterdam",
+    "Amsterdam"
+  ],
+  "AKL": [
+    "- Auckland",
+    "Auckland"
+  ],
+  "BWN": [
+    "Bandar Sri Bengawan",
+    "Bandar Seri Begawan",
+    "Bandar Sri Begawan",
+    "- Bandar Sri Bengawan",
+    "- BANDAR SRI BEGAWAN",
+    "BANDAR SRI BEGAWAN"
+  ],
+  "BKK": [
+    "- Bangkok",
+    "Bangkok"
+  ],
+  "DMK": [
+    "Bangkok-Don Mueang",
+    "- Bangkok-Don Mueang"
+  ],
+  "PEK": [
+    "Beijing",
+    "- Beijing"
+  ],
+  "BNE": [
+    "Brisbane",
+    "- Brisbane"
+  ],
+  "CNS": [
+    "Cairns",
+    "- Cairns"
+  ],
+  "DVO": [
+    "Barangay Buhangin"
+  ],
+  "CSX": [
+    "- Changsha",
+    "Changsha"
+  ],
+  "MAA": [
+    "Chennai"
+  ],
+  "CMB": [
+    "Colombo",
+    "- Colombo"
+  ],
+  "DRW": [
+    "DARWIN",
+    "Darwin"
+  ],
+  "DIL": [
+    "DILI",
+    "Dili",
+    "- DILI"
+  ],
+  "DOH": [
+    "- Doha",
+    "Doha"
+  ],
+  "DXB": [
+    "Dubai",
+    "- Dubai"
+  ],
+  "FOC": [
+    "Fuzhou",
+    "- Fuzhou"
+  ],
+  "AVV": [
+    "Geelong"
+  ],
+  "CAN": [
+    "- Guangzhou",
+    "Guangzhou"
+  ],
+  "HAK": [
+    "Haikou",
+    "- Haikou"
+  ],
+  "HND": [
+    "- Haneda",
+    "Haneda"
+  ],
+  "HGH": [
+    "Hangzhou",
+    "- Hangzhou"
+  ],
+  "HAN": [
+    "Hanoi",
+    "- Hanoi"
+  ],
+  "SGN": [
+    "Ho Chi Minh City",
+    "- Ho Chi Minh City"
+  ],
+  "HKG": [
+    "Hongkong",
+    "- Hongkong"
+  ],
+  "ICN": [
+    "Incheon",
+    "- Incheon"
+  ],
+  "IST": [
+    "- Istanbul",
+    "Istanbul"
+  ],
+  "JED": [
+    "- Jeddah",
+    "Jeddah"
+  ],
+  "JHB": [
+    "Johor Baru",
+    "- Johor Baru"
+  ],
+  "BKI": [
+    "Kota Kinabalu",
+    "- Kota Kinabalu"
+  ],
+  "KUL": [
+    "- Kuala Lumpur",
+    "Kuala Lumpur"
+  ],
+  "KCH": [
+    "Kuching",
+    "- KUCHING",
+    "KUCHING"
+  ],
+  "KMG": [
+    "- Kunming",
+    "Kunming"
+  ],
+  "LHR": [
+    "London"
+  ],
+  "MKZ": [
+    "- Malaka",
+    "Malaka"
+  ],
+  "MNL": [
+    "- Manila",
+    "Manila"
+  ],
+  "MED": [
+    "Medinah",
+    "- Medinah"
+  ],
+  "MEL": [
+    "- Melbourne",
+    "Melbourne"
+  ],
+  "MCT": [
+    "- Muscat",
+    "Muscat"
+  ],
+  "NGO": [
+    "Nagoya"
+  ],
+  "KHN": [
+    "Nanchang"
+  ],
+  "NKG": [
+    "- Nanjing",
+    "Nanjing"
+  ],
+  "NNG": [
+    "Nanning",
+    "- Nanning"
+  ],
+  "NRT": [
+    "- Narita",
+    "Narita"
+  ],
+  "SVO": [
+    "Oblast Moskwa"
+  ],
+  "KIX": [
+    "Osaka",
+    "- Osaka"
+  ],
+  "PEN": [
+    "Penang",
+    "- Penang"
+  ],
+  "PER": [
+    "Perth",
+    "- Perth"
+  ],
+  "PNH": [
+    "Phnom Penh",
+    "- Phnom Penh"
+  ],
+  "PHE": [
+    "Port Hedland"
+  ],
+  "PVG": [
+    "Pudong",
+    "- Pudong"
+  ],
+  "RUH": [
+    "- Riyadh",
+    "Riyadh"
+  ],
+  "SZX": [
+    "Shenzhen",
+    "- Shenzhen"
+  ],
+  "SIN": [
+    "- SINGAPURA",
+    "SINGAPURA",
+    "Singapore",
+    "- Singapura",
+    "Singapura"
+  ],
+  "SZB": [
+    "Subang",
+    "- Subang"
+  ],
+  "SYD": [
+    "Sydney",
+    "- Sydney"
+  ],
+  "TPE": [
+    "Taipei",
+    "- Taipei"
+  ],
+  "TAS": [
+    "Tashkent",
+    "- Tashkent"
+  ],
+  "TWU": [
+    "Tawau"
+  ],
+  "WUH": [
+    "Wuhan",
+    "- Wuhan"
+  ],
+  "XMN": [
+    "Xiamen",
+    "- Xiamen"
+  ],
+  "XIY": [
+    "Xian"
+  ],
+  "CGO": [
+    "Zhengshou"
+  ],
+  "SQN": [
+    "- Sanana",
+    "Sanana"
+  ],
+  "LUX": [
+    "Findel"
+  ],
+  "PWL": [
+    "Banyumas",
+    "- Banyumas"
+  ],
+  "CPF": [
+    "Cepu",
+    "- Cepu"
+  ],
+  "EWE": [
+    "- Merauke",
+    "Ewer",
+    "Merauke"
+  ],
+  "HMS": [
+    "Trinsing",
+    "Muara Teweh"
+  ],
+  "CTU": [
+    "- Chengdu",
+    "Chengdu"
+  ],
+  "DWC": [
+    "Dubai",
+    "Dubai - Al Maktoum",
+    "- Dubai"
+  ],
+  "PCB": [
+    "- Jakarta",
+    "Jakarta"
+  ],
+  "TBX": [
+    "Tambelan",
+    "- Tambelan"
+  ],
+  "WNZ": [
+    "Wenzhou",
+    "- Wenzhou"
+  ],
+  "KFR": [
+    "Kufar-Seram Timur"
+  ],
+  "LKI": [
+    "Lasikin"
+  ],
+  "TXB": [
+    "Teluk Bintoni"
+  ],
+  "CAI": [
+    "Cairo",
+    "- Cairo"
+  ],
+  "TFU": [
+    "Chengdu"
+  ],
+  "DEL": [
+    "- Delhi",
+    "Delhi"
+  ],
+  "OOL": [
+    "Gold Coast"
+  ],
+  "KWL": [
+    "- Guilin",
+    "Guilin"
+  ],
+  "MFM": [
+    "- Macau",
+    "Macau"
+  ],
+  "BOM": [
+    "- Mumbai",
+    "Mumbai"
+  ],
+  "POM": [
+    "Port Moresby"
+  ],
+  "DHX": [
+    "- Dhoho",
+    "Dhoho"
+  ],
+  "RTU": [
+    "KALIMANTAN TIMUR"
+  ],
+  "BLR": [
+    "Bangalore",
+    "- Bangalore"
+  ],
+  "PUS": [
+    "Busan"
+  ],
+  "CBR": [
+    "- Canberra",
+    "Canberra"
+  ],
+  "LGK": [
+    "Langkawi"
+  ],
+  "HKT": [
+    "Phuket"
+  ]
+}

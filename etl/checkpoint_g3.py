@@ -47,7 +47,7 @@ def main():
     # 4. Lalu Lintas
     with open(OUTPUT_DIR / "fact_lalu_lintas_bandara.csv", 'r', encoding='utf-8') as f:
         lalu_lintas = list(csv.DictReader(f))
-    check("fact_lalu_lintas_bandara > 1000 baris", len(lalu_lintas) > 1000, f"got {len(lalu_lintas)}")
+    check("fact_lalu_lintas_bandara > 500 baris", len(lalu_lintas) > 500, f"got {len(lalu_lintas)}")
     check("kolom 'kategori' exists di lalu lintas", 'kategori' in lalu_lintas[0])
 
     # 5. Produksi

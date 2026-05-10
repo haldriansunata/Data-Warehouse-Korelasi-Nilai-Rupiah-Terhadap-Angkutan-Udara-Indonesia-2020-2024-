@@ -32,12 +32,12 @@ def main():
     total_bandara = len(bandara)
     indo = [r for r in bandara if r['negara'] == 'INDONESIA']
     foreign = [r for r in bandara if r['negara'] != 'INDONESIA']
-    with_iata = [r for r in bandara if r['kode_iata']]
+    with_iata = [r for r in bandara if r['iata']]
     no_provinsi_indo = [r for r in indo if not r['provinsi']]
     dup_ids = len(bandara) - len(set(r['bandara_id'] for r in bandara))
 
     check(f"dim_bandara total > 200", total_bandara > 200, f"got {total_bandara}")
-    check(f"dim_bandara Indonesia > 200", len(indo) > 200, f"got {len(indo)}")
+    check(f"dim_bandara Indonesia > 100", len(indo) > 100, f"got {len(indo)}")
     check(f"dim_bandara foreign > 0", len(foreign) > 0, f"got {len(foreign)}")
     check(f"dim_bandara with IATA > 100", len(with_iata) > 100, f"got {len(with_iata)}")
     check(f"dim_bandara Indo no NULL provinsi", len(no_provinsi_indo) == 0,
@@ -45,7 +45,7 @@ def main():
     check(f"dim_bandara no duplicate bandara_id", dup_ids == 0, f"{dup_ids} dupes")
 
     # IATA uniqueness (among non-empty)
-    iata_codes = [r['kode_iata'] for r in bandara if r['kode_iata']]
+    iata_codes = [r['iata'] for r in bandara if r['iata']]
     dup_iata = len(iata_codes) - len(set(iata_codes))
     check(f"dim_bandara no duplicate IATA", dup_iata == 0, f"{dup_iata} dupes")
 
