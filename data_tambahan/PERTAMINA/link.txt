@@ -1,0 +1,3 @@
+aku mau fokus ini dulu : "fact_makro_bulanan + fact_penumpang_rute + dim_rute + dim_bandara + dim_waktu_bulanan"
+"dim_waktu_bulanan diperkaya dengan attribute covid_phase, jumlah_hari_libur, has_lebaran, has_natal"
+

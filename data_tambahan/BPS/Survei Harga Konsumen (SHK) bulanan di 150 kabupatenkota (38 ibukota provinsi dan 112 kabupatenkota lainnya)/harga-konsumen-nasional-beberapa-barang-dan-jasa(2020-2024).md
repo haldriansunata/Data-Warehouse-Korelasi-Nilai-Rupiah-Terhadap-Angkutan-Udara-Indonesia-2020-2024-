@@ -1,0 +1,7 @@
+|Tahun/Year|Komoditas/Commodity                    |Satuan/Unit          |Jan |Feb |Mar |Apr |Mei |Jun |Jul |Ags |Sep |Okt |Nov |Des |
+|----------|---------------------------------------|---------------------|----|----|----|----|----|----|----|----|----|----|----|----|
+|2020      |Tarip Angkutan Udara / Air Freight Fare|Orang / Person       |1463|1436|1370|1248|1327|1411|1407|1394|1295|1291|1317|1376|
+|2021      |Tarip Angkutan Udara / Air Freight Fare|Orang / Person       |1451|1350|1459|1465|1469|1305|1316|1390|1304|1432|1448|1496|
+|2022      |Tarif Angkutan Udara/ Airfares         |Orang / Person       |1426|1393|1362|1412|1499|1524|1635|1611|1597|1564|1648|1574|
+|2023      |Tarif Angkutan Udara / Airfares        |Orang / Person       |1651|1602|1599|1612|1788|1602|1662|1635|1676|1674|1705|1782|
+|2024      |Tarif Angkutan Udara / Air Freight Fare|Penumpang / Passenger|1567|1676|1681|1719|1666|1645|1677|1630|1683|1635|1696|1686|
