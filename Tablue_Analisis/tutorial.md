@@ -193,7 +193,7 @@ Pertanyaan utama: bagaimana lanskap industri penerbangan Indonesia dan indikator
 
 Story arc: bab ini setting the stage. Sebelum ngomong korelasi, audience harus melihat dulu apa yang terjadi. COVID memukul keras 2020-2021, recovery progresif 2022, hampir normal 2023-2024 tapi dengan struktur biaya baru. Kurs bergerak dari ~13.700 di awal 2020 ke 16.000+ di akhir 2024. Brent crash di Apr 2020, lalu melonjak Mei 2022 (Russia-Ukraine), tetap elevated. BI rate dari 5% turun ke 3,5% selama COVID lalu naik agresif ke 6%+ di 2023-2024.
 
-Core analysis adalah dashboard multi-panel time series dengan event annotations. Di Tableau, buat satu worksheet dengan format ini: Columns = `waktu_id` (continuous), Rows = `Measure Values`, lalu drag `Measure Names` ke Color pada Marks card. Filter Measure Names untuk include 4 saja: `SUM(jumlah_penumpang)`, `AVG(avg_kurs_tengah)`, `AVG(bi_rate)`, `AVG(brent_usd_bbl)`. Marks: Line. Hasilnya 4 garis tertumpuk yang bisa di-overlay atau dipecah jadi panel terpisah lewat right-click Measure Values → "Use Separate Axes". Tambahkan Reference Lines (dari Analytics pane) di posisi: 202003 (PSBB), 202107 (PPKM Darurat), 202202 (Russia-Ukraine), 202205 (VOA dibuka), 202301 (PPKM dicabut), 202404 (rupiah tembus 16.000).
+Core analysis adalah dashboard multi-panel time series dengan event annotations. Di Tableau, buat satu worksheet dengan langkah ini: Pertama, buat `Calculated Field` baru bernama `Tanggal Analisis` dengan rumus `DATEPARSE('yyyyMM', STR([waktu_id]))`(sesuaikan dengan penamaan waktu_id dari table dim_waktu_bulanan) agar sumbu X dikenali sebagai kalender tanpa membuat error pada Join tabel. Drag `Tanggal Analisis` ke Columns (klik kanan pil hijau tersebut, pilih format `'Month'` atau `'Month Year'` di bagian bawah agar bersifat Continuous). Lalu, drag masing-masing measure ini ke rak `Rows` secara berderet menyamping (jangan pakai Measure Values): `SUM(jumlah_penumpang)`, `AVG(avg_kurs_tengah)`, `AVG(brent_usd_bbl)`, dan `AVG(bi_rate)`. Marks: Line. Hasilnya akan langsung membentuk 4 panel grafik independen yang tersusun rapi ke bawah dengan skala sumbu Y masing-masing. Terakhir, tambahkan `Reference Lines` (dari Analytics pane) pada area grafik untuk sumbu tanggal di posisi: 01/03/2020 (PSBB), 01/07/2021 (PPKM Darurat), 01/02/2022 (Russia-Ukraine), 01/05/2022 (VOA dibuka), 01/01/2023 (PPKM dicabut), 01/04/2024 (rupiah tembus 16.000).
 
 Extension opsional untuk depth: (a) **seasonal heatmap** terpisah — worksheet baru, Columns = `nama_bulan` (discrete, sort Jan-Des manual), Rows = `tahun` (discrete), Marks Square, Color = `SUM(jumlah_penumpang)`; (b) **decomposition domestik vs internasional** sebagai dual-line dengan Color = `kategori`.
 
@@ -219,9 +219,59 @@ Story arc: bab ini yang membedakan paper kalian dari analisis korelasi naif. Kal
 
 Core analysis adalah path analysis dalam satu dashboard berisi 3 scatter berurutan: step 1 kurs × Brent (apakah keduanya bergerak bersama), step 2 Brent × tarif tiket IHK (apakah harga BBM dunia ter-translate ke tarif domestik), step 3 tarif tiket × penumpang (apakah tarif lebih tinggi mengurangi demand). Setiap scatter dibuat seperti pattern di Bab 2 (Columns numeric, Rows numeric, Detail waktu_id, Color covid_phase, Trend Line Linear). Susun ketiganya berurutan di Dashboard dengan title "Step 1 → 2 → 3" yang menceritakan flow. Annotation R² di setiap panel.
 
-Extension opsional: (a) **correlation matrix lengkap** — paling praktis hitung di Python (pandas .corr()) dan import sebagai CSV jadi data source baru, lalu di Tableau buat heatmap dengan Rows = variable1, Columns = variable2, Color = correlation_value; (b) **bubble chart** — Columns = kurs, Rows = tarif tiket, Color = covid_phase, Size = penumpang. Ini memperlihatkan 4 dimensi dalam 1 chart.
+### Langkah detail di Tableau
 
-Berita pendukung: ini bab dengan amunisi berita paling kaya karena pelaku industri eksplisit mengakui channel ini. Direktur Garuda Indonesia pada 2024 menjelaskan tarif batas atas dibuat tahun 2019 dengan harga avtur Rp 9.000-an saat itu dan kurs USD Rp 14.200, sementara 2024 keduanya sudah jauh di atas. INACA memperkuat bahwa kontribusinya mencapai sekitar 40% dari total biaya maskapai untuk avtur, sehingga gerakan harga BBM langsung tertranslate ke tarif. Kementerian Pariwisata pada September 2024 mencatat harga avtur Indonesia masih lebih mahal Rp 4.000-5.000 dibandingkan dengan avtur di Singapura, menjelaskan kenapa Jakarta-Bali bisa lebih mahal daripada Jakarta-Singapura. Untuk shock spesifik, kenaikan harga avtur global pasca-invasi Russia ke Ukraina Februari 2022 menjadi shock eksogen yang ideal untuk diidentifikasi di chart kalian — kondisi ini terjadi sebagai imbas dari invasi Rusia ke Ukraina pada Februari 2022."[Harga Avtur Dan Nilai Kurs Sudah Naik Garuda Minta Tarif Pesawat Dievaluasi](https://rm.id/baca-berita/ekonomi-bisnis/221636/harga-avtur-dan-nilai-kurs-sudah-naik-garuda-minta-tarif-pesawat-dievaluasi)","[Harga Avtur Naik 70%, Bagaimana Nasib Tiket Pesawat di Indonesia?](https://goodstats.id/article/harga-avtur-naik-70-bagaimana-nasib-tiket-pesawat-di-indonesia-EqvHH)","[Wacana Kemenparekraf Turunkan Harga Tiket Pesawat hingga 10 Persen pada Akhir Oktober 2024](https://travel.kompas.com/read/2024/09/30/111100227/wacana-kemenparekraf-turunkan-harga-tiket-pesawat-hingga-10-persen-pada-akhir)","[Jumlah Penumpang Pesawat Diperkirakan Tembus 98,67 Juta pada 2023](https://www.marketeers.com/jumlah-penumpang-pesawat-diperkirakan-tembus-9867-juta-pada-2023/)"
+#### Worksheet 1: Step 1 (Kurs vs Brent)
+
+- **Columns**: Drag `avg_kurs_tengah`. Pastikan pilnya berwarna hijau dan tulisannya `AVG(Avg Kurs Tengah)`. (Ubah agg-nya jadi Average jika masih SUM)
+- **Rows**: Drag `brent_usd_bbl`. Pastikan hijau dan tulisannya `AVG(Brent Usd Bbl)`
+- **Marks Card (Shape)**: Pilih Circle di dropdown Marks agar bentuknya titik
+- **Detail (Pecah Titik)**: Drag `waktu_id` ke kotak Detail di Marks Card. Klik kanan pil `waktu_id`, lalu pastikan memilih Dimension (jangan Measure/Sum). Titik di layar harus langsung menyebar menjadi 60 titik
+- **Color**: Drag `covid_phase` ke kotak Color
+- **Trend Line**: Buka tab Analytics (panel kiri atas) → Drag Trend Line ke kanvas grafik → Lepaskan di opsi Linear (akan terbentuk garis per warna covid phase)
+
+#### Worksheet 2: Step 2 (Brent vs Tarif Tiket)
+
+Lakukan cara yang persis sama dengan Worksheet 1, tetapi ubah sumbunya:
+
+- **Columns**: `AVG(Brent Usd Bbl)`
+- **Rows**: `AVG(Tarif Tiket Ihk)`
+- **Detail**: `waktu_id` (Dimension)
+- **Color**: `covid_phase`
+- **Trend Line**: Linear
+
+#### Worksheet 3: Step 3 (Tarif Tiket vs Penumpang)
+
+- **Columns**: `AVG(Tarif Tiket Ihk)`
+- **Rows**: `SUM(Jumlah Penumpang)` (Ingat: khusus penumpang harus SUM)
+- **Detail**: `waktu_id` (Dimension)
+- **Color**: `covid_phase`
+- **Trend Line**: Linear
+
+### Penyusunan Dashboard
+
+Buat New Dashboard, lalu drag ketiga worksheet tersebut agar berjajar berdampingan dari kiri ke kanan. Beri judul **"Step 1 (Kurs → Minyak) → Step 2 (Minyak → Tarif) → Step 3 (Tarif → Penumpang)"**. Untuk mendapatkan nilai R², arahkan kursor (hover) ke garis Trend Line di masing-masing grafik, lalu catat angka R-Squared dan tambahkan sebagai teks (Annotation) manual di atas setiap grafik agar audiens langsung melihat kekuatan korelasinya tanpa harus hover.
+
+### Extension opsional
+
+- **(a) Correlation matrix lengkap** — paling praktis hitung di Python (pandas .corr()) dan import sebagai CSV jadi data source baru, lalu di Tableau buat heatmap dengan Rows = variable1, Columns = variable2, Color = correlation_value
+- **(b) Bubble chart** — Columns = kurs, Rows = tarif tiket, Color = covid_phase, Size = penumpang. Ini memperlihatkan 4 dimensi dalam 1 chart
+
+### Berita pendukung
+
+Ini bab dengan amunisi berita paling kaya karena pelaku industri eksplisit mengakui channel ini:
+
+- Direktur Garuda Indonesia pada 2024 menjelaskan tarif batas atas dibuat tahun 2019 dengan harga avtur Rp 9.000-an saat itu dan kurs USD Rp 14.200, sementara 2024 keduanya sudah jauh di atas
+- INACA memperkuat bahwa kontribusi avtur mencapai sekitar 40% dari total biaya maskapai, sehingga gerakan harga BBM langsung tertranslate ke tarif
+- Kementerian Pariwisata pada September 2024 mencatat harga avtur Indonesia masih lebih mahal Rp 4.000-5.000 dibandingkan dengan avtur di Singapura, menjelaskan kenapa Jakarta-Bali bisa lebih mahal daripada Jakarta-Singapura
+- Kenaikan harga avtur global pasca-invasi Russia ke Ukraina Februari 2022 menjadi shock eksogen yang ideal untuk diidentifikasi di chart
+
+**Referensi:**
+
+- [Harga Avtur Dan Nilai Kurs Sudah Naik Garuda Minta Tarif Pesawat Dievaluasi](https://rm.id/baca-berita/ekonomi-bisnis/221636/harga-avtur-dan-nilai-kurs-sudah-naik-garuda-minta-tarif-pesawat-dievaluasi)
+- [Harga Avtur Naik 70%, Bagaimana Nasib Tiket Pesawat di Indonesia?](https://goodstats.id/article/harga-avtur-naik-70-bagaimana-nasib-tiket-pesawat-di-indonesia-EqvHH)
+- [Wacana Kemenparekraf Turunkan Harga Tiket Pesawat hingga 10 Persen pada Akhir Oktober 2024](https://travel.kompas.com/read/2024/09/30/111100227/wacana-kemenparekraf-turunkan-harga-tiket-pesawat-hingga-10-persen-pada-akhir)
+- [Jumlah Penumpang Pesawat Diperkirakan Tembus 98,67 Juta pada 2023](https://www.marketeers.com/jumlah-penumpang-pesawat-diperkirakan-tembus-9867-juta-pada-2023/)
 
 ## Bab 4 — Kontrol Confounder: Memisahkan efek kurs dari COVID dan musim (Anggota 4)
 
