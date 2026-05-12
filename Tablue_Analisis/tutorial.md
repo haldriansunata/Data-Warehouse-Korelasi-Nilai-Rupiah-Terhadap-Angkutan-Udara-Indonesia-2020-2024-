@@ -1,12 +1,4 @@
-Aku jawab bagian per bagian. Pertama kelayakan analisis, lalu tutorial Tableau, kemudian sekitar 18 ide analisis dengan tutorial-nya, terakhir berita untuk narasinya — aku cari berita sebenarnya pakai web search supaya akurat dan recent.
-
-## 1. Tanpa avtur — sudah cukup oke
-
-Iya, cukup. Brent oil itu proxy ~80% bagus untuk avtur karena avtur (jet kerosene) adalah turunan langsung dari crude oil — harga keduanya berkorelasi >0.9 secara historis. Yang **hilang** tanpa avtur adalah pengukuran *langsung* dari channel "kurs IDR melemah → biaya bahan bakar rupiah naik → maskapai naikkan tarif → demand turun". Tapi kamu masih bisa argue lewat path tidak langsung: kurs → Brent dalam IDR (kurs × Brent) → biaya operasional proxy → tarif → demand. Untuk analisis korelasi level tim/exploratory, ini sangat workable. Untuk paper akademik formal, baru perlu avtur langsung.
-
-Aku akan tunjukkan analisis konkret yang bisa kamu jalankan dengan dataset sekarang.
-
-## 2. Tutorial physical join di Tableau
+## Tutorial physical join di Tableau
 
 Mari mulai dari konsep penting, lalu ke langkah konkret.
 
@@ -46,7 +38,7 @@ Satu pengecualian: **`jumlah_penumpang`** dari `fact_penumpang_rute` itu *additi
 
 Quick rule yang gampang diingat: **`jumlah_penumpang` = SUM. Semua makro = AVG.**
 
-## 3. 18 ide analisis dengan tutorial Tableau
+## 18 ide analisis dengan tutorial Tableau
 
 Ada 5 tema dengan 3-4 analisis per tema. Tiap orang bisa "own" satu tema
 
@@ -144,7 +136,7 @@ Itu 20 ide (over-deliver dari "lebih dari 5"). 5 tema, masing-masing 3-4 analisi
 
 Sekarang aku cari berita biar narasinya kuat.
 
-## 4. Berita untuk membangun narasi analisis
+## Ide Berita untuk membangun narasi analisis
 
 Aku susun per story arc — tiap arc bisa kamu pakai sebagai konteks untuk beberapa analisis sekaligus.
 
@@ -188,10 +180,6 @@ Pasangkan dengan: Analisis 3, 12, 13.
 Buat reference line/anotasi di chart waktu pakai event-event ini: Mar 2020 (PSBB pertama), Jul 2021 (PPKM Darurat / Delta wave puncak), Feb 2022 (invasi Rusia-Ukraina), Mei 2022 (VOA dibuka, reopening internasional), Jan 2023 (PPKM dicabut), sekitar Apr 2024 (rupiah tembus Rp 16.000), Okt 2024 (rupiah melemah lagi karena eskalasi Timur Tengah). 
 
 Pasangkan dengan: Analisis 4, 20.
-
----
-
-Itu semua bahan untuk kamu dan tim. Total: tutorial physical join lengkap + 20 ide analisis dengan instruksi pill/drag/aggregation + 6 story arc berita yang terhubung ke analisis spesifik. Kalau di tengah jalan ada analisis yang stuck di Tableau (mis. calculated field untuk lag analysis atau correlation matrix), atau ada news angle yang mau diperdalam dengan search lebih spesifik, tinggal bilang.
 
 ---
 
