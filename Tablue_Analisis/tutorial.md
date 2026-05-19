@@ -281,6 +281,67 @@ Story arc: ini bab "jangan terburu-buru menyimpulkan". Periode 2020-2024 mengand
 
 Core analysis adalah faceted scatter per `covid_phase` plus seasonal effect quantification. Worksheet 1: scatter kurs × penumpang dengan Columns: `covid_phase` di kiri pill `AVG(avg_kurs_tengah)`, Rows: `SUM(jumlah_penumpang)`, Detail: `waktu_id`, Color: `covid_phase`, Trend Line Linear per pane. Hasilnya 4 mini scatter side-by-side, satu per fase. Bandingkan slope dan R² antar panel — kalau hubungan kurs-penumpang muncul di pre_pandemic, lockdown, dan recovery secara konsisten (tidak hanya muncul di satu fase), berarti bukan artefak COVID. Worksheet 2: Lebaran effect — Columns `has_lebaran` (discrete, akan show 0 dan 1), Rows `MEDIAN(jumlah_penumpang)` per rute (Detail: `kode_rute`), Filter `kategori` = DOMESTIK (karena Lebaran lebih relevan domestik). Lalu duplicate untuk `has_natal`. Susun dalam dashboard berjudul "Hubungan kurs setelah dikontrol untuk fase COVID dan musim libur".
 
+### Langkah detail di Tableau
+#### Worksheet 1: Mengontrol Fase COVID (Scatter Plot 4 Panel)
+
+**Sumbu X:**
+Drag `avg_kurs_tengah` ke **Columns**. Pastikan hijau dan bertuliskan `AVG(Avg Kurs Tengah)`.
+
+**Sumbu Y:**
+Drag `jumlah_penumpang` ke **Rows**. Pastikan hijau dan bertuliskan `SUM(Jumlah Penumpang)`.
+
+**Pecah Titik per Bulan:**
+Drag `waktu_id` ke kotak **Detail** di **Marks Card**. Klik kanan pil tersebut, pilih **Dimension**. Titik akan menyebar.
+
+**Membuat 4 Panel:**
+Drag `covid_phase` ke rak **Columns**, lalu letakkan letakkan persis di sebelah kiri pil `AVG(Avg Kurs Tengah)`. Layarmu otomatis terbelah menjadi 4 kolom berjejer (*side-by-side*) sesuai fase COVID.
+
+**Warna & Trend Line:**
+Drag `covid_phase` ke kotak **Color**. Buka tab **Analytics**, tarik **Trend Line** ke grafik, lepaskan di opsi **Linear**.
+
+**Hasil:**
+Kamu bisa membandingkan kemiringan (*slope*) garis antar panel. Kalau garisnya tetap turun di fase `recovery` dan `pre_pandemic`, berarti itu murni efek kurs, bukan gara-gara COVID.
+
+---
+
+#### Worksheet 2: Efek Lebaran (Bar Chart)
+
+**Filter Domestik:**
+Drag `kategori` ke kotak **Filters**, centang hanya `DOMESTIK` (karena mudik sangat kuat di rute domestik).
+
+**Sumbu X:**
+Drag `has_lebaran` ke **Columns**. Klik kanan pilnya, pastikan memilih **Discrete** (pil berubah jadi biru). Ini akan membuat 2 kolom: `0` (Bukan bulan Lebaran) dan `1` (Bulan Lebaran).
+
+**Sumbu Y:**
+Drag `jumlah_penumpang` ke **Rows**. Klik kanan pil hijau tersebut, pilih **Measure (Sum)** lalu ubah menjadi **Median**. (Kita pakai Median agar angkanya tidak terdistorsi oleh rute super sibuk seperti Jakarta-Bali).
+
+**Marks:**
+Pilih **Bar** di dropdown **Marks Card**.
+
+**Hasil:**
+Dua bar chart sederhana yang menunjukkan perbedaan rata-rata tengah (*median*) penumpang saat bulan biasa vs bulan Lebaran.
+
+---
+
+#### Worksheet 3: Efek Natal
+
+**Caranya paling mudah:**
+Klik kanan pada nama tab **Worksheet 2** di bawah layar, pilih **Duplicate**.
+
+**Pada sheet hasil duplikat:**
+Tarik buang `has_lebaran` dari **Columns**, lalu ganti dengan mendrag `has_natal` ke **Columns** (pastikan **Discrete/biru**).
+
+---
+
+#### Penyusunan Dashboard
+
+Buat **New Dashboard**, masukkan **Worksheet 1** di bagian atas (memanjang dari kiri ke kanan), lalu letakkan **Worksheet 2** dan **Worksheet 3** berdampingan di bagian bawah.
+
+**Beri judul dashboard:**
+
+> "Hubungan Kurs Setelah Dikontrol untuk Fase COVID dan Musim Libur"
+
+
 Extension opsional: (a) **inflasi dan BI rate sebagai control** — pakai colour ganda atau dual scatter dengan Color = covid_phase + Shape = `Bins(inflasi_yoy)`; (b) **seasonal decomposition** lewat Tableau Quick Table Calculation → Moving Average untuk smoothing, plus residual analysis.
 
 Berita pendukung: timeline COVID Indonesia mencakup PSBB Maret 2020, PPKM Darurat Juli 2021 saat Delta wave, reopening Mei 2022 dengan dibukanya Visa on Arrival, dan PPKM resmi dicabut Januari 2023. Untuk validasi flag `has_lebaran` dan `has_natal`, Kementerian Perhubungan memperkirakan jumlah penumpang Natal dan Tahun Baru 2023/2024 akan melonjak naik dari tahun lalu sekitar 4 juta orang atau 19% lebih tinggi dari periode sebelumnya — pattern ini harus muncul jelas di analisis Worksheet 2. "[Tahun 2024, Industri Penerbangan Optimistis Pulih dan Bangkit](https://www.kompas.id/artikel/tahun-2024-industri-penerbangan-optimis-pulih-dan-bangkit)"
