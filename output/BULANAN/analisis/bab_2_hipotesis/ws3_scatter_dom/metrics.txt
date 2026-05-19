@@ -1,0 +1,6 @@
+Bab 2 / WS3 — Kurs × Penumpang DOMESTIK
+n = 60
+slope = 1,118.94
+R-squared = 0.2257
+Pearson r = 0.4750
+p-value = 0.000125

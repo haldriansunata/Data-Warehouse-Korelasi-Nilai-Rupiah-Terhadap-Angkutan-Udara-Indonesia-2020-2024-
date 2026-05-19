@@ -1,0 +1,6 @@
+Bab 3 / WS1 — Kurs × Brent (in IDR)
+slope = 159.91 (IDR/bbl per 1 IDR kurs)
+R² = 0.1195
+p-value = 0.006821
+
+Brent IDR range: 400,377 - 1,688,685

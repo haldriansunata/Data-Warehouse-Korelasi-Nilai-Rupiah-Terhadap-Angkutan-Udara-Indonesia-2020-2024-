@@ -1,0 +1,4 @@
+Bab 3 / WS5 — Kurs × Inflasi YoY
+slope = 0.000542 (% inflasi per 1 IDR)
+R² = 0.0744
+p-value = 0.035022

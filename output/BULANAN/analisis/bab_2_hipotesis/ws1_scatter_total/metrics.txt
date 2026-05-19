@@ -1,0 +1,7 @@
+Bab 2 / WS1 — Scatter Kurs × Total Penumpang (All)
+n observations = 60
+slope (penumpang per 1 IDR pelemahan kurs) = 2,294.47
+intercept = -28,983,655.40
+Pearson r = 0.5892
+R-squared = 0.3471
+p-value = 0.000001

@@ -1,0 +1,5 @@
+Bab 4 / WS3 — Lebaran Effect (DOMESTIK)
+Median penumpang non-Lebaran: 5,338
+Median penumpang Lebaran: 5,621
+Boost ratio: 1.05×
+Mann-Whitney U test: U=6112190, p=0.696919

@@ -1,0 +1,6 @@
+Bab 3 / WS4 — Kurs × BI Rate
+slope = 0.001322 (% per 1 IDR pelemahan)
+R² = 0.6445
+p-value = 0.000000
+
+Interpretasi: setiap 1.000 IDR pelemahan, BI rate naik 1.32%.

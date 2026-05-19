@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PYTHONIOENCODING=utf-8 python output/BULANAN/analisis/data_eksplorasi/explore.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python output/BULANAN/analisis/bab_1_konteks/ws1_multi_panel/analysis.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python output/BULANAN/analisis/bab_1_konteks/ws2_kurs_band/analysis.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python output/BULANAN/analisis/bab_1_konteks/ws3_inflasi_covid/analysis.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python output/BULANAN/analisis/bab_1_konteks/ws4_seasonal_heatmap/analysis.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python output/BULANAN/analisis/__TRACKED_VAR__/analysis.py)",
+      "Bash(pip install *)"
+    ]
+  }
+}

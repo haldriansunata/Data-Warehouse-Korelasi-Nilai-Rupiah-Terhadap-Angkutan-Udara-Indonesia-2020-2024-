@@ -1,0 +1,4 @@
+Bab 4 / WS2 — Spread Kurs × Penumpang
+slope = 174.84 (pax per 1 IDR spread)
+R² = 0.0006
+p-value = 0.857362

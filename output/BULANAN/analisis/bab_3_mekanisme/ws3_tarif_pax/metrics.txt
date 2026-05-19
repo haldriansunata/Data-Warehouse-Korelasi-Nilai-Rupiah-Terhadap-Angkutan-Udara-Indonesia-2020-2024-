@@ -1,0 +1,4 @@
+Bab 3 / WS3 — Tarif Tiket × Total Penumpang
+slope = 15,192.52 (pax per 1 poin IHK)
+R² = 0.7086
+p-value = 0.000000

@@ -1,0 +1,4 @@
+Bab 3 / WS2 — Brent IDR × Tarif Tiket IHK
+slope = 0.000277 (poin IHK per 1 IDR brent)
+R² = 0.3521
+p-value = 0.000001

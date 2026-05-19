@@ -1,0 +1,4 @@
+Bab 4 / WS5 — Hari Libur × Penumpang
+slope = -86,534.27 (pax per 1 hari libur tambahan)
+R² = 0.0014
+p-value = 0.777255

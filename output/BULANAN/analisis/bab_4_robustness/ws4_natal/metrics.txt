@@ -1,0 +1,5 @@
+Bab 4 / WS4 — Natal Effect (semua segmen)
+Median non-Natal: 5,839
+Median Natal:     7,704
+Boost: 1.32×
+Mann-Whitney p = 0.000000

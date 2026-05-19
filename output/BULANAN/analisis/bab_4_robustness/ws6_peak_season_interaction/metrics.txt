@@ -1,0 +1,11 @@
+Bab 4 / WS6 — Interaksi is_peak_season × Kurs
+
+is_peak_season=0 (n=40):
+  slope = 1,841.14
+  R² = 0.2436
+  p = 0.001210
+
+is_peak_season=1 (n=20):
+  slope = 3,087.42
+  R² = 0.5466
+  p = 0.000195

@@ -1,0 +1,6 @@
+Bab 2 / WS2 — Kurs × Penumpang INTERNASIONAL
+n = 60
+slope = 1,175.53 (pax / 1 IDR pelemahan)
+R-squared = 0.4862
+Pearson r = 0.6973
+p-value = 0.000000
