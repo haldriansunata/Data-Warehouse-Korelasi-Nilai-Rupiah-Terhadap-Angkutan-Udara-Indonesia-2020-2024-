@@ -46,9 +46,31 @@ Kenapa? Karena bulan Lebaran di dataset adalah:
 
 Hindari over-claim efek Lebaran berdasarkan median per rute. Yang lebih kuat: total nasional April 2024 (8,58 juta) > rata-rata bulan non-libur 2024 → boost ~12-15%. Tapi ini juga butuh kontrol Lebaran-bulan-shift.
 
-## Target Tableau
-- Columns: `has_lebaran` (Discrete, 0/1)
-- Rows: `MEDIAN(jumlah_penumpang)` per rute (Detail = `kode_rute`)
-- Filter: `kategori` = DOMESTIK
+## Target Tableau — Step by Step
 
-Hasil di Tableau akan match dengan angka median di atas.
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab4_WS3_LebaranEffect`.
+2. **Filter Domestik**: drag `kategori` ke **Filters** → centang hanya `DOMESTIK` → OK.
+3. **Drag `has_lebaran` ke Columns**. Klik kanan pil → pastikan **Discrete** (pil biru). Akan jadi 2 kolom: "0" dan "1".
+4. **Drag `jumlah_penumpang` ke Rows**. Pil default SUM. Ubah ke MEDIAN:
+   - Klik kanan pil → **Measure (Sum)** → pilih **Median**.
+   - Pil sekarang `MEDIAN(jumlah_penumpang)`.
+5. **Marks**: Bar.
+6. **Drag `MEDIAN(jumlah_penumpang)` ke Label** di Marks card (untuk tampilan angka di atas bar).
+7. **Color**: drag `has_lebaran` ke Color (2 warna: 0 = abu, 1 = merah).
+
+### Cross-check ke Python
+File `summary.csv`:
+- Median has_lebaran=0: **5.338,5**
+- Median has_lebaran=1: **5.621**
+- Boost ratio: 1,05×
+
+### Catatan TENTANG Statistik
+- **Mann-Whitney U test (p=0,697) yang ada di Python tidak tersedia native di Tableau.** Tableau hanya tampilkan median, tidak uji signifikansi.
+- Untuk presentasi, tambah annotation manual: "Boost Lebaran median **1,05×** (tidak signifikan, p=0,70). Lebaran terkontaminasi COVID — 3 dari 5 bulan Lebaran terjadi di periode lockdown/transisi."
+
+### Bonus: Box Plot
+Untuk visualisasi distribusi (lebih informatif dari median saja):
+1. Di sheet sama atau duplicate, ubah Marks dari Bar ke **Show Me → Box-and-Whisker Plot**.
+2. Tableau akan auto-generate box plot dengan median, Q1, Q3, whiskers.
+3. Box plot menunjukkan overlap distribusi yang kuat antara group 0 dan 1 → visual konfirmasi "tidak signifikan".

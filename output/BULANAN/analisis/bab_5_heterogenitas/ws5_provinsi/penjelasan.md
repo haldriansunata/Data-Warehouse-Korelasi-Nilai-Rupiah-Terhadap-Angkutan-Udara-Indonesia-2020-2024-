@@ -65,10 +65,47 @@ Kombinasi 4 provinsi ini ~17M — penting untuk konektivitas region, biasanya ru
 - `plot.png` — horizontal bar top 15
 - `top15_provinsi.csv`
 
-## Target Tableau
-- Filter: `kategori = DOMESTIK`
-- Rows: `[dim_bandara_origin].provinsi` (gunakan field yang sudah di-grouping di Tableau)
-- Columns: `SUM(jumlah_penumpang)`
-- Sort: descending
+## Target Tableau — Step by Step
 
-**Untuk peta**: Tableau bisa auto-detect provinsi Indonesia kalau nama-nya match dengan basemap-nya. Karena ada nama Inggris di data, mungkin perlu Edit Locations manual (Map → Edit Locations → pilih country Indonesia, lalu map nama-nama yang tidak match).
+### Persiapan: Konsolidasi Nama Provinsi (Group Manual)
+Karena `dim_bandara.provinsi` punya inkonsistensi (mis. "JAKARTA" vs "DKI JAKARTA"; "EAST KALIMANTAN" vs "KALIMANTAN TIMUR"), buat **Group**:
+1. Di Data pane, klik kanan field `o_provinsi` (origin) → **Create → Group**.
+2. Beri nama group field: `Provinsi (Cleaned)`.
+3. Di dialog Create Group:
+   - Pilih "JAKARTA" + "DKI JAKARTA" (Ctrl+click), klik **Group** → rename "DKI JAKARTA".
+   - Pilih "EAST KALIMANTAN" + "KALIMANTAN TIMUR" → Group → "KALIMANTAN TIMUR".
+   - Ulangi untuk provinsi lain yang duplikat (cek dengan `Show Members`).
+4. Klik OK.
+
+### Langkah Pembuatan Sheet (Bar Chart)
+1. **Buat worksheet baru** `Bab5_WS5_Provinsi`.
+2. **Filter Domestik**: drag `kategori` ke Filters → centang `DOMESTIK`.
+3. **Drag `Provinsi (Cleaned)` ke Rows** (bukan field provinsi original).
+4. **Drag `jumlah_penumpang` ke Columns**. Pil SUM.
+5. **Filter Top 15**: klik kanan `Provinsi (Cleaned)` di Rows → Filter → Top → Top 15 by SUM.
+6. **Sort descending**: klik icon sort di toolbar atau klik kanan field → Sort By Field.
+7. **Color**: opsional, pakai field konstan atau warna tunggal.
+8. **Label**: drag `SUM(jumlah_penumpang)` ke Label, format dalam juta.
+
+### Cross-check ke Python (Setelah Group)
+File `top15_provinsi.csv`:
+- DKI JAKARTA (cleaned): ~**125 juta** (Jakarta + DKI Jakarta digabung)
+- KALIMANTAN TIMUR (cleaned): ~21 juta
+- KEPULAUAN RIAU: 14,63 juta
+- BALI: 13,17 juta
+
+### Bonus: Peta Provinsi
+1. **Buat worksheet baru** `Bab5_WS5b_PetaProvinsi`.
+2. **Drag `Provinsi (Cleaned)` ke worksheet** — Tableau akan auto-detect sebagai **geographic role**.
+3. Kalau muncul peta dunia (bukan Indonesia), klik kanan field → **Geographic Role → State/Province**.
+4. **Edit Locations** kalau ada nama yang tidak match:
+   - Map → Edit Locations.
+   - Pilih country: **Indonesia**.
+   - Untuk setiap unrecognized name, pilih dari dropdown (mis. "BALI" → "Bali, Indonesia").
+5. **Show Me**: pilih **Symbol Map** atau **Filled Map**.
+6. **Size**: `SUM(jumlah_penumpang)`.
+7. **Color**: opsional, pakai sequential palette dengan field yang sama atau `AVG(avg_kurs_tengah)` di tahun 2024 (filter tahun=2024) untuk konteks.
+
+### Catatan
+- Peta provinsi Indonesia di Tableau **tidak selengkap peta US/Eropa** — beberapa provinsi mungkin perlu manual mapping (terutama provinsi baru seperti Papua Pegunungan, Papua Selatan).
+- Kalau Tableau tidak punya geocoding lengkap, alternatif: pakai **bar chart horizontal** saja (lebih reliable).

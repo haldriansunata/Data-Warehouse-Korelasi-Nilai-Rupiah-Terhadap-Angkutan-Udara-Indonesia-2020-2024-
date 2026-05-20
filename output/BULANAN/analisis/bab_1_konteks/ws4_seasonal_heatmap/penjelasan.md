@@ -51,9 +51,30 @@ Visual ini juga jadi *validasi sanity check*: kalau Tableau heatmap kamu tidak m
 - `plot.png` — heatmap
 - `pivot_pax_tahun_bulan.csv` — matriks
 
-## Target Tableau
-- Columns: `nama_bulan` (Discrete, sort manual Jan-Des)
-- Rows: `tahun` (Discrete)
-- Marks: Square
-- Color: `SUM(jumlah_penumpang)` (sequential palette mis. orange/red)
-- Label: `SUM(jumlah_penumpang)` formatted as juta
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru**, beri nama `Bab1_WS4_HeatmapSeasonal`.
+2. **Drag `nama_bulan` ke Columns**. Pil biru (Discrete). Default order alfabetis — kita perlu manual sort.
+3. **Sort manual `nama_bulan` Jan–Des**:
+   - Klik kanan field `nama_bulan` di Data pane → **Default Properties → Sort** → Manual.
+   - Atur urutan: Januari, Februari, Maret, April, Mei, Juni, Juli, Agustus, September, Oktober, November, Desember.
+   - Atau lebih cepat: pakai field `bulan` (angka 1–12) sebagai sort key — klik kanan `nama_bulan` di Columns → Sort → By Field → `bulan` ascending.
+4. **Drag `tahun` ke Rows**. Pil biru (Discrete).
+5. **Pilih Marks card**: ubah tipe Mark dari Automatic ke **Square**.
+6. **Drag `SUM(jumlah_penumpang)` ke Color di Marks card**.
+7. **Pilih palette**: klik dropdown Color di Marks card → Edit Colors → palette **Orange-Red** (sequential, dark = high). Centang "Stepped Color" kalau mau diskrit.
+8. **Tambah label angka di tiap sel**:
+   - Drag `SUM(jumlah_penumpang)` ke **Label** di Marks card.
+   - Klik kanan label → Format → Numbers → Custom → ketik `#,##0,,"M"` (akan tampak "9M" untuk 9.000.000).
+9. **Resize sel**: drag border kolom/baris untuk membuat heatmap proporsional (mis. lebar = tinggi).
+
+### Cross-check ke Python
+- Cell Mei 2020 = **0,1 juta** (warna paling gelap kalau pakai sequential).
+- Cell Jan 2020 = **9,12 juta** (warna paling terang).
+- Cell Jul 2024 = **9,03 juta** — peak recovery.
+
+### Catatan Khusus
+- Kalau sel terlalu kecil dan label tidak muat, perbesar zoom (Fit → Fit Width).
+- Untuk presentasi, beri **Title sheet** "Heatmap Penumpang Nasional (juta) — Tahun × Bulan".
+- Color legend: tampilkan dengan klik tombol "Show Color Legend" di toolbar Tableau.

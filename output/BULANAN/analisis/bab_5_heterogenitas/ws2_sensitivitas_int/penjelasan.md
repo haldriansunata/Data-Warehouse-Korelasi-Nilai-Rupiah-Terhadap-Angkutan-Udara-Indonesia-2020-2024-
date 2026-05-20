@@ -44,13 +44,38 @@ Rute ke **Singapura/Malaysia (KNO-KUL, CGK-KUL, CGK-SIN)** menunjukkan R² lebih
 - `plot.png` — horizontal bar slope per rute
 - `sensitivity_per_int_route.csv`
 
-## Target Tableau
-- Filter: `kategori = INTERNASIONAL`, top 10 by total pax
-- Columns: `AVG(avg_kurs_tengah)`, Rows: `SUM(jumlah_penumpang)`
-- Detail: `waktu_id`, Color: `kode_rute`
-- Trend Line: Linear **per color** (centang "Linear trend lines per Color")
+## Target Tableau — Step by Step
 
-Slope tiap line akan match angka di atas.
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab5_WS2_SensitivitasINT`.
+2. **Filter kategori**: drag `kategori` ke Filters → centang hanya `INTERNASIONAL`.
+3. **Filter Top 10 rute INT**: drag `kode_rute` ke Filters → tab Top → "By field" → Top 10 by `SUM([jumlah_penumpang])` → OK.
+4. **Drag `avg_kurs_tengah` ke Columns**. Pil `AVG`.
+5. **Drag `jumlah_penumpang` ke Rows**. Pil SUM.
+6. **Drag `waktu_id` ke Detail** → klik kanan → **Dimension**.
+7. **Marks**: Circle.
+8. **Drag `kode_rute` ke Color** di Marks card. Akan tampak 10 warna.
+9. **Trend Line per color**:
+   - Analytics → Trend Line → Linear.
+   - Klik kanan trend line → **Edit Trend Lines** → centang **"Allow a trend line per color"** → klik OK.
+   - Tableau akan menggambar 10 garis trend, satu per rute.
+10. **Hover tiap line** untuk lihat slope dan R² masing-masing rute.
 
-## Caveat untuk Paper
-Jangan klaim "rute X paling elastis ke kurs" hanya dari slope. Gunakan **R² + slope/mean(pax)** sebagai metrik elastisitas yang lebih fair.
+### Cross-check ke Python
+File `sensitivity_per_int_route.csv` — sorted by slope ascending:
+
+| Rute | Slope | R² |
+|---|---:|---:|
+| DPS-SYD | +17,48 | 0,272 |
+| DPS-MEL | +17,62 | 0,234 |
+| CGK-DOH | +23,54 | 0,488 |
+| ... | ... | ... |
+| CGK-KUL | +94,72 | 0,500 |
+| **CGK-SIN** | **+114,33** | 0,402 |
+
+Trend line paling curam (slope absolute terbesar) di Tableau = CGK-SIN (114).
+
+### Catatan untuk Presentasi
+- **Jangan klaim "rute X paling elastis ke kurs"** hanya dari slope — slope mencerminkan volume.
+- Beri **annotation membandingkan R²**: rute Australia (DPS-SYD, DPS-MEL) R² paling rendah → paling resilient.
+- Tambah text box di dashboard untuk caveat.

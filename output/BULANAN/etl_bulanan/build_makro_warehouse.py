@@ -120,12 +120,18 @@ def main():
                   .merge(mtm_long,   on='waktu_id', how='left')
                   .merge(bi_long,    on='waktu_id', how='left')
                   .merge(brent_long, on='waktu_id', how='left'))
+    # brent_idr_per_bbl = Brent dalam IDR (proxy upstream biaya bahan bakar penerbangan,
+    # karena data avtur langsung tidak tersedia). Disimpan 2 desimal.
+    fact_makro['brent_idr_per_bbl'] = (
+        fact_makro['brent_usd_bbl'] * fact_makro['avg_kurs_tengah']
+    ).round(2)
     fact_makro = fact_makro[[
         'waktu_id',
         'avg_kurs_jual', 'avg_kurs_beli', 'avg_kurs_tengah',
         'min_kurs_tengah', 'max_kurs_tengah', 'jumlah_hari_trading',
         'tarif_tiket_ihk', 'inflasi_yoy', 'inflasi_mtm', 'bi_rate',
         'brent_usd_bbl', 'brent_high', 'brent_low',
+        'brent_idr_per_bbl',
     ]]
     out_makro = OUTPUT_DIR / 'fact_makro_bulanan.csv'
     fact_makro.to_csv(out_makro, index=False, lineterminator='\n')

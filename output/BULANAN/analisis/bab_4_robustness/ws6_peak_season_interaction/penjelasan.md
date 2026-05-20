@@ -32,11 +32,31 @@ Slope positif di kedua segmen = artefak COVID yang sama dengan Bab 2. Yang valid
 
 Ini insight yang bisa diangkat sebagai *contribution* kelompok kamu — tidak banyak paper Indonesia yang memecah elastisitas kurs–demand by season.
 
-## Target Tableau
-- Columns: `AVG(avg_kurs_tengah)`
-- Rows: `SUM(jumlah_penumpang)`
-- Detail: `waktu_id`
-- Color: `is_peak_season` (akan jadi 2 warna)
-- Trend Line: Linear **per color** (centang "Linear trend lines per Color")
+## Target Tableau — Step by Step
 
-Hasil: 2 trend lines, slope dan R² match angka di atas.
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab4_WS6_PeakSeasonInteraction`.
+2. **Drag `avg_kurs_tengah` ke Columns**. Pil `AVG` hijau.
+3. **Drag `jumlah_penumpang` ke Rows**. Pil SUM hijau.
+4. **Drag `waktu_id` ke Detail** → klik kanan → **Dimension**.
+5. **Marks**: Circle.
+6. **Drag `is_peak_season` ke Color** di Marks card. Klik kanan pil di Color → pastikan **Discrete** (akan tampak 2 warna: 0 abu, 1 merah/biru).
+7. **Trend Line per color**:
+   - Analytics → Trend Line → Linear.
+   - **Klik kanan trend line → Edit Trend Lines** → centang **"Allow a trend line per color"**.
+   - Tableau akan menggambar 2 garis trend (satu per peak_season value).
+
+### Cross-check ke Python
+File `slope_by_peak.csv`:
+
+| is_peak_season | n | Slope | R² |
+|---:|---:|---:|---:|
+| 0 (non-peak) | 40 | **+1.841** | 0,244 |
+| 1 (peak season) | 20 | **+3.087** | **0,547** |
+
+Hover trend line non-peak → R²=0,24; hover trend line peak → R²=0,55.
+
+### Catatan untuk Paper
+- **Sensitivitas 2,2× lebih tinggi di peak season**. Ini *publishable finding*.
+- Annotation manual: "Demand di peak season (Lebaran, libur sekolah, Natal) memiliki sensitivitas kurs 2,2× lebih tinggi dibanding non-peak. Konsisten dengan literatur bahwa segmen leisure lebih elastis."
+- **Catatan caveat**: kedua slope masih positif (spurious COVID). Yang valid adalah *relative comparison*, bukan slope absolut.

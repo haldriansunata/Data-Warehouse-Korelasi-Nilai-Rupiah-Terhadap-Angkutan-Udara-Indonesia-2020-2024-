@@ -22,9 +22,24 @@ Flag `has_natal` adalah seasonal predictor yang **valid**. Kalau di Tableau kamu
 
 Kamu bisa kombinasi dengan `is_peak_season` (yang mencakup Juni-Juli libur sekolah + Lebaran + Desember) untuk control musim lebih komprehensif.
 
-## Target Tableau
-- Columns: `has_natal` (Discrete)
-- Rows: `MEDIAN(jumlah_penumpang)`
-- (tanpa filter kategori — Natal berlaku universal)
+## Target Tableau — Step by Step
 
-Hasil: bar 5.839 vs 7.704.
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab4_WS4_NatalEffect`. ATAU duplicate `Bab4_WS3_LebaranEffect` dan rename.
+2. **HAPUS filter kategori** kalau sebelumnya ada (Natal berlaku universal, tidak khusus DOM).
+3. **Drag `has_natal` ke Columns**. Klik kanan → **Discrete** (pil biru). 2 kolom: 0, 1.
+4. **Drag `jumlah_penumpang` ke Rows**. Ubah ke **MEDIAN** (klik kanan pil → Measure → Median).
+5. **Marks**: Bar.
+6. **Drag `MEDIAN(jumlah_penumpang)` ke Label**.
+7. **Color**: `has_natal` (2 warna).
+
+### Cross-check ke Python
+File `summary.csv`:
+- Median has_natal=0: **5.839**
+- Median has_natal=1: **7.704**
+- Boost ratio: **1,32×** (SIGNIFIKAN, p < 0,001)
+
+### Catatan
+- **Berbeda dengan Lebaran (WS3) yang tidak signifikan**, efek Natal **SIGNIFIKAN** karena bulan Desember 2020–2024 mayoritas di luar lockdown puncak.
+- Annotation manual: "Median Natal **1,32× lebih tinggi** dari bulan biasa (Mann-Whitney p < 0,001). Konsisten karena Desember bertepatan dengan libur sekolah + Tahun Baru + Natal."
+- Ini bisa jadi sheet pendamping WS3 saat presentasi — kontraskan "Lebaran terkontaminasi COVID" vs "Natal robust".

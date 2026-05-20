@@ -32,5 +32,28 @@ Channel 2 menjelaskan demand penumpang **secara tidak langsung**:
 
 Effect size-nya lebih kecil dari channel cost-push (pengaruhnya lewat tabungan/biaya kapital konsumen, bukan langsung ke harga tiket).
 
-## Target Tableau
-Columns: `AVG(avg_kurs_tengah)`. Rows: `AVG(bi_rate)`. Detail: `waktu_id`. Color: `covid_phase`. Trend linear. R² akan match 0,645.
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab3_WS4_KursBIRate`.
+2. **Drag `avg_kurs_tengah` ke Columns**. Pil `AVG(avg_kurs_tengah)` hijau.
+3. **Drag `bi_rate` ke Rows**. Pil `AVG(bi_rate)` hijau.
+4. **Drag `waktu_id` ke Detail** → klik kanan → **Dimension**.
+5. **Marks**: Circle.
+6. **Drag `covid_phase` ke Color**.
+7. **Trend Line**: Analytics → Linear.
+
+### Cross-check ke Python
+File `metrics.txt`:
+- slope = **+0,00132** %/IDR (atau **+1,32% per 1000 IDR pelemahan**)
+- R² = **0,6445**
+- p-value < 10⁻¹⁰
+
+### Catatan untuk Presentasi
+**INI ADALAH HEADLINE BAB 3** — channel transmisi terkuat dan slope POSITIF sesuai teori:
+- Kurs naik → BI Rate naik (BI defend rupiah).
+- BI Rate naik → biaya kapital naik → daya beli diskresioner termasuk travel turun.
+
+Tambah annotation manual: "*R²=0,65 — channel moneter dominan. BI Rate naik +1,32% per 1.000 IDR pelemahan rupiah.*"
+
+Saat presentasi Bab 3, **dahulukan sheet ini** karena ini channel yang paling kuat dan paling *publishable*.

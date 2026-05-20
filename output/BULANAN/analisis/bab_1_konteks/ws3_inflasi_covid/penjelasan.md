@@ -45,7 +45,37 @@ Solusi di Bab 4: regresi/scatter **per fase COVID** untuk memastikan slope berta
 - `plot.png` — dual-axis line dengan background COVID
 - `phase_summary.csv` — rata-rata indikator per fase
 
-## Target Tableau
-- Columns: `Tanggal Analisis` (continuous)
-- Rows: `AVG(inflasi_yoy)` + `AVG(inflasi_mtm)` sebagai dual-axis (jangan synchronize, beda skala)
-- Tambah background shading via Reference Band dengan field `covid_phase`. Caranya: drag `covid_phase` ke Color di Marks card → pilih Bar di Marks → buat axis dummy dengan field konstan.
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru**, beri nama `Bab1_WS3_InflasiCOVID`.
+2. **Drag `Tanggal Analisis` ke Columns** → Month (Continuous).
+3. **Drag `AVG(inflasi_yoy)` ke Rows**. Marks = Line, warna merah.
+4. **Drag `AVG(inflasi_mtm)` ke Rows** di sebelahnya. Marks = Line, warna biru.
+5. **Buat dual axis**: klik kanan pil `AVG(inflasi_mtm)` → **Dual Axis**.
+6. **JANGAN Synchronize Axis** (range YoY 1–6% vs MtM −0,21–1,17% sangat berbeda).
+7. **Tambah background COVID phase** (pakai Reference Bands):
+   - Buka tab **Analytics** (panel kiri atas, sebelah Data).
+   - Drag **Reference Band** ke chart, lepaskan di "Pane" untuk sumbu X.
+   - Set:
+     - *Band From*: nilai minimum `waktu_id`
+     - *Band To*: nilai maximum `waktu_id`
+     - *Label*: dari `covid_phase`
+     - *Fill*: warna per fase (atur manual)
+   - Alternatif lebih mudah: buat 4 reference bands manual, masing-masing untuk 1 fase, dengan tanggal start/end yang sudah diketahui:
+     - pre_pandemic: 01-Jan-2020 sampai 29-Feb-2020 (biru)
+     - lockdown: 01-Mar-2020 sampai 30-Sep-2021 (merah)
+     - transisi: 01-Oct-2021 sampai 31-Dec-2022 (oranye)
+     - recovery: 01-Jan-2023 sampai 31-Dec-2024 (hijau)
+   - Set Fill opacity ~20% supaya line tetap terlihat di atasnya.
+8. **Label sumbu kanan**: pastikan sumbu kanan adalah MtM, kiri YoY. Tambah judul sumbu via klik kanan sumbu → Edit Axis → Title.
+
+### Cross-check ke Python
+- Inflasi YoY mean per fase: lockdown=1,70%, transisi=3,72%, recovery=2,99%.
+- Lihat `phase_summary.csv` untuk angka penuh — Tableau harus tunjukkan rata-rata yang sama kalau di-hover atau di-bar per phase.
+
+### Catatan Khusus
+- Reference Band di Tableau punya keterbatasan untuk membuat background shaded yang berubah-ubah per dimensi. Workaround alternatif: pakai **Dual Axis dengan Bar Chart**:
+  - Buat field konstan = 1, drag ke Rows sebagai bar.
+  - Color = `covid_phase`, opacity 20%, di-link sebagai axis kedua di belakang line YoY/MtM.
+  - Hide sumbu Y bar tersebut.

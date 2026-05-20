@@ -40,5 +40,34 @@ Channel yang **dominan** adalah:
 
 *Catatan data*: kita tidak punya data harga avtur langsung; analisis channel cost-push menggunakan **Brent crude oil × kurs** sebagai *proxy upstream* karena avtur disuling dari crude oil dan harganya berkorelasi ~80–90% dengan Brent (lag 1–2 bulan).
 
-## Target Tableau
-Columns: `AVG(avg_kurs_tengah)`. Rows: `AVG(inflasi_yoy)`. Detail: `waktu_id`. Color: `covid_phase`. Trend linear. R² akan match 0,074.
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab3_WS5_KursInflasi`.
+2. **Drag `avg_kurs_tengah` ke Columns**. Pil `AVG`.
+3. **Drag `inflasi_yoy` ke Rows**. Pil `AVG(inflasi_yoy)`.
+4. **Drag `waktu_id` ke Detail** → Dimension.
+5. **Marks**: Circle.
+6. **Drag `covid_phase` ke Color**.
+7. **Trend Line**: Analytics → Linear.
+
+### Cross-check ke Python
+File `metrics.txt`:
+- slope = **+0,000542** %/IDR
+- R² = **0,0744** (sangat rendah)
+
+### Catatan untuk Presentasi
+- Channel ini **LEMAH** — R² hanya 7%. Maknanya: pelemahan kurs tidak banyak menjelaskan inflasi umum di Indonesia 2020–2024.
+- Pass-through kurs ke inflasi rendah karena banyak harga diatur (BBM, listrik, beras).
+- Saat presentasi, gunakan sheet ini untuk **menutup argumen** bahwa channel daya beli BUKAN driver utama — sebaliknya channel moneter (WS4) lebih dominan.
+
+### Bonus: Dashboard Sintesis Bab 3
+Buat **Dashboard `Bab3_Dashboard_TigaChannel`** dengan layout 3×2:
+- Baris 1 (Channel 1 cost-push): WS1, WS2, WS3.
+- Baris 2 (Channel 2 & 3): WS4, WS5, dan text box ringkasan.
+- Text box ringkasan:
+  ```
+  Channel terkuat: Moneter (R²=0,65)
+  Channel cost-push step B valid (R²=0,35), step C spurious COVID
+  Channel daya beli tidak signifikan (R²=0,07)
+  ```

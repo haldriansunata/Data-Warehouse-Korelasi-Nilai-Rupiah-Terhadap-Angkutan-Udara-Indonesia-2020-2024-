@@ -30,5 +30,28 @@ Ini sesuai ekspektasi teoritis:
 
 **Tapi**: semua slope positif karena confounder COVID. Hubungan sebenarnya menanti di Bab 4 (kontrol per covid_phase).
 
-## Target Tableau
-Duplicate WS1, filter `kategori = DOMESTIK`. R² akan jadi 0,226.
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Klik kanan tab worksheet `Bab2_WS1_ScatterTotal` → Duplicate**. Rename menjadi `Bab2_WS3_ScatterDOM`.
+2. **Tambah filter kategori**:
+   - Drag `kategori` ke **Filters**.
+   - Centang **hanya `DOMESTIK`** → OK.
+3. **Update title sheet** ke "Scatter Kurs × Penumpang DOMESTIK".
+4. **Hover Trend Line** untuk verifikasi metrik.
+
+### Cross-check ke Python
+File `metrics.txt`:
+- slope = **1.118,94**
+- R-squared = **0,2257**
+- p-value = **0,000125**
+- Pearson r = **0,4750**
+
+R² DOMESTIK paling rendah dari 3 sheet (Total 0,35, INT 0,49) — konsisten dengan teori bahwa rute domestik kurang ter-USD-kan dibanding internasional.
+
+### Catatan Khusus untuk Presentasi
+Susun ketiga sheet (WS1, WS2, WS3) di satu **Dashboard** baru bernama `Bab2_Dashboard_HipotesisUtama`:
+1. Buat Dashboard baru (icon dashboard di bawah, sebelah icon worksheet).
+2. Drag ketiga sheet ke layout horizontal/grid.
+3. Tambah Text box di atas untuk title: "Korelasi Naive Kurs × Penumpang per Segmen".
+4. Tambah Text box di bawah dengan ringkasan: "R² ranking: INT (0,49) > Total (0,35) > DOM (0,23). Slope semua POSITIF — akan dijelaskan di Bab 4."

@@ -62,14 +62,47 @@ Negara besar volume (MALAYSIA, SINGAPURA) punya slope absolute lebih besar — b
 - `plot.png` — horizontal bar slope per negara
 - `sensitivity_per_negara.csv`
 
-## Target Tableau
-- Filter: `kategori = INTERNASIONAL`
-- Calculated field `negara_asing`:
-  ```
-  IF [o_negara] != "INDONESIA" THEN [o_negara] ELSE [d_negara] END
-  ```
-- Columns: `AVG(avg_kurs_tengah)`, Rows: `SUM(jumlah_penumpang)`
-- Detail: `waktu_id`, Color: `negara_asing`
-- Trend Line: Linear per color
+## Target Tableau — Step by Step
 
-Hasil match dengan tabel ini.
+### Persiapan: Calculated Field
+**Buat calculated field `negara_asing`** (klik kanan Data pane → Create Calculated Field):
+```
+IF [o_negara] != "INDONESIA" THEN [o_negara] ELSE [d_negara] END
+```
+
+Catatan: nama field `o_negara` dan `d_negara` ini adalah hasil prefix dari dua instance `dim_bandara` (origin dan destination). Cek di Data pane Tableau — kalau nama-nya beda (mis. `dim_bandara_origin.negara`), sesuaikan formula.
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab5_WS3_PerNegara`.
+2. **Filter kategori INT**: drag `kategori` ke Filters → centang `INTERNASIONAL`.
+3. **Filter negara dengan volume signifikan**:
+   - Drag `negara_asing` ke Filters → tab Top → "By field" → Top 14 by `SUM([jumlah_penumpang])`.
+   - Atau pakai filter manual untuk exclude "INDONESIA" jika muncul.
+4. **Drag `avg_kurs_tengah` ke Columns**. Pil `AVG`.
+5. **Drag `jumlah_penumpang` ke Rows**. Pil SUM.
+6. **Drag `waktu_id` ke Detail** → klik kanan → **Dimension**.
+7. **Marks**: Circle.
+8. **Drag `negara_asing` ke Color**.
+9. **Trend Line per color**:
+   - Analytics → Trend Line → Linear.
+   - Edit Trend Lines → centang **"Allow a trend line per color"**.
+
+### Cross-check ke Python
+File `sensitivity_per_negara.csv` — sorted by R²:
+
+| Negara | R² | Slope |
+|---|---:|---:|
+| **FILIPINA** | **0,532** | +20,7 |
+| QATAR | 0,507 | +50,3 |
+| THAILAND | 0,509 | +25,4 |
+| MALAYSIA | 0,501 | +342,1 |
+| SINGAPURA | 0,463 | +277,6 |
+| AUSTRALIA | 0,481 | +123,4 |
+| ... | ... | ... |
+| **ARAB SAUDI** | **0,246** | +44,6 |
+
+R² terendah (Saudi 0,25 dan Jepang 0,33) menunjukkan rute-rute ini punya driver non-kurs (haji, visa).
+
+### Catatan untuk Presentasi
+- **Ini HEADLINE Bab 5**. Tampilkan annotation: "Rute ke Filipina, Qatar, Thailand, Malaysia paling sensitif (R²>0,50). Saudi & Jepang tidak (R²<0,35) — driver kuota haji & kebijakan visa."
+- Banyak warna (14 negara) bisa membuat chart ramai. Pertimbangkan **filter pertahap** — tunjukkan 5 negara dulu, lalu zoom ke 14.

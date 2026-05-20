@@ -31,5 +31,25 @@ Itu sebabnya R² INT > Total — karena COVID mempengaruhi INT lebih ekstrem dar
 ## Output
 - `plot.png`, `metrics.txt`
 
-## Target Tableau
-Duplicate sheet WS1, filter `kategori = INTERNASIONAL`. R² akan jadi 0,486.
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Klik kanan tab worksheet `Bab2_WS1_ScatterTotal` → Duplicate**. Rename hasil duplikat menjadi `Bab2_WS2_ScatterINT`.
+2. **Tambah filter kategori**:
+   - Drag `kategori` (dari Data pane → dim_rute) ke kotak **Filters**.
+   - Di dialog yang muncul, centang **hanya `INTERNASIONAL`** → OK.
+3. **Update title sheet**: klik 2× di title chart → ubah ke "Scatter Kurs × Penumpang INTERNASIONAL".
+4. **Lihat R² baru**: hover ke trend line → tooltip akan tampilkan R² yang berbeda.
+
+### Cross-check ke Python
+File `metrics.txt`:
+- slope = **1.175,53**
+- R-squared = **0,4862**
+- p-value = **6 × 10⁻¹⁰**
+- Pearson r = **0,6973**
+
+**R² lebih tinggi dari WS1 (0,49 vs 0,35)** — segmen internasional memang lebih sensitif terhadap dinamika makro/COVID.
+
+### Catatan Khusus
+- Filter `kategori = INTERNASIONAL` akan mempengaruhi `SUM(jumlah_penumpang)` saja, tidak mempengaruhi `AVG(avg_kurs_tengah)` (karena kurs sama untuk semua rute di bulan tersebut).
+- Slope tetap **POSITIF** (+1.176) — spurious yang sama, akan dijelaskan di Bab 4.

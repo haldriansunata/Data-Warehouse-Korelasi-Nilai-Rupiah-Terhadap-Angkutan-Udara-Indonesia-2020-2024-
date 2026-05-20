@@ -45,7 +45,28 @@ Ini setup untuk Bab 4 WS2 yang akan menguji **apakah volatilitas spread → penu
 - `plot.png` — band chart kurs
 - `top5_volatile_months.csv` — 5 bulan paling volatil
 
-## Target Tableau
-- Columns: `Tanggal Analisis` (continuous)
-- Rows: `AVG(avg_kurs_tengah)` (line)
-- Tambahan: `AVG(min_kurs_tengah)` dan `AVG(max_kurs_tengah)` sebagai **dual axis area chart** di belakang. Atau pakai Reference Band (Analytics pane) dengan computed field.
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru**, beri nama `Bab1_WS2_KursBand`.
+2. **Drag `Tanggal Analisis` ke Columns** → klik kanan pil → **Month (Continuous)**, pil hijau.
+3. **Drag `AVG(min_kurs_tengah)` ke Rows**. Pil hijau.
+4. **Drag `AVG(max_kurs_tengah)` ke Rows** (di sebelah pil min). Akan jadi 2 panel terpisah.
+5. **Buat dual axis**: klik kanan pil `AVG(max_kurs_tengah)` di Rows → pilih **Dual Axis**. Dua panel akan tumpang-tindih.
+6. **Synchronize axis**: klik kanan sumbu Y kanan → **Synchronize Axis** (penting karena range sama).
+7. **Marks card**: sekarang ada 3 Marks card (All, AVG(min), AVG(max)):
+   - Di Marks card `AVG(min_kurs_tengah)`: pilih **Area** sebagai tipe Mark.
+   - Di Marks card `AVG(max_kurs_tengah)`: pilih **Area** juga.
+   - Set warna area kedua = sama (mis. ungu/merah muda) dengan opacity ~40% — ini akan membentuk band.
+8. **Tambah line rata-rata**: drag `AVG(avg_kurs_tengah)` ke Rows. Pilihan: ubah jadi triple axis (right-click → Dual Axis lagi) atau pakai Reference Line.
+   - **Cara mudah**: drag `AVG(avg_kurs_tengah)` ke sumbu Y kiri (akan menambah measure ke axis yang sudah ada). Marks = Line, warna lebih gelap dari area.
+9. **Sembunyikan sumbu Y kanan**: klik kanan sumbu kanan → uncheck "Show Header".
+
+### Cross-check ke Python
+Pada Maret 2020:
+- Area band paling tebal (volatil): min ≈ 14.168, max ≈ 16.608, spread ≈ **2.440 IDR**.
+- Tooltip harus tunjukkan angka ini.
+
+### Catatan Khusus
+- Triple axis tidak native di Tableau. Pakai trik: 2 measure di dual axis + 1 measure sebagai overlay manual.
+- Alternatif lebih sederhana: pakai **Reference Band** (Analytics pane → Reference Band → Per Cell, dengan field min sebagai lower, max sebagai upper). Tidak butuh dual axis.

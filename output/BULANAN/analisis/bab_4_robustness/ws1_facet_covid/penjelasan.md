@@ -45,11 +45,42 @@ Ini *honest finding* — paper kamu akan lebih kuat karena mengakui keterbatasan
 - `plot.png` — 4 panel scatter side-by-side
 - `slope_per_phase.csv` — slope/R²/p tiap fase
 
-## Target Tableau
-- Columns: `covid_phase` (sebelah kiri) lalu `AVG(avg_kurs_tengah)`
-- Rows: `SUM(jumlah_penumpang)`
-- Detail: `waktu_id`
-- Color: `covid_phase`
-- Trend Line: Linear **per pane**
+## Target Tableau — Step by Step
 
-Hasilnya 4 mini scatter side-by-side. Slope tiap panel harus match angka di tabel.
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab4_WS1_FacetCOVID`.
+2. **Drag `avg_kurs_tengah` ke Columns**. Pil `AVG(avg_kurs_tengah)` hijau.
+3. **Drag `covid_phase` ke Columns** dan letakkan **di sebelah KIRI** pil `AVG(avg_kurs_tengah)` (drop di area sebelum pil hijau). Pil biru `covid_phase` akan muncul.
+   - Layar akan otomatis terbelah menjadi **4 kolom** sesuai 4 fase COVID.
+4. **Drag `jumlah_penumpang` ke Rows**. Pil `SUM(jumlah_penumpang)` hijau.
+5. **Drag `waktu_id` ke Detail di Marks card** → klik kanan → **Dimension**.
+6. **Marks**: Circle.
+7. **Drag `covid_phase` ke Color** (drag lagi dari Dimensions).
+8. **Trend Line per pane**:
+   - Analytics → Trend Line → Linear.
+   - Klik kanan trend line → **Edit Trend Lines**.
+   - Centang **"Allow a trend line per color"** AND **"Force y-intercept to zero"** UN-centang.
+   - Penting: Tableau secara default akan fit trend line per *color*, dan karena Color = `covid_phase` = sama dengan panel, hasilnya = 1 trend line per panel. ✓
+
+### Cross-check ke Python
+File `slope_per_phase.csv`:
+
+| Phase | n | Slope | R² | p |
+|---|---:|---:|---:|---:|
+| pre_pandemic | 2 | (tidak dihitung — n terlalu kecil) | — | — |
+| lockdown | 19 | **−317,59** | 0,012 | 0,652 |
+| transisi | 15 | **+1.555,50** | 0,578 | 0,001 |
+| recovery | 24 | **+706,28** | 0,176 | 0,041 |
+
+Hover trend line tiap panel → angka harus match.
+
+### Catatan KRUSIAL untuk Presentasi
+- **Panel `lockdown` menunjukkan slope NEGATIF (−318)** — *sesuai teori* meskipun tidak signifikan (p=0,65). Beri annotation di chart.
+- **Panel `transisi` dan `recovery` slope POSITIF** — spurious sisa.
+- **Panel `pre_pandemic`** hanya 2 titik → trend line tidak meaningful. Tableau akan tetap menggambar garis tapi tooltip tidak akan tunjukkan R² yang valid. Pertimbangkan hide panel ini atau beri caveat.
+
+### Implikasi Paper
+Ini sheet **PALING PENTING** dari seluruh analisis kalian. Saat presentasi Bab 4:
+1. Tunjukkan slope per pane.
+2. Highlight: "Hanya lockdown phase yang slope negatif sesuai teori, tapi tidak signifikan."
+3. Konklusi: "Korelasi naive di Bab 2 adalah artefak structural break COVID."

@@ -46,5 +46,38 @@ Fungsi: audience bisa langsung mencocokkan perubahan visual di chart dengan even
 - `plot.png` — 4-panel chart
 - `data_4panel.csv` — data per bulan (60 baris)
 
-## Target Tableau
-Buat satu **sheet** dengan `Tanggal Analisis` di Columns (continuous), 4 measure (`SUM(jumlah_penumpang)`, `AVG(avg_kurs_tengah)`, `AVG(brent_usd_bbl)`, `AVG(bi_rate)`) sebagai 4 pil terpisah di Rows. Tambah Reference Lines di tanggal-tanggal di atas. Tableau akan menghasilkan grafik yang sangat mirip dengan PNG di folder ini.
+## Target Tableau — Step by Step
+
+### Persiapan (sekali saja untuk seluruh workbook)
+1. **Set default aggregation**: klik kanan `avg_kurs_tengah` di Data pane → **Default Properties → Aggregation → Average**. Ulangi untuk `brent_usd_bbl`, `bi_rate`, `inflasi_yoy`, `inflasi_mtm`, `tarif_tiket_ihk`, `min_kurs_tengah`, `max_kurs_tengah`. (`jumlah_penumpang` tetap SUM — itu default-nya.)
+2. **Buat calculated field `Tanggal Analisis`**: klik kanan area kosong Data pane → Create Calculated Field → nama "Tanggal Analisis" → formula:
+   ```
+   DATEPARSE('yyyyMM', STR([waktu_id]))
+   ```
+   Klik OK. Field baru akan muncul di Dimensions.
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru**, beri nama `Bab1_WS1_MultiPanel`.
+2. **Drag `Tanggal Analisis` ke Columns**. Klik kanan pil → pilih **Month** di bagian *Continuous* (warna pil = hijau). Pastikan format bulanan, bukan diskret tahun.
+3. **Drag 4 measure berikut ke Rows secara berurutan** (akan menumpuk ke bawah membentuk 4 panel):
+   - `SUM(jumlah_penumpang)`
+   - `AVG(avg_kurs_tengah)`
+   - `AVG(brent_usd_bbl)`
+   - `AVG(bi_rate)`
+4. **Pilih Marks card untuk masing-masing panel**: pastikan tipe Mark = **Line**. (Di Marks card atas ada dropdown "All", lalu di bawahnya ada satu Marks card per measure di Rows — set Line untuk semua.)
+5. **Tambah Reference Lines** untuk event eksternal:
+   - Klik kanan sumbu X (tanggal) di panel paling atas → **Add Reference Line** → pilih *Line* (bukan Band) → *Constant* (manual ketik tanggal) atau pakai *Per Cell*.
+   - Tambah 7 reference lines pada tanggal: 01-Mar-2020 (PSBB), 01-Jul-2021 (PPKM Darurat), 01-Feb-2022 (Russia-Ukraine), 01-May-2022 (VOA dibuka), 01-Jan-2023 (PPKM dicabut), 01-Apr-2024 (Rupiah > 16K), 01-Oct-2024 (eskalasi Timur Tengah).
+   - Atau lebih praktis: buat **Parameter** `Event Date` dengan list 7 tanggal, lalu reference line di-link ke parameter.
+6. **Format**: klik kanan sumbu Y kiri tiap panel → Format → set decimal/satuan. Misal panel pertama (penumpang) → Number (Custom) → "#,##0,M" supaya tampak juta.
+
+### Cross-check ke Python
+Hover ke titik tertinggi/terendah:
+- Panel penumpang: max **Jan 2020 = 9.122.039**, min **Mei 2020 = 96.452**.
+- Panel kurs: min Jan 2020 = **13.732**, max Des 2024 = **16.329**.
+- Panel Brent: min Apr 2020 = **26,35**, max Jun 2022 = **115,60** (kalau range tidak match, kemungkinan default agg masih SUM).
+- Panel BI Rate: min era PPKM = **3,5%**, max akhir 2024 = **6,25%**.
+
+### Catatan Khusus
+- Kalau panel kelihatan datar (semua nilai jadi besar/akumulatif), itu karena `avg_kurs_tengah` masih ber-aggregation SUM. Kembali ke Step 1 Persiapan.
+- Untuk presentasi: pakai **Dashboard** terpisah dan susun ke-4 panel ini side-by-side untuk visual yang lebih rapi.

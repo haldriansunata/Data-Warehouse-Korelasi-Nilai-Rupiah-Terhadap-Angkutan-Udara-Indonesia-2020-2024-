@@ -34,5 +34,27 @@ Karena kedua variabel sama-sama mengikuti pola COVID dip + recovery, mereka berk
 
 Setelah dikontrol COVID, slope step C harusnya **menjadi negatif** (sesuai teori). Inilah yang akan diverifikasi di Bab 4.
 
-## Target Tableau
-Columns: `AVG(tarif_tiket_ihk)`. Rows: `SUM(jumlah_penumpang)`. Detail: `waktu_id`. Color: `covid_phase`. Trend linear. R² akan match 0,709.
+## Target Tableau — Step by Step
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab3_WS3_TarifPax`.
+2. **Drag `tarif_tiket_ihk` ke Columns**. Pil `AVG(tarif_tiket_ihk)` hijau.
+3. **Drag `jumlah_penumpang` ke Rows**. Pil `SUM(jumlah_penumpang)` hijau.
+4. **Drag `waktu_id` ke Detail** → klik kanan → **Dimension**.
+5. **Marks**: Circle.
+6. **Drag `covid_phase` ke Color**.
+7. **Trend Line**: Analytics → Linear.
+
+### Cross-check ke Python
+File `metrics.txt`:
+- slope = **+15.192,52** pax per 1 poin IHK
+- R² = **0,7086** (tertinggi di Bab 3, tapi SPURIOUS)
+- p-value < 10⁻⁹
+
+### Catatan KHUSUS untuk Presentasi
+- Slope **POSITIF**: tarif naik → penumpang juga naik. Ini *spurious* karena COVID:
+  - 2020 lockdown: tarif IHK rendah (1.248) + penumpang rendah (~1 juta)
+  - 2024 recovery: tarif IHK tinggi (1.788) + penumpang tinggi (~8 juta)
+- **JANGAN** klaim "tarif naik bikin penumpang naik" — itu absurd secara teori.
+- Tambah annotation manual di chart: "*R²=0,71 spurious karena confounder COVID; lihat Bab 4 WS1*".
+- Saat presentasi, gunakan chart ini untuk menunjukkan **bahaya naive interpretation** — bukan untuk klaim positif.

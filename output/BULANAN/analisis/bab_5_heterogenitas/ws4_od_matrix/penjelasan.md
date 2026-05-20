@@ -49,12 +49,30 @@ Row CGK punya 7 cells terisi dengan volume besar (5–17M). Tidak ada bandara la
 - `plot.png` — heatmap
 - `od_matrix.csv` — pivot table
 
-## Target Tableau
-- Rows: `[dim_bandara_origin].iata`
-- Columns: `[dim_bandara_destination].iata`
-- Marks: Square
-- Color: `SUM(jumlah_penumpang)` (sequential palette)
-- Filter: top 10 origin & top 10 destination by SUM
-- Label: `SUM(jumlah_penumpang)` formatted juta
+## Target Tableau — Step by Step
 
-**Note pasangan PP**: karena dim_rute kamu menyimpan rute terurut alfabetis, di Tableau juga akan tampak pattern segitiga atas — ini wajar.
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab5_WS4_ODMatrix`.
+2. **Drag `o_iata` ke Rows** (atau nama field IATA dari instance origin). Pil biru.
+3. **Drag `d_iata` ke Columns** (instance destination). Pil biru.
+4. **Marks**: Square (dropdown atas Marks card).
+5. **Drag `SUM(jumlah_penumpang)` ke Color** di Marks card.
+6. **Edit Colors**: klik dropdown Color → Edit Colors → palette sequential **Orange-Red** atau **Green-Blue Diverging**. Centang "Stepped Color" kalau mau lebih kontras.
+7. **Filter Top 10 di kedua axis**:
+   - Klik kanan `o_iata` di Rows → Filter → tab Top → Top 10 by `SUM([jumlah_penumpang])`.
+   - Klik kanan `d_iata` di Columns → Filter → tab Top → Top 10 by `SUM([jumlah_penumpang])`.
+8. **Tambah label**:
+   - Drag `SUM(jumlah_penumpang)` ke Label di Marks card.
+   - Format: Number Custom → `#,##0,,"M"`.
+   - Klik kanan Label di Marks → set warna text ke "Match Mark Color" supaya kontras.
+
+### Cross-check ke Python
+File `od_matrix.csv`. Cell tertinggi:
+- CGK → DPS: **16,82 juta** (warna paling gelap di pojok)
+- CGK → KNO: 12,35 juta
+- CGK → SUB: 11,51 juta
+
+### Catatan KHUSUS
+- **Asymmetric flow**: karena `dim_rute` menyimpan pasangan IATA terurut alfabetis (`A-B` di mana A<B), banyak cell di "segitiga bawah" akan kosong. Ini wajar — flow PP digabung di satu cell.
+- Top 10 IATA yang muncul (dari Python): CGK, DPS, SUB, UPG, KNO, SIN, BPN, KUL, BTH, YIA.
+- Untuk presentasi, susun dengan **CGK** di paling atas/kiri supaya pattern hub dominan langsung terlihat. Klik kanan `o_iata` → Sort → Manual.

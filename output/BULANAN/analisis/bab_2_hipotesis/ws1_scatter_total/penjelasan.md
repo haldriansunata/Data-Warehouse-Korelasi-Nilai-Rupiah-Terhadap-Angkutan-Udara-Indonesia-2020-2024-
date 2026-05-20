@@ -57,13 +57,38 @@ Penyebab sebenarnya = "waktu" / "fase COVID". Karena kebetulan kurs cenderung na
 - `plot.png` — scatter dengan warna covid_phase
 - `metrics.txt` — slope/r²/p-value
 
-## Target Tableau
-- Columns: `AVG(avg_kurs_tengah)`
-- Rows: `SUM(jumlah_penumpang)`
-- Detail: `waktu_id` (Dimension)
-- Color: `covid_phase`
-- Trend Line: Linear (drag dari Analytics pane)
+## Target Tableau — Step by Step
 
-Tableau akan menampilkan R²=0,347 dan p<0,001 di tooltip trend line.
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru**, beri nama `Bab2_WS1_ScatterTotal`.
+2. **Drag `avg_kurs_tengah` ke Columns**. Pil harus hijau dan bertuliskan `AVG(avg_kurs_tengah)`. Kalau masih SUM, klik kanan pil → Measure → Average.
+3. **Drag `jumlah_penumpang` ke Rows**. Pil hijau `SUM(jumlah_penumpang)`. Tetap SUM (additive).
+4. **Pecah titik per bulan**:
+   - Drag `waktu_id` ke kotak **Detail** di Marks card.
+   - Klik kanan pil `waktu_id` yang baru muncul di Marks card → pilih **Dimension** (jangan Measure/SUM). Pil berubah jadi biru.
+   - Layar akan langsung menyebar dari 1 titik jadi **60 titik** (1 per bulan).
+5. **Pilih Marks Card → Circle** (dropdown atas).
+6. **Drag `covid_phase` ke Color** di Marks card. Tableau akan otomatis assign 4 warna untuk 4 fase.
+7. **Tambah Trend Line**:
+   - Buka tab **Analytics** (kiri atas, sebelah Data).
+   - Drag **Trend Line** ke chart, lepaskan di opsi **Linear**.
+   - Tableau akan menggambar garis tren linear.
+8. **Lihat R² dan slope**: hover mouse ke garis Trend Line → tooltip akan muncul:
+   - **R-Squared: 0.347**
+   - **p-value: < 0.0001**
+   - Formula: `jumlah_penumpang = 2294.47 * avg_kurs_tengah + -28983655`
+9. **Annotation manual** (untuk presentasi): klik kanan area kosong di chart → Annotate → Area → ketik "R² = 0,347 | Slope = +2.294 pax/IDR | p < 10⁻⁶".
 
-**Cek match dengan Python**: slope di Tableau harus persis 2.294,47 dan R² = 0,347.
+### Cross-check ke Python
+File `metrics.txt` di folder ini:
+- slope = **2.294,47** ✓
+- R-squared = **0,3471** ✓
+- p-value = **0,000001** ✓
+
+Kalau angka di Tableau berbeda jauh, kemungkinan:
+- `avg_kurs_tengah` masih SUM (bukan AVG) → cek Step 2.
+- `waktu_id` masih Measure (bukan Dimension) → cek Step 4. Hanya akan ada 1 titik kalau Measure.
+- Join data source rusak → cek Tableau Data Source page.
+
+### Catatan untuk Paper
+Slope **POSITIF** (+2.294) di chart ini adalah finding *counter-intuitive* yang nanti dijelaskan di Bab 4 sebagai *spurious correlation* karena COVID. Saat presentasi, JANGAN langsung klaim "kurs naik → pax naik" — ini titik *intellectual hook* yang akan di-resolve di Bab 4.

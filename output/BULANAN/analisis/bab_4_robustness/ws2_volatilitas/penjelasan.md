@@ -26,9 +26,31 @@ Tidak semua hipotesis yang kelihatan masuk akal didukung data. Ini OK untuk pape
 
 Kalau mau argumen lebih kuat: ulangi analisis dengan **filter recovery saja** (lockdown sudah lewat). Volatility di recovery (mis. Aug 2024 spread 914) mungkin punya signal yang lebih bersih.
 
-## Target Tableau
-Calculated field:
+## Target Tableau — Step by Step
+
+### Persiapan: Calculated Field
+**Buat calculated field `Spread Kurs`** (klik kanan Data pane → Create Calculated Field):
 ```
-Spread Kurs = AVG([max_kurs_tengah]) - AVG([min_kurs_tengah])
+AVG([max_kurs_tengah]) - AVG([min_kurs_tengah])
 ```
-Scatter: Columns=Spread Kurs, Rows=SUM(jumlah_penumpang). R² akan ~0.
+Klik OK.
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab4_WS2_Volatilitas`.
+2. **Drag `Spread Kurs` ke Columns**. Pil hijau.
+3. **Drag `jumlah_penumpang` ke Rows**. Pil SUM.
+4. **Drag `waktu_id` ke Detail** → klik kanan → **Dimension**.
+5. **Marks**: Circle.
+6. **Drag `covid_phase` ke Color** (untuk identifikasi mana titik volatile).
+7. **Trend Line**: Analytics → Linear.
+
+### Cross-check ke Python
+File `metrics.txt`:
+- slope = **+175** pax per 1 IDR spread
+- R² = **0,0006** (essentially nol)
+- p-value: tidak signifikan
+
+### Catatan untuk Presentasi
+- **Hipotesis volatilitas DITOLAK**. Slope ~0, R² ~0.
+- Hover ke titik dengan spread terbesar (Mar 2020, ~2.440 IDR) — akan terlihat di pojok kanan-bawah (volatile + pax rendah). Tapi pola umumnya random.
+- Beri annotation: "Volatilitas kurs tidak punya signal independen — bulan paling volatil (Mar 2020) bertepatan dengan PSBB, sinyal tertelan COVID."

@@ -34,9 +34,40 @@ Tapi titik pentingnya: **range Brent IDR berlipat 4× lipat** (400K → 1.689K) 
 ### Implikasi
 Channel 1 step A: kurs → cost BBM dalam IDR adalah **valid secara konseptual** (kalau kurs melemah, biaya BBM dalam IDR memang lebih mahal *ceteris paribus*), tapi *kontribusi parsial* kurs ke variasi total `brent_idr` kecil karena Brent global lebih dominan. Cocok untuk argumen: "kurs sebagai *amplifier*, bukan *driver* utama biaya."
 
-## Target Tableau
-Buat calculated field:
+## Target Tableau — Step by Step
+
+### Persiapan: Set Default Aggregation
+Kolom `brent_idr_per_bbl` sudah tersedia langsung di `fact_makro_bulanan.csv` (tidak perlu calculated field). Set default aggregation-nya sekali:
+
+1. Di Data pane, klik kanan field `brent_idr_per_bbl` → **Default Properties → Aggregation → Average**.
+
+### Langkah Pembuatan Sheet
+1. **Buat worksheet baru** `Bab3_WS1_KursBrentIDR`.
+2. **Drag `avg_kurs_tengah` ke Columns**. Pil `AVG(avg_kurs_tengah)`, hijau.
+3. **Drag `brent_idr_per_bbl` ke Rows**. Pil `AVG(brent_idr_per_bbl)`, hijau.
+4. **Drag `waktu_id` ke Detail** → klik kanan pil → **Dimension**. 60 titik muncul.
+5. **Marks**: Circle.
+6. **Drag `covid_phase` ke Color**.
+7. **Trend Line**: Analytics → Trend Line → Linear.
+8. **Hover trend line** untuk lihat R² di tooltip.
+
+### Catatan: Alternatif dengan Calculated Field
+Kalau di versi `fact_makro_bulanan.csv` kamu **belum ada** kolom `brent_idr_per_bbl` (mis. dataset lama atau snapshot sebelum patch), buat calculated field:
 ```
 Brent IDR per Bbl = AVG([brent_usd_bbl]) * AVG([avg_kurs_tengah])
 ```
-Scatter: Columns = `AVG(avg_kurs_tengah)`, Rows = `Brent IDR per Bbl`, Detail = `waktu_id`, Color = `covid_phase`, Trend Line Linear.
+Hasil dan R² akan **sama persis** dengan versi native, karena formula identik.
+
+### Cross-check ke Python
+File `metrics.txt`:
+- slope = **159,91** (IDR Brent per 1 IDR kurs)
+- R² = **0,1195**
+- p-value < 0,01
+
+Range Brent IDR di tooltip 60 titik:
+- Min: ~**400.000** IDR/bbl (Apr 2020, oil crash)
+- Max: ~**1.689.000** IDR/bbl (Jun 2022, Russia-Ukraine peak)
+
+### Catatan Khusus
+- R² rendah (0,12) bukan berarti channel ini tidak ada — itu berarti kontribusi *kurs saja* terhadap variasi Brent IDR kecil. Brent USD sendiri sangat volatil secara independen.
+- Untuk lebih informatif, tambah **time series Brent IDR** di worksheet terpisah dengan Tanggal Analisis di Columns → tunjukkan double-shock visual.
