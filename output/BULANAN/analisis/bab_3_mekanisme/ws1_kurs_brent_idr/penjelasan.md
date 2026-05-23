@@ -71,3 +71,14 @@ Range Brent IDR di tooltip 60 titik:
 ### Catatan Khusus
 - R² rendah (0,12) bukan berarti channel ini tidak ada — itu berarti kontribusi *kurs saja* terhadap variasi Brent IDR kecil. Brent USD sendiri sangat volatil secara independen.
 - Untuk lebih informatif, tambah **time series Brent IDR** di worksheet terpisah dengan Tanggal Analisis di Columns → tunjukkan double-shock visual.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi standar:
+1. Klik kanan trend line → **Edit Trend Lines**.
+2. Uncheck `[ ] Allow a trend line per color`.
+3. OK. Trend line jadi 1 (slope ≈ 159,91), titik tetap berwarna per fase.
+
+Lihat `output/BULANAN/analisis/masalah/solusi_masalah.md` Solusi #1.

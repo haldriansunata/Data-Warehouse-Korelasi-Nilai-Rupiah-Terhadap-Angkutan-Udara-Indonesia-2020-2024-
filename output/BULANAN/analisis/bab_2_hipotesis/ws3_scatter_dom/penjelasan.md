@@ -55,3 +55,14 @@ Susun ketiga sheet (WS1, WS2, WS3) di satu **Dashboard** baru bernama `Bab2_Dash
 2. Drag ketiga sheet ke layout horizontal/grid.
 3. Tambah Text box di atas untuk title: "Korelasi Naive Kurs × Penumpang per Segmen".
 4. Tambah Text box di bawah dengan ringkasan: "R² ranking: INT (0,49) > Total (0,35) > DOM (0,23). Slope semua POSITIF — akan dijelaskan di Bab 4."
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi sama dengan WS1:
+1. Klik kanan trend line → **Edit Trend Lines**.
+2. Uncheck `[ ] Allow a trend line per color`.
+3. OK. Trend line jadi 1, titik tetap berwarna.
+
+Lihat `output/BULANAN/analisis/masalah/solusi_masalah.md` Solusi #1.

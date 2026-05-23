@@ -54,3 +54,19 @@ File `metrics.txt`:
 - **Hipotesis volatilitas DITOLAK**. Slope ~0, R² ~0.
 - Hover ke titik dengan spread terbesar (Mar 2020, ~2.440 IDR) — akan terlihat di pojok kanan-bawah (volatile + pax rendah). Tapi pola umumnya random.
 - Beri annotation: "Volatilitas kurs tidak punya signal independen — bulan paling volatil (Mar 2020) bertepatan dengan PSBB, sinyal tertelan COVID."
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+### 1. `covid_phase` memecah trend line
+Solusi standar: Edit Trend Lines → uncheck `Allow a trend line per color`. Trend line jadi 1 (slope ≈ +175, R² ≈ 0,0006), titik tetap berwarna.
+
+### 2. `AGG(Spread Kurs)` apakah benar?
+**BENAR**. Calculated field-mu:
+```
+Spread Kurs = AVG([max_kurs_tengah]) - AVG([min_kurs_tengah])
+```
+karena formula sudah pakai `AVG(...)` di dalamnya, Tableau otomatis bungkus jadi `AGG(Spread Kurs)` saat di-drag ke Columns. Jangan dibungkus AVG lagi — error "Cannot mix aggregate and non-aggregate".
+
+Lihat `solusi_masalah.md` Solusi #1 dan #5.

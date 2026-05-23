@@ -71,3 +71,9 @@ Buat **Dashboard `Bab3_Dashboard_TigaChannel`** dengan layout 3×2:
   Channel cost-push step B valid (R²=0,35), step C spurious COVID
   Channel daya beli tidak signifikan (R²=0,07)
   ```
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi standar: Edit Trend Lines → uncheck `Allow a trend line per color`. Lihat `solusi_masalah.md` Solusi #1.

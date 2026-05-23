@@ -102,3 +102,16 @@ Hover trend line → R² Tableau harus match.
 - `LOOKUP` adalah **Table Calculation**, bukan formula biasa. Hasilnya tergantung "Compute Using". Salah setting = salah angka.
 - Untuk lag 6 di TOTAL, R² masih naik (0,51) — efek kurs ke demand transport ternyata punya pengaruh jangka panjang (>6 bulan).
 - Slope semua lag tetap **POSITIF** (spurious dari COVID). Tidak menyelesaikan masalah utama Bab 2.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi sama dengan Bab 2 WS1:
+1. Klik kanan trend line → **Edit Trend Lines**.
+2. Uncheck `[ ] Allow a trend line per color`.
+3. OK. Trend line jadi 1 per nilai parameter Lag, titik tetap berwarna per fase.
+
+**Catatan Lag Parameter (dari `gabisa.txt`)**: setup parameter `Lag Bulan` dengan calculated field `Kurs Lag Dynamic = LOOKUP(AVG([avg_kurs_tengah]), -[Lag Bulan])` + `Compute Using = Specific Dimensions: waktu_id` sudah benar. Tetap pertahankan.
+
+Lihat `output/BULANAN/analisis/masalah/solusi_masalah.md` Solusi #1.

@@ -1,0 +1,48 @@
+aku sudah mencoba mengikuti seluruh tutorial tabluenya dari bab 1- bab 5, aku melakukannya berurutan mulai dari 1 - 5 untuk setiap ws nya kecuali bab 5 ws5.
+setiap saya bertemu masalah, aku "catat dulu masalahnya + fiks bareng ai (dan aku tidak yakin benar juga, riwayat chat dengan ai untuk yang ku coba fiks aku lampirkan dalam @gabisa.txt) + ada juga masalah yang aku bingung sehingga belum ku fiks" lalu lanjut ke bab berikutnya dan lakukan hal yang sama setiap bertemu masalah.
+
+masalah umum yang ku temukan :{
+#1 = Filter Covid Phase di BAB 2,3,4 impacted ke trend line lebih dari satu karena ada "Drag covid_phase ke Color di Marks card." gimana atasinya jika ingin mempertahankan 1 garis tapi covid phase titiknya tetap berwarna?
+#2 = Format Angka ""#,##0,,M" ga keliatan koma nya" di bab/ws yang ada format ini tidak aku pakai karena sepertinya dibulatkan(tidak terlihat koma dibelakangnya) dan jika ada yang dibawah sejuta bakal 0M jadi aku biarkan saja otomatis menampilkan data lengkapnya.
+}
+
+masalah BAB :[
+- BAB 1 : {
+sudah aman, tapi banyak yang ku fiks sendiri dengan bantuan ai dan sepertinya juga sudah benar.}
+
+- BAB 2 : {
+untuk ws1,ws2,ws3,ws4(masalah umum #1) : visualisasi grafik/plot/trendline nya seharusnya satu garis atau banyak garis? karena muncul banyak garis saat aku "Describe Trend Model" hasilnya beda/terpisah ketika pakai covid_phase di mark dan tidak pakai.}
+
+- BAB 3 :{
+untuk ws1,ws2,ws3,ws4,ws5(masalah umum #1) : sama seperti masalah di bab 2.
+}
+
+- BAB 4 :{
+untuk ws2,ws5(masalah umum #1) : sama seperti masalah di bab 2.
+
+measure atau dimension: [
+- has natal & lebaran (saat ku coba aku jadikan dimension apakah benar)
+- jumlah hari libur, is_peak_season ]
+
+untuk ws5: jumlah hari liburnya avg atau sum aja yah tolong di perjelas aku bingung karena banyak pilihan dan aku mau badingin dengan yang kamu buat dengan python jadi bingung. Spread Kurs yang kita buat dengan calculated field apakah benar dia akan menjadi AGG(Spread Kurs) saat di drag ke columns? 
+}
+
+- BAB 5 :{
+
+untuk ws1 : aman dan bisa.
+
+untuk ws2&ws3 : aku tetap pakai 
+
+untuk ws2 : aman sepertinya, tapi beda implementasi contoh python kamu dengan penerapan ditablue berbeda, dicontoh kamu kasih plot diagram batang dan di tablue kita dengan titik titik trend line. 
+
+untuk ws3: aku ga tau salah di tutorial atau aku yang salah ikutin tutorial. tapi kayaknya kita gapunya kolom "negara_asing", kolom yang berhubungan dengan negara ada di dim_bandara yaitu Negara yang dimana saat di tablue sudah kita join 2x dan saat ada 2 kolom pill negara : "Negara dan Negara (Dim Bandara.Csv)" dari dim_bandara_origin dan dim_bandara_destination. dan juga tutorial tidak lengkap tidak seperti di contoh python yang bisa menampilkan total jumlah penumpang nya negaranya dibar, sedangkan kita kan pakai trend line apakah bisa menampilkan jumalh penumpang juga di trend line? . dan juga negara filipina dengan tutorial sekarang belum muncul, serta negara yang muncul di tablue ku berbeda dengan yang ada di contoh.
+
+untuk ws4: iata ga match + urutannya. list aita yang muncul di tablue dari dim_bandara_destination dan dim_bandara_origin tidak sama dan sangat berbeda dengan yang ditutorial kamu origin dan destination list iata sama.
+
+untuk ws 5: sepertinya ini masalah besar di datasource yah, nanti terakhir saja fiks. karena aku belum buat juga karena rumit tutorialnya.
+}
+
+dari masalah diatas: 
+- masalah apa yang bisa diselesaikan terlebih dahulu
+- apa yang kamu butuhkan sebelum bisa selesaikan masalahnya, misal kamu mau lihat keadaan tablue ku mungkin seperti : "setiap ws baik SS masing masing ws, setiap mark filter pill yang sudah di setting, Describe Trend Model(tapi ada masalah umum #1 yang harus di fiks dulu kayaknya), view data full data sheet yang kubuat lalu download csv nya untuk kamu cek" dan lainnya yang kamu butuhkan dilihat atau ditanyakan. buatkan folder dan sub folder jika perlu untuk saya menaruh file file nya yang kamu lihat yah.
+- setelah semua masalah selesai baru aku akan mau mulai cek angka angkanya sesuai dengan kamu berikan contohnya atau tidak. 

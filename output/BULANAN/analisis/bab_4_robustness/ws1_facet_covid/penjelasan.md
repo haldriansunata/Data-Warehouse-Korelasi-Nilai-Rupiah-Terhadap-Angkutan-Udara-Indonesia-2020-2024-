@@ -84,3 +84,13 @@ Ini sheet **PALING PENTING** dari seluruh analisis kalian. Saat presentasi Bab 4
 1. Tunjukkan slope per pane.
 2. Highlight: "Hanya lockdown phase yang slope negatif sesuai teori, tapi tidak signifikan."
 3. Konklusi: "Korelasi naive di Bab 2 adalah artefak structural break COVID."
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Untuk WS1 ini, trend line MEMANG harus multi (per pane/per phase)** — itu inti analisanya. Jadi **biarkan** `Allow a trend line per color` tetap **CENTANG**. Tampilan 4 trend line per pane (1 per fase) adalah hasil yang benar.
+
+Beda dengan Bab 2/3 yang covid_phase cuma untuk konteks visual — di WS1 ini, faceted regression adalah poin utamanya.
+
+Lihat `solusi_masalah.md` Solusi #1 untuk peta lengkap mana WS yang trend line 1 vs multi.

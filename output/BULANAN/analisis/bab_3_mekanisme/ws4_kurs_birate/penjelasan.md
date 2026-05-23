@@ -57,3 +57,9 @@ File `metrics.txt`:
 Tambah annotation manual: "*R²=0,65 — channel moneter dominan. BI Rate naik +1,32% per 1.000 IDR pelemahan rupiah.*"
 
 Saat presentasi Bab 3, **dahulukan sheet ini** karena ini channel yang paling kuat dan paling *publishable*.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi standar: Edit Trend Lines → uncheck `Allow a trend line per color`. Lihat `solusi_masalah.md` Solusi #1.

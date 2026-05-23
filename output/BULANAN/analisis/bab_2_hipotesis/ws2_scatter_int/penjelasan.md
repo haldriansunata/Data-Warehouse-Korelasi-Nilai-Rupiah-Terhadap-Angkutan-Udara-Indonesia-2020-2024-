@@ -53,3 +53,14 @@ File `metrics.txt`:
 ### Catatan Khusus
 - Filter `kategori = INTERNASIONAL` akan mempengaruhi `SUM(jumlah_penumpang)` saja, tidak mempengaruhi `AVG(avg_kurs_tengah)` (karena kurs sama untuk semua rute di bulan tersebut).
 - Slope tetap **POSITIF** (+1.176) — spurious yang sama, akan dijelaskan di Bab 4.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi sama dengan WS1:
+1. Klik kanan trend line → **Edit Trend Lines**.
+2. Uncheck `[ ] Allow a trend line per color`.
+3. OK. Trend line jadi 1, titik tetap berwarna.
+
+Lihat `output/BULANAN/analisis/masalah/solusi_masalah.md` Solusi #1.

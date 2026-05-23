@@ -1,0 +1,224 @@
+BAB1_WS2:
+{
+Pilihan **Dual Axis** tidak muncul karena Tableau memiliki batasan: **fitur Dual Axis maksimal hanya bisa digunakan untuk dua *measure* (dua sumbu) saja.** Kalau dilihat dari tampilan layar Anda, grafik yang atas sudah menggunakan Dual Axis untuk `AVG(Max Kurs Tengah)` (sumbu kiri) dan `AVG(Min Kurs Tengah)` (sumbu kanan). Karena kuota dua sumbunya sudah penuh, pill ketiga yaitu `AVG(Avg Kurs Tengah)` tidak bisa dijadikan Dual Axis lagi.
+
+Jika Anda ingin menggabungkan ketiga data tersebut (Max, Min, dan Avg) ke dalam satu grafik yang sama, Anda tidak bisa menggunakan Dual Axis. Solusinya adalah menggunakan **Measure Values**.
+
+Berikut langkah-langkah untuk menggabungkannya:
+
+### Cara Menggabungkan 3 Data (atau lebih) dalam 1 Grafik
+
+1. **Bersihkan rak Rows:** Tarik keluar (hapus) ketiga pill hijau yang saat ini ada di rak **Rows**.
+2. **Gunakan Measure Values:** Pada panel *Data* di sebelah kiri bawah, cari *field* bernama **Measure Values**, lalu tarik (drag) ke rak **Rows**.
+* *Catatan: Tableau mungkin akan otomatis memasukkan semua angka ke dalam chart dan memunculkan kotak baru bernama "Measure Values" di bawah rak Marks.*
+
+
+3. **Pilih Data yang Ingin Ditampilkan:** Pada kotak **Measure Values** tersebut, buang semua *measure* yang tidak diperlukan dengan cara ditarik keluar. Sisakan hanya tiga data ini:
+* `AVG(Max Kurs Tengah)`
+* `AVG(Min Kurs Tengah)`
+* `AVG(Avg Kurs Tengah)`
+
+
+4. **Beri Warna Berbeda:** Di panel *Data* sebelah kiri, cari *field* bernama **Measure Names**, lalu tarik ke kotak **Color** di rak **Marks**. Ini akan membuat ketiga data tersebut memiliki warna yang berbeda agar mudah dibedakan.
+
+**Tips:** Karena Anda menggunakan bentuk grafik **Area**, ketiga data tersebut akan saling menumpuk. Anda bisa mengklik kotak **Color** di rak Marks, lalu turunkan **Opacity** (transparansi) agar grafik area yang berada di belakangnya tetap terlihat!
+}
+
+BAB1_WS3 :
+{
+Wah, pas banget! Kamu sudah berhasil melakukan *drag* dan jendela **Edit Band** sudah terbuka di layarmu.
+
+Maksud dari Langkah 7 adalah membuat warna latar belakang (background) yang berbeda pada grafik untuk menandai periode-periode COVID-19. Di panduanmu ada dua cara, dan **kita akan pakai "Alternatif lebih mudah"** (membuat 4 warna manual satu per satu) karena cara ini jauh lebih gampang dipraktikkan langsung pada jendela yang sedang terbuka itu.
+
+Mari kita atur jendela **Edit Band** yang ada di layarmu sekarang untuk fase pertama (**pre_pandemic**):
+
+### Langkah Mengatur Fase 1 (pre_pandemic)
+
+1. **Value (From):** Klik kotak *dropdown* yang saat ini bertuliskan `MONTH(Tanggal Analisis)`, lalu ganti/pilih opsi **Constant**. Setelah itu, ketik atau masukkan tanggal mulai: **01-Jan-2020**.
+2. **Value (To):** Klik kotak *dropdown* `MONTH(Tanggal Analisis)` yang di bawahnya, ganti menjadi **Constant**, lalu ketik atau masukkan tanggal selesai: **29-Feb-2020**.
+3. **Label:** Ubah dari *None* menjadi **Custom**, lalu ketik **pre_pandemic** pada kotak teks yang muncul.
+4. **Formatting (Fill):** Gulir (*scroll*) sedikit ke bawah di jendela tersebut sampai kamu menemukan bagian *Formatting*. Pada opsi **Fill**, pilih warna **Biru** dan atur tingkat transparansinya (**Opacity**) menjadi **20%** (supaya garis grafik kamu tetap kelihatan jelas dan tidak tertutup warna latar belakang).
+5. Jika sudah, klik tanda silang (**X**) di pojok kanan atas jendela Edit Band tersebut untuk menyimpan.
+
+---
+
+### Apa Langkah Selanjutnya?
+
+Setelah fase pertama selesai, kamu tinggal mengulangi langkah di atas untuk 3 fase sisanya. Caranya:
+
+* Pergi ke tab **Analytics** lagi di sebelah kiri.
+* *Drag* lagi **Reference Band** ke arah grafik, lalu lepaskan di kotak **Pane**.
+* Isi detailnya sesuai jadwal fase berikut:
+* **Fase 2 (Lockdown):** * *From:* Constant (`01-Mar-2020`)
+* *To:* Constant (`30-Sep-2021`)
+* *Label:* `lockdown`
+* *Fill:* Merah (Opacity 20%)
+
+
+* **Fase 3 (Transisi):** * *From:* Constant (`01-Oct-2021`)
+* *To:* Constant (`31-Dec-2022`)
+* *Label:* `transisi`
+* *Fill:* Oranye (Opacity 20%)
+
+
+* **Fase 4 (Recovery):** * *From:* Constant (`01-Jan-2023`)
+* *To:* Constant (`31-Dec-2024`)
+* *Label:* `recovery`
+* *Fill:* Hijau (Opacity 20%)
+
+
+
+Apakah pengaturan untuk fase pertama (pre_pandemic) sudah berhasil muncul warnanya di grafikmu?
+}
+
+BAB2_WS4 :
+{
+Wah, pilihan yang sangat tepat! Pakai cara 1 sheet dengan Parameter ini jauh lebih efisien dan terlihat lebih profesional (interaktif). Jadi, kamu nggak perlu capek-capek bikin 7 sheet yang isinya hampir sama.
+
+Mari kita buat fitur interaktifnya langkah demi langkah berdasarkan panduanmu:
+
+### Langkah 1: Membuat Parameter (Lag Selector)
+
+Parameter ini berfungsi sebagai "tombol" atau "slider" yang nanti bisa kamu ubah-ubah angkanya.
+
+1. Di panel *Data* (sebelah kiri), klik ikon panah kecil ke bawah yang ada di dekat kotak *Search*, lalu pilih **Create Parameter**.
+2. Pada jendela yang terbuka, atur seperti ini:
+* **Name:** Ketik **`Lag Bulan`**
+* **Data type:** Pilih **Integer**
+* **Allowable values:** Pilih **Range**
+* **Minimum:** Ketik **0**
+* **Maximum:** Ketik **6**
+* **Step size:** Ketik **1**
+
+
+3. Klik **OK**.
+4. Parameter `Lag Bulan` sekarang akan muncul di bagian paling bawah panel *Data*. **Klik kanan** pada parameter tersebut dan pilih **Show Parameter**. (Nanti akan muncul kontrol angka/slider di sebelah kanan layarmu).
+
+### Langkah 2: Membuat Calculated Field (Rumus Dinamis)
+
+Sekarang kita buat rumus yang menyambungkan grafik dengan Parameter yang baru dibuat.
+
+1. Klik lagi ikon panah kecil di dekat kotak *Search* panel *Data*, lalu pilih **Create Calculated Field**.
+2. Beri nama field ini: **`Kurs Lag Dynamic`**
+3. *Copy-paste* atau ketik rumus ini di dalam kotak kosong yang besar:
+```tableau
+LOOKUP(AVG([Avg Kurs Tengah]), -[Lag Bulan])
+
+```
+
+
+4. Pastikan ada tulisan *The calculation is valid* di pojok kiri bawah kotak, lalu klik **OK**.
+
+### Langkah 3: Menerapkan ke Grafik Saat Ini
+
+Kita akan mengganti sumbu X yang saat ini statis (`Kurs Lag 3`) dengan yang dinamis.
+
+1. Tarik (*drag*) field **`Kurs Lag Dynamic`** yang baru saja kamu buat ke rak **Columns**. Taruh tepat di sebelah atau di atas pill hijau `Kurs Lag 3` untuk menimpanya.
+2. Tarik keluar (buang) pill `Kurs Lag 3` yang lama dari rak *Columns*.
+
+### Langkah 4: Mengatur Table Calculation (SANGAT PENTING)
+
+Sama seperti panduanmu sebelumnya, rumus `LOOKUP` butuh arah hitungan yang benar agar nilai $R^2$ (R-Squared) dan posisinya tidak ngaco.
+
+1. **Klik kanan** pada pill **`Kurs Lag Dynamic`** (yang ada ikon segitiga kecilnya) di rak *Columns*, lalu pilih **Edit Table Calculation**.
+2. Pada jendela yang muncul, di bawah *Compute Using*, pilih **Specific Dimensions**.
+3. **Centang hanya pada kotak `Waktu Id**` (hilangkan centang pada *Covid Phase* jika ada).
+4. Tutup jendela tersebut dengan klik tanda silang (**X**).
+
+**Selesai!** Coba kamu ubah angka pada kontrol parameter **Lag Bulan** di sebelah kanan layar (bisa diketik atau diklik panahnya). Kamu akan melihat titik-titik *scatter plot* dan *Trend Line* kamu otomatis bergerak menyesuaikan lag 0 sampai lag 6!
+
+Keren kan? Mau coba tes ubah parameternya sekarang?
+
+Hampir sempurna! Pengaturan utamanya sudah benar semua (Nama, Tipe Data, Minimum, dan Maximum).
+
+Tapi ada satu hal kecil yang terlewat di layar kamu saat ini: **Kamu harus mencentang kotak kosong di sebelah tulisan "Step size"** agar angka 1-nya benar-benar aktif.
+
+Berikut adalah langkah selanjutnya yang harus kamu lakukan:
+
+### 1. Selesaikan Parameter
+
+* Centang kotak **Step size** (pastikan angkanya tetap 1).
+* Klik tombol biru **OK** di pojok kanan bawah jendela tersebut untuk menyimpannya.
+
+### 2. Tampilkan Parameter (Show Parameter)
+
+* Setelah klik OK, perhatikan panel *Data* di sebelah kiri bawah layar. Kamu akan menemukan parameter baru bernama **`Lag Bulan`**.
+* **Klik kanan** pada `Lag Bulan` tersebut, lalu pilih **Show Parameter**.
+* *Nanti akan muncul kotak kontrol angka (slider) di sebelah kanan layar.*
+
+### 3. Lanjut Membuat Calculated Field (Rumus Dinamis)
+
+Sekarang kita buat rumusnya agar "tombol" parameternya bisa berfungsi:
+
+* Di panel *Data* (sebelah kiri), klik ikon panah kecil ke bawah yang ada di sebelah kotak *Search*.
+* Pilih **Create Calculated Field...**
+* Pada kotak yang muncul, beri nama: **`Kurs Lag Dynamic`**
+* *Copy-paste* atau ketik persis rumus ini ke dalam kotak besarnya:
+```tableau
+LOOKUP(AVG([Avg Kurs Tengah]), -[Lag Bulan])
+
+```
+
+
+* Jika sudah ada tulisan *The calculation is valid* hijau di bawahnya, klik **OK**.
+
+Kabari ya kalau *Calculated Field*-nya sudah berhasil dibuat atau kalau kamu mau layarnya dicek lagi sebelum lanjut ke tahap *drag-and-drop*!
+
+Tampilan kosong (hanya sumbu tanpa titik data) atau muncul indikator "0 marks" di pojok kiri bawah itu hal yang sangat wajar terjadi saat kita baru memasukkan rumus `LOOKUP`.
+
+Penyebabnya adalah **Tableau kebingungan ke mana dia harus "melihat mundur" (Lag)**. Rumus *Lag Dynamic* yang kita buat butuh arahan jalan. Saat ini dia tidak tahu bahwa dia harus mundur berdasarkan urutan waktu.
+
+Mari kita "buka mata" Tableau dengan mengatur **Table Calculation**-nya. Ini adalah langkah paling *PENTING* di panduanmu yang kemungkinan terlewat:
+
+### Langkah Memperbaiki Tampilan Blank:
+
+1. **Buka Pengaturan Table Calc:**
+Arahkan kursor ke pill hijau **`Kurs Lag Dynamic`** yang ada di rak **Columns** (perhatikan ada lambang segitiga $\Delta$ di pill tersebut). **Klik kanan** (atau klik ikon panah kecilnya), lalu pilih **Edit Table Calculation...**
+2. **Atur Arah Hitungan (Compute Using):**
+Pada jendela pop-up yang muncul, lihat bagian *Compute Using*. Ubah pilihannya menjadi **Specific Dimensions**.
+3. **Pilih Dimensi Waktu:**
+Di bawahnya akan muncul daftar dimensi yang ada di grafik (biasanya ada *Covid Phase* dan *Waktu Id*).
+* **Centang HANYA pada kotak `Waktu Id (Dim Waktu Bulanan.csv)**`.
+* Pastikan kotak *Covid Phase* **TIDAK** dicentang.
+
+
+4. **Tutup Jendela:**
+Klik tanda silang (**X**) di pojok kanan atas jendela pengaturan tersebut.
+
+---
+
+**Satu Tips Tambahan:**
+Agar titik-titik *scatter plot*-nya terlihat lebih bulat dan tebal seperti standar analisis korelasi, coba perhatikan rak **Marks** (di bawah *Filters*). Ubah *dropdown* yang saat ini bertuliskan **Automatic** menjadi **Circle**.
+
+Setelah kamu mengatur *Specific Dimensions* ke `Waktu Id`, titik-titik korelasi tersebut dijamin akan langsung bermunculan di layarmu. Silakan dicoba dan kabari ya kalau titiknya sudah muncul!
+}
+
+BAB5_WS2:
+{
+Berdasarkan tampilan di layar Anda, outputnya **belum sepenuhnya benar** atau masih ada langkah yang terlewat dari instruksi yang Anda berikan.
+
+Langkah yang belum dilakukan adalah **Langkah 3: Filter Top 10 rute INT**.
+
+Berikut adalah buktinya berdasarkan tampilan layar Anda:
+
+* **Rak Filters:** Di panel sebelah kiri pada bagian *Filters*, saat ini hanya ada pil `Kategori`. Belum ada pil `Kode Rute` di sana.
+* **Legenda Warna:** Di panel sebelah kanan, legenda untuk `Kode Rute` menampilkan **sangat banyak rute** (puluhan rute), bukan hanya 10 rute.
+* **Garis Tren:** Karena rute belum difilter, visualisasi Anda (Scatter Plot) terlihat sangat padat dan memiliki jauh lebih dari 10 garis tren.
+
+**Solusi / Langkah Perbaikan:**
+Silakan tarik (*drag*) variabel **Kode Rute** dari panel Data ke rak **Filters**. Kemudian atur pengaturannya sesuai instruksi Anda: masuk ke tab **Top** → pilih **By field** → set ke **Top 10 by SUM([Jumlah Penumpang])** → lalu klik **OK**.
+
+Untuk langkah-langkah lainnya (pengaturan *Columns*, *Rows*, *Marks Circle*, *Color*, *Detail Waktu Id*, dan pembuatan *Trend Line*) **sudah benar**. Setelah Anda menerapkan filter Top 10 tersebut, grafik Anda akan menjadi lebih rapi dan hanya menampilkan tepat 10 warna beserta 10 garis trennya.
+
+Apakah ada kesulitan saat mencoba memasukkan *Kode Rute* ke dalam rak Filter?
+
+Nah, betul sekali! Sekarang tampilannya **sudah 100% benar** dan sesuai dengan instruksi.
+
+Sebelumnya memang sepertinya filter untuk `Kode Rute` terlewat atau belum ter-terapkan dengan sempurna. Tapi kalau melihat layar Anda yang sekarang, semuanya sudah pas:
+
+* **Rak Filters:** Sudah ada pil `Kode Rute` menemani pil `Kategori`.
+* **Legenda Warna (Kanan):** Sekarang sudah sangat rapi dan hanya menampilkan tepat **10 rute** internasional teratas (mulai dari CGK-DOH sampai SIN-SUB).
+* **Grafik & Garis Tren:** Grafiknya sudah tidak "semrawut" seperti sebelumnya. Sekarang sudah jelas terlihat 10 warna berbeda dengan 10 garis tren (*trend lines*) untuk masing-masing rute.
+
+Kerja bagus! Langkah-langkah untuk *worksheet* `Bab5_WS2_SensitivitasINT` ini sudah beres dan visualisasinya sudah merepresentasikan data dengan sangat baik. Silakan dilanjut ke pembuatan *worksheet* atau *dashboard* berikutnya!
+}

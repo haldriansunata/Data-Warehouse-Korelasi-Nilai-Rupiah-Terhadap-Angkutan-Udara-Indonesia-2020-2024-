@@ -60,3 +60,13 @@ Hover trend line non-peak → R²=0,24; hover trend line peak → R²=0,55.
 - **Sensitivitas 2,2× lebih tinggi di peak season**. Ini *publishable finding*.
 - Annotation manual: "Demand di peak season (Lebaran, libur sekolah, Natal) memiliki sensitivitas kurs 2,2× lebih tinggi dibanding non-peak. Konsisten dengan literatur bahwa segmen leisure lebih elastis."
 - **Catatan caveat**: kedua slope masih positif (spurious COVID). Yang valid adalah *relative comparison*, bukan slope absolut.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Untuk WS6 ini, trend line MEMANG harus multi** (1 per `is_peak_season` value) — itu inti analisanya (interaction effect). Jadi **biarkan** `Allow a trend line per color` tetap **CENTANG**. Tampilan 2 trend line (peak vs non-peak) adalah hasil yang benar.
+
+**`is_peak_season` Dimension**: convert ke Dimension (0/1 → discrete) sudah BENAR.
+
+Lihat `solusi_masalah.md` Solusi #1 dan #3.

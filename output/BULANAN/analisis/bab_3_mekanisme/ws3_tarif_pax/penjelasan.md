@@ -58,3 +58,9 @@ File `metrics.txt`:
 - **JANGAN** klaim "tarif naik bikin penumpang naik" — itu absurd secara teori.
 - Tambah annotation manual di chart: "*R²=0,71 spurious karena confounder COVID; lihat Bab 4 WS1*".
 - Saat presentasi, gunakan chart ini untuk menunjukkan **bahaya naive interpretation** — bukan untuk klaim positif.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi standar: Edit Trend Lines → uncheck `Allow a trend line per color`. Lihat `solusi_masalah.md` Solusi #1.

@@ -61,3 +61,21 @@ File `metrics.txt`:
 Pakai `jumlah_hari_libur` sebagai **Color** atau **Size** di scatter kurs × pax:
 - Color = `jumlah_hari_libur` (sequential palette) bukan covid_phase.
 - Akan terlihat bahwa bulan dengan libur banyak (titik warna gelap) cluster di kanan-bawah scatter (COVID lockdown) — visual yang sama menjelaskan spurious-nya.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+### 1. `jumlah_hari_libur` AVG atau SUM?
+**Pakai AVG**. Karena field ini ada di `dim_waktu` (1 nilai per `waktu_id`), AVG = SUM = MIN per granularity. Pakai AVG agar konsisten dengan field-field dim makro lainnya (kurs, BI rate, dll).
+
+Set default aggregation sekali:
+- Klik kanan `jumlah_hari_libur` di Data pane → **Default Properties → Aggregation → Average**.
+
+### 2. `is_peak_season` Dimension vs Measure?
+Nilainya 0/1 → convert ke **Dimension** (untuk grouping/color). Klik kanan field → Convert to Dimension. Pil biru = benar.
+
+### 3. `covid_phase` memecah trend line
+Solusi standar: Edit Trend Lines → uncheck `Allow a trend line per color`. Trend line jadi 1, titik tetap berwarna.
+
+Lihat `solusi_masalah.md` Solusi #1, #3, #4.

@@ -52,3 +52,9 @@ Interpretasi: kenaikan Brent IDR sebesar Rp 1.000.000 per barel diasosiasikan de
 ### Catatan Khusus
 - R² = 0,35 → 35% variasi tarif tiket dijelaskan oleh biaya BBM dalam IDR. Sisanya (65%) dijelaskan faktor lain: gaji crew, biaya bandara, retribusi, faktor non-BBM.
 - Slope kecil dalam angka absolute (0,000277) karena Brent IDR dalam ratusan ribu sedangkan tarif IHK dalam ribuan. Jangan terkecoh angka kecil — interpretasi yang benar pakai range.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Masalah `covid_phase` memecah trend line** → solusi standar: Edit Trend Lines → uncheck `Allow a trend line per color`. Lihat `solusi_masalah.md` Solusi #1.

@@ -92,3 +92,19 @@ Kalau angka di Tableau berbeda jauh, kemungkinan:
 
 ### Catatan untuk Paper
 Slope **POSITIF** (+2.294) di chart ini adalah finding *counter-intuitive* yang nanti dijelaskan di Bab 4 sebagai *spurious correlation* karena COVID. Saat presentasi, JANGAN langsung klaim "kurs naik → pax naik" — ini titik *intellectual hook* yang akan di-resolve di Bab 4.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+> Lihat `output/BULANAN/analisis/masalah/solusi_masalah.md` untuk semua solusi lengkap.
+
+**Masalah `covid_phase` memecah trend line**:
+Saat `covid_phase` di-Color, trend line otomatis tampil 4 garis (per fase) dan Describe Trend Model output 4 persamaan. Yang kamu mau: **1 trend line untuk semua titik, tapi titik tetap berwarna per fase**.
+
+**Solusi**:
+1. Klik kanan trend line di chart → **Edit Trend Lines**.
+2. **Uncheck** `[ ] Allow a trend line per color`.
+3. Klik OK.
+
+Hasil: 1 garis trend (slope ≈ +2.294), titik tetap berwarna per fase. Describe Trend Model akan tampil 1 model tunggal yang match dengan `metrics.txt` Python.

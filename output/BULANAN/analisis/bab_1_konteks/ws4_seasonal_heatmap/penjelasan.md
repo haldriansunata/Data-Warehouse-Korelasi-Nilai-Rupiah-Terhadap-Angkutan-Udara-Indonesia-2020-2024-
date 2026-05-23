@@ -78,3 +78,11 @@ Visual ini juga jadi *validasi sanity check*: kalau Tableau heatmap kamu tidak m
 - Kalau sel terlalu kecil dan label tidak muat, perbesar zoom (Fit → Fit Width).
 - Untuk presentasi, beri **Title sheet** "Heatmap Penumpang Nasional (juta) — Tahun × Bulan".
 - Color legend: tampilkan dengan klik tombol "Show Color Legend" di toolbar Tableau.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Format angka `#,##0,,M`**: untuk heatmap, format `#,##0.0,,"M"` (decimal 1 angka) lebih readable karena nilai sel ada yang 0,1M (Mei 2020) dan 9,1M (Jan 2020). Atau pakai format default kalau cell-nya cukup besar untuk menampilkan angka penuh.
+
+Lihat `solusi_masalah.md` Solusi #2.

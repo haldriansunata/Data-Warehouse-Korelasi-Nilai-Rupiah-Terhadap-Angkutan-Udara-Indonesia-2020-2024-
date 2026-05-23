@@ -106,3 +106,112 @@ R² terendah (Saudi 0,25 dan Jepang 0,33) menunjukkan rute-rute ini punya driver
 ### Catatan untuk Presentasi
 - **Ini HEADLINE Bab 5**. Tampilkan annotation: "Rute ke Filipina, Qatar, Thailand, Malaysia paling sensitif (R²>0,50). Saudi & Jepang tidak (R²<0,35) — driver kuota haji & kebijakan visa."
 - Banyak warna (14 negara) bisa membuat chart ramai. Pertimbangkan **filter pertahap** — tunjukkan 5 negara dulu, lalu zoom ke 14.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau (BUTUH BUKTI VISUAL)
+
+### Masalah yang kamu temukan
+- Tutorial menyebut field `o_negara` / `d_negara`, tapi setelah self-join `dim_bandara` 2x di Tableau-mu, **nama field-nya beda** (misal `Negara` dan `Negara (Dim Bandara.csv1)`).
+- Calculated field `negara_asing` jadi tidak bisa dibuat dengan formula di tutorial.
+- Filipina tidak muncul di legend; list negara berbeda dengan contoh.
+- Total pax per negara tidak ter-display di scatter trend line (beda dengan bar chart Python).
+
+### Untuk diperbaiki, aku butuh bukti dari kamu
+
+Upload ke folder `output/BULANAN/analisis/masalah/feedback_tableau/bab5_ws3_per_negara/`:
+1. **SS1_data_pane.png** — Screenshot Data pane (nama-nama field hasil self-join).
+2. **SS2_data_source_tab.png** — Screenshot tab Data Source (join structure).
+3. **SS3_chart_sekarang.png** — Screenshot WS3 apa adanya.
+4. **export_negara_visible.csv** — View Data → Full Data → Download.
+
+Detail lengkap di `feedback_tableau/bab5_ws3_per_negara/README.md` dan `solusi_masalah.md` Solusi #7.
+
+### Setelah file di atas masuk, aku akan
+- Rewrite calculated field `negara_asing` dengan nama field yang match data-mu.
+- Cek kenapa Filipina tidak muncul (filter Top 14 mungkin perlu disesuaikan).
+- Update tutorial WS3 supaya match data structure-mu.
+
+---
+
+## 🔧 PERBAIKAN FINAL — Setelah Cek SS dan CSV Export-mu
+
+### Diagnosis dari SS yang kamu upload
+Dari `SS1_data_pane.png`, field hasil self-join `dim_bandara` di Tableau-mu adalah:
+
+| Instance | Nama field di Data pane |
+|---|---|
+| Origin (dari `bandara_1_id`) | **`Negara`** (tanpa suffix) |
+| Destination (dari `bandara_2_id`) | **`Negara (Dim Bandara Destination.Csv)`** |
+
+Sama dengan `Iata`, `Kota`, `Nama Bandara`, `Provinsi` — kedua instance punya nama yang dibedakan dengan suffix.
+
+### Masalah utama: di chart-mu (`SS3_chart_sekarang.png`)
+Filter pakai field `Negara` (origin only) → akibatnya:
+- Filipina (yang muncul sebagai `Negara (Destination)` di rute CGK-MNL) **TIDAK muncul** di legend.
+- Daftar negara di legend cuma 13 (Australia, Selandia Baru, Malaysia, Thailand, China, dst) — bukan 14 seperti analisis Python.
+- Negara dengan IATA destination "alfabet belakang" (Jepang/NRT, Korea/ICN, dst.) hilang karena `dim_rute` di proyek ini normalisasi alfabetis (`bandara_1` = alfabet lebih awal).
+
+### Solusi: pakai calculated field `negara_asing` yang benar
+
+#### Step 1 — Hapus filter Negara yang lama
+1. Klik kanan pil `Negara` di **Filters** → **Remove**.
+2. Klik kanan pil `Negara` di **Color** di Marks card → **Remove**.
+
+#### Step 2 — Buat calculated field `Negara Asing` dengan formula yang BENAR
+1. Klik kanan area kosong di Data pane → **Create Calculated Field**.
+2. Nama: **`Negara Asing`**.
+3. Formula (copy-paste persis):
+   ```
+   IF [Negara] != "INDONESIA" THEN [Negara]
+   ELSE [Negara (Dim Bandara Destination.Csv)]
+   END
+   ```
+4. Pastikan ada "*The calculation is valid*" → klik OK.
+
+> **Catatan**: nama `Negara (Dim Bandara Destination.Csv)` harus ditulis **persis** sesuai data pane-mu. Kalau Tableau auto-complete tidak menampilkan, ketik manual sambil di-bracketed.
+
+#### Step 3 — Setup filter dan visualisasi
+1. **Drag `kategori` ke Filters** → centang `INTERNASIONAL` → OK.
+2. **Drag `Negara Asing` ke Filters** → tab **Condition** → "By field" → `SUM(jumlah_penumpang)` `>=` `500000` → OK.
+   - Atau lebih simple: tab **Top** → Top 14 by `SUM(jumlah_penumpang)`.
+3. **Drag `avg_kurs_tengah` ke Columns** (pil AVG hijau).
+4. **Drag `jumlah_penumpang` ke Rows** (pil SUM hijau).
+5. **Drag `waktu_id` ke Detail** di Marks card → klik kanan → **Dimension**.
+6. **Marks**: Circle.
+7. **Drag `Negara Asing` ke Color** (field calculated yang baru).
+8. **Trend Line per color**:
+   - Analytics → Trend Line → Linear.
+   - Klik kanan trend line → **Edit Trend Lines** → centang `[x] Allow a trend line per color`.
+
+#### Step 4 — Tambah info total pax (yang tadinya bingung)
+Untuk menampilkan jumlah penumpang di setiap titik (atau di tooltip):
+1. **Drag `SUM(jumlah_penumpang)` ke Tooltip** di Marks card → muncul saat hover.
+2. **(Opsional)** Buat sheet pendamping bar chart:
+   - Worksheet baru `Bab5_WS3b_TotalPaxPerNegara`.
+   - `Negara Asing` di Rows, `SUM(jumlah_penumpang)` di Columns.
+   - Sort descending, filter sama (INT + top 14).
+   - Drag ke dashboard di samping scatter WS3 supaya pembaca lihat slope+total bersamaan.
+
+### Validasi: 14 negara yang harus muncul (dari Python)
+| Rank | Negara | Total Pax (juta) | R² |
+|---:|---|---:|---:|
+| 1 | MALAYSIA | 20,5 | 0,50 |
+| 2 | SINGAPURA | 18,9 | 0,46 |
+| 3 | AUSTRALIA | 7,9 | 0,48 |
+| 4 | ARAB SAUDI | 3,9 | 0,25 |
+| 5 | QATAR | 3,8 | 0,51 |
+| 6 | CHINA | 3,4 | 0,48 |
+| 7 | UNI EMIRAT ARAB | 3,2 | 0,47 |
+| 8 | HONG KONG | 2,5 | 0,40 |
+| 9 | KOREA SELATAN | 2,2 | 0,45 |
+| 10 | JEPANG | 2,2 | 0,33 |
+| 11 | TAIWAN | 1,9 | 0,40 |
+| 12 | THAILAND | 1,5 | 0,51 |
+| 13 | TURKI | 1,3 | 0,41 |
+| 14 | **FILIPINA** | **1,2** | **0,53** |
+
+Setelah Step 1-3 di atas, **Filipina** akan muncul di legend, dan ke-14 negara akan match dengan Python.
+
+### Catatan data quality
+Beberapa entry di `dim_bandara.negara` masih berupa kode 2-huruf ISO (EG=Egypt, ET=Ethiopia, FJ=Fiji, RU=Russia, dll) karena library `airportsdata` default-nya kode ISO. Negara-negara ini volume-nya kecil, tidak masuk top 14, jadi tidak mempengaruhi headline. Kalau muncul di chart, kamu bisa filter manual exclude mereka.

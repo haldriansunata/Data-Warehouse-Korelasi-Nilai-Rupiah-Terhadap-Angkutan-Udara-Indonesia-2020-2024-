@@ -43,3 +43,11 @@ File `summary.csv`:
 - **Berbeda dengan Lebaran (WS3) yang tidak signifikan**, efek Natal **SIGNIFIKAN** karena bulan Desember 2020–2024 mayoritas di luar lockdown puncak.
 - Annotation manual: "Median Natal **1,32× lebih tinggi** dari bulan biasa (Mann-Whitney p < 0,001). Konsisten karena Desember bertepatan dengan libur sekolah + Tahun Baru + Natal."
 - Ini bisa jadi sheet pendamping WS3 saat presentasi — kontraskan "Lebaran terkontaminasi COVID" vs "Natal robust".
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**`has_natal` Dimension vs Measure**: sama dengan WS3 Lebaran — nilainya 0/1, convert ke **Dimension** sudah BENAR.
+
+Lihat `solusi_masalah.md` Solusi #3.

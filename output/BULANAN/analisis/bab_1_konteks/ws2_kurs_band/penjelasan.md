@@ -70,3 +70,13 @@ Pada Maret 2020:
 ### Catatan Khusus
 - Triple axis tidak native di Tableau. Pakai trik: 2 measure di dual axis + 1 measure sebagai overlay manual.
 - Alternatif lebih sederhana: pakai **Reference Band** (Analytics pane → Reference Band → Per Cell, dengan field min sebagai lower, max sebagai upper). Tidak butuh dual axis.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau (Konfirmasi)
+
+Solusi AI yang kamu pakai (dari `gabisa.txt`) untuk gabung 3 measure (min/max/avg) lewat **Measure Values + Measure Names di Color** sudah **BENAR**.
+
+Alasan: Tableau Dual Axis maks 2 sumbu. Untuk 3+ measure dalam 1 panel, Measure Values pattern adalah idiom standar Tableau. Tidak perlu diubah.
+
+Lihat `solusi_masalah.md` bagian CATATAN BAB 1.

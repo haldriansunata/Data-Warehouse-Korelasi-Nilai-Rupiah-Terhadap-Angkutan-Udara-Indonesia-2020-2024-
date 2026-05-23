@@ -81,3 +81,16 @@ Hover ke titik tertinggi/terendah:
 ### Catatan Khusus
 - Kalau panel kelihatan datar (semua nilai jadi besar/akumulatif), itu karena `avg_kurs_tengah` masih ber-aggregation SUM. Kembali ke Step 1 Persiapan.
 - Untuk presentasi: pakai **Dashboard** terpisah dan susun ke-4 panel ini side-by-side untuk visual yang lebih rapi.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**Format angka `#,##0,,M` (0M untuk angka < 1 juta)**:
+Format ini terlalu kasar untuk panel penumpang yang range-nya 96K–9M (jadi 0M-9M, hilang detail).
+
+**Ganti ke format yang lebih informatif**:
+- Custom format: `#,##0.0,,"M"` (decimal 1 angka) → 9,1M dan 0,1M.
+- Atau biarkan default (angka penuh tampil seperti `9,122,039`) seperti yang kamu lakukan sekarang — tidak salah.
+
+Lihat `solusi_masalah.md` Solusi #2.

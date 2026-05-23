@@ -79,3 +79,23 @@ Trend line paling curam (slope absolute terbesar) di Tableau = CGK-SIN (114).
 - **Jangan klaim "rute X paling elastis ke kurs"** hanya dari slope — slope mencerminkan volume.
 - Beri **annotation membandingkan R²**: rute Australia (DPS-SYD, DPS-MEL) R² paling rendah → paling resilient.
 - Tambah text box di dashboard untuk caveat.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+### 1. Mengapa Python pakai bar chart sementara Tableau pakai scatter + trend line?
+
+**Keduanya valid** — mereka menjawab pertanyaan yang sama dari sudut berbeda:
+- **Python `plot.png`** = bar chart slope per rute → fokus *ranking visual* (rute mana paling sensitif).
+- **Tableau** = scatter kurs–pax per rute dengan 10 trend line → fokus *visual goodness-of-fit per rute*.
+
+Untuk paper, **boleh tampilkan keduanya** — bar di awal sebagai overview, scatter sebagai detail.
+
+### 2. Trend line MULTI (per rute) — biarkan
+Di WS ini, trend line per `kode_rute` adalah inti analisanya (sensitivity per route). Jadi **biarkan** `Allow a trend line per color` tetap **CENTANG**. Tampilan 10 trend line adalah hasil yang benar.
+
+### 3. Filter Top 10 (dari `gabisa.txt`)
+Setup `kode_rute` di Filters → tab Top → Top 10 by SUM(jumlah_penumpang) sudah BENAR. Pertahankan.
+
+Lihat `solusi_masalah.md` Solusi #1 dan #6.

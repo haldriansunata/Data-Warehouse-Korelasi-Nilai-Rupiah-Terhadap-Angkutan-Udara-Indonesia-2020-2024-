@@ -49,30 +49,114 @@ Row CGK punya 7 cells terisi dengan volume besar (5–17M). Tidak ada bandara la
 - `plot.png` — heatmap
 - `od_matrix.csv` — pivot table
 
-## Target Tableau — Step by Step
+---
 
-### Langkah Pembuatan Sheet
-1. **Buat worksheet baru** `Bab5_WS4_ODMatrix`.
-2. **Drag `o_iata` ke Rows** (atau nama field IATA dari instance origin). Pil biru.
-3. **Drag `d_iata` ke Columns** (instance destination). Pil biru.
-4. **Marks**: Square (dropdown atas Marks card).
-5. **Drag `SUM(jumlah_penumpang)` ke Color** di Marks card.
-6. **Edit Colors**: klik dropdown Color → Edit Colors → palette sequential **Orange-Red** atau **Green-Blue Diverging**. Centang "Stepped Color" kalau mau lebih kontras.
-7. **Filter Top 10 di kedua axis**:
-   - Klik kanan `o_iata` di Rows → Filter → tab Top → Top 10 by `SUM([jumlah_penumpang])`.
-   - Klik kanan `d_iata` di Columns → Filter → tab Top → Top 10 by `SUM([jumlah_penumpang])`.
-8. **Tambah label**:
-   - Drag `SUM(jumlah_penumpang)` ke Label di Marks card.
-   - Format: Number Custom → `#,##0,,"M"`.
-   - Klik kanan Label di Marks → set warna text ke "Match Mark Color" supaya kontras.
+## Target Tableau — Tutorial Step-by-Step
 
-### Cross-check ke Python
-File `od_matrix.csv`. Cell tertinggi:
-- CGK → DPS: **16,82 juta** (warna paling gelap di pojok)
-- CGK → KNO: 12,35 juta
-- CGK → SUB: 11,51 juta
+> **Konteks penting sebelum mulai**: jangan pakai filter "Top 10 by SUM" native Tableau di kedua axis — hasilnya akan **berbeda** karena `dim_rute` di proyek ini me-normalize pasangan IATA alfabetis (yang awal alfabet jadi origin, yang akhir jadi destination). Yang benar: pakai **1 list IATA tetap** untuk kedua axis. List yang dipakai: **`CGK, DPS, SUB, UPG, KNO, SIN, BPN, KUL, BTH, YIA`** (= top 10 aggregate kedua sisi dari Python).
 
-### Catatan KHUSUS
-- **Asymmetric flow**: karena `dim_rute` menyimpan pasangan IATA terurut alfabetis (`A-B` di mana A<B), banyak cell di "segitiga bawah" akan kosong. Ini wajar — flow PP digabung di satu cell.
-- Top 10 IATA yang muncul (dari Python): CGK, DPS, SUB, UPG, KNO, SIN, BPN, KUL, BTH, YIA.
-- Untuk presentasi, susun dengan **CGK** di paling atas/kiri supaya pattern hub dominan langsung terlihat. Klik kanan `o_iata` → Sort → Manual.
+### Step 1 — Buat worksheet baru
+1. Klik **icon worksheet baru** di bar bawah Tableau (icon kotak dengan tanda +).
+2. Rename tab jadi **`Bab5_WS4_ODMatrix`** (double-click tab → ketik nama).
+
+### Step 2 — Drag field ke Rows dan Columns
+1. **Drag `Iata`** (dari `dim_bandara_origin`, nama field tanpa suffix) ke **Rows**. Pil biru muncul.
+2. **Drag `Iata (Dim Bandara Destination.Csv)`** (dari `dim_bandara_destination`) ke **Columns**. Pil biru muncul.
+
+> Layar sekarang akan tampak **sangat ramai** karena semua IATA muncul (200+ bandara × 200+ bandara). Tenang — akan kita filter di Step 3.
+
+### Step 3 — Filter origin ke 10 IATA
+1. **Drag `Iata`** (origin, dari Data pane) ke area **Filters**.
+2. Jendela "Filter [Iata]" muncul.
+3. Di tab **General**, klik **None** dulu (untuk uncheck semua), lalu **check manual** 10 IATA ini:
+   - **CGK, DPS, SUB, UPG, KNO, SIN, BPN, KUL, BTH, YIA**
+4. Klik **OK**.
+
+### Step 4 — Filter destination ke 10 IATA yang sama
+1. **Drag `Iata (Dim Bandara Destination.Csv)`** (destination, dari Data pane) ke area **Filters**.
+2. Di tab **General**, klik **None**, lalu **check manual** 10 IATA yang **sama persis**:
+   - **CGK, DPS, SUB, UPG, KNO, SIN, BPN, KUL, BTH, YIA**
+3. Klik **OK**.
+
+### Step 5 — Set Marks ke Square
+1. Di **Marks card** (panel kiri tengah), klik dropdown **Automatic** di paling atas.
+2. Pilih **Square**.
+
+### Step 6 — Drag SUM(jumlah_penumpang) ke Color
+1. **Drag `jumlah_penumpang`** dari Data pane ke **Color** di Marks card.
+2. Pastikan agregasi-nya **SUM** (default). Pil akan tampil `SUM(jumlah_penumpang)`.
+3. **Edit warna**:
+   - Klik **Color** di Marks card → **Edit Colors**.
+   - Pilih palette sequential, mis. **Orange-Red** atau **Green-Blue**.
+   - Centang **Stepped Color** dengan 5–7 step kalau mau kontras lebih tajam.
+   - Klik **Apply** → **OK**.
+
+### Step 7 — Drag SUM(jumlah_penumpang) ke Label
+1. **Drag `jumlah_penumpang`** dari Data pane ke **Label** di Marks card.
+2. Pil di Label akan tampil `SUM(jumlah_penumpang)`.
+3. **Format label angka**:
+   - Klik kanan pil `SUM(jumlah_penumpang)` di Label → **Format**.
+   - Di panel Format (sebelah kiri), klik tab **Pane**.
+   - Cari **Numbers** → pilih **Custom**.
+   - Ketik: **`#,##0.0,,"M"`** (perhatikan: titik koma sebelum 0, dua koma sebelum "M").
+   - Contoh hasil: 16.822.345 → `16,8M`.
+4. **(Opsional)** Klik kanan Label di Marks → **Format** → set warna text ke **Match Mark Color** untuk kontras.
+
+### Step 8 — Sort manual supaya CGK di pojok kiri-atas
+Tableau default sort alfabetis (AAP, AMQ, BPN, ...). CGK akan ada di tengah, bukan pojok. Sort manual:
+
+1. **Sort Rows**:
+   - Klik kanan pil `Iata` di **Rows** → **Sort**.
+   - Sort By: **Manual**.
+   - Drag urutan: **CGK** ke paling atas, lalu DPS, SUB, UPG, KNO, SIN, BPN, KUL, BTH, YIA.
+   - Klik OK.
+2. **Sort Columns**:
+   - Klik kanan pil `Iata (Dim Bandara Destination.Csv)` di **Columns** → **Sort**.
+   - Sort By: **Manual**.
+   - Urutan sama: CGK, DPS, SUB, UPG, KNO, SIN, BPN, KUL, BTH, YIA.
+   - Klik OK.
+
+### Step 9 — Cek visual
+Sekarang OD matrix-mu seharusnya menampilkan:
+- 10 baris × 10 kolom (100 cell).
+- Cell tergelap di **CGK-DPS = 16,8M** (pojok kiri-atas area, posisi row CGK kolom DPS).
+- Banyak cell kosong di "segitiga bawah" (mis. DPS-CGK kosong tapi CGK-DPS terisi) — itu wajar, karena flow PP digabung di pair alfabetis.
+
+---
+
+## Cross-Check ke Python
+
+| Origin | Destination | Pax (juta) — harus match di Tableau |
+|---|---|---:|
+| CGK | DPS | **16,82** |
+| CGK | KNO | 12,35 |
+| CGK | SUB | 11,51 |
+| CGK | UPG | 10,96 |
+| CGK | SIN | 8,49 |
+| CGK | BPN | 5,91 |
+| CGK | YIA | 5,12 |
+| BPN | CGK | 5,80 |
+| BTH | CGK | 5,37 |
+| SUB | UPG | **5,43** (secondary corridor) |
+
+Hover Tableau ke cell CGK-DPS → label harus tampil **16,8M**. Kalau angka berbeda jauh:
+- Cek filter `kategori` tidak ter-set (Python aggregate **semua kategori**, jangan filter DOMESTIK/INTERNASIONAL di WS4).
+- Cek 10 IATA yang dipilih di Step 3 dan Step 4 **sama persis**.
+
+---
+
+## Catatan Khusus
+
+### Kenapa pakai filter manual, bukan Top N?
+`dim_rute` menormalkan pasangan IATA alfabetis (`bandara_1_id` = yang alfabet lebih awal). Akibat:
+- Top 10 origin pakai Top N native = CGK, DPS, BPN, BTH, BDJ, HLP, KNO, SUB, DJJ, KUL (IATA awal alfabet dominan).
+- Top 10 destination pakai Top N native = SUB, UPG, CGK, DPS, KNO, SIN, YIA, KUL, PLM, PKU (IATA akhir alfabet dominan).
+- Hasilnya **list berbeda di kedua axis** → OD matrix tidak match Python.
+
+Solusi: hard-code list yang sama untuk kedua axis (Step 3 & 4).
+
+### Asymmetric flow
+Cell di "segitiga bawah" (mis. DPS-CGK) sering kosong karena flow PP digabung di pair alfabetis. Ini wajar, bukan bug.
+
+### Untuk presentasi
+Annotation manual: *"CGK adalah hub absolut — 7 dari 10 cell terisi di row CGK, total flow > 70M. Tidak ada bandara lain yang sebanding sebagai hub."*

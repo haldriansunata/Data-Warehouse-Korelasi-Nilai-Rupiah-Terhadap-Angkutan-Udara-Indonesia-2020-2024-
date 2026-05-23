@@ -79,3 +79,22 @@ Solusi di Bab 4: regresi/scatter **per fase COVID** untuk memastikan slope berta
   - Buat field konstan = 1, drag ke Rows sebagai bar.
   - Color = `covid_phase`, opacity 20%, di-link sebagai axis kedua di belakang line YoY/MtM.
   - Hide sumbu Y bar tersebut.
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau (Konfirmasi)
+
+Solusi AI yang kamu pakai (dari `gabisa.txt`) untuk 4 **Reference Band** manual (pre_pandemic/lockdown/transisi/recovery) dengan tanggal:
+- Fase 1 (pre_pandemic): `01-Jan-2020` – `29-Feb-2020`, biru, opacity 20%
+- Fase 2 (lockdown): `01-Mar-2020` – `30-Sep-2021`, merah
+- Fase 3 (transisi): `01-Oct-2021` – `31-Dec-2022`, oranye
+- Fase 4 (recovery): `01-Jan-2023` – `31-Dec-2024`, hijau
+
+**Sudah BENAR**. Tanggal-tanggal ini match dengan fungsi `covid_phase()` di `etl_bulanan/build_makro_warehouse.py`:
+```python
+if wid <= 202002: return 'pre_pandemic'   # ≤ Feb 2020
+if wid <= 202109: return 'lockdown'        # ≤ Sep 2021
+if wid <= 202212: return 'transisi'        # ≤ Dec 2022
+return 'recovery'                          # 2023+
+```
+Tidak perlu diubah.

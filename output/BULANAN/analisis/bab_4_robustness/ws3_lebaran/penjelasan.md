@@ -74,3 +74,13 @@ Untuk visualisasi distribusi (lebih informatif dari median saja):
 1. Di sheet sama atau duplicate, ubah Marks dari Bar ke **Show Me → Box-and-Whisker Plot**.
 2. Tableau akan auto-generate box plot dengan median, Q1, Q3, whiskers.
 3. Box plot menunjukkan overlap distribusi yang kuat antara group 0 dan 1 → visual konfirmasi "tidak signifikan".
+
+---
+
+## ⚙️ Update — Catatan Implementasi Tableau
+
+**`has_lebaran` Dimension vs Measure**: nilainya 0/1, jadi convert ke **Dimension** sudah BENAR. Klik kanan field di Data pane → Convert to Dimension. Pil yang tadi hijau jadi biru.
+
+WS3 ini tidak punya trend line, hanya bar chart median per group + Mann-Whitney p-value (manual annotation). Tidak terdampak masalah `covid_phase`.
+
+Lihat `solusi_masalah.md` Solusi #3.
