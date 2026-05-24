@@ -1,6 +1,6 @@
 """
-Eksplorasi data: profil tiap kolom (range, statistik, sampel).
-Output: profil.md (manual ditulis ulang setelah baca output ini).
+Data profiling: profil tiap kolom (range, statistik, sampel).
+Output: profil_raw_stats.txt (dipakai sebagai bahan baku data_profiling.md).
 """
 import sys
 from pathlib import Path
@@ -16,7 +16,7 @@ pd.set_option("display.float_format", "{:,.4f}".format)
 waktu, rute, band, makro = load_dim()
 pax = load_pax()
 
-OUT = Path(__file__).parent / "profil.txt"
+OUT = Path(__file__).parent / "profil_raw_stats.txt"
 with open(OUT, "w", encoding="utf-8") as f:
     def w(s=""):
         print(s)

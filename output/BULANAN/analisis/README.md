@@ -13,10 +13,10 @@ analisis/
 ├── README.md                     (file ini)
 ├── _utils.py                     (helper bersama: load_data, regresi, dll)
 │
-├── data_eksplorasi/
-│   ├── explore.py                (profil tiap kolom)
-│   ├── profil.txt                (output mentah)
-│   └── profil.md                 (ringkasan satuan & cek Brent USD)
+├── data_profiling/
+│   ├── explore.py                (script profil tiap kolom)
+│   ├── profil_raw_stats.txt      (output mentah explore.py)
+│   └── data_profiling.md         (skema lengkap + lineage ETL + caveat data)
 │
 ├── bab_1_konteks/                (Anggota 1 — Lanskap)
 │   ├── ws1_multi_panel/          (4-panel time series)
